@@ -1,4 +1,4 @@
-CurrPath = {MainLConePath}/TissueFolding/
+CurrPath = {MainClonePath}/TissueFolding/
 
 TARGET = $$CurrPath/Release/TissueFolding
 
