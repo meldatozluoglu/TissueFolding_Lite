@@ -1,0 +1,113 @@
+\form#0:$\left[ \delta x_{node0}\\ \delta y_{node0},\\ \delta z_{node0},\\ ... ,\\ \delta x_{nodeN},\\ \delta y_{nodeN},\\ \delta z_{nodeN}\right]$
+\form#1:\begin{eqnarray*} g &=& \frac{Gm_2}{r^2} \\ &=& \frac{(6.673 \times 10^{-11}\,\mbox{m}^3\,\mbox{kg}^{-1}\, \mbox{s}^{-2})(5.9736 \times 10^{24}\,\mbox{kg})}{(6371.01\,\mbox{km})^2} \\ &=& 9.82066032\,\mbox{m/s}^2 \end{eqnarray*}
+\form#2:\begin{eqnarray*} ss \end{eqnarray*}
+\form#3:$\begin{bmatrix}n2 / (r - l) & 0 & 0 & 0 \\0 & n2 / (t - b) & 0 & 0 \\r + l / (r - l) & (t + b) & - (f + n) / (f - n) & -1 \\0 & 0 & -(2 * f * n) / (f-n) & 0\end{bmatrix}$
+\form#4:$\begin{bmatrix}n2 / (r - l) & 0 & 0 & 0 \\ 0 & n2 / (t - b) & 0 & 0 \\ r + l / (r - l) & (t + b) & - (f + n) / (f - n) & -1 \\ 0 & 0 & -(2 * f * n) / (f-n) & 0\end{bmatrix} $
+\form#5:$\begin{bmatrix} \Delta x_{node0}\\ \Delta y_{node0},\\ \Delta z_{node0},\\ ... ,\\ \Delta x_{nodeN},\\ \Delta y_{nodeN},\\ \Delta z_{nodeN} \end{bmatrix} $
+\form#6:$ diaplacement = \begin{bmatrix} \Delta x_{node0}\\ \Delta y_{node0},\\ \Delta z_{node0},\\ ... ,\\ \Delta x_{nodeN},\\ \Delta y_{nodeN},\\ \Delta z_{nodeN} \end{bmatrix} $
+\form#7:$ displacement = \begin{bmatrix} \Delta x_{0}\\ \Delta y_{0}\\ \Delta z_{0}\\ ... ,\\ \Delta x_{N}\\ \Delta y_{N}\\ \Delta z_{N} \end{bmatrix} $
+\form#8:\[\sigma^{v} = internalViscosity \textbf{d} \]
+\form#9:$eta$
+\form#10:\[\sigma^{v} = \eta \textbf{d} \]
+\form#11:$\eta$
+\form#12:$\textbf{F}$
+\form#13:$ \delta X/\delta \xi$
+\form#14:\begin{eqnarray*} \textbf{g}^v &=& \textbf{B}^{T} \sigma^{v} \\ &=& det(\textbf{F})det\left( \frac{\delta X }{\delta \xi} \right) \textbf{B}^{T} \sigma^{v} \end{eqnarray*}
+\form#15:$ \delta \textbf{X}/\delta \xi$
+\form#16:$ \delta \textbf{X}/\delta \boldsymbol{\xi}$
+\form#17:\begin{eqnarray*} \textbf{g}^v &=& \textbf{B}^{T} \sigma^{v} \\ &=& det(\textbf{F})det\left( \frac{\delta \textbf{X} }{\delta \boldsymbol{\xi}} \right) \textbf{B}^{T} \sigma^{v} \end{eqnarray*}
+\form#18:\begin{eqnarray*} \textbf{g}^v &=& \int_{V} \textbf{B}^{T} \sigma^{v} dV \\ &=& det(\textbf{F})det\left( \frac{\delta \textbf{X} }{\delta \boldsymbol{\xi}} \right) \textbf{B}^{T} \sigma^{v} \end{eqnarray*}
+\form#19:\begin{eqnarray*} \textbf{B} &=& \left[ \left[ \textbf{B}_{0}\right] \left[ \textbf{B}_{1}\right] ... \left[ \textbf{B}_{nNode}\right] \right] \end{eqnarray*}
+\form#20:\begin{eqnarray*} \textbf{B} &=& \left[ \left[ \textbf{B}_{0}\right] \left[ \textbf{B}_{1}\right] ... \left[ \textbf{B}_{nNode}\right] \right]\\ &=& \begin{bmatrix} \partial_x N_a & 0 & 0 \\ 0 & \partial_y N_a & 0 \\ 0 & 0 & \partial_z N_a \\ \partial_y N_a & \partial_x N_a & 0\\ \partial_z N_a & 0 & \partial_x N_a \\ 0 & \partial_z N_a & \partial_y N_a \end{bmatrix} \end{eqnarray*}
+\form#21:\begin{eqnarray*} \textbf{B} &=& \left[ \left[ \textbf{B}_{0}\right] \left[ \textbf{B}_{1} \right] ... \left[ \textbf{B}_{nNode}\right] \right]\\ \end{eqnarray*}
+\form#22:\begin{eqnarray*} \textbf{B} &=& \left[ \left[ \textbf{B}_{0}\right] \left[ \textbf{B}_{1} \right] ... \left[ \textbf{B}_{nNode}\right] \right]\\ &=& \begin{bmatrix} \partial_x N_0 & 0 & 0 \\ 0 & \partial_y N_0 & 0 \\ 0 & 0 & \partial_z N_0 \\ \partial_y N_0 & \partial_x N_0 & 0\\ \partial_z N_0 & 0 & \partial_x N_0 \\ 0 & \partial_z N_0 & \partial_y N_0 \end{bmatrix} \begin{bmatrix} \partial_x N_1 & 0 & 0 \\ 0 & \partial_y N_1 & 0 \\ 0 & 0 & \partial_z N_1 \\ \partial_y N_1 & \partial_x N_1 & 0\\ \partial_z N_1 & 0 & \partial_x N_1 \\ 0 & \partial_z N_1 & \partial_y N_1 \end{bmatrix} ... \begin{bmatrix} \partial_x N_{nNode} & 0 & 0 \\ 0 & \partial_y N_{nNode} & 0 \\ 0 & 0 & \partial_z N_{nNode} \\ \partial_y N_{nNode} & \partial_x N_{nNode} & 0\\ \partial_z N_{nNode} & 0 & \partial_x N_{nNode} \\ 0 & \partial_z N_{nNode} & \partial_y N_{nNode} \end{bmatrix} \end{eqnarray*}
+\form#23:\begin{eqnarray*} \textbf{B} &=& \left[ \left[ \textbf{B}_{0} \right] \left[ \textbf{B}_{1} \right] ... \left[ \textbf{B}_{nNode}\right] \right]\\ &=& \left[ \begin{bmatrix} \partial_x N_0 & 0 & 0 \\ 0 & \partial_y N_0 & 0 \\ 0 & 0 & \partial_z N_0 \\ \partial_y N_0 & \partial_x N_0 & 0\\ \partial_z N_0 & 0 & \partial_x N_0 \\ 0 & \partial_z N_0 & \partial_y N_0 \end{bmatrix} \begin{bmatrix} \partial_x N_1 & 0 & 0 \\ 0 & \partial_y N_1 & 0 \\ 0 & 0 & \partial_z N_1 \\ \partial_y N_1 & \partial_x N_1 & 0\\ \partial_z N_1 & 0 & \partial_x N_1 \\ 0 & \partial_z N_1 & \partial_y N_1 \end{bmatrix} ... \begin{bmatrix} \partial_x N_{nNode} & 0 & 0 \\ 0 & \partial_y N_{nNode} & 0 \\ 0 & 0 & \partial_z N_{nNode} \\ \partial_y N_{nNode} & \partial_x N_{nNode} & 0\\ \partial_z N_{nNode} & 0 & \partial_x N_{nNode} \\ 0 & \partial_z N_{nNode} & \partial_y N_{nNode} \end{bmatrix} \right] \end{eqnarray*}
+\form#24:$ u_{n}$
+\form#25:$ u_{k},$
+\form#26:$\textbf{B}$
+\form#27:\begin{eqnarray*} \boldsymbol{l} & = \boldsymbol{B} \boldsymbol{v_{n+1}}\nonumber \\ & = \boldsymbol{B} \frac{{u_{n+1}^{k} - u_{n}}} {\delta t}. \end{eqnarray*}
+\form#28:$ u_{k}$
+\form#29:\[ f\left( d \right) = \frac{L}{1+ e^{-k\left(d-d_{0}\right)}} \]
+\form#30:$ L $
+\form#31:\[ -k = \frac{2\:sigmoid\:saturation}{packing\:threshold} \]
+\form#32:$ d_{0} $
+\form#33:\[ \mathbf{F_{i}}\left( d \right) = f\left( d \right)\: \mathbf{e_{i}}\:\:,\:\: F_{j}\left( d \right) = f\left( d \right)\: \mathbf{e_{j}}=-f\left( d \right)\: \mathbf{e_{i}}=-\mathbf{F_{i}} \]
+\form#34:$ d $
+\form#35:$ ||\mathbf{x_{i}}-\mathbf{x_{j}} || $
+\form#36:$ \mathbf{e_{i}} = \left( \mathbf{x_{i}}-\mathbf{x_{j}} \right) / ||\mathbf{x_{i}}-\mathbf{x_{j}} || $
+\form#37:$ \mathbf{F_{0}} $
+\form#38:$ \mathbf{F_{1}} $
+\form#39:\[ \frac{d\mathbf{F_{i}}}{d\mathbf{x_{i}}} = \frac{f\left( d \right)}{d}\left( \mathbf{I} - \mathbf{e_{i}} \mathbf{e_{i}^{T}}\right) +\frac{df\left( d \right)}{dd} \mathbf{e_{i}} \mathbf{e_{i}^{T}} \]
+\form#40:$ \mathbf{I} $
+\form#41:$ f\left( d \right) $
+\form#42:\[ \frac{df\left( d \right)}{dd} = mass\:\frac{-2\:sigmoid\:saturation}{packing\:threshold} f\left( d \right) \left( 1 - f\left( d \right) \right) \]
+\form#43:\[ - \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow K \begin{bmatrix} & \vdots & \vdots & \vdots & \\ \dots & x_{3id0,3id0} & \dots & x_{3id0,3id0+2} & \dots \\ \dots & \vdots & \dots & \vdots & \dots \\ \dots & x_{3id0+2,3id0} & \dots & x_{3id0+2,3id0+2} & \dots \\ & \vdots & \vdots & \vdots & \end{bmatrix}, \]
+\form#44:\[ \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id0,3id1} & \dots\\ \dots & x_{3id0+2,3id1+2} \end{bmatrix}, -\frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id1,3id1} & \dots\\ \dots & x_{3id1+2,3id1+2} \end{bmatrix}, \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id1,3id0} & \dots\\ \dots & x_{3id1+2,3id0+2} \end{bmatrix}. \]
+\form#45:\begin{tabular}{ccc} 1 & 2 & 3 \\ 3 & 4 & 4 \end{tabular}
+\form#46:\begin{tabular}{|c|c|c|} 1 & 2 & 3 \\ 3 & 4 & 4 \end{tabular}
+\form#47:\begin{tabular}{c|c|c|c|c|} 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#48:\begin{tabular}{c|c|c|c|c|} \multicolumn{5}{|c|}{$\lambda = 1 - \xi - \eta$ $\alpha = \left( 1-\zeta \right) /2$ $b = \left(1+\zeta\right)/2$ } \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#49:\begin{tabular}{c|c|c|c|c|} \multicolumn{5}{|c|}{$\lambda = 1 - \xi - \eta$ $\alpha = \left( 1-\zeta \right) /2$ $b = \left(1+\zeta\right)/2$ } \\ Node & Shape function. & Shape function & Shape function & Shape function. \\ & & derivative wrt $\xi$ & derivative wrt $\zeta$ & derivative wrt $\eta$ \\ & $N$ & $\frac{\partial{N}}{\xi}$ & $\frac{\partial{N}}{\zeta}$ & $\frac{\partial{N}}{\eta}$ \\ 1 & $\lambda \alpha$ & $- \alpha$ & $- \alpha$ & $ \frac{-\lambda} {2}$ \\ 2 & $\xi \alpha$ & $\alpha$ & 0 & $\frac{-\xi} {2} $ \\ 3 & $\eta \alpha$ & 0 & $\alpha$ & $\frac{-\nu} {2} $ \\ 4 & $\lambda b$ & $-b$ & $-b$ & $\frac{\lambda} {2} $ \\ 5 & $\xi b$ & $b$ &0 & $\frac{\xi} {2} $ \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#50:\begin{tabular}{c|c|c|c|c|} \multicolumn{5}{|c|}{ $\lambda = 1 - \xi - \eta$ } \\ \multicolumn{5}{|c|}{ $\alpha = \left( 1-\zeta \right) /2$ } \\ \multicolumn{5}{|c|}{ $b = \left(1+\zeta\right)/2$ } \\ Node & Shape function. & Shape function & Shape function & Shape function. \\ & & derivative wrt $\xi$ & derivative wrt $\zeta$ & derivative wrt $\eta$ \\ & $N$ & $\frac{\partial{N}}{\xi}$ & $\frac{\partial{N}}{\zeta}$ & $\frac{\partial{N}}{\eta}$ \\ 1 & $\lambda \alpha$ & $- \alpha$ & $- \alpha$ & $ \frac{-\lambda} {2}$ \\ 2 & $\xi \alpha$ & $\alpha$ & 0 & $\frac{-\xi} {2} $ \\ 3 & $\eta \alpha$ & 0 & $\alpha$ & $\frac{-\nu} {2} $ \\ 4 & $\lambda b$ & $-b$ & $-b$ & $\frac{\lambda} {2} $ \\ 5 & $\xi b$ & $b$ &0 & $\frac{\xi} {2} $ \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#51:\begin{tabular}{|c|c|c|c|c|} \multicolumn{5}{|c|}{ $\lambda = 1 - \xi - \eta$ } \\ \multicolumn{5}{|c|}{ $\alpha = \left( 1-\zeta \right) /2$ } \\ \multicolumn{5}{|c|}{ $b = \left(1+\zeta\right)/2$ } \\ Node & Shape function. & Shape function & Shape function & Shape function. \\ & & derivative wrt $\xi$ & derivative wrt $\zeta$ & derivative wrt $\eta$ \\ & $N$ & $\frac{\partial{N}}{\xi}$ & $\frac{\partial{N}}{\zeta}$ & $\frac{\partial{N}}{\eta}$ \\ 1 & $\lambda \alpha$ & $- \alpha$ & $- \alpha$ & $ \frac{-\lambda} {2}$ \\ 2 & $\xi \alpha$ & $\alpha$ & 0 & $\frac{-\xi} {2} $ \\ 3 & $\eta \alpha$ & 0 & $\alpha$ & $\frac{-\nu} {2} $ \\ 4 & $\lambda b$ & $-b$ & $-b$ & $\frac{\lambda} {2} $ \\ 5 & $\xi b$ & $b$ &0 & $\frac{\xi} {2} $ \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#52:\begin{tabular}{|c|c|c|c|c|} \multicolumn{5}{|c|}{ $\lambda = 1 - \xi - \eta$ } \\ \multicolumn{5}{|c|}{ $\alpha = \left( 1-\zeta \right) /2$ } \\ \multicolumn{5}{|c|}{ $b = \left(1+\zeta\right)/2$ } \\ Node & Shape function. & Shape function & Shape function & Shape function. \\ & & derivative wrt $\xi$ & derivative wrt $\zeta$ & derivative wrt $\eta$ \\ & $N$ & $\frac{\partial{N}}{ \partial \xi}$ & $\frac{\partial{N}}{\partial \zeta}$ & $\frac{\partial{N}}{\partial \eta}$ \\ 1 & $\lambda \alpha$ & $- \alpha$ & $- \alpha$ & $ \frac{-\lambda} {2}$ \\ 2 & $\xi \alpha$ & $\alpha$ & 0 & $\frac{-\xi} {2} $ \\ 3 & $\eta \alpha$ & 0 & $\alpha$ & $\frac{-\nu} {2} $ \\ 4 & $\lambda b$ & $-b$ & $-b$ & $\frac{\lambda} {2} $ \\ 5 & $\xi b$ & $b$ &0 & $\frac{\xi} {2} $ \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+\form#53:\begin{eqnarray*} \left[ \begin{bmatrix} \frac{\partial N_0}{ \partial \xi} & ... & \frac{\partial N_n}{ \partial \xi} \\ \frac{\partial N_0}{ \partial \zeta} & ... & \frac{\partial N_n}{ \partial \zeta} \\ \frac{\partial N_0}{ \partial \eta} & ... & \frac{\partial N_n}{ \partial \eta} \end{bmatrix} \right] \end{eqnarray*}
+\form#54:\begin{eqnarray*} \begin{bmatrix} \frac{\partial N_0}{ \partial \xi} & ... & \frac{\partial N_n}{ \partial \xi} \\ \frac{\partial N_0}{ \partial \zeta} & ... & \frac{\partial N_n}{ \partial \zeta} \\ \frac{\partial N_0}{ \partial \eta} & ... & \frac{\partial N_n}{ \partial \eta} \end{bmatrix} \end{eqnarray*}
+\form#55:$ N_{i, \xi} $
+\form#56:$ \partial \boldsymbol{x_{i}} / \partial {\xi} $
+\form#57:\begin{eqnarray*} \begin{bmatrix} N_{1,\xi} & 0 & 0 & N_{2,\xi} & \cdots &N_{n,\xi} & 0 & 0 \\ N_{1,\zeta} & 0 & 0 & N_{2,\zeta} & \cdots &N_{n,\zeta} & 0 & 0 \\ N_{1,\nu} & 0 & 0 & N_{2,\nu} & \cdots &N_{n,\nu} & 0 & 0 \\ 0 & N_{1,\xi} & 0 & 0 & \cdots &0 & N_{n,\xi} & 0 \\ 0 & N_{1,\zeta} & 0 & 0 & \cdots &0 & N_{n,\zeta} & 0 \\ 0 & N_{2,\nu} & 0 & 0 & \cdots &0 & N_{n,\nu} & 0 \\ 0 & 0 & N_{1,\xi} & 0 & \cdots &0 &0 & N_{n,\xi} \\ 0 & 0 & N_{1,\zeta} & 0 & \cdots &0 &0 & N_{n,\zeta} \\ 0 & 0 & N_{2,\nu} & 0 & \cdots &0 &0 & N_{n,\nu} . \end{bmatrix} \end{eqnarray*}
+\form#58:\begin{eqnarray*} \begin{bmatrix} N_{0,\xi} & 0 & 0 & N_{1,\xi} & \cdots &N_{n-1,\xi} & 0 & 0 \\ N_{0,\zeta} & 0 & 0 & N_{1,\zeta} & \cdots &N_{n-1,\zeta} & 0 & 0 \\ N_{0,\nu} & 0 & 0 & N_{1,\nu} & \cdots &N_{n-1,\nu} & 0 & 0 \\ 0 & N_{0,\xi} & 0 & 0 & \cdots &0 & N_{n-1,\xi} & 0 \\ 0 & N_{0,\zeta} & 0 & 0 & \cdots &0 & N_{n-1,\zeta} & 0 \\ 0 & N_{0,\nu} & 0 & 0 & \cdots &0 & N_{n-1,\nu} & 0 \\ 0 & 0 & N_{0,\xi} & 0 & \cdots &0 &0 & N_{n-1,\xi} \\ 0 & 0 & N_{0,\zeta} & 0 & \cdots &0 &0 & N_{n-1,\zeta} \\ 0 & 0 & N_{0,\nu} & 0 & \cdots &0 &0 & N_{n-1,\nu} . \end{bmatrix} \end{eqnarray*}
+\form#59:$ \frac{\partial \boldsymbol{X}}{\partial \boldsymbol{\zeta}} $
+\form#60:$ \boldsymbol{F} $
+\form#61:$ \boldsymbol{x} $
+\form#62:$ \boldsymbol{X} $
+\form#63:\begin{eqnarray*} \frac{\partial \boldsymbol{x}} {\partial \boldsymbol{X}} \end{eqnarray*}
+\form#64:\begin{eqnarray*} \boldsymbol{c} = \begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\ \end{bmatrix} \sim \begin{bmatrix} \epsilon_{x} \\ \epsilon_{y} \\ \epsilon_{z}\\ \gamma_{x,y} \\ \gamma_{x,z} \\ \gamma_{y,z} \end{bmatrix} \sim \begin{bmatrix} \sigma_{x} \\ \sigma_{y} \\ \sigma_{z}\\ \sigma_{x,y} \\ \sigma_{x,z} \\ \sigma_{y,z} \end{bmatrix}. \end{eqnarray*}
+\form#65:$ \lambda $
+\form#66:$ \mu $
+\form#67:$\boldsymbol {\mathcal D} $
+\form#68:\begin{eqnarray*} \mathcal{D}_{ijkl} = \lambda \boldsymbol{C}^{-1}_{ij} \boldsymbol{C}^{-1}_{kl} + 2 \left( \mu - \lambda ln(J)\right) \mathcal{I}_{ijkl} \end{eqnarray*}
+\form#69:$ \mathcal{I}_{ijkl} $
+\form#70:\begin{eqnarray*} \mathcal{I}_{ijkl} = \frac{1}{2} \left[ \boldsymbol{C}^{-1}_{ik} \boldsymbol{C}^{-1}_{jl} + \boldsymbol{C}^{-1}_{il} \boldsymbol{C}^{-1}_{jk}\right] \end{eqnarray*}
+\form#71:$ E = 1/2 *(Fe^T*Fe-I): $
+\form#72:$ F_{ii} = \sqrt{e_{i} \times 2 + 1} $
+\form#73:$ \mathbf{R}^{T} \mathbf{F}^{G}_{increment} \mathbf{R} $
+\form#74:$ \mathbf{F}^{G}_{increment} $
+\form#75:$ F^{G} $
+\form#76:$ N(t+\Delta t) = N(t) * 2 ^ (-\Delta t/\tau_{1/2}) $
+\form#77:$ \tau_{1/2} = plasticDeformationHalfLifeMultiplier * plasticDeformationHalfLife/(log(2)) $
+\form#78:$ \mathbf{R}_{x}(\theta_{1}) \mathbf{R}_{y}(\theta_{2}) \mathbf{R}_{z}(\theta_{3})$
+\form#79:\begin{eqnarray*} \mathbf{M} = \begin{bmatrix} m_{00} & m_{01} & m_{02} \\ m_{10} & m_{11} & m_{12} \\ m_{20} & m_{21} & m_{22}] \end{bmatrix} \end{eqnarray*}
+\form#80:$ c_{1} $
+\form#81:$ cos(\theta_{1}) $
+\form#82:$ s_{1} $
+\form#83:$ sin(\theta_{1}) $
+\form#84:\begin{eqnarray*} tet_1 & = & atan2(m_{12},m_{22}) = atan2(s_1c_2, c_1c_2) \\ c_2 & = & \sqrt{m_{00}*m_{00} + m_{01}*m_{01}} \\ tet_2 & = & atan2(-m_{02},c_2) \\ tet_3 & = & atan2(m_{01},m_{00}) \end{eqnarray*}
+\form#85:$ \mathbf{U} $
+\form#86:$ \mathbf{U} \mathbf{V}^{T} $
+\form#87:$ \mathbf{A} = \mathbf{U} \mathbf{S} \mathbf{V}^{T} $
+\form#88:$ \mathbf{C} $
+\form#89:$ \mathbf{C} = \left( \mathbf{F}^{eT} \mathbf{F}^{e} \right) $
+\form#90:$ \mathbf{F}^{e} $
+\form#91:$ \mathbf{E} $
+\form#92:$ \mathbf{E} = \frac{1}{2} \times \left( \mathbf{C}- \mathbf{I} \right) $
+\form#93:$ \mathbf{S} $
+\form#94:$ \mathbf{S} = \mathbf{D}: \mathbf{E} $
+\form#95:$ \mathbf{D} $
+\form#96:$ \mathbf{S}^e = \mu (\mathbf {I} - \mathbf {C^{-1}}) + \lambda (ln J^e) \mathbf {C^{-1}} $
+\form#97:$ \mathcal D $
+\form#98:$ \mathcal{D}_{ijkl} = \lambda \boldsymbol{C}^{-1}_{ij} \boldsymbol{C}^{-1}_{kl} + 2 \left( \mu - \lambda ln(J)\right) \mathcal{I}_{ijkl} $
+\form#99:$ \mathbf{\sigma}^e = J^{e-1} \mathbf{F}^{e} \mathbf{S}^{e} \mathbf{F}^{eT} $
+\form#100:$ \mathbf{u}_k^{t+\Delta t} $
+\form#101:$ \mathbf{u}_n^{t} $
+\form#102:$ \Delta t $
+\form#103:\begin{eqnarray*} \boldsymbol{K} \end{eqnarray*}
+\form#104:\begin{eqnarray*} \boldsymbol{K}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}\\ \boldsymbol{g}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{g} \\ \boldsymbol{N_{ij}} &= & \begin{bmatrix} 1 & if & i = j \text{ and } i \text{ is not a slave}\\ 1 & if & i \text{ is slave to } j \\ 0 & & \text{elsewhere} \end{bmatrix} \end{eqnarray*}
+\form#105:\begin{eqnarray*} \boldsymbol{K}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}\\ \boldsymbol{g}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{g} \\ \boldsymbol{N_{ij}} &= & \begin{vmatrix} 1 & if & i = j \text{ and } i \text{ is not a slave}\\ 1 & if & i \text{ is slave to } j \\ 0 & & \text{elsewhere} \end{vmatrix} \\ \boldsymbol{\bar{I}_{ij}} & = & \begin{vmatrix} 1 & if & i = j \text{ and } i \text{ is a slave}\\ 0 & & \text{elsewhere} \end{vmatrix} \\ \end{eqnarray*}
+\form#106:\begin{eqnarray*} \boldsymbol{K}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}\\ \boldsymbol{g}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{g} \\ \boldsymbol{N_{ij}} &= & \begin{matrix} 1 & if & i = j \text{ and } i \text{ is not a slave}\\ 1 & if & i \text{ is slave to } j \\ 0 & & \text{elsewhere} \end{matrix} \\ \boldsymbol{\bar{I}_{ij}} & = & \begin{matrix} 1 & if & i = j \text{ and } i \text{ is a slave}\\ 0 & & \text{elsewhere} \end{matrix} \\ \end{eqnarray*}
+\form#107:\begin{eqnarray*} \boldsymbol{K}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}\\ \boldsymbol{g}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{g} \\ \boldsymbol{N_{ij}} &= & \left\{ \begin{matrix} 1 & if & i = j \text{ and } i \text{ is not a slave}\\ 1 & if & i \text{ is slave to } j \\ 0 & & \text{elsewhere} \end{matrix} \right. \\ \boldsymbol{\bar{I}_{ij}} & = & \left\{ \begin{matrix} 1 & if & i = j \text{ and } i \text{ is a slave}\\ 0 & & \text{elsewhere} \end{matrix} \right. \\ \end{eqnarray*}
+\form#108:$ \boldsymbol{g}_{bound} = \boldsymbol{N^{T}} \boldsymbol{g} $
+\form#109:$ \boldsymbol{N^{T}} \boldsymbol{K} $
+\form#110:$ \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} $
+\form#111:$ \boldsymbol{K}_{DOFslave,DOFslave} $
+\form#112:$ \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}$

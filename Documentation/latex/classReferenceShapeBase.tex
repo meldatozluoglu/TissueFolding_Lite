@@ -1,0 +1,53 @@
+\hypertarget{classReferenceShapeBase}{}\section{Reference\+Shape\+Base Class Reference}
+\label{classReferenceShapeBase}\index{Reference\+Shape\+Base@{Reference\+Shape\+Base}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReferenceShapeBase_ad2dc1fc69d86a6bf6dd6d07a4ce3f039}{}\hyperlink{classReferenceShapeBase_ad2dc1fc69d86a6bf6dd6d07a4ce3f039}{Reference\+Shape\+Base} (std\+::string \hyperlink{classReferenceShapeBase_a4831a54cffbafef4ded26fb8c50566e0}{Shape\+Type}, int \hyperlink{classReferenceShapeBase_af0da93cee3f17800d7aa90b21b1b81c7}{Id})\label{classReferenceShapeBase_ad2dc1fc69d86a6bf6dd6d07a4ce3f039}
+
+\begin{DoxyCompactList}\small\item\em Constructer of the \hyperlink{classReferenceShapeBase}{Reference\+Shape\+Base} class. \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_addf60ebee57a9d3b0e345b963901e3b5}{}\hyperlink{classReferenceShapeBase_addf60ebee57a9d3b0e345b963901e3b5}{$\sim$\+Reference\+Shape\+Base} ()\label{classReferenceShapeBase_addf60ebee57a9d3b0e345b963901e3b5}
+
+\begin{DoxyCompactList}\small\item\em Destructor of the \hyperlink{classReferenceShapeBase}{Reference\+Shape\+Base} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReferenceShapeBase_a6b20aebb733d845a8e2b7cd4f69722cb}{}std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ \hyperlink{classReferenceShapeBase_a6b20aebb733d845a8e2b7cd4f69722cb}{Positions}\label{classReferenceShapeBase_a6b20aebb733d845a8e2b7cd4f69722cb}
+
+\begin{DoxyCompactList}\small\item\em The pointer to the position matrix of the reference element. The array itself is declared within the constructor, depending on \hyperlink{classShapeBase_a0ae4246d158f4d66b5bd1644df40f150}{Shape\+Base\+::n\+Dim} and \hyperlink{classShapeBase_a0daa5629b1335ca3e1be089a006fe897}{Shape\+Base\+::n\+Nodes}, its size being \mbox{[}n\+Nodes\mbox{]}\mbox{[}n\+Dim\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_a12d2d0c2511f4f1357360ff61910ac02}{}double \hyperlink{classReferenceShapeBase_a12d2d0c2511f4f1357360ff61910ac02}{Volume}\label{classReferenceShapeBase_a12d2d0c2511f4f1357360ff61910ac02}
+
+\begin{DoxyCompactList}\small\item\em The volume of reference element, calculated assuming regular shapes (e.\+g. Perpendicular prism of equal top and bottom surfaces). \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_a214b89b970efa7a290dbe1533cf237ea}{}double \hyperlink{classReferenceShapeBase_a214b89b970efa7a290dbe1533cf237ea}{Basal\+Area}\label{classReferenceShapeBase_a214b89b970efa7a290dbe1533cf237ea}
+
+\begin{DoxyCompactList}\small\item\em The basal area of the reference shape. \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_a76ac694d1b1276f6847bee3c3efa84b0}{}double \hyperlink{classReferenceShapeBase_a76ac694d1b1276f6847bee3c3efa84b0}{height}\label{classReferenceShapeBase_a76ac694d1b1276f6847bee3c3efa84b0}
+
+\begin{DoxyCompactList}\small\item\em Now being used as Reference element height in reference element area calculation. Slab height for 2\+D elements, value is -\/100 for 3\+D elements. Is obsolete now, must be deleted together with any 2\+D element option. Mesh file reading should be cleared in parallel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReferenceShapeBase_aa582a1e9264afcb37e4d0baa06b88a51}{}void {\bfseries set\+Shape\+Type} (std\+::string Type\+Name)\label{classReferenceShapeBase_aa582a1e9264afcb37e4d0baa06b88a51}
+
+\item 
+\hypertarget{classReferenceShapeBase_a027db08b5e580286448380aa21902b33}{}void {\bfseries set\+Node\+Number} ()\label{classReferenceShapeBase_a027db08b5e580286448380aa21902b33}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classReferenceShapeBase_a4831a54cffbafef4ded26fb8c50566e0}{}int \hyperlink{classReferenceShapeBase_a4831a54cffbafef4ded26fb8c50566e0}{Shape\+Type}\label{classReferenceShapeBase_a4831a54cffbafef4ded26fb8c50566e0}
+
+\begin{DoxyCompactList}\small\item\em The integer defining the type of the shape, it is a negative value at the same basis of \hyperlink{classShapeBase_a36aedd41e8465a186a0b0c454b5b76f3}{Shape\+Base\+::\+Shape\+Type}\+: prisms Shape\+Type = -\/1. \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_af0da93cee3f17800d7aa90b21b1b81c7}{}int \hyperlink{classReferenceShapeBase_af0da93cee3f17800d7aa90b21b1b81c7}{Id}\label{classReferenceShapeBase_af0da93cee3f17800d7aa90b21b1b81c7}
+
+\begin{DoxyCompactList}\small\item\em The unique identifier of the reference shape, it is identical to the owner shape, it is set inside the constructor. \end{DoxyCompactList}\item 
+\hypertarget{classReferenceShapeBase_a1183c092056a3245a350ff6f56632633}{}int \hyperlink{classReferenceShapeBase_a1183c092056a3245a350ff6f56632633}{n\+Nodes}\label{classReferenceShapeBase_a1183c092056a3245a350ff6f56632633}
+
+\begin{DoxyCompactList}\small\item\em The number of nodes of the reference element, it is based on \hyperlink{classReferenceShapeBase_a4831a54cffbafef4ded26fb8c50566e0}{Reference\+Shape\+Base\+::\+Shape\+Type}, through function Reference\+Shape\+Base\+::set\+Node\+Number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Reference\+Shape\+Base.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Reference\+Shape\+Base.\+cpp\end{DoxyCompactItemize}

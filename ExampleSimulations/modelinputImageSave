@@ -1,0 +1,10 @@
+TimeParameters:
+  TimeStep(sec): 1800
+  SimulationLength(sec):  180000
+
+SaveOptions:
+  SaveImages(bool): 1
+  ImagesSaveDirectory(relative_path_to_od): ./ScreenShots/
+  SaveData(bool):   1
+  ImageSaveInterval(sec): 1
+  DataSaveInterval(sec):  1800

@@ -1,0 +1,24 @@
+TimeStep(sec):  10
+DataSaveInterval(sec):  10
+ModelinputName:  /home/melda/Documents/nonAcademic/TissueFoldingFefractor/TissueFoldingRefractor/TissueFoldingLinux//ExampleSimulationsToRun/pipette//modelinput
+
+Mesh_Type:  4
+	Symmetricity-x: 0 Symmetricity-y: 1
+	MeshFileName: ../MeshFiles/WingAt48hr.mesh
+
+
+There is explicit ECM:	1
+	Columnar ECM Stiffness(Pa): 1600
+	Peripodial ECM Stiffness(Pa): 100
+	ECM remodelling half life (hour): 8
+	Is there perturbation to the ECM: 0
+
+There is explicit actin:  1
+
+There is pipette aspiration:  1
+	is the tissue stuck on the glass: 1
+	suction on apical side: 1
+	pipette position [centre(x,y,z), effective pippette suction depth, microns]: 0 0 14 2
+	pipette radia [inner & outer(microns)]: 6 8
+	Steps for pipette suction 2
+	suction times (sec): 0 40 

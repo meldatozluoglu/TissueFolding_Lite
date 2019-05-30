@@ -1,0 +1,97 @@
+Description
+===========
+This is a finite element simulation package specifically designed to model morphogenesis and deformaion of 
+biological material. 
+
+The package have been used to model morphogenesis of real tissues inside the fly embryo,
+providing mechanical basis of tissue shape formation and sucessfully predicting the emergent shape of tissues with
+mutations. The predictive power has long term high impact in wound healing, regeneration, and tissue engineering.
+Details of the thory and methodology can be found in https://www.biorxiv.org/content/10.1101/515528v1. 
+One example for morphogeneis is provided for 36 hour development of the wing of the fly, see EXAMPLE sections below.
+
+Additional to modelling morphogenesis, this simulation platform has been used to model a series of experimental 
+setups used to determine physcal properties of biological samples. As these samples have highly complex structures,
+and noise in their physical properties, it is not trivial to use analytical approaches to interpret the 
+experiments and deduce physical properties. The simulations allow for fitting of the experimental result to provide
+quantitatave outputs for physical property measurement form the experiments. One example is provided for stiffness 
+measurement from micro-pipette aspiration, see EXAMPLE sections below.
+
+
+Compilation
+===========
+The package has relatively standard library dependencies. Of note, it requires OpenMP, OpenGL, Boost, 
+GLM and PARDISO solver (see below). The .pro files for compilation in linux environment is available for
+both the user interface and server versions, and can be adjusted for the setup of the user. The 
+recommended compilation is with a modern c++ compiler, through qmake. 
+
+qmake -o Makefile TissueFolding.pro OR qmake -o Makefile TissueFoldingUI.pro
+make 
+
+Which will generate the executable under Release folder for both UserInterface and Tissuefolding folders. The .pro 
+files can be found under {Mainpath}/UserInterface and {Mainpath}/TissueFolding, respectively.
+
+** IMPORTANT **
+This package requires PARDISO sparse matrix solver. If this library is not available in the test machine,
+it can be downloaded and an academic license obtained freely through https://pardiso-project.org - this 
+does not require an academic email address.
+
+For purely test purposes, a copy of the library for unix environment is available in {MainPath}/Pardiso, and a 
+PLACEHOLDER license file pardiso.lic is included. Having the library in an accessable path will allow for 
+compilation, and placing a pardico.lic file either in the home directory OR where the executable is called 
+from will allow for running the simulation without error termination, but the solver WILL NOT SOLVE THE SYSTEM.
+Please feel free to use this method for saved simulation displays and testing the compilation of the code. 
+For a functioning solver, the contents of the pardiso.lic should be replaced with an actual license, that can be 
+freely obtained from https://pardiso-project.org.
+
+
+DOCUMENTATION
+=============
+Documentation can be found in {Mainpath}/Documentation
+It is suggested that the html version is viewed through {Mainpath}/Documentation/html/index.html
+
+
+EXAMPLE Saved simulations and videos
+====================================
+There are two sample simulations saved for demonstrating some of the capabilities of the TissueFolding package.
+1) Morphogenesis
+2) Pipette
+
+Saved under {Mainpath}/ExampleSimulations/
+
+Each sample simulation contains a one-page summary of the setup, a pre-rendered video of the simulation and
+the saved data files for displaying the simulations results with the TissueFolding package. 
+
+The script to demonstrate each saved simulation can be found in:
+{Mainpath}/ExampleSimulations/displaySave.sh 
+
+Please modify the main path and the simulation you would like to display accordingly.
+
+** IMPORTANT **
+The provided script will inflate some archived files. If running without the displaySave.sh script,
+please unzip the SaveFile.zip and GrowthFile.zip in {Mainpath}/ExampleSimulations/morphogenesis before attempting to display.
+
+
+EXAMPLE Simulations to run
+==========================
+There are three sample simulations to demonstrate the TissueFolding package in action, in parallel with the 
+saved simulations. In each scenario, the parameter set used to generate the saved simulation is used. 
+Simulations can be started from scratch, or can be continued from saved files. 
+
+A script to inititate simulations can be found in:
+Saved under {Mainpath}/ExampleSimulationToRun/runSimulation.sh
+
+The results can be displayed via:
+Saved under {Mainpath}/ExampleScriptsToRun/displaySave.sh
+
+Folder naming is self-explanatory, it is recommended the script provided is used to 
+initiate the simulations. 
+
+The morphogesis script here is set up for 10 hours, wherease the provided exapmle is a longer simulation of 
+36 hours (under {Mainpath}/ExampleSimulations/morphogenesis, see "EXAMPLE Saved simulations and videos" above). 
+The examples simulations to run can be set up for longer, by modifying the modelinput file under each example directory.
+The length of simulation is set in parameter "SimulationLength(sec):" It is recommended to keep the time step shorter 
+for morphogenesis simulations longer than 24 hours (parameter "TimeStep(sec):") as the geometry becomes challenging 
+with increasing self-contacts. 
+
+
+

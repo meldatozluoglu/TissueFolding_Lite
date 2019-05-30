@@ -1,0 +1,104 @@
+\hypertarget{classRandomGenerator}{}\section{Random\+Generator Class Reference}
+\label{classRandomGenerator}\index{Random\+Generator@{Random\+Generator}}
+
+
+{\ttfamily \#include $<$Random\+Generator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRandomGenerator_ad2b3256e634878160c7d8b6e865341b2}{Random\+Generator} ()
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classRandomGenerator_a6a5e536f784814c4fcd596fcc911d14a}{get\+Norm\+R\+V} (double mean, double var, unsigned int n)
+\item 
+double \hyperlink{classRandomGenerator_a96a04ffa03a3f0a3e95d50d7c7e828cb}{get\+Norm\+R\+V} (double mean, double var)
+\item 
+int \hyperlink{classRandomGenerator_a39a6365864741e8246546162b6e5a34e}{get\+Uniform\+R\+V} (int min, int max)
+\item 
+double \hyperlink{classRandomGenerator_ad584ae9751a4cd03b981ced9c12f4e6e}{get\+Uniform\+R\+V} (double min, double max)
+\item 
+std\+::string \hyperlink{classRandomGenerator_a2da3e84fb399d8af423547376a1aae42}{get\+Random\+Str} (unsigned int length)
+\item 
+void \hyperlink{classRandomGenerator_a35e84fa76d2bfaba05671aa0f79c1b0a}{Seed} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classRandomGenerator}{Random\+Generator} \& \hyperlink{classRandomGenerator_a6c161d5ba97abe160d46d031f2211eb7}{Obj} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The random number generator. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRandomGenerator_ad2b3256e634878160c7d8b6e865341b2}{}\index{Random\+Generator@{Random\+Generator}!Random\+Generator@{Random\+Generator}}
+\index{Random\+Generator@{Random\+Generator}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{Random\+Generator}]{\setlength{\rightskip}{0pt plus 5cm}Random\+Generator\+::\+Random\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_ad2b3256e634878160c7d8b6e865341b2}
+Default constructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classRandomGenerator_a6a5e536f784814c4fcd596fcc911d14a}{}\index{Random\+Generator@{Random\+Generator}!get\+Norm\+R\+V@{get\+Norm\+R\+V}}
+\index{get\+Norm\+R\+V@{get\+Norm\+R\+V}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{get\+Norm\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Random\+Generator\+::get\+Norm\+R\+V (
+\begin{DoxyParamCaption}
+\item[{double}]{mean, }
+\item[{double}]{var, }
+\item[{unsigned int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_a6a5e536f784814c4fcd596fcc911d14a}
+Get a given number of normally-\/distributed random variables. \hypertarget{classRandomGenerator_a96a04ffa03a3f0a3e95d50d7c7e828cb}{}\index{Random\+Generator@{Random\+Generator}!get\+Norm\+R\+V@{get\+Norm\+R\+V}}
+\index{get\+Norm\+R\+V@{get\+Norm\+R\+V}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{get\+Norm\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}double Random\+Generator\+::get\+Norm\+R\+V (
+\begin{DoxyParamCaption}
+\item[{double}]{mean, }
+\item[{double}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_a96a04ffa03a3f0a3e95d50d7c7e828cb}
+Get a normally-\/distributed random variable. \hypertarget{classRandomGenerator_a2da3e84fb399d8af423547376a1aae42}{}\index{Random\+Generator@{Random\+Generator}!get\+Random\+Str@{get\+Random\+Str}}
+\index{get\+Random\+Str@{get\+Random\+Str}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{get\+Random\+Str}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Random\+Generator\+::get\+Random\+Str (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_a2da3e84fb399d8af423547376a1aae42}
+Get a randomised string of a certain length. \hypertarget{classRandomGenerator_a39a6365864741e8246546162b6e5a34e}{}\index{Random\+Generator@{Random\+Generator}!get\+Uniform\+R\+V@{get\+Uniform\+R\+V}}
+\index{get\+Uniform\+R\+V@{get\+Uniform\+R\+V}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{get\+Uniform\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}int Random\+Generator\+::get\+Uniform\+R\+V (
+\begin{DoxyParamCaption}
+\item[{int}]{min, }
+\item[{int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_a39a6365864741e8246546162b6e5a34e}
+Get a uniformly distributed R\+V in \mbox{[}m,n\mbox{]} (m,n are int). \hypertarget{classRandomGenerator_ad584ae9751a4cd03b981ced9c12f4e6e}{}\index{Random\+Generator@{Random\+Generator}!get\+Uniform\+R\+V@{get\+Uniform\+R\+V}}
+\index{get\+Uniform\+R\+V@{get\+Uniform\+R\+V}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{get\+Uniform\+R\+V}]{\setlength{\rightskip}{0pt plus 5cm}double Random\+Generator\+::get\+Uniform\+R\+V (
+\begin{DoxyParamCaption}
+\item[{double}]{min, }
+\item[{double}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_ad584ae9751a4cd03b981ced9c12f4e6e}
+Get a uniformly distributed R\+V in \mbox{[}m,n\mbox{]} (m,n are int). \hypertarget{classRandomGenerator_a6c161d5ba97abe160d46d031f2211eb7}{}\index{Random\+Generator@{Random\+Generator}!Obj@{Obj}}
+\index{Obj@{Obj}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{Obj}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Random\+Generator}\& Random\+Generator\+::\+Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classRandomGenerator_a6c161d5ba97abe160d46d031f2211eb7}
+The random generator access function. \hypertarget{classRandomGenerator_a35e84fa76d2bfaba05671aa0f79c1b0a}{}\index{Random\+Generator@{Random\+Generator}!Seed@{Seed}}
+\index{Seed@{Seed}!Random\+Generator@{Random\+Generator}}
+\subsubsection[{Seed}]{\setlength{\rightskip}{0pt plus 5cm}void Random\+Generator\+::\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRandomGenerator_a35e84fa76d2bfaba05671aa0f79c1b0a}
+Seed the generator. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Random\+Generator.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Random\+Generator.\+cpp\end{DoxyCompactItemize}

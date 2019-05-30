@@ -1,0 +1,101 @@
+\hypertarget{classModelInputObject}{}\section{Model\+Input\+Object Class Reference}
+\label{classModelInputObject}\index{Model\+Input\+Object@{Model\+Input\+Object}}
+
+
+{\ttfamily \#include $<$Model\+Input\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classModelInputObject_a64b031469546b19177c0a13365058162}{}\hyperlink{classModelInputObject_a64b031469546b19177c0a13365058162}{Model\+Input\+Object} ()\label{classModelInputObject_a64b031469546b19177c0a13365058162}
+
+\begin{DoxyCompactList}\small\item\em The constructor of the \hyperlink{classModelInputObject}{Model\+Input\+Object}. \end{DoxyCompactList}\item 
+bool \hyperlink{classModelInputObject_a9741685527f446bd2bf66455c5b01d0c}{read\+Parameters} ()
+\begin{DoxyCompactList}\small\item\em This is the main funciton reading the parameters from file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classModelInputObject_a449b2f014b6095bf2a76adb5dfb9dc50}{}std\+::shared\+\_\+ptr$<$ \hyperlink{classSimulation}{Simulation} $>$ \hyperlink{classModelInputObject_a449b2f014b6095bf2a76adb5dfb9dc50}{Sim}\label{classModelInputObject_a449b2f014b6095bf2a76adb5dfb9dc50}
+
+\begin{DoxyCompactList}\small\item\em The pointer to the simulation object, for which the parameters are being read from the modelinput file. \end{DoxyCompactList}\item 
+\hypertarget{classModelInputObject_a949d172401012173bcb6a5683f5690df}{}std\+::string \hyperlink{classModelInputObject_a949d172401012173bcb6a5683f5690df}{parameter\+File\+Name}\label{classModelInputObject_a949d172401012173bcb6a5683f5690df}
+
+\begin{DoxyCompactList}\small\item\em The name (including path) of the file containing the model input parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classModelInputObject}{Model\+Input\+Object} class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classModelInputObject_a9741685527f446bd2bf66455c5b01d0c}{}\index{Model\+Input\+Object@{Model\+Input\+Object}!read\+Parameters@{read\+Parameters}}
+\index{read\+Parameters@{read\+Parameters}!Model\+Input\+Object@{Model\+Input\+Object}}
+\subsubsection[{read\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool Model\+Input\+Object\+::read\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classModelInputObject_a9741685527f446bd2bf66455c5b01d0c}
+
+
+This is the main funciton reading the parameters from file. 
+
+This function will read all available model inputs from the file \hyperlink{classModelInputObject_a949d172401012173bcb6a5683f5690df}{Model\+Input\+Object\+::parameter\+File\+Name}. ~\newline
+It will start by opening the model input file, after each attempt to open a file, there will be a health check to ensure the file could be opened. In case there are issues with the file (most common one being the file is not opened due to a path error), the function will throw an error with corresponding explanatory error message, and quit the simulation.
+
+After successfully opening the input file, the function will read it until it reaches to the end of the file. This will involve a series of private functions, which are thoroughly documented in source code, while the processed documentation may or may not be available in this user interface documentation structure.
+
+Depending on the header the function it encounters it will read\+:
+
+Mesh geometry related parameters through the private function Model\+Input\+Object\+::read\+Mesh\+Parameters
+
+Peripodial membrane structure related parameters through the private function Model\+Input\+Object\+::read\+Peripodial\+Membrane\+Parameters
+
+Linker zone physical properties through the private function Model\+Input\+Object\+::read\+Linker\+Zone\+Parameters
+
+Inputs relating to fixing the nodes of the tissue through the private function Model\+Input\+Object\+::read\+Node\+Fixing\+Parameters
+
+Inputs relating to binding the displacement the nodes of the tissue through the private function Model\+Input\+Object\+::read\+Node\+Binding\+Parameters
+
+Inputs relating to the external viscosity felt by the tissue through private function Model\+Input\+Object\+::read\+External\+Viscosity\+Parameters
+
+\hyperlink{classSimulation}{Simulation} time and time step related parameters through the private function Model\+Input\+Object\+::read\+Time\+Parameters
+
+Physical parameters of the tissue through the private function Model\+Input\+Object\+::read\+Pysical\+Properties
+
+Save options of the simulation through the private function Model\+Input\+Object\+::read\+Save\+Options
+
+Growth functions and related parameters of the simulation through the private function Model\+Input\+Object\+::read\+Growth\+Options
+
+Shape change functions and related parameters of the simulation through the private function Model\+Input\+Object\+::read\+Shape\+Change\+Options
+
+Plastic deformation options through the private function Model\+Input\+Object\+::read\+Plastic\+Deformation\+Options
+
+Stretcher experimental setup parameters of the simulation through the private function Model\+Input\+Object\+::read\+Stretcher\+Setup
+
+Pipette aspiration experimental setup parameters of the simulation through the private function Model\+Input\+Object\+::read\+Pipette\+Setup
+
+Setting perturbations to E\+C\+M, current setup includes softening of apical or basal E\+C\+M at a given time point.
+
+Setting perturbations to tissue stiffness, current setup includes changing Young\textquotesingle{}s modulus for apical, basal or whole tissue at a given time point.
+
+Setting perturbations to E\+C\+M, current setup includes softening of apical or basal E\+C\+M at a given time point.
+
+Setting perturbations to E\+C\+M, current setup includes softening of apical or basal E\+C\+M at a given time point.
+
+Setting the flag to activate adhesion in the model
+
+Setting the flag to activate node collapsing for elements dangerously close to flipping
+
+Setting explicit actin options, The actin layer will not grow in z.
+
+Setting volume redistributions options, The volume will be redistributed within a column of elements, starting from the apical surface.
+
+Setting mutation options.
+
+Setting z enclosement options.
+
+In the case that the function, or any of the above listed parameter reading functions, encounters an unexpected line in the model input file, it will throw an error with a corresponding explanatory message, and quit the simulation.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Model\+Input\+Object.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Model\+Input\+Object.\+cpp\end{DoxyCompactItemize}

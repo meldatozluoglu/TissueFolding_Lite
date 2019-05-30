@@ -1,0 +1,284 @@
+\hypertarget{classGLWidget}{}\section{G\+L\+Widget Class Reference}
+\label{classGLWidget}\index{G\+L\+Widget@{G\+L\+Widget}}
+
+
+{\ttfamily \#include $<$G\+L\+Widget.\+h$>$}
+
+Inheritance diagram for G\+L\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGLWidget}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGLWidget_a031d84e410b07e5c8afca4ab11e06c54}{}void \hyperlink{classGLWidget_a031d84e410b07e5c8afca4ab11e06c54}{Selected\+Item\+Changed} ()\label{classGLWidget_a031d84e410b07e5c8afca4ab11e06c54}
+
+\begin{DoxyCompactList}\small\item\em Signal emmitted when the selected item has changed, either with manu input, or as mouse click. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a628dd262f28dda97912e2f5d61eb8c6a}{}void \hyperlink{classGLWidget_a628dd262f28dda97912e2f5d61eb8c6a}{Need\+To\+Clear\+Manual\+Element\+Selection} ()\label{classGLWidget_a628dd262f28dda97912e2f5d61eb8c6a}
+
+\begin{DoxyCompactList}\small\item\em Signal emmitted to clear existing element selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGLWidget_ab79c391c86de1ffb76f6950b49d82c0c}{}\hyperlink{classGLWidget_ab79c391c86de1ffb76f6950b49d82c0c}{G\+L\+Widget} (Q\+Widget $\ast$parent=0)\label{classGLWidget_ab79c391c86de1ffb76f6950b49d82c0c}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a535192a4262b4501e5493303834f45d3}{}\hyperlink{classGLWidget_a535192a4262b4501e5493303834f45d3}{$\sim$\+G\+L\+Widget} ()\label{classGLWidget_a535192a4262b4501e5493303834f45d3}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_ade3142625c1bfda0576e419b176cf8b1}{}Q\+Size {\bfseries minimum\+Size\+Hint} () const \label{classGLWidget_ade3142625c1bfda0576e419b176cf8b1}
+
+\item 
+\hypertarget{classGLWidget_a57698bc426052845b43a135a13540154}{}Q\+Size {\bfseries size\+Hint} () const \label{classGLWidget_a57698bc426052845b43a135a13540154}
+
+\item 
+void \hyperlink{classGLWidget_ad425870ac081f6814c5bdb794e6e4c21}{manual\+Element\+Selection} (int i)
+\begin{DoxyCompactList}\small\item\em This funciton will make screen and vbo updates for selecting an element from id input menu bar manually. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGLWidget_a064d69f850c3822d5b1a80f2248e30c6}{}std\+::shared\+\_\+ptr$<$ \hyperlink{classSimulation}{Simulation} $>$ \hyperlink{classGLWidget_a064d69f850c3822d5b1a80f2248e30c6}{Sim01}\label{classGLWidget_a064d69f850c3822d5b1a80f2248e30c6}
+
+\begin{DoxyCompactList}\small\item\em Shared pointer to the simulation object. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a1b697f35b35a3bdd7132548daafe63c9}{}bool \hyperlink{classGLWidget_a1b697f35b35a3bdd7132548daafe63c9}{update\+V\+B\+O}\label{classGLWidget_a1b697f35b35a3bdd7132548daafe63c9}
+
+\begin{DoxyCompactList}\small\item\em The boolean flagging the G\+L\+Widget\+::vbo should be updated. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a37fa0d9c8bfb720f550365da0aefccc7}{}bool \hyperlink{classGLWidget_a37fa0d9c8bfb720f550365da0aefccc7}{Item\+Selected}\label{classGLWidget_a37fa0d9c8bfb720f550365da0aefccc7}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if an element is selected. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a67bf1bb7f19922f4ccb6728f339920e4}{}string \hyperlink{classGLWidget_a67bf1bb7f19922f4ccb6728f339920e4}{Selected\+Item\+Name}\label{classGLWidget_a67bf1bb7f19922f4ccb6728f339920e4}
+
+\begin{DoxyCompactList}\small\item\em The name of the selected element. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a908e8a53461c09eacf8d82d78d0a84d3}{}int \hyperlink{classGLWidget_a908e8a53461c09eacf8d82d78d0a84d3}{Selected\+Item\+Index}\label{classGLWidget_a908e8a53461c09eacf8d82d78d0a84d3}
+
+\begin{DoxyCompactList}\small\item\em The index of the selected element. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a314984029a390e02a2d4235c5c2741a5}{}bool \hyperlink{classGLWidget_a314984029a390e02a2d4235c5c2741a5}{Display\+Strains}\label{classGLWidget_a314984029a390e02a2d4235c5c2741a5}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the strains are visualised. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a753550713effac7b997844f2759c6129}{}float \hyperlink{classGLWidget_a753550713effac7b997844f2759c6129}{Display\+Strain\+Range} \mbox{[}2\mbox{]}\label{classGLWidget_a753550713effac7b997844f2759c6129}
+
+\begin{DoxyCompactList}\small\item\em The double array giving the scale of minimum and maximum strain for colour mapping. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_ae95a720ff47f77ab05229d6502223c6f}{}int \hyperlink{classGLWidget_ae95a720ff47f77ab05229d6502223c6f}{Strain\+To\+Display}\label{classGLWidget_ae95a720ff47f77ab05229d6502223c6f}
+
+\begin{DoxyCompactList}\small\item\em The option for the selected strain. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a9a990de1ec4c0e18778611cb0159eac8}{}bool \hyperlink{classGLWidget_a9a990de1ec4c0e18778611cb0159eac8}{Display\+Pys\+Prop}\label{classGLWidget_a9a990de1ec4c0e18778611cb0159eac8}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the physical propoerties are visualised. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a478ab24d1ae3c646f40afedb72b725ae}{}int \hyperlink{classGLWidget_a478ab24d1ae3c646f40afedb72b725ae}{Pys\+Prop\+To\+Display}\label{classGLWidget_a478ab24d1ae3c646f40afedb72b725ae}
+
+\begin{DoxyCompactList}\small\item\em The option for the selected physical property. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a1748fb50c9552ff8bfc37674e094db3a}{}float \hyperlink{classGLWidget_a1748fb50c9552ff8bfc37674e094db3a}{Display\+Pys\+Prop\+Range} \mbox{[}5\mbox{]}\mbox{[}2\mbox{]}\label{classGLWidget_a1748fb50c9552ff8bfc37674e094db3a}
+
+\begin{DoxyCompactList}\small\item\em The current ranges for physical property, for each possible physical property\+: \mbox{[}min\mbox{]}\mbox{[}max\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_ac0ba05c87161b879805d40d899a9aefa}{}float \hyperlink{classGLWidget_ac0ba05c87161b879805d40d899a9aefa}{Display\+Pys\+Prop\+Bounds} \mbox{[}5\mbox{]}\mbox{[}4\mbox{]}\label{classGLWidget_ac0ba05c87161b879805d40d899a9aefa}
+
+\begin{DoxyCompactList}\small\item\em The minimum and maximum of the range for selected physical property, for each possible physical property\+: \mbox{[}min-\/lower bound\mbox{]}\mbox{[}min-\/upper bound\mbox{]}\mbox{[}max-\/lower bound\mbox{]}\mbox{[}max-\/upper bound\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a09145c9029860cc666005168a7db52b4}{}int \hyperlink{classGLWidget_a09145c9029860cc666005168a7db52b4}{Display\+Pys\+Prop\+Decimals} \mbox{[}5\mbox{]}\label{classGLWidget_a09145c9029860cc666005168a7db52b4}
+
+\begin{DoxyCompactList}\small\item\em The decimal points for spin boxes for physical property display. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a22184489528112f605a96bea8ab0409e}{}float \hyperlink{classGLWidget_a22184489528112f605a96bea8ab0409e}{Display\+Pys\+Prop\+Steps} \mbox{[}5\mbox{]}\label{classGLWidget_a22184489528112f605a96bea8ab0409e}
+
+\begin{DoxyCompactList}\small\item\em current step of the spinbox for physical property display. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_ac238abe591ebaf2aa26a65378a65ce0f}{}vector$<$ Q\+String $>$ \hyperlink{classGLWidget_ac238abe591ebaf2aa26a65378a65ce0f}{Selected\+Pos}\label{classGLWidget_ac238abe591ebaf2aa26a65378a65ce0f}
+
+\begin{DoxyCompactList}\small\item\em The vector of selected positions in string form for display. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a358fbf9622862b7fd18a5eafca90aaf2}{}vector$<$ Q\+String $>$ \hyperlink{classGLWidget_a358fbf9622862b7fd18a5eafca90aaf2}{Selected\+Id}\label{classGLWidget_a358fbf9622862b7fd18a5eafca90aaf2}
+
+\begin{DoxyCompactList}\small\item\em The vector of selected ids in string form for display. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a16bec7573f51d68f7606c13d258fdff2}{}bool {\bfseries display\+Pipette}\label{classGLWidget_a16bec7573f51d68f7606c13d258fdff2}
+
+\item 
+\hypertarget{classGLWidget_a50707fe8f3eb2f48a541094af67c0e2b}{}bool {\bfseries draw\+Symmetricity}\label{classGLWidget_a50707fe8f3eb2f48a541094af67c0e2b}
+
+\item 
+\hypertarget{classGLWidget_a4a046f26807fc8e3be97438d5b3cd54c}{}float \hyperlink{classGLWidget_a4a046f26807fc8e3be97438d5b3cd54c}{obj\+\_\+pos} \mbox{[}3\mbox{]}\label{classGLWidget_a4a046f26807fc8e3be97438d5b3cd54c}
+
+\begin{DoxyCompactList}\small\item\em The array in 3\+D, stating the traslation of the current view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGLWidget_a7fab13e8cc9fc0730ca54c08b2c923a7}{initialize\+G\+L} ()
+\begin{DoxyCompactList}\small\item\em This function sets up the G\+L object. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a640b5570cb2b37724fd5b58a77339c5e}{}void \hyperlink{classGLWidget_a640b5570cb2b37724fd5b58a77339c5e}{paint\+G\+L} ()\label{classGLWidget_a640b5570cb2b37724fd5b58a77339c5e}
+
+\begin{DoxyCompactList}\small\item\em This function paints the screen at each update. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_ac0d2a8ecf60907a81c0d73475d851025}{resize\+G\+L} (int width, int height)
+\begin{DoxyCompactList}\small\item\em This function ensures aspect ratio preserving update of the view. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_ab144cc8064c1bbf6d0ef0646ca0bd06c}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Mouse press event for view manipulation. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_ab992c4c25439a5ef23031991015451c1}{mouse\+Release\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Mouse release event for view manipulation. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_a9043bac13d6f0a5307ea5c7f9b3caa50}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Mouse move event for view manipulation. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_a5702a23f7cf42d05fe55a417d810a4b6}{wheel\+Event} (Q\+Wheel\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Mouse wheel event for view manipulation. \end{DoxyCompactList}\item 
+void \hyperlink{classGLWidget_af102973086f831f0a27b3458c57bb337}{Object\+Selection} (Q\+Point Last\+Pos)
+\begin{DoxyCompactList}\small\item\em This function checks for selection of an element under the last mouse click, updates model as needed. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a040b04f3707c01014977d6465bb441c0}{}void \hyperlink{classGLWidget_a040b04f3707c01014977d6465bb441c0}{update\+V\+B\+O\+Data} ()\label{classGLWidget_a040b04f3707c01014977d6465bb441c0}
+
+\begin{DoxyCompactList}\small\item\em This funciton updates all the G\+L\+Widget\+::vbo information from the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a0add0176392582cc3db892bcf88b736a}{}void \hyperlink{classGLWidget_a0add0176392582cc3db892bcf88b736a}{update\+V\+B\+O\+Colors} ()\label{classGLWidget_a0add0176392582cc3db892bcf88b736a}
+
+\begin{DoxyCompactList}\small\item\em This funciton updates the G\+L\+Widget\+::vbo node colour information from the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a4aba027a507e84b880acd641275165d4}{}void \hyperlink{classGLWidget_a4aba027a507e84b880acd641275165d4}{reset\+Item\+Selection\+Info} (int source)\label{classGLWidget_a4aba027a507e84b880acd641275165d4}
+
+\begin{DoxyCompactList}\small\item\em This function reseats the element selection information, as a new selection identified no elements. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a7fe217738ad7d4c54caa575068641234}{}void \hyperlink{classGLWidget_a7fe217738ad7d4c54caa575068641234}{find\+Element} ()\label{classGLWidget_a7fe217738ad7d4c54caa575068641234}
+
+\begin{DoxyCompactList}\small\item\em This function finds the element under mouse click from picked unique identifier colour. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_aa1c349f897d0fee1163abba8fd39995c}{}bool \hyperlink{classGLWidget_aa1c349f897d0fee1163abba8fd39995c}{find\+Element} (int i)\label{classGLWidget_aa1c349f897d0fee1163abba8fd39995c}
+
+\begin{DoxyCompactList}\small\item\em This function finds the element with input index. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_afc09ab8fa7a8163ca1b69e7953e33dc4}{}void \hyperlink{classGLWidget_afc09ab8fa7a8163ca1b69e7953e33dc4}{get\+Colour\+Of\+Point} (Q\+Point Last\+Pos)\label{classGLWidget_afc09ab8fa7a8163ca1b69e7953e33dc4}
+
+\begin{DoxyCompactList}\small\item\em This funciton returns the screen colour of the input point. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a218fadfeda519fd8a120b702f04771c8}{}void \hyperlink{classGLWidget_a218fadfeda519fd8a120b702f04771c8}{draw\+For\+Picking} ()\label{classGLWidget_a218fadfeda519fd8a120b702f04771c8}
+
+\begin{DoxyCompactList}\small\item\em This function draws the elements on screen buffer with their unique picking identifier colours. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_a30be9e529d717552be70cbad097d99e8}{}void \hyperlink{classGLWidget_a30be9e529d717552be70cbad097d99e8}{initialise\+Node\+Colour\+List} ()\label{classGLWidget_a30be9e529d717552be70cbad097d99e8}
+
+\begin{DoxyCompactList}\small\item\em This funciton initialises the nodal colours from simulation information and display preferences. \end{DoxyCompactList}\item 
+\hypertarget{classGLWidget_af2ce64f5342b0a42f9460a9173b7eaf7}{}void \hyperlink{classGLWidget_af2ce64f5342b0a42f9460a9173b7eaf7}{fill\+Item\+Selection\+Info} (int i)\label{classGLWidget_af2ce64f5342b0a42f9460a9173b7eaf7}
+
+\begin{DoxyCompactList}\small\item\em This function fills in the item selection information for the element with input indice i. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classGLWidget}{G\+L\+Widget} class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classGLWidget_a7fab13e8cc9fc0730ca54c08b2c923a7}{}\index{G\+L\+Widget@{G\+L\+Widget}!initialize\+G\+L@{initialize\+G\+L}}
+\index{initialize\+G\+L@{initialize\+G\+L}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{initialize\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::initialize\+G\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_a7fab13e8cc9fc0730ca54c08b2c923a7}
+
+
+This function sets up the G\+L object. 
+
+In initialisation the vertex buffers will be constructed. Each prism of the system is actually made up of 6 nodes, the ids rangeing from 0-\/5. For correct lighting, same nodes should hold different normals at the edges. Therefore, for each prism of 6 nodes, a total of 18 vertices are stored\+: 3 upper surface, 3 lower surface, 4 for each of 3 side rectangles. The indice order is stored in the array vertex\+Order\+To\+Add\+For\+Prism.
+
+For each of the stored vertices, first the position array is inserted into the G\+L\+Widget\+::\+G\+L\+Vertices.
+
+then the current colour of the vertex,
+
+then the current normal pointing out of the vertex,
+
+and lastly, the unique identifier colour of Element\+Colour are appended to the vertex buffer.
+
+Each prism will be defined by size trienagles (upper/lower surfaces and two triangles each for each of the three side rectangles). These triangles will be defined by the 18 vertices added to the vectex buffer for this triangle. Their order in terms of the elemental vertex index is stored in triangles\+For\+Node\+Order\+Added\+By\+Element.
+
+As these indices are in the elemental definition, they are be positioned in the vertex array with the offset\+: (element index from the simulation) $\ast$18. With the offset correction, the tirangle information is appended to the G\+L\+Widget\+::\+G\+L\+Elements
+
+Then the vertex (G\+L\+Widget\+::vbo) and element (G\+L\+Widget\+::veo) buffers are generated with the size of the vectors G\+L\+Widget\+::\+G\+L\+Vertices and G\+L\+Widget\+::\+G\+L\+Elements.
+
+The shaders are set up.
+
+In development, the shader status can be checked in a hard coded loop within this function. The loop is not active in release, but can be activated with setting check\+Shader\+Status = true insisde the code. This loop will also print the log buffer.
+
+The position attribute is assiged for the first 3 items on the stride of 12 floats in the vertex buffer.
+
+The colour attribute is assiged after an offset of 3 floats (for position) to the next 3 items on the stride of 12 floats in the vertex buffer.
+
+The normal attribute is assiged after an offset of 6 floats (for position + colour) to the next 3 items on the stride of 12 floats in the vertex buffer.
+
+Fianllt, the unique colour identifier of the elementm picking colour attribute is assiged after an offset of 9 floats (for position + colour + normal) to the next 3 items on the stride of 12 floats in the vertex buffer.
+
+Then the orthagonal view and rotation matrices are set followed by the drawing options.\hypertarget{classGLWidget_ad425870ac081f6814c5bdb794e6e4c21}{}\index{G\+L\+Widget@{G\+L\+Widget}!manual\+Element\+Selection@{manual\+Element\+Selection}}
+\index{manual\+Element\+Selection@{manual\+Element\+Selection}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{manual\+Element\+Selection}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::manual\+Element\+Selection (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{classGLWidget_ad425870ac081f6814c5bdb794e6e4c21}
+
+
+This funciton will make screen and vbo updates for selecting an element from id input menu bar manually. 
+
+This function is selected to update elemetn selection when the id of the element is typed in.\hypertarget{classGLWidget_a9043bac13d6f0a5307ea5c7f9b3caa50}{}\index{G\+L\+Widget@{G\+L\+Widget}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{mouse\+Move\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_a9043bac13d6f0a5307ea5c7f9b3caa50}
+
+
+Mouse move event for view manipulation. 
+
+If a left click is being moved, then the last position is updated until relase.
+
+If a middle click is being moved, then the last position is updated and the view is transposed accordingly.
+
+If a right click is being moved, then the system is rotated with the projected movement of the mouse. Rotation is done with quaternians.\hypertarget{classGLWidget_ab144cc8064c1bbf6d0ef0646ca0bd06c}{}\index{G\+L\+Widget@{G\+L\+Widget}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{mouse\+Press\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_ab144cc8064c1bbf6d0ef0646ca0bd06c}
+
+
+Mouse press event for view manipulation. 
+
+The mouse press event will update the clicked button identifier and record the initial position of click.\hypertarget{classGLWidget_ab992c4c25439a5ef23031991015451c1}{}\index{G\+L\+Widget@{G\+L\+Widget}!mouse\+Release\+Event@{mouse\+Release\+Event}}
+\index{mouse\+Release\+Event@{mouse\+Release\+Event}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{mouse\+Release\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::mouse\+Release\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_ab992c4c25439a5ef23031991015451c1}
+
+
+Mouse release event for view manipulation. 
+
+If a left click is released in the immediate neighbourhood of the initial click (allow for 5 pixel error), then this is identified as an attempt at object selection, and the relevant function \hyperlink{classGLWidget_af102973086f831f0a27b3458c57bb337}{G\+L\+Widget\+::\+Object\+Selection} is called.
+
+For hardware setups that do not have an inherent middle click, there is ian alternative view movement option added. If the left button is dragged, this will also let traslation of the coordinates.\hypertarget{classGLWidget_af102973086f831f0a27b3458c57bb337}{}\index{G\+L\+Widget@{G\+L\+Widget}!Object\+Selection@{Object\+Selection}}
+\index{Object\+Selection@{Object\+Selection}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{Object\+Selection}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::\+Object\+Selection (
+\begin{DoxyParamCaption}
+\item[{Q\+Point}]{Last\+Pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_af102973086f831f0a27b3458c57bb337}
+
+
+This function checks for selection of an element under the last mouse click, updates model as needed. 
+
+This function starts by drawing the schene into the buffer with the \hyperlink{classGLWidget_a218fadfeda519fd8a120b702f04771c8}{G\+L\+Widget\+::draw\+For\+Picking} function. Here, all visible elements of the schene are drawn as usual, but instead of colourd defiend by teh user inputs, they are drawn with their unique drawing colours. Please bear in mind this is a transition phase for screen picking, and thse colours are not displatyed at any point.
+
+The picking attempt is registered bu the function \hyperlink{classGLWidget_ab992c4c25439a5ef23031991015451c1}{G\+L\+Widget\+::mouse\+Release\+Event}, and the last pointwhere the mouse was release is recorded in Last\+Pos, an input of this function. Picked colour is read into G\+L\+Widget\+::\+Picked\+Colour via function \hyperlink{classGLWidget_afc09ab8fa7a8163ca1b69e7953e33dc4}{G\+L\+Widget\+::get\+Colour\+Of\+Point}. Then the owner of the picked unique color is identified in \hyperlink{classGLWidget_a7fe217738ad7d4c54caa575068641234}{G\+L\+Widget\+::find\+Element}.
+
+On the display, there may be item labels left, and those are cleaned by \hyperlink{classGLWidget_a4aba027a507e84b880acd641275165d4}{G\+L\+Widget\+::reset\+Item\+Selection\+Info}. Then the element is found from the picked colour via \hyperlink{classGLWidget_a7fe217738ad7d4c54caa575068641234}{G\+L\+Widget\+::find\+Element}.\hypertarget{classGLWidget_ac0d2a8ecf60907a81c0d73475d851025}{}\index{G\+L\+Widget@{G\+L\+Widget}!resize\+G\+L@{resize\+G\+L}}
+\index{resize\+G\+L@{resize\+G\+L}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{resize\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::resize\+G\+L (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_ac0d2a8ecf60907a81c0d73475d851025}
+
+
+This function ensures aspect ratio preserving update of the view. 
+
+Upon resizing the window, the width and height are scaled with the aspect ratio to keep the aspect ratio of the drawn simulation results constant.\hypertarget{classGLWidget_a5702a23f7cf42d05fe55a417d810a4b6}{}\index{G\+L\+Widget@{G\+L\+Widget}!wheel\+Event@{wheel\+Event}}
+\index{wheel\+Event@{wheel\+Event}!G\+L\+Widget@{G\+L\+Widget}}
+\subsubsection[{wheel\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void G\+L\+Widget\+::wheel\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Wheel\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classGLWidget_a5702a23f7cf42d05fe55a417d810a4b6}
+
+
+Mouse wheel event for view manipulation. 
+
+If the mouse wheel is activated, the system is zooming in or out.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+User\+Interface/\+Source\+Code/G\+L\+Widget.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+User\+Interface/\+Source\+Code/G\+L\+Widget.\+cpp\end{DoxyCompactItemize}

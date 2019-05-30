@@ -1,0 +1,29 @@
+TimeStep(sec):  1800
+DataSaveInterval(sec):  1800
+ModelinputName:  /home/ucgamto/Scratch/Projects/TissueFolding/bulkruns/ModelInputs/modelinput00001
+
+Mesh_Type:  4
+	Symmetricity-x: 0 Symmetricity-y: 1
+	MeshFileName: /home/ucgamto/Scratch/Projects/TissueFolding/bulkruns/MeshFiles/Exp48hr-noPeri-ThinECM_12.mesh
+
+Growth Type:  growth From File (3)
+	Initial time(sec): 0	FinalTime time(sec): 57600	Growth matrix mesh size: 60 33
+Growth Type:  growth From File (3)
+	Initial time(sec): 57600	FinalTime time(sec): 115200	Growth matrix mesh size: 60 33
+Growth Type:  growth From File (3)
+	Initial time(sec): 115200	FinalTime time(sec): 172800	Growth matrix mesh size: 60 33
+Growth Type:  growth From File (3)
+	Initial time(sec): 0	FinalTime time(sec): 115200	Growth matrix mesh size: 60 33
+Growth Type:  growth From File (3)
+	Initial time(sec): 115200	FinalTime time(sec): 172800	Growth matrix mesh size: 60 33
+
+
+There is explicit ECM:	1
+	Columnar ECM Stiffness(Pa): 1600
+	Peripodial ECM Stiffness(Pa): 100
+	ECM remodelling half life (hour): 8
+	Is there perturbation to the ECM: 0
+
+There is explicit actin:  1
+
+There is pipette aspiration:  0

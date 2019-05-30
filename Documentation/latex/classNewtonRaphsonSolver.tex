@@ -1,0 +1,334 @@
+\hypertarget{classNewtonRaphsonSolver}{}\section{Newton\+Raphson\+Solver Class Reference}
+\label{classNewtonRaphsonSolver}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+
+
+{\ttfamily \#include $<$Newton\+Raphson\+Solver.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNewtonRaphsonSolver_a3cd02ecd63a37d6b621ece7f781aeefd}{Newton\+Raphson\+Solver} (int n\+Dim, int n\+Nodes)
+\begin{DoxyCompactList}\small\item\em Constructer of the N-\/\+R solver. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a84bf8e492138670ee2a9355c65b35904}{}\hyperlink{classNewtonRaphsonSolver_a84bf8e492138670ee2a9355c65b35904}{$\sim$\+Newton\+Raphson\+Solver} ()\label{classNewtonRaphsonSolver_a84bf8e492138670ee2a9355c65b35904}
+
+\begin{DoxyCompactList}\small\item\em Desturctor of the N-\/\+R solver. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a3d01456ea07e72b0f02ae2e8d2b8ec9e}{}void \hyperlink{classNewtonRaphsonSolver_a3d01456ea07e72b0f02ae2e8d2b8ec9e}{set\+Matrices\+To\+Zero\+At\+The\+Beginning\+Of\+Iteration} ()\label{classNewtonRaphsonSolver_a3d01456ea07e72b0f02ae2e8d2b8ec9e}
+
+\begin{DoxyCompactList}\small\item\em The function setting the calculation matrices to zero at the beginning of each iteration. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a36d647a13f9942e90e288a42c5444c4d}{}void \hyperlink{classNewtonRaphsonSolver_a36d647a13f9942e90e288a42c5444c4d}{set\+Matrices\+To\+Zero\+Inside\+Iteration} ()\label{classNewtonRaphsonSolver_a36d647a13f9942e90e288a42c5444c4d}
+
+\begin{DoxyCompactList}\small\item\em The function setting the relevant matrices to zero at each iteration. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_af759360cc54ea9515deb3cc2ecc83377}{}void \hyperlink{classNewtonRaphsonSolver_af759360cc54ea9515deb3cc2ecc83377}{construct\+Un\+Matrix} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ $>$ \&Nodes)\label{classNewtonRaphsonSolver_af759360cc54ea9515deb3cc2ecc83377}
+
+\begin{DoxyCompactList}\small\item\em This function constructs \hyperlink{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{Newton\+Raphson\+Solver\+::un} matrix at the beginning of the iterations. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a48b7753542f36889cd030104937d76a3}{}void \hyperlink{classNewtonRaphsonSolver_a48b7753542f36889cd030104937d76a3}{initialte\+Uk\+Matrix} ()\label{classNewtonRaphsonSolver_a48b7753542f36889cd030104937d76a3}
+
+\begin{DoxyCompactList}\small\item\em This function initiates \hyperlink{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}{Newton\+Raphson\+Solver\+::uk} matrix at the beginning of the iterations, it is initiated to be equal to \hyperlink{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{Newton\+Raphson\+Solver\+::un}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_aa1e2ec4519853c9acfaf120c4b513651}{calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F} ()
+\begin{DoxyCompactList}\small\item\em This function updates the Jacobian of the system, \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}, to reflect degrees of freedom binding. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_ad1670a14238d705e839d7bd80fb42c13}{}void \hyperlink{classNewtonRaphsonSolver_ad1670a14238d705e839d7bd80fb42c13}{equate\+Slave\+Displacements\+To\+Masters} ()\label{classNewtonRaphsonSolver_ad1670a14238d705e839d7bd80fb42c13}
+
+\begin{DoxyCompactList}\small\item\em This function moves the slaves of bound couples with a displacement equivalent to the masters\textquotesingle{}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_aa0ce333a40397fd113f9b9fc47bcb6ca}{calculate\+Displacement\+Matrix} (double dt)
+\begin{DoxyCompactList}\small\item\em This function calculates the displacement of each node in current iteration \char`\"{}k\char`\"{}, from their positions at the end of the previous step \char`\"{}n\char`\"{} (\hyperlink{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}{Newton\+Raphson\+Solver\+::uk} -\/ \hyperlink{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{Newton\+Raphson\+Solver\+::un}) \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_acfaaed8f038167756f352b566b8455d7}{calcutate\+Fixed\+K} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes)
+\begin{DoxyCompactList}\small\item\em This function updates the Jacobian to account for nodes that are fixed in certain dimensions in space, as part of boundary conditions. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a5793ee41a3a4d97c0c944347f1f6da8e}{calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&Elements, double dt)
+\begin{DoxyCompactList}\small\item\em This function calculates elemental forces and Jacobians, later to be combined in \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K} and \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_aca7345c1d02bf38b1c36cf1f5110f869}{}void \hyperlink{classNewtonRaphsonSolver_aca7345c1d02bf38b1c36cf1f5110f869}{write\+Forces\+Toge\+Andgv\+Internal} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&Elements, std\+::vector$<$ std\+::array$<$ double, 3 $>$$>$ \&System\+Forces)\label{classNewtonRaphsonSolver_aca7345c1d02bf38b1c36cf1f5110f869}
+
+\begin{DoxyCompactList}\small\item\em This function writes the values of elemental elastic (Shape\+Base\+::ge) and internal viscous forces (Shape\+Base\+::gv\+Internal) into the system elastic and internal viscous forces, \hyperlink{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}{Newton\+Raphson\+Solver\+::ge}, and \hyperlink{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}{Newton\+Raphson\+Solver\+::gv\+Internal}, respectively. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a0d6e3a4d0cf1c6e4fdf2753c7f08df13}{write\+Implicit\+Elemental\+K\+To\+Jacobian} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&Elements)
+\begin{DoxyCompactList}\small\item\em This function writes the elemental values for elastic part of the Jacobian -\/ stiffness matrix -\/ (\hyperlink{classShapeBase_ace20710f27099833509c474b221c25df}{Shape\+Base\+::\+Tri\+Point\+Ke}) and for viscous part of Jacobian (\hyperlink{classShapeBase_a7fa5b1338e405a2c75c8d010f4153b05}{Shape\+Base\+::\+Tri\+Point\+Kv}) into the system Jacobian \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_ad39200f7babf1a3761a010c1a43f7c22}{calculate\+External\+Viscous\+Forces\+For\+N\+R} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes)
+\begin{DoxyCompactList}\small\item\em This function calculates the external viscous forces acting on each node, the values are sotred in \hyperlink{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{Newton\+Raphson\+Solver\+::gv\+External}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a78759a96ed41bf35e8401b7c63180ea2}{add\+Implicit\+K\+Viscous\+External\+To\+Jacobian} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, double dt)
+\begin{DoxyCompactList}\small\item\em This function adds the external related terms of the Jacobian to the system Jacobian \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a40dee8332c648b53cb9b1c8f2f2861ee}{check\+Jacobian\+For\+Ablated\+Nodes} (std\+::vector$<$ int $>$ \&Ablated\+Nodes)
+\begin{DoxyCompactList}\small\item\em This functions checks the Jacobian to ensure the diagonal terms are non-\/zero for ablated nodes. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_aba9098983f90b6237a9d32ea633bcb7f}{}void \hyperlink{classNewtonRaphsonSolver_aba9098983f90b6237a9d32ea633bcb7f}{calculate\+Sum\+Of\+Internal\+Forces} ()\label{classNewtonRaphsonSolver_aba9098983f90b6237a9d32ea633bcb7f}
+
+\begin{DoxyCompactList}\small\item\em This function adds the ealsticity and viscosity related forces (\hyperlink{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}{Newton\+Raphson\+Solver\+::ge}, \hyperlink{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}{Newton\+Raphson\+Solver\+::gv\+Internal}, \hyperlink{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{Newton\+Raphson\+Solver\+::gv\+External}) to sum of forces, \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum}. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a24f8fb47b9c29dd9856228ba0602f69e}{add\+Exernal\+Forces} ()
+\item 
+void \hyperlink{classNewtonRaphsonSolver_a8efb09b253b7d19bd978296314d65c24}{solve\+For\+Delta\+U} ()
+\begin{DoxyCompactList}\small\item\em This function solves for the displacements within the N-\/\+R step. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a710aa89593ea0236da8bf6e4594dbe3d}{}int {\bfseries solve\+With\+Pardiso} (double $\ast$a, double $\ast$b, int $\ast$ia, int $\ast$ja, const int n\+\_\+variables)\label{classNewtonRaphsonSolver_a710aa89593ea0236da8bf6e4594dbe3d}
+
+\item 
+\hypertarget{classNewtonRaphsonSolver_addfef5ffb5b0c224dd707c5cb5a79e77}{}void {\bfseries constructia\+For\+Pardiso} (int $\ast$ia, const int nmult, std\+::vector$<$ int $>$ \&ja\+\_\+vec, std\+::vector$<$ double $>$ \&a\+\_\+vec)\label{classNewtonRaphsonSolver_addfef5ffb5b0c224dd707c5cb5a79e77}
+
+\item 
+\hypertarget{classNewtonRaphsonSolver_aa1821e3689ccc552557a6704bcd1e1b4}{}void {\bfseries write\+Kin\+Pardiso\+Format} (const int n\+Nonzero, std\+::vector$<$ int $>$ \&ja\+\_\+vec, std\+::vector$<$ double $>$ \&a\+\_\+vec, int $\ast$ja, double $\ast$a)\label{classNewtonRaphsonSolver_aa1821e3689ccc552557a6704bcd1e1b4}
+
+\item 
+\hypertarget{classNewtonRaphsonSolver_a78957a2905c38a9170a5c27d6f49326d}{}void {\bfseries writegin\+Pardiso\+Format} (double $\ast$b, const int n)\label{classNewtonRaphsonSolver_a78957a2905c38a9170a5c27d6f49326d}
+
+\item 
+bool \hyperlink{classNewtonRaphsonSolver_a3653a563e32649e0c90407aa089a995b}{check\+Convergence\+Via\+Delta\+U} ()
+\begin{DoxyCompactList}\small\item\em Check for cenvergence with the norm of displacements vector,against the threshold Newton\+Raphson\+Solver\+::threshold. \end{DoxyCompactList}\item 
+bool \hyperlink{classNewtonRaphsonSolver_a16edb5206c079476a0d6c2c956c65f25}{check\+Convergence\+Via\+Force} ()
+\begin{DoxyCompactList}\small\item\em Check for cenvergence with the norm of forces vector,against the threshold Newton\+Raphson\+Solver\+::threshold. \end{DoxyCompactList}\item 
+void \hyperlink{classNewtonRaphsonSolver_a5e457b3608c6fbd71767cd6eed07b2f7}{update\+Uk\+In\+Iteration} ()
+\begin{DoxyCompactList}\small\item\em Calulate the nodal displacemetns at the kth iteration of N\+R dolver. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a3f873749f4a94498ddbc5d3648c5c404}{}void {\bfseries display\+Matrix} (gsl\+\_\+matrix $\ast$mat, std\+::string matname)\label{classNewtonRaphsonSolver_a3f873749f4a94498ddbc5d3648c5c404}
+
+\item 
+\hypertarget{classNewtonRaphsonSolver_a7e33c406f4e366b2d3c2e4b5d650a1ba}{}void {\bfseries display\+Matrix} (gsl\+\_\+vector $\ast$mat, std\+::string matname)\label{classNewtonRaphsonSolver_a7e33c406f4e366b2d3c2e4b5d650a1ba}
+
+\item 
+\hypertarget{classNewtonRaphsonSolver_a9cdedabbc023ac182c924b1ec6c3804d}{}bool {\bfseries check\+If\+Combination\+Exists} (int dof\+Slave, int dof\+Master)\label{classNewtonRaphsonSolver_a9cdedabbc023ac182c924b1ec6c3804d}
+
+\item 
+void \hyperlink{classNewtonRaphsonSolver_a1cc04a2a1d6132eb01437f318bcb5103}{check\+Master\+Update} (int \&dof\+Master, int \&master\+Id)
+\begin{DoxyCompactList}\small\item\em This function takes a degree of freedom number as input. This D\+O\+F is supposed to be a master. If, the dof is already a slave to another dof, then update the masetr dof. Anything that would be bound to the input dof can be bound to the already existing master of the input dof. \end{DoxyCompactList}\item 
+bool \hyperlink{classNewtonRaphsonSolver_ab4dd0fae0f0d56355521fbd22875bda8}{check\+If\+Slave\+Is\+Already\+Master\+Of\+Others} (int dof\+Slave, int dof\+Master)
+\begin{DoxyCompactList}\small\item\em This function checks if the slave D\+O\+F is already master of others, if so, updates the master of said slave to the new master the current slave will be bound to. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a7065afed801c6edf31a76c9578b325ea}{}void {\bfseries update\+Element\+Positions} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ $>$ \&Nodes, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&Elements)\label{classNewtonRaphsonSolver_a7065afed801c6edf31a76c9578b325ea}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{un}\label{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}
+
+\begin{DoxyCompactList}\small\item\em The initial positions of the nodes, as calculated at the end of previous step \char`\"{}n\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}{ge}\label{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}
+
+\begin{DoxyCompactList}\small\item\em The matrix containing elastic forces on each node, size (n\+Dim$\ast$n\+Nodes,1). Organisation is \mbox{[}Node0,x ; Node0,y ; Node0,z; ... ; Noden,x ; Noden,y ; Noden,z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}{gv\+Internal}\label{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}
+
+\begin{DoxyCompactList}\small\item\em The matrix containing internal viscous forces on each node, size (n\+Dim$\ast$n\+Nodes,1). Organisation is \mbox{[}Node0,x ; Node0,y ; Node0,z; ... ; Noden,x ; Noden,y ; Noden,z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{gv\+External}\label{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}
+
+\begin{DoxyCompactList}\small\item\em The matrix containing external viscous forces on each node, size (n\+Dim$\ast$n\+Nodes,1). Organisation is \mbox{[}Node0,x ; Node0,y ; Node0,z; ... ; Noden,x ; Noden,y ; Noden,z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_afee5ceb54c8d439c1044ad3997d079ea}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_afee5ceb54c8d439c1044ad3997d079ea}{g\+Ext}\label{classNewtonRaphsonSolver_afee5ceb54c8d439c1044ad3997d079ea}
+
+\begin{DoxyCompactList}\small\item\em The matrix containing external forces on each node (currently includes packing forces), size (n\+Dim$\ast$n\+Nodes,1). Organisation is \mbox{[}Node0,x ; Node0,y ; Node0,z; ... ; Noden,x ; Noden,y ; Noden,z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{}gsl\+\_\+vector $\ast$ \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{g\+Sum}\label{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}
+
+\begin{DoxyCompactList}\small\item\em The matrix containing sum of \hyperlink{classNewtonRaphsonSolver_a3b2a215e49d3c1d6d12eb7c8c73e9ff6}{Newton\+Raphson\+Solver\+::ge}, \hyperlink{classNewtonRaphsonSolver_a79fd12919ceb329bc177f16f3ce897b6}{Newton\+Raphson\+Solver\+::gv\+Internal}, \hyperlink{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{Newton\+Raphson\+Solver\+::gv\+External}, \hyperlink{classNewtonRaphsonSolver_afee5ceb54c8d439c1044ad3997d079ea}{Newton\+Raphson\+Solver\+::g\+Ext}. Organisation is \mbox{[}Node0,x ; Node0,y ; Node0,z; ... ; Noden,x ; Noden,y ; Noden,z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}{uk}\label{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}
+
+\begin{DoxyCompactList}\small\item\em The matrix storing the position of each node at iteration \char`\"{}k\char`\"{}. Initiated in function \hyperlink{classNewtonRaphsonSolver_a48b7753542f36889cd030104937d76a3}{Newton\+Raphson\+Solver\+::initialte\+Uk\+Matrix} at the beginning of each step, and updated by function \hyperlink{classNewtonRaphsonSolver_a5e457b3608c6fbd71767cd6eed07b2f7}{Newton\+Raphson\+Solver\+::update\+Uk\+In\+Iteration} during the iteartions. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a5c25883f25c52190ea88893ede622e6b}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a5c25883f25c52190ea88893ede622e6b}{displacement\+Per\+Dt}\label{classNewtonRaphsonSolver_a5c25883f25c52190ea88893ede622e6b}
+
+\begin{DoxyCompactList}\small\item\em The displacement per time step of each node in current iteration \char`\"{}k\char`\"{}, from its position at the end of the last time step \char`\"{}n\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a064de5e752631defb9dc1b33d5c115f2}{}gsl\+\_\+vector $\ast$ \hyperlink{classNewtonRaphsonSolver_a064de5e752631defb9dc1b33d5c115f2}{delta\+U}\label{classNewtonRaphsonSolver_a064de5e752631defb9dc1b33d5c115f2}
+
+\begin{DoxyCompactList}\small\item\em The incremental change in positions as calculated in current iteration, resulting from the imbalance of elastic, viscous and any other external forces acting on each nodes. The solver minimises this value, convergence occurs when all incremental movements for all nodes sufficiently close to zero. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{}gsl\+\_\+matrix $\ast$ \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{K}\label{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}
+
+\begin{DoxyCompactList}\small\item\em The Jacobian matrix, derivative of sum of forces acting on each node with respect to displacements. \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_ac00970bee6f2c4e1ed503e9c8df65e6d}{}bool \hyperlink{classNewtonRaphsonSolver_ac00970bee6f2c4e1ed503e9c8df65e6d}{bound\+Nodes\+With\+Slave\+Master\+Definition}\label{classNewtonRaphsonSolver_ac00970bee6f2c4e1ed503e9c8df65e6d}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there are degrees of freedom slave to other nodes (masters). \end{DoxyCompactList}\item 
+\hypertarget{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}{}std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}{slave\+Master\+List}\label{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}
+
+\begin{DoxyCompactList}\small\item\em The 2\+D integer vector storing the slave-\/master degrees of freedom couples, such that array \mbox{[}i\mbox{]}\mbox{[}0\mbox{]} = slave to array\mbox{[}i\mbox{]}\mbox{[}1\mbox{]}, each i representing one dim of node position ( z of node 2 is Do\+F i=8);. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Newton-\/\+Raphson solver class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNewtonRaphsonSolver_a3cd02ecd63a37d6b621ece7f781aeefd}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{Newton\+Raphson\+Solver}]{\setlength{\rightskip}{0pt plus 5cm}Newton\+Raphson\+Solver\+::\+Newton\+Raphson\+Solver (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Dim, }
+\item[{int}]{n\+Nodes}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a3cd02ecd63a37d6b621ece7f781aeefd}
+
+
+Constructer of the N-\/\+R solver. 
+
+The function initiates (memory allocates) the necessary matrices for the numerical solver.
+
+\subsection{Member Function Documentation}
+\hypertarget{classNewtonRaphsonSolver_a24f8fb47b9c29dd9856228ba0602f69e}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!add\+Exernal\+Forces@{add\+Exernal\+Forces}}
+\index{add\+Exernal\+Forces@{add\+Exernal\+Forces}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{add\+Exernal\+Forces}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::add\+Exernal\+Forces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a24f8fb47b9c29dd9856228ba0602f69e}
+This function adds the external forces on the system sum of forces, \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum})\hypertarget{classNewtonRaphsonSolver_a78759a96ed41bf35e8401b7c63180ea2}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!add\+Implicit\+K\+Viscous\+External\+To\+Jacobian@{add\+Implicit\+K\+Viscous\+External\+To\+Jacobian}}
+\index{add\+Implicit\+K\+Viscous\+External\+To\+Jacobian@{add\+Implicit\+K\+Viscous\+External\+To\+Jacobian}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{add\+Implicit\+K\+Viscous\+External\+To\+Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::add\+Implicit\+K\+Viscous\+External\+To\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a78759a96ed41bf35e8401b7c63180ea2}
+
+
+This function adds the external related terms of the Jacobian to the system Jacobian \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}. 
+
+This function will add the derivatives of external viscous drag forces with respect to nodal displacement onto the system Jacobian.\hypertarget{classNewtonRaphsonSolver_aa1e2ec4519853c9acfaf120c4b513651}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F@{calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F}}
+\index{calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F@{calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_aa1e2ec4519853c9acfaf120c4b513651}
+
+
+This function updates the Jacobian of the system, \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}, to reflect degrees of freedom binding. 
+
+The matrix calculation for node binding is in the form\+: ~\newline
+ \begin{eqnarray*} \boldsymbol{K}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}\\ \boldsymbol{g}_{bound} & = & \boldsymbol{N^{T}} \boldsymbol{g} \\ \boldsymbol{N_{ij}} &= & \left\{ \begin{matrix} 1 & if & i = j \text{ and } i \text{ is not a slave}\\ 1 & if & i \text{ is slave to } j \\ 0 & & \text{elsewhere} \end{matrix} \right. \\ \boldsymbol{\bar{I}_{ij}} & = & \left\{ \begin{matrix} 1 & if & i = j \text{ and } i \text{ is a slave}\\ 0 & & \text{elsewhere} \end{matrix} \right. \\ \end{eqnarray*} ~\newline
+ As this actual matrix calculation requires a significant memory allocation, these operations are carried out on a row/column basis, rather than using full matrices. ~\newline
+
+
+First all forces on slave to master, set slave forces to zero on \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum}, equivalent of $ \boldsymbol{g}_{bound} = \boldsymbol{N^{T}} \boldsymbol{g} $.
+
+Then start the manipulation of the Jacobian, by adding all elements of the slave degrees of freedom row to master degrees of freedom row on \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}, equivalent of operation $ \boldsymbol{N^{T}} \boldsymbol{K} $.
+
+Followed by adding all elements of the slave degrees of freedom column to master degrees of freedom columno n \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}, equivalent of operation (cumulatively) $ \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} $.
+
+Finally, make the diagonal element of \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}, $ \boldsymbol{K}_{DOFslave,DOFslave} $ to unity, equivalent of operation (cumulatively) $ \boldsymbol{N^{T}} \boldsymbol{K} \boldsymbol{N} + \boldsymbol{\bar{I}}$.\hypertarget{classNewtonRaphsonSolver_aa0ce333a40397fd113f9b9fc47bcb6ca}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!calculate\+Displacement\+Matrix@{calculate\+Displacement\+Matrix}}
+\index{calculate\+Displacement\+Matrix@{calculate\+Displacement\+Matrix}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{calculate\+Displacement\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::calculate\+Displacement\+Matrix (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_aa0ce333a40397fd113f9b9fc47bcb6ca}
+
+
+This function calculates the displacement of each node in current iteration \char`\"{}k\char`\"{}, from their positions at the end of the previous step \char`\"{}n\char`\"{} (\hyperlink{classNewtonRaphsonSolver_ad217268afdeb4838d3b58f075762de95}{Newton\+Raphson\+Solver\+::uk} -\/ \hyperlink{classNewtonRaphsonSolver_a89a6e2f583c785b77b967e6f0e9f5893}{Newton\+Raphson\+Solver\+::un}) 
+
+The displacement of nodes per \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt}, for each iteration defined as $ \frac{\boldsymbol{u_k} - \boldsymbol{u_n}}{dt} $\hypertarget{classNewtonRaphsonSolver_ad39200f7babf1a3761a010c1a43f7c22}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!calculate\+External\+Viscous\+Forces\+For\+N\+R@{calculate\+External\+Viscous\+Forces\+For\+N\+R}}
+\index{calculate\+External\+Viscous\+Forces\+For\+N\+R@{calculate\+External\+Viscous\+Forces\+For\+N\+R}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{calculate\+External\+Viscous\+Forces\+For\+N\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::calculate\+External\+Viscous\+Forces\+For\+N\+R (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_ad39200f7babf1a3761a010c1a43f7c22}
+
+
+This function calculates the external viscous forces acting on each node, the values are sotred in \hyperlink{classNewtonRaphsonSolver_a80160d7bfb04a39e3b8910b68f66aa6d}{Newton\+Raphson\+Solver\+::gv\+External}. 
+
+For all nodes of the system, the external viscous forces will depend on the exposed surface associated with each node (\hyperlink{classNode_a7a585da74654d80d5f94805e39c1e2ad}{Node\+::viscosity\+Surface}), calculated through \hyperlink{classShapeBase_aa91f3d3cddf8cc01ce06562185c291ba}{Shape\+Base\+::assign\+Viscosity\+Surface\+Area\+To\+Nodes}. This surface will be muliplied by the local viscosity \hyperlink{classNode_a6377f135c12aae0dd776107c2628516e}{Node\+::external\+Viscosity} and the displacement of the node in current iteration k, from its position at the end of previous time step n.
+
+Once all the viscous forces are calculated, the force direction will be inverted, as I am interested in the visouc drag applied by the meida to the node.\hypertarget{classNewtonRaphsonSolver_a5793ee41a3a4d97c0c944347f1f6da8e}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R@{calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R}}
+\index{calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R@{calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes, }
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Shape\+Base} $>$$>$ \&}]{Elements, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a5793ee41a3a4d97c0c944347f1f6da8e}
+
+
+This function calculates elemental forces and Jacobians, later to be combined in \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K} and \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum}. 
+
+The calculation of foces and their derivatives in each element starts with calculation of forces via Shape\+Base\+::calculate\+Forces. A series of calculations necessary for Jacobian calculation are obtained at this stage. Then the Elastic and Viscous parts of the elemetnal Jacobian are calculates through \hyperlink{classShapeBase_a922c41864d4826725cc72089046f818c}{Shape\+Base\+::calculate\+Implicit\+K\+Elastic} and \hyperlink{classShapeBase_a20c23d30b7f9f3bc7ed2fde542401aeb}{Shape\+Base\+::calculate\+Implicit\+K\+Viscous} ,respectively\hypertarget{classNewtonRaphsonSolver_acfaaed8f038167756f352b566b8455d7}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!calcutate\+Fixed\+K@{calcutate\+Fixed\+K}}
+\index{calcutate\+Fixed\+K@{calcutate\+Fixed\+K}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{calcutate\+Fixed\+K}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::calcutate\+Fixed\+K (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_acfaaed8f038167756f352b566b8455d7}
+
+
+This function updates the Jacobian to account for nodes that are fixed in certain dimensions in space, as part of boundary conditions. 
+
+Some degrees of freedom are fixed for some nodes, as defined by the user input boundary conditions. this will be recorded in the 3 dimensional boolean array of each node \hyperlink{classNode_a8f3a763935fb67e34784d060c0ea76f8}{Node\+::\+Fixed\+Pos} for x,y and z coordinates. In the node has a fixed degree of freedom, then the sum of elastic and viscous forces recorded on \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum} is made zero. Then in the Jacobian, the diagonal term for the degree of freedom is set to unity, all remaining terms of the column and row of the degree of freedom is set to zero.\hypertarget{classNewtonRaphsonSolver_a3653a563e32649e0c90407aa089a995b}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!check\+Convergence\+Via\+Delta\+U@{check\+Convergence\+Via\+Delta\+U}}
+\index{check\+Convergence\+Via\+Delta\+U@{check\+Convergence\+Via\+Delta\+U}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{check\+Convergence\+Via\+Delta\+U}]{\setlength{\rightskip}{0pt plus 5cm}bool Newton\+Raphson\+Solver\+::check\+Convergence\+Via\+Delta\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a3653a563e32649e0c90407aa089a995b}
+
+
+Check for cenvergence with the norm of displacements vector,against the threshold Newton\+Raphson\+Solver\+::threshold. 
+
+This function checks the norm of \hyperlink{classNewtonRaphsonSolver_a064de5e752631defb9dc1b33d5c115f2}{Newton\+Raphson\+Solver\+::delta\+U}, the change in nodal positions from previous iteration to this one. If the norm is below the threshold of convergence Newton\+Raphson\+Solver\+::threshold, then the solution has been achieved for the current time step.\hypertarget{classNewtonRaphsonSolver_a16edb5206c079476a0d6c2c956c65f25}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!check\+Convergence\+Via\+Force@{check\+Convergence\+Via\+Force}}
+\index{check\+Convergence\+Via\+Force@{check\+Convergence\+Via\+Force}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{check\+Convergence\+Via\+Force}]{\setlength{\rightskip}{0pt plus 5cm}bool Newton\+Raphson\+Solver\+::check\+Convergence\+Via\+Force (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a16edb5206c079476a0d6c2c956c65f25}
+
+
+Check for cenvergence with the norm of forces vector,against the threshold Newton\+Raphson\+Solver\+::threshold. 
+
+The system can converge with zero forces as well. This function checks the norm of the sum of all nodal forces against the threshold.\hypertarget{classNewtonRaphsonSolver_ab4dd0fae0f0d56355521fbd22875bda8}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!check\+If\+Slave\+Is\+Already\+Master\+Of\+Others@{check\+If\+Slave\+Is\+Already\+Master\+Of\+Others}}
+\index{check\+If\+Slave\+Is\+Already\+Master\+Of\+Others@{check\+If\+Slave\+Is\+Already\+Master\+Of\+Others}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{check\+If\+Slave\+Is\+Already\+Master\+Of\+Others}]{\setlength{\rightskip}{0pt plus 5cm}bool Newton\+Raphson\+Solver\+::check\+If\+Slave\+Is\+Already\+Master\+Of\+Others (
+\begin{DoxyParamCaption}
+\item[{int}]{dof\+Slave, }
+\item[{int}]{dof\+Master}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_ab4dd0fae0f0d56355521fbd22875bda8}
+
+
+This function checks if the slave D\+O\+F is already master of others, if so, updates the master of said slave to the new master the current slave will be bound to. 
+
+The function takes in the addresses for potential master and slave degrees of freedom indices. If the proposed slave Do\+F is already on the \hyperlink{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}{Newton\+Raphson\+Solver\+::slave\+Master\+List} as a master, then transfer all Do\+F that are its slave to the new proposed master.\hypertarget{classNewtonRaphsonSolver_a40dee8332c648b53cb9b1c8f2f2861ee}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!check\+Jacobian\+For\+Ablated\+Nodes@{check\+Jacobian\+For\+Ablated\+Nodes}}
+\index{check\+Jacobian\+For\+Ablated\+Nodes@{check\+Jacobian\+For\+Ablated\+Nodes}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{check\+Jacobian\+For\+Ablated\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::check\+Jacobian\+For\+Ablated\+Nodes (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{Ablated\+Nodes}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a40dee8332c648b53cb9b1c8f2f2861ee}
+
+
+This functions checks the Jacobian to ensure the diagonal terms are non-\/zero for ablated nodes. 
+
+The function clears the system Jacobian for ablated nodes, which should not have any forces acting on them.\hypertarget{classNewtonRaphsonSolver_a1cc04a2a1d6132eb01437f318bcb5103}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!check\+Master\+Update@{check\+Master\+Update}}
+\index{check\+Master\+Update@{check\+Master\+Update}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{check\+Master\+Update}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::check\+Master\+Update (
+\begin{DoxyParamCaption}
+\item[{int \&}]{dof\+Master, }
+\item[{int \&}]{master\+Id}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a1cc04a2a1d6132eb01437f318bcb5103}
+
+
+This function takes a degree of freedom number as input. This D\+O\+F is supposed to be a master. If, the dof is already a slave to another dof, then update the masetr dof. Anything that would be bound to the input dof can be bound to the already existing master of the input dof. 
+
+The function takes in the addresses for potential master and slave degrees of freedom indices. If the proposed master Do\+F is already on the \hyperlink{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}{Newton\+Raphson\+Solver\+::slave\+Master\+List} as a slave, then the its master Do\+F should become the master of the proposed slave Do\+F. The order of \hyperlink{classNewtonRaphsonSolver_a08e76823173b89fe71fac26ba4edc191}{Newton\+Raphson\+Solver\+::slave\+Master\+List} is \mbox{[}slave\mbox{]}\mbox{[}master\mbox{]}.\hypertarget{classNewtonRaphsonSolver_a8efb09b253b7d19bd978296314d65c24}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!solve\+For\+Delta\+U@{solve\+For\+Delta\+U}}
+\index{solve\+For\+Delta\+U@{solve\+For\+Delta\+U}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{solve\+For\+Delta\+U}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::solve\+For\+Delta\+U (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a8efb09b253b7d19bd978296314d65c24}
+
+
+This function solves for the displacements within the N-\/\+R step. 
+
+This funciton will solve for new displacements from the system forces and the Jacobian. This requires solving a sparse system of linear equatons, and the operation is handled by Pardiso solver. Please refer to the manual of Pardiso to follow the necessary steps in this function/\hypertarget{classNewtonRaphsonSolver_a5e457b3608c6fbd71767cd6eed07b2f7}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!update\+Uk\+In\+Iteration@{update\+Uk\+In\+Iteration}}
+\index{update\+Uk\+In\+Iteration@{update\+Uk\+In\+Iteration}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{update\+Uk\+In\+Iteration}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::update\+Uk\+In\+Iteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a5e457b3608c6fbd71767cd6eed07b2f7}
+
+
+Calulate the nodal displacemetns at the kth iteration of N\+R dolver. 
+
+This funciton updates the positions of nodes for next iteration \$  \{u\}\+\_\+\{k+1\} \$  from the positions of current iteration the \$  \{u\}\+\_\+\{k\} \$  and \$  \{ u\}\+\_\+\{k\} \$ .\hypertarget{classNewtonRaphsonSolver_a0d6e3a4d0cf1c6e4fdf2753c7f08df13}{}\index{Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}!write\+Implicit\+Elemental\+K\+To\+Jacobian@{write\+Implicit\+Elemental\+K\+To\+Jacobian}}
+\index{write\+Implicit\+Elemental\+K\+To\+Jacobian@{write\+Implicit\+Elemental\+K\+To\+Jacobian}!Newton\+Raphson\+Solver@{Newton\+Raphson\+Solver}}
+\subsubsection[{write\+Implicit\+Elemental\+K\+To\+Jacobian}]{\setlength{\rightskip}{0pt plus 5cm}void Newton\+Raphson\+Solver\+::write\+Implicit\+Elemental\+K\+To\+Jacobian (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Shape\+Base} $>$$>$ \&}]{Elements}
+\end{DoxyParamCaption}
+)}\label{classNewtonRaphsonSolver_a0d6e3a4d0cf1c6e4fdf2753c7f08df13}
+
+
+This function writes the elemental values for elastic part of the Jacobian -\/ stiffness matrix -\/ (\hyperlink{classShapeBase_ace20710f27099833509c474b221c25df}{Shape\+Base\+::\+Tri\+Point\+Ke}) and for viscous part of Jacobian (\hyperlink{classShapeBase_a7fa5b1338e405a2c75c8d010f4153b05}{Shape\+Base\+::\+Tri\+Point\+Kv}) into the system Jacobian \hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}. 
+
+All elemental elastic (Shape\+Base\+::\+Ke) and internal viscous (Shape\+Base\+::\+Kv) jacobians are added onto the system Jacobian (\hyperlink{classNewtonRaphsonSolver_a4e9ffc424dd37c6c00f9de3d7ac455ed}{Newton\+Raphson\+Solver\+::\+K}) in this function.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Newton\+Raphson\+Solver.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Newton\+Raphson\+Solver.\+cpp\end{DoxyCompactItemize}

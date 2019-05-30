@@ -1,0 +1,1331 @@
+\hypertarget{classSimulation}{}\section{Simulation Class Reference}
+\label{classSimulation}\index{Simulation@{Simulation}}
+Inheritance diagram for Simulation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSimulation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSimulation_a5b224cc5b36bcc8eb29689aff223de41}{}\hyperlink{classSimulation_a5b224cc5b36bcc8eb29689aff223de41}{Simulation} ()\label{classSimulation_a5b224cc5b36bcc8eb29689aff223de41}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a80fad3f57dfaf195a36f7bc49bc88279}{}\hyperlink{classSimulation_a80fad3f57dfaf195a36f7bc49bc88279}{$\sim$\+Simulation} ()\label{classSimulation_a80fad3f57dfaf195a36f7bc49bc88279}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7ed75e3d044166072754e6e323f3604c}{}void \hyperlink{classSimulation_a7ed75e3d044166072754e6e323f3604c}{assign\+Tips} ()\label{classSimulation_a7ed75e3d044166072754e6e323f3604c}
+
+\begin{DoxyCompactList}\small\item\em This function assigns the nodes marking the tips of the tissue in xy plane. \end{DoxyCompactList}\item 
+bool \hyperlink{classSimulation_aa5c031b9d4c6b3d74f636adec0b695ed}{read\+Executable\+Inputs} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em This function reads the input executables from user input. \end{DoxyCompactList}\item 
+bool \hyperlink{classSimulation_ae44910ca27d6ec5eaa48f7136fad87ea}{initiate\+System} ()
+\begin{DoxyCompactList}\small\item\em This function initiates the system with model inputs. \end{DoxyCompactList}\item 
+bool \hyperlink{classSimulation_a6ef90fd76ed4f6bb9d063e7e72e9a983}{initiate\+Saved\+System} ()
+\begin{DoxyCompactList}\small\item\em This function initiates a saved system from save files. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1f9bf054812136067d30e79345f877de}{}void \hyperlink{classSimulation_a1f9bf054812136067d30e79345f877de}{calculate\+System\+Centre} ()\label{classSimulation_a1f9bf054812136067d30e79345f877de}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the tissue geometric centre. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5c0989e1c64b0fde348701454e9fbf67}{}void \hyperlink{classSimulation_a5c0989e1c64b0fde348701454e9fbf67}{reset\+Forces} (bool reset\+Packing)\label{classSimulation_a5c0989e1c64b0fde348701454e9fbf67}
+
+\begin{DoxyCompactList}\small\item\em This function resets all forces to zero at the beginning of each iteration. Depending on the packing calculation type (implicit/explicit) the boolean states if teh packing forces should be reset or not. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8e6ec9457aa61d2493747d0110a50ca5}{}void \hyperlink{classSimulation_a8e6ec9457aa61d2493747d0110a50ca5}{calculate\+Apical\+Size} ()\label{classSimulation_a8e6ec9457aa61d2493747d0110a50ca5}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the xy-\/plane bounding box of the apical side of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a4950a649e48408ad5756acd9c2718665}{}void \hyperlink{classSimulation_a4950a649e48408ad5756acd9c2718665}{calculate\+Bounding\+Box} ()\label{classSimulation_a4950a649e48408ad5756acd9c2718665}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the 3\+D bounding box of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af21c5c157e6f487f879bdd7043288982}{}void \hyperlink{classSimulation_af21c5c157e6f487f879bdd7043288982}{calculate\+Z\+Projected\+Areas} ()\label{classSimulation_af21c5c157e6f487f879bdd7043288982}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the z-\/projected areas of all elemetns and nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a7a47dfca0623a5636cb65416411cb901}{correctz\+Projected\+Area\+For\+Mid\+Nodes} ()
+\begin{DoxyCompactList}\small\item\em This function corrects the z-\/projected areas for mid-\/l;ayer nodes, as their areas are counted twice, by both elements. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a9c3f5acaa8ec130dedc94dfd6f7b013a}{}void \hyperlink{classSimulation_a9c3f5acaa8ec130dedc94dfd6f7b013a}{clear\+Projected\+Areas} ()\label{classSimulation_a9c3f5acaa8ec130dedc94dfd6f7b013a}
+
+\begin{DoxyCompactList}\small\item\em This function clears the z-\/projected areas of all elemetns and nodes. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa9ad0627365ad5d465b273183c7db344}{}void \hyperlink{classSimulation_aa9ad0627365ad5d465b273183c7db344}{check\+For\+Experimental\+Setups\+Before\+Iteration} ()\label{classSimulation_aa9ad0627365ad5d465b273183c7db344}
+
+\begin{DoxyCompactList}\small\item\em This macro function checks for all experimental setup updates at the beginning of a time step, prior to iterations. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2ebd37d36e25d118738d25811da4aa45}{}void \hyperlink{classSimulation_a2ebd37d36e25d118738d25811da4aa45}{check\+For\+Experimental\+Setups\+Within\+Iteration} ()\label{classSimulation_a2ebd37d36e25d118738d25811da4aa45}
+
+\begin{DoxyCompactList}\small\item\em This macro function checks for all experimental setup updates at each N-\/\+R iteration. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae8b5dcc56bb2633d284a413f1e9dc1e9}{}void \hyperlink{classSimulation_ae8b5dcc56bb2633d284a413f1e9dc1e9}{check\+For\+Experimental\+Setups\+After\+Iteration} ()\label{classSimulation_ae8b5dcc56bb2633d284a413f1e9dc1e9}
+
+\begin{DoxyCompactList}\small\item\em This macro function checks for all experimental setup updates at the end of iterations, post convergence. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a49ebb11d5727f0a6fc3ebfe8166b7290}{check\+For\+Emergent\+Ellipse\+Formation} ()
+\begin{DoxyCompactList}\small\item\em Check for emergent marker elipse bands with fold initiation in the tissue. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aba7aa0ded1d2cd262ed08c8abddde4f8}{check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation} ()
+\begin{DoxyCompactList}\small\item\em Check for emergence of ellipse bands as a result of E\+C\+M loss. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a1cf2aca93cb0f8716817936d98b6bf0e}{check\+Ellipse\+Allocation\+With\+Curving\+Nodes} ()
+\begin{DoxyCompactList}\small\item\em Check the ellipse band allocation of nodes residing on fold initiation. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a0e7040a8ecc377bd2e53c785fc4c488b}{update\+Ellipse\+With\+Collapse} ()
+\begin{DoxyCompactList}\small\item\em Update marker ellipses with collapsing nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a065f2150d785ee160762367bd6419e42}{check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment} ()
+\begin{DoxyCompactList}\small\item\em Check if elements at border of two emergent folds are missed in marking, and correct as needed. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_ae096c8a7fcc6e921415d1be317526d02}{check\+E\+C\+M\+Change} ()
+\begin{DoxyCompactList}\small\item\em Check if there is E\+C\+M perturbation. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_af0d9108d648996ef65a3eff0977a8590}{update\+Change\+For\+Explicit\+E\+C\+M} (int id\+Of\+Current\+E\+C\+M\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Update physical properties of the E\+C\+M with the E\+C\+M perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a2308c071a7f6260910d76d4a8604a0a3}{update\+E\+C\+M\+Renewal\+Halflife\+Multiplier} (int id\+Of\+Current\+E\+C\+M\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Update E\+C\+M renewal half-\/life with the E\+C\+M perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a6ac28dca8cca35baed5b75ce4f8062c8}{update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition} (int id\+Of\+Current\+E\+C\+M\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Update E\+C\+M viscosity with the E\+C\+M perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a405e565b21064979e0010286927d087a}{calculate\+Change\+Rates\+For\+E\+C\+M} (int id\+Of\+Current\+E\+C\+M\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Calculate the physical property change rates for E\+C\+M perturbation with the E\+C\+M perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a361530c38e215fd901d5e8a0ef051386}{check\+Stiffness\+Perturbation} ()
+\begin{DoxyCompactList}\small\item\em Check for stiffness perturbation on the tissue. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aacaebdb527784f46f67232f3180936e1}{update\+Stiffness\+Change\+For\+Actin} (int id\+Of\+Current\+Stiffness\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Update stiffness of actin with the stiffness perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a8b40b6f71c115d9c566333151219a7d6}{calculate\+Stiffness\+Change\+Rates\+For\+Actin} (int id\+Of\+Current\+Stiffness\+Perturbation)
+\begin{DoxyCompactList}\small\item\em Calculate the stiffness change rates for actin with the stiffness perturbaiton function of input I\+D. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_ae7642cf5d56f38710da9b219e56b3c77}{update\+On\+Fold\+Nodes\+From\+Collapse} ()
+\begin{DoxyCompactList}\small\item\em Mark nodes as on fold, due to collapsed elements. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a5a12ff087efbc813a949e347da7a0438}{assign\+Fold\+Region\+And\+Release\+Peripodial} (\hyperlink{classNode}{Node} $\ast$Node\+M\+Aster, \hyperlink{classNode}{Node} $\ast$Node\+Slave)
+\begin{DoxyCompactList}\small\item\em Nodes are assigned to be on folding regions if they lie in between two adhered nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aee92b20e497b42f5b7a089c3f9409e97}{artificial\+Relax} ()
+\begin{DoxyCompactList}\small\item\em Artificially relax all deformation on all elements at selected time point. \end{DoxyCompactList}\item 
+bool \hyperlink{classSimulation_a300713fd91c15b51421606bffd6d87b7}{run\+One\+Step} ()
+\begin{DoxyCompactList}\small\item\em Run the simulation for one time step. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1f5dbbde572af555225089e247296e2e}{}void \hyperlink{classSimulation_a1f5dbbde572af555225089e247296e2e}{update\+One\+Step\+From\+Save} ()\label{classSimulation_a1f5dbbde572af555225089e247296e2e}
+
+\begin{DoxyCompactList}\small\item\em Update the simulation for time step from saved files. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aba920b0ae2806ea3890cbe2b819977fe}{update\+Plastic\+Deformation} ()
+\begin{DoxyCompactList}\small\item\em Update the plastic deformation (remodelling) of all nodes. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a6a869cb433953d1d36249460b0a74545}{update\+Step\+N\+R} ()
+\begin{DoxyCompactList}\small\item\em Update the positions with solving for the displacements with the N-\/\+R iterations. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aed6fc494b468ebd56c07625d3e5984ff}{}void \hyperlink{classSimulation_aed6fc494b468ebd56c07625d3e5984ff}{update\+Element\+Positionsin\+N\+R} (gsl\+\_\+matrix $\ast$uk)\label{classSimulation_aed6fc494b468ebd56c07625d3e5984ff}
+
+\begin{DoxyCompactList}\small\item\em Update elemental positions during one iteration of the N\+R numerical solving for the displacements. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aea943e8e0caf1b9ff8e40b61248024b6}{update\+Node\+Positions\+N\+R} (gsl\+\_\+matrix $\ast$uk)
+\begin{DoxyCompactList}\small\item\em Update nodal positions during one iteration of the N\+R numerical solving for the displacements. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae16977eb346093b2fe00f94e9c485b37}{}void \hyperlink{classSimulation_ae16977eb346093b2fe00f94e9c485b37}{calculate\+Random\+Forces} ()\label{classSimulation_ae16977eb346093b2fe00f94e9c485b37}
+
+\begin{DoxyCompactList}\small\item\em Calculate the random forces on elements. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ad14662c0f9cee95a76c523130e8e688d}{}void \hyperlink{classSimulation_ad14662c0f9cee95a76c523130e8e688d}{add\+Random\+Forces} (gsl\+\_\+matrix $\ast$g\+Ext)\label{classSimulation_ad14662c0f9cee95a76c523130e8e688d}
+
+\begin{DoxyCompactList}\small\item\em Add random forces to system forces. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_ab67230d22a5c07292574d10d5ee8fc13}{detect\+Pacing\+Nodes} ()
+\begin{DoxyCompactList}\small\item\em Detect nodes potentially packing to each other. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{calculate\+Packing\+Forces\+Implicit3\+D} ()
+\begin{DoxyCompactList}\small\item\em Calculate packing forces on nodes due to packing to each other. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}{calculate\+Packing\+Jacobian3\+D} (gsl\+\_\+matrix $\ast$K)
+\begin{DoxyCompactList}\small\item\em Update the system jaconbian with the derivatives of forces due to packing to each other, with respect to positions. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a97927bd45513fc16d7dd56b9e8474f4a}{detect\+Packing\+To\+Pipette} ()
+\begin{DoxyCompactList}\small\item\em Detect nodes potentially packing to the pipette wall in pipette aspiration experiment. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_af18305ef63492bb7e76f79c4c85206d0}{calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D} ()
+\begin{DoxyCompactList}\small\item\em Calculate packing forces on nodes due to packing to pipette wall in pipette aspiration experiment. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_aeebe76bd38ce67afd3611ad521450c1f}{calculate\+Packing\+To\+Pipette\+Jacobian3\+D} (gsl\+\_\+matrix $\ast$K)
+\begin{DoxyCompactList}\small\item\em Update the system jaconbian with the derivatives of forces due to packing to the pipette wall in pipette aspiration experiment, with respect to positions. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_ac1225a76f3acef7e6ecc175d386b6b86}{detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes} ()
+\begin{DoxyCompactList}\small\item\em Detect nodes potentially packing to the enclosing surfaces in z. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a3b2d417e1f2814ffd8e34c186508c2f2}{calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D} ()
+\begin{DoxyCompactList}\small\item\em Calculate packing forces on nodes due to packing to enclosing surfaces. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a4b259e3827b74767c8005b2126191609}{calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D} (gsl\+\_\+matrix $\ast$K)
+\begin{DoxyCompactList}\small\item\em Update the system jaconbian with the derivatives of forces due to packing to enclosing surfaces, with respect to positions. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a7a62be5131e130aa7f631201d5a4a49a}{add\+Packing\+Forces} (gsl\+\_\+matrix $\ast$g\+Ext)
+\begin{DoxyCompactList}\small\item\em Add al packing forces to external foces vector. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ac096cfe7f8b3b7b66f6af2a87ff6556f}{}void \hyperlink{classSimulation_ac096cfe7f8b3b7b66f6af2a87ff6556f}{add\+Value\+To\+Matrix} (gsl\+\_\+matrix $\ast$K, int i, int j, double value)\label{classSimulation_ac096cfe7f8b3b7b66f6af2a87ff6556f}
+
+\begin{DoxyCompactList}\small\item\em Helper function, adds value to matrix K, in indices (i,j). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa92f90b98dc049a3206b4906ebf52585}{}void \hyperlink{classSimulation_aa92f90b98dc049a3206b4906ebf52585}{update\+Element\+Positions} ()\label{classSimulation_aa92f90b98dc049a3206b4906ebf52585}
+
+\begin{DoxyCompactList}\small\item\em Update element positions, from the nodal positions. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a59684286f79843524da38d1bb30718a6}{}void \hyperlink{classSimulation_a59684286f79843524da38d1bb30718a6}{update\+Master\+Slave\+Nodes\+In\+Binding} ()\label{classSimulation_a59684286f79843524da38d1bb30718a6}
+
+\begin{DoxyCompactList}\small\item\em Update node degrees of freedom binding information stored in N-\/\+R solver to the saved data. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a4cfdafedfcaedb329c377046009bf7ec}{}void \hyperlink{classSimulation_a4cfdafedfcaedb329c377046009bf7ec}{update\+Element\+Positions\+Single} (size\+\_\+t i)\label{classSimulation_a4cfdafedfcaedb329c377046009bf7ec}
+
+\begin{DoxyCompactList}\small\item\em Update the position of element at index i, in the \hyperlink{classSimulation_a96e0aaea7b40dbb5bc11329fc7d34559}{Simulation\+::\+Elements} vector. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulation_a91a12f6ac1b230cecbe004221326a7ca}{align\+Tissue\+D\+V\+To\+X\+Positive} ()
+\begin{DoxyCompactList}\small\item\em Align tissue D\+V axis to x axis, the D\+V axis is defiend by Simulation\+::ventral\+Tip\+Index and Simulation\+::dorsal\+Tip\+Index, as assigned in \hyperlink{classSimulation_a7ed75e3d044166072754e6e323f3604c}{Simulation\+::assign\+Tips}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7aa2db4c2819e37c0ded181d47467233}{}bool \hyperlink{classSimulation_a7aa2db4c2819e37c0ded181d47467233}{check\+Flip} ()\label{classSimulation_a7aa2db4c2819e37c0ded181d47467233}
+
+\begin{DoxyCompactList}\small\item\em Check if any of the elements have flipped, and report error accordingly. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ada1776f97a899b0e77e20df658713cb3}{}void \hyperlink{classSimulation_ada1776f97a899b0e77e20df658713cb3}{wrap\+Up\+At\+The\+End\+Of\+Simulation} ()\label{classSimulation_ada1776f97a899b0e77e20df658713cb3}
+
+\begin{DoxyCompactList}\small\item\em Correct tissue alignement once more before simulation is finalised to have the correct final mesh. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2cdf77d01390a32cabb8ba7535a9f7dd}{}void \hyperlink{classSimulation_a2cdf77d01390a32cabb8ba7535a9f7dd}{calculate\+D\+V\+Distance} ()\label{classSimulation_a2cdf77d01390a32cabb8ba7535a9f7dd}
+
+\begin{DoxyCompactList}\small\item\em Calclate the long (D\+V) axis tip to tip distance (not contour length), the D\+V axis is defiend by Simulation\+::ventral\+Tip\+Index and Simulation\+::dorsal\+Tip\+Index, as assigned in \hyperlink{classSimulation_a7ed75e3d044166072754e6e323f3604c}{Simulation\+::assign\+Tips}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a4897adef943963c8f79f45fcc52e409a}{}void \hyperlink{classSimulation_a4897adef943963c8f79f45fcc52e409a}{fix\+Node0\+In\+Position} (double x, double y, double z)\label{classSimulation_a4897adef943963c8f79f45fcc52e409a}
+
+\begin{DoxyCompactList}\small\item\em Fix the node 0 in 3\+D space, in case of zero external viscosity on all axes, checked in Simulation\+::check\+For\+Zero\+External\+Viscosity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSimulation_a473866f52cbbb0f5186f4b2a4ac451ee}{}std\+::ofstream \hyperlink{classSimulation_a473866f52cbbb0f5186f4b2a4ac451ee}{output\+File}\label{classSimulation_a473866f52cbbb0f5186f4b2a4ac451ee}
+
+\begin{DoxyCompactList}\small\item\em The output file to direct eroors and wornings, progress summary such as last converged time step. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a219f980877f9cf37de32556b5bce836a}{}bool \hyperlink{classSimulation_a219f980877f9cf37de32556b5bce836a}{display\+Is\+On}\label{classSimulation_a219f980877f9cf37de32556b5bce836a}
+
+\begin{DoxyCompactList}\small\item\em The simulation is displayed. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab4d07267bab8e631658e2ef056ee5750}{}bool \hyperlink{classSimulation_ab4d07267bab8e631658e2ef056ee5750}{Display\+Save}\label{classSimulation_ab4d07267bab8e631658e2ef056ee5750}
+
+\begin{DoxyCompactList}\small\item\em The package is displaying a saved simulation from. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a99b66ca81fcc16dab7f44632ddff7ecd}{}bool \hyperlink{classSimulation_a99b66ca81fcc16dab7f44632ddff7ecd}{reached\+End\+Of\+Save\+File}\label{classSimulation_a99b66ca81fcc16dab7f44632ddff7ecd}
+
+\begin{DoxyCompactList}\small\item\em The simulation has reached the end of the read of save file. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{}float \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{dt}\label{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}
+
+\begin{DoxyCompactList}\small\item\em The time step increment in seconds, such that \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{Simulation\+::curr\+Sim\+Time\+Sec} = \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt} $\ast$ \hyperlink{classSimulation_a2056af9924aff237c804ffe006adc00b}{Simulation\+::timestep}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2056af9924aff237c804ffe006adc00b}{}int \hyperlink{classSimulation_a2056af9924aff237c804ffe006adc00b}{timestep}\label{classSimulation_a2056af9924aff237c804ffe006adc00b}
+
+\begin{DoxyCompactList}\small\item\em The time step count, such that \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{Simulation\+::curr\+Sim\+Time\+Sec} = \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt} $\ast$ \hyperlink{classSimulation_a2056af9924aff237c804ffe006adc00b}{Simulation\+::timestep}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{}double \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{curr\+Sim\+Time\+Sec}\label{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}
+
+\begin{DoxyCompactList}\small\item\em The current time of the simulation in time seconds, obtained as \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{Simulation\+::curr\+Sim\+Time\+Sec} = \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt} $\ast$ \hyperlink{classSimulation_a2056af9924aff237c804ffe006adc00b}{Simulation\+::timestep}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a96bf105b28395184053bb4f987f05746}{}double \hyperlink{classSimulation_a96bf105b28395184053bb4f987f05746}{Sim\+Length}\label{classSimulation_a96bf105b28395184053bb4f987f05746}
+
+\begin{DoxyCompactList}\small\item\em The desiered length of the current simulation in seconds. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a9e4287e16564745895acac3550e11e82}{}std\+::string \hyperlink{classSimulation_a9e4287e16564745895acac3550e11e82}{save\+Directory}\label{classSimulation_a9e4287e16564745895acac3550e11e82}
+
+\begin{DoxyCompactList}\small\item\em The full path to the directory where the results of the simulation are saved. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a29eff6bb523b42f0c5e9db833a094444}{}std\+::string \hyperlink{classSimulation_a29eff6bb523b42f0c5e9db833a094444}{save\+Screenshots\+Directory}\label{classSimulation_a29eff6bb523b42f0c5e9db833a094444}
+
+\begin{DoxyCompactList}\small\item\em The full path to the directory where the screenshots of the simulation are saved. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3b086632fb67338d29f2ddc69c9087be}{}std\+::string \hyperlink{classSimulation_a3b086632fb67338d29f2ddc69c9087be}{save\+Directory\+To\+Display\+String}\label{classSimulation_a3b086632fb67338d29f2ddc69c9087be}
+
+\begin{DoxyCompactList}\small\item\em The full path to the directory from which the saved simulation is being read. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a419351054778337026abd0bc0787019d}{}std\+::string \hyperlink{classSimulation_a419351054778337026abd0bc0787019d}{input\+Mesh\+File\+Name}\label{classSimulation_a419351054778337026abd0bc0787019d}
+
+\begin{DoxyCompactList}\small\item\em The path to the input mesh file. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab911b1546aecf4b891f670f11ebccf19}{}std\+::string \hyperlink{classSimulation_ab911b1546aecf4b891f670f11ebccf19}{output\+File\+String}\label{classSimulation_ab911b1546aecf4b891f670f11ebccf19}
+
+\begin{DoxyCompactList}\small\item\em The full path to the output file (\hyperlink{classSimulation_a473866f52cbbb0f5186f4b2a4ac451ee}{Simulation\+::output\+File}) directory. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afb8b3f2ba1e2d02eec79d83cbd6b4d16}{}bool \hyperlink{classSimulation_afb8b3f2ba1e2d02eec79d83cbd6b4d16}{save\+Images}\label{classSimulation_afb8b3f2ba1e2d02eec79d83cbd6b4d16}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the screenshot images should be saved. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7d0d5e335aeaefff71fee46ee73d0cba}{}bool \hyperlink{classSimulation_a7d0d5e335aeaefff71fee46ee73d0cba}{save\+Data}\label{classSimulation_a7d0d5e335aeaefff71fee46ee73d0cba}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the simulation data should be saved. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_acc8ebf021a21da302f6aabb24a9c5d87}{}int \hyperlink{classSimulation_acc8ebf021a21da302f6aabb24a9c5d87}{image\+Save\+Interval}\label{classSimulation_acc8ebf021a21da302f6aabb24a9c5d87}
+
+\begin{DoxyCompactList}\small\item\em The interval to save screenshot images, in time step counts. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afa3a518b104d571d442f9752c7e3cf92}{}int \hyperlink{classSimulation_afa3a518b104d571d442f9752c7e3cf92}{data\+Save\+Interval}\label{classSimulation_afa3a518b104d571d442f9752c7e3cf92}
+
+\begin{DoxyCompactList}\small\item\em The interval to save simalation data, in time step counts. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a624c8f135227f36c3749fb12b89f6937}{}double \hyperlink{classSimulation_a624c8f135227f36c3749fb12b89f6937}{E\+Apical}\label{classSimulation_a624c8f135227f36c3749fb12b89f6937}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the apical section of tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ac36c6cc857bb7cdb84ccf9c17ef5bcba}{}double \hyperlink{classSimulation_ac36c6cc857bb7cdb84ccf9c17ef5bcba}{E\+Basal}\label{classSimulation_ac36c6cc857bb7cdb84ccf9c17ef5bcba}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the basal section of tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7241e19c4db7e819dad00bf210e8ca46}{}double \hyperlink{classSimulation_a7241e19c4db7e819dad00bf210e8ca46}{E\+Mid}\label{classSimulation_a7241e19c4db7e819dad00bf210e8ca46}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the mid-\/line of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a82219fd675e3f94e3de603f01af32dd9}{}double \hyperlink{classSimulation_a82219fd675e3f94e3de603f01af32dd9}{E\+Columnar\+E\+C\+M}\label{classSimulation_a82219fd675e3f94e3de603f01af32dd9}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the columnar extracellular matrix (E\+C\+M) \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a66bc1ebb86876dd826aee17cd78764f2}{}double \hyperlink{classSimulation_a66bc1ebb86876dd826aee17cd78764f2}{E\+Peripodial\+E\+C\+M}\label{classSimulation_a66bc1ebb86876dd826aee17cd78764f2}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the peripodial extracellular matrix (E\+C\+M) \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a49bdb9254f7b7f5a6e33352c43881422}{}double \hyperlink{classSimulation_a49bdb9254f7b7f5a6e33352c43881422}{poisson}\label{classSimulation_a49bdb9254f7b7f5a6e33352c43881422}
+
+\begin{DoxyCompactList}\small\item\em Poisson ratio of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6db999f14bd36d808d133eb9ae702f9a}{}double \hyperlink{classSimulation_a6db999f14bd36d808d133eb9ae702f9a}{disc\+Proper\+Apical\+Viscosity}\label{classSimulation_a6db999f14bd36d808d133eb9ae702f9a}
+
+\begin{DoxyCompactList}\small\item\em The apical internal viscosity of the columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3332b7870109dcfcf57bdd36566844e9}{}double \hyperlink{classSimulation_a3332b7870109dcfcf57bdd36566844e9}{disc\+Proper\+Basal\+Viscosity}\label{classSimulation_a3332b7870109dcfcf57bdd36566844e9}
+
+\begin{DoxyCompactList}\small\item\em The basal internal viscosity of the columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5940ac39f46fd4f07d6cde8bb403fb80}{}double \hyperlink{classSimulation_a5940ac39f46fd4f07d6cde8bb403fb80}{disc\+Proper\+Midline\+Viscosity}\label{classSimulation_a5940ac39f46fd4f07d6cde8bb403fb80}
+
+\begin{DoxyCompactList}\small\item\em The mid-\/line internal viscosity of the columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a762d730b0722e46ac8cec52816477249}{}std\+::array$<$ int, 4 $>$ \hyperlink{classSimulation_a762d730b0722e46ac8cec52816477249}{noise\+On\+Pys\+Prop}\label{classSimulation_a762d730b0722e46ac8cec52816477249}
+
+\begin{DoxyCompactList}\small\item\em The desired noise percentage on the physical properties \mbox{[}\hyperlink{classSimulation_a624c8f135227f36c3749fb12b89f6937}{Simulation\+::\+E\+Apical}\mbox{]} \mbox{[}\hyperlink{classSimulation_ac36c6cc857bb7cdb84ccf9c17ef5bcba}{Simulation\+::\+E\+Basal}\mbox{]}\mbox{[}Simulation\+::\+E\+Mid\+Line\mbox{]}\mbox{[}\hyperlink{classSimulation_a49bdb9254f7b7f5a6e33352c43881422}{Simulation\+::poisson}\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a865d265405d3d496d3755735ff72484b}{}bool \hyperlink{classSimulation_a865d265405d3d496d3755735ff72484b}{zero\+External\+Viscosity} \mbox{[}3\mbox{]}\label{classSimulation_a865d265405d3d496d3755735ff72484b}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is zero external viscosity on any of the 3 dimensions. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a850dff7ea7bb0fe75dd0e2cac62d9eba}{}bool \hyperlink{classSimulation_a850dff7ea7bb0fe75dd0e2cac62d9eba}{extend\+External\+Viscosity\+To\+Inner\+Tissue}\label{classSimulation_a850dff7ea7bb0fe75dd0e2cac62d9eba}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the external viscosity will be extended to the inner layers. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae0960e3fb2edb70918f75e27826d3bad}{}double \hyperlink{classSimulation_ae0960e3fb2edb70918f75e27826d3bad}{external\+Viscosity\+D\+P\+Apical}\label{classSimulation_ae0960e3fb2edb70918f75e27826d3bad}
+
+\begin{DoxyCompactList}\small\item\em The apical external viscosity of the columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2cb640995a5288502bd0ba3ea6a6c893}{}double \hyperlink{classSimulation_a2cb640995a5288502bd0ba3ea6a6c893}{external\+Viscosity\+D\+P\+Basal}\label{classSimulation_a2cb640995a5288502bd0ba3ea6a6c893}
+
+\begin{DoxyCompactList}\small\item\em The basal external viscosity of the columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa794b85325ceb5339a21c3166cc40313}{}double \hyperlink{classSimulation_aa794b85325ceb5339a21c3166cc40313}{external\+Viscosity\+P\+M\+Apical}\label{classSimulation_aa794b85325ceb5339a21c3166cc40313}
+
+\begin{DoxyCompactList}\small\item\em The apical external viscosity of the peripodial layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_acdd300d98cfaa633b13e2d091aa17398}{}double \hyperlink{classSimulation_acdd300d98cfaa633b13e2d091aa17398}{external\+Viscosity\+P\+M\+Basal}\label{classSimulation_acdd300d98cfaa633b13e2d091aa17398}
+
+\begin{DoxyCompactList}\small\item\em The basal external viscosity of the peripodial layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7008c3c2a7451471a70bdffb4e97054e}{}double \hyperlink{classSimulation_a7008c3c2a7451471a70bdffb4e97054e}{external\+Viscosity\+L\+Z\+Apical}\label{classSimulation_a7008c3c2a7451471a70bdffb4e97054e}
+
+\begin{DoxyCompactList}\small\item\em The apical external viscosity of the linker zone between columnar and peripodial layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8bc411f696e2333c6501bd20fe0e4ab9}{}double \hyperlink{classSimulation_a8bc411f696e2333c6501bd20fe0e4ab9}{external\+Viscosity\+L\+Z\+Basal}\label{classSimulation_a8bc411f696e2333c6501bd20fe0e4ab9}
+
+\begin{DoxyCompactList}\small\item\em The basal external viscosity of the linker zone between columnar and peripodial layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{}int \hyperlink{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{Mesh\+Type}\label{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}
+
+\begin{DoxyCompactList}\small\item\em The mesh type of the tissue; 2\+: a hexagonal mesh is generated with \hyperlink{classSimulation_a7e232e744b0c21c7d878dc454e74b898}{Simulation\+::\+Row} and \hyperlink{classSimulation_ad700818601343ea02758de553eaab8e3}{Simulation\+::\+Column} number of elemetns; 4\+: an input file is specified. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7e232e744b0c21c7d878dc454e74b898}{}int \hyperlink{classSimulation_a7e232e744b0c21c7d878dc454e74b898}{Row}\label{classSimulation_a7e232e744b0c21c7d878dc454e74b898}
+
+\begin{DoxyCompactList}\small\item\em The number of rows of elemetns for initiating a hexagonal mesh for \hyperlink{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{Simulation\+::\+Mesh\+Type} = 2. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ad700818601343ea02758de553eaab8e3}{}int \hyperlink{classSimulation_ad700818601343ea02758de553eaab8e3}{Column}\label{classSimulation_ad700818601343ea02758de553eaab8e3}
+
+\begin{DoxyCompactList}\small\item\em The number of columns of elemetns for initiating a hexagonal mesh for \hyperlink{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{Simulation\+::\+Mesh\+Type} = 2. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8f79cab9b0ff8dc3802e1bf1f903d1c7}{}float \hyperlink{classSimulation_a8f79cab9b0ff8dc3802e1bf1f903d1c7}{Side\+Length}\label{classSimulation_a8f79cab9b0ff8dc3802e1bf1f903d1c7}
+
+\begin{DoxyCompactList}\small\item\em The side length of an element for initiating a hexagonal mesh for \hyperlink{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{Simulation\+::\+Mesh\+Type} = 2. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a27aa62c2297902e2e77159fe05362467}{}float \hyperlink{classSimulation_a27aa62c2297902e2e77159fe05362467}{z\+Height}\label{classSimulation_a27aa62c2297902e2e77159fe05362467}
+
+\begin{DoxyCompactList}\small\item\em The z height of an element for initiating a hexagonal mesh for \hyperlink{classSimulation_a3dc59b7f2368423781a41b0a457af1e4}{Simulation\+::\+Mesh\+Type} = 2. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a27563e2e991aadaf7ff9629c90197459}{}bool \hyperlink{classSimulation_a27563e2e991aadaf7ff9629c90197459}{Apical\+Node\+Fix\+With\+External\+Viscosity}\label{classSimulation_a27563e2e991aadaf7ff9629c90197459}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the apical nodes should be fixed with external viscosity;. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1898c90a360862484cb379c213640fbc}{}bool \hyperlink{classSimulation_a1898c90a360862484cb379c213640fbc}{Basal\+Node\+Fix\+With\+External\+Viscosity}\label{classSimulation_a1898c90a360862484cb379c213640fbc}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the basal nodes should be fixed with external viscosity;. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a797bef0a4c6e90daf92f51550ee0619e}{}bool \hyperlink{classSimulation_a797bef0a4c6e90daf92f51550ee0619e}{Circumferential\+Node\+Fix\+With\+High\+External\+Viscosity} \mbox{[}5\mbox{]}\label{classSimulation_a797bef0a4c6e90daf92f51550ee0619e}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the circumferential nodes should be fixed with external viscosity (\mbox{[}apical\mbox{]}\mbox{[}basal\mbox{]}\mbox{[}linker apcial\mbox{]}\mbox{[}linker basal\mbox{]} \mbox{[}all\mbox{]}) \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afcdc046caaaf16a43ee646c79902eae1}{}bool \hyperlink{classSimulation_afcdc046caaaf16a43ee646c79902eae1}{Notum\+Node\+Fix\+With\+External\+Viscosity}\label{classSimulation_afcdc046caaaf16a43ee646c79902eae1}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the notum nodes should be fixed with external viscosity;. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ac00c2a04cdaf04f28dbe95f1ca6fd934}{}double \hyperlink{classSimulation_ac00c2a04cdaf04f28dbe95f1ca6fd934}{fixing\+External\+Viscosity} \mbox{[}3\mbox{]}\label{classSimulation_ac00c2a04cdaf04f28dbe95f1ca6fd934}
+
+\begin{DoxyCompactList}\small\item\em The array of viscosity values to fix nodes by external viscosity \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a34b767055f674bf25b1b000c60683447}{}bool \hyperlink{classSimulation_a34b767055f674bf25b1b000c60683447}{Apical\+Node\+Fix} \mbox{[}3\mbox{]}\label{classSimulation_a34b767055f674bf25b1b000c60683447}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the apical nodes are fixed, rigid or via viscosity \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\href{accompanying boolean array to specify the fixing method Simulation#ApicalNodeFixWithExternalViscosity}{\tt z} \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1d716c8688103f42b89242d962c9ab1b}{}bool \hyperlink{classSimulation_a1d716c8688103f42b89242d962c9ab1b}{Basal\+Node\+Fix} \mbox{[}3\mbox{]}\label{classSimulation_a1d716c8688103f42b89242d962c9ab1b}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the basal nodes are fixed, rigid or via viscosity \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\href{accompanying boolean array to specify the fixing method Simulation#BasalNodeFixWithExternalViscosity}{\tt z} \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6222749d0ee7055efb52974eacbfa074}{}bool \hyperlink{classSimulation_a6222749d0ee7055efb52974eacbfa074}{Notum\+Node\+Fix} \mbox{[}3\mbox{]}\label{classSimulation_a6222749d0ee7055efb52974eacbfa074}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the notum nodes are fixed, rigid or via viscosity \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\href{accompanying boolean array to specify the fixing method Simulation#CircumferentialNodeFixWithHighExternalViscosity}{\tt z} \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a995a48098144f291dfa47773c150ed84}{}double \hyperlink{classSimulation_a995a48098144f291dfa47773c150ed84}{notum\+Fixing\+Range} \mbox{[}2\mbox{]}\label{classSimulation_a995a48098144f291dfa47773c150ed84}
+
+\begin{DoxyCompactList}\small\item\em The boundaries of the notum zone in relative x \mbox{[}min\+X\mbox{]}\mbox{[}max\+X\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a42120f650198d83e054144ab71e2fee2}{}bool \hyperlink{classSimulation_a42120f650198d83e054144ab71e2fee2}{Circumferential\+Node\+Fix} \mbox{[}5\mbox{]}\mbox{[}3\mbox{]}\label{classSimulation_a42120f650198d83e054144ab71e2fee2}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the circumference should be fixed, rigid or via viscosity\+: ~\newline
+row 0\+: apical circumferece x,y,z ; row 1\+: basal circumference x,y,z; row 2\+: linker apical circumference x,y,z, row 3\+: linker basal circumference x,y,z, row 4\+: all circumference x,y,z. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3d8435d5bedf3810cb12138538169d9c}{}double \hyperlink{classSimulation_a3d8435d5bedf3810cb12138538169d9c}{Peripodial\+Elasticity}\label{classSimulation_a3d8435d5bedf3810cb12138538169d9c}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the peropodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a9d12531ec1daffb9e389ac59b4f43299}{}double \hyperlink{classSimulation_a9d12531ec1daffb9e389ac59b4f43299}{peripodial\+Apical\+Viscosity}\label{classSimulation_a9d12531ec1daffb9e389ac59b4f43299}
+
+\begin{DoxyCompactList}\small\item\em Apical viscosity of the peripodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa37b9f5ae1a1711bf6905ea1525fb1f4}{}double \hyperlink{classSimulation_aa37b9f5ae1a1711bf6905ea1525fb1f4}{peripodial\+Basal\+Viscosity}\label{classSimulation_aa37b9f5ae1a1711bf6905ea1525fb1f4}
+
+\begin{DoxyCompactList}\small\item\em Basal viscosity of the peripodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a92b5bdeb108bfc8816cd90eddbe49067}{}double \hyperlink{classSimulation_a92b5bdeb108bfc8816cd90eddbe49067}{peripodial\+Midline\+Viscosity}\label{classSimulation_a92b5bdeb108bfc8816cd90eddbe49067}
+
+\begin{DoxyCompactList}\small\item\em Mid-\/line viscosity of the peripodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7c6f3faf5d16e41aa43c9a71fb67d1b8}{}bool \hyperlink{classSimulation_a7c6f3faf5d16e41aa43c9a71fb67d1b8}{Base\+Linker\+Zone\+Parameters\+On\+Peripodialness}\label{classSimulation_a7c6f3faf5d16e41aa43c9a71fb67d1b8}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the physical properties should be calculated based on the tisseu type weights for linker zones (\hyperlink{classShapeBase_a134d82ba500ef829b6aa3e3a83783c9a}{Shape\+Base\+::columnar\+Growth\+Weight}) \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aaa5d205910274dd5be4976b87ab20abc}{}double \hyperlink{classSimulation_aaa5d205910274dd5be4976b87ab20abc}{Linker\+Zone\+Apical\+Elasticity}\label{classSimulation_aaa5d205910274dd5be4976b87ab20abc}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the apical section of linker tissue between columnar and peripodial. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a07cf19fd8a3e78d4644563b3c9c030ee}{}double \hyperlink{classSimulation_a07cf19fd8a3e78d4644563b3c9c030ee}{Linker\+Zone\+Basal\+Youngs\+Modulus}\label{classSimulation_a07cf19fd8a3e78d4644563b3c9c030ee}
+
+\begin{DoxyCompactList}\small\item\em Young\textquotesingle{}s modulus of the basal section of linker tissue between columnar and peripodial. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8f11d2644c957402cd0e6e1b4c652182}{}double \hyperlink{classSimulation_a8f11d2644c957402cd0e6e1b4c652182}{linker\+Zone\+Apical\+Viscosity}\label{classSimulation_a8f11d2644c957402cd0e6e1b4c652182}
+
+\begin{DoxyCompactList}\small\item\em Internal viscosity of the apical section of linker tissue between columnar and peripodial. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af7b9b2275582a0d94b6ac6709b0f73eb}{}double \hyperlink{classSimulation_af7b9b2275582a0d94b6ac6709b0f73eb}{linker\+Zone\+Basal\+Viscosity}\label{classSimulation_af7b9b2275582a0d94b6ac6709b0f73eb}
+
+\begin{DoxyCompactList}\small\item\em Internal viscosity of the basal section of linker tissue between columnar and peripodial. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5810bcef5e865af1cdbfb8e0586fa12d}{}double \hyperlink{classSimulation_a5810bcef5e865af1cdbfb8e0586fa12d}{linker\+Zone\+Midline\+Viscosity}\label{classSimulation_a5810bcef5e865af1cdbfb8e0586fa12d}
+
+\begin{DoxyCompactList}\small\item\em Internal viscosity of the mid-\/line section of linker tissue between columnar and peripodial. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a47187b5d7f450b1c41e6fdaffeedc207}{}int \hyperlink{classSimulation_a47187b5d7f450b1c41e6fdaffeedc207}{n\+Growth\+Functions}\label{classSimulation_a47187b5d7f450b1c41e6fdaffeedc207}
+
+\begin{DoxyCompactList}\small\item\em The number of growth functions active in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae83cadb5675d5ef391adb5d1595070ec}{}bool \hyperlink{classSimulation_ae83cadb5675d5ef391adb5d1595070ec}{Grid\+Growths\+Pinned\+On\+Initial\+Mesh}\label{classSimulation_ae83cadb5675d5ef391adb5d1595070ec}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the grid based gorwth is pinned on the mesh for prolonged periods, the timings stored in \hyperlink{classSimulation_ad6454fcc9e796f92d6c9aec482f10191}{Simulation\+::growth\+Pin\+Update\+Time}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a505b17bf704f4ee58df2490b993c8f15}{}int \hyperlink{classSimulation_a505b17bf704f4ee58df2490b993c8f15}{n\+Growth\+Pinning}\label{classSimulation_a505b17bf704f4ee58df2490b993c8f15}
+
+\begin{DoxyCompactList}\small\item\em The number of times growth pinning positions will be updated, the relative positions of elements in tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ad6454fcc9e796f92d6c9aec482f10191}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_ad6454fcc9e796f92d6c9aec482f10191}{growth\+Pin\+Update\+Time}\label{classSimulation_ad6454fcc9e796f92d6c9aec482f10191}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the growth rate pinning update times, as \hyperlink{classSimulation_a2056af9924aff237c804ffe006adc00b}{Simulation\+::timestep} counters. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7209f8394d5888670e14e3d46c89718f}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a7209f8394d5888670e14e3d46c89718f}{growth\+Pin\+Update\+Bools}\label{classSimulation_a7209f8394d5888670e14e3d46c89718f}
+
+\begin{DoxyCompactList}\small\item\em The vector storint the booleans to check the pinning update has been carried out. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6a4bbc66c4a2bb43de57509d25ce6ac4}{}int \hyperlink{classSimulation_a6a4bbc66c4a2bb43de57509d25ce6ac4}{grid\+Growths\+Interpolation\+Type}\label{classSimulation_a6a4bbc66c4a2bb43de57509d25ce6ac4}
+
+\begin{DoxyCompactList}\small\item\em The type of interpolation done on growth map grid, 0 = no interpolation, step function, 1 = linear interpolation (default = 1). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a425b8ee683e10f79d04e8710d82dafe2}{}std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classGrowthFunctionBase}{Growth\+Function\+Base} $>$ $>$ \hyperlink{classSimulation_a425b8ee683e10f79d04e8710d82dafe2}{Growth\+Functions}\label{classSimulation_a425b8ee683e10f79d04e8710d82dafe2}
+
+\begin{DoxyCompactList}\small\item\em The vector containing the unique pointers to the growth functions active in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a74251252e9f320268055537749d674c1}{}int \hyperlink{classSimulation_a74251252e9f320268055537749d674c1}{n\+Shape\+Change\+Functions}\label{classSimulation_a74251252e9f320268055537749d674c1}
+
+\begin{DoxyCompactList}\small\item\em The number of shape change functions active in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afdceee7efa90cc90973292c5e0a72e72}{}std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classGrowthFunctionBase}{Growth\+Function\+Base} $>$ $>$ \hyperlink{classSimulation_afdceee7efa90cc90973292c5e0a72e72}{Shape\+Change\+Functions}\label{classSimulation_afdceee7efa90cc90973292c5e0a72e72}
+
+\begin{DoxyCompactList}\small\item\em The vector containing the unique pointers to the shape change functions active in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5869e105b5d4d2e41c071f24988b314e}{}double \hyperlink{classSimulation_a5869e105b5d4d2e41c071f24988b314e}{shape\+Change\+E\+C\+M\+Limit}\label{classSimulation_a5869e105b5d4d2e41c071f24988b314e}
+
+\begin{DoxyCompactList}\small\item\em The threshold of E\+C\+M density upon which emergent shape change will be activated (reduction of E\+C\+M strength inducing shape change). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab0d54e9e505f3701cf5ca8b0ac0df00a}{}bool \hyperlink{classSimulation_ab0d54e9e505f3701cf5ca8b0ac0df00a}{there\+Is\+Plastic\+Deformation}\label{classSimulation_ab0d54e9e505f3701cf5ca8b0ac0df00a}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating that there is plastic deformation (remodelling) in the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_abf2cb97bd129a14b21e15b742af8768c}{}bool \hyperlink{classSimulation_abf2cb97bd129a14b21e15b742af8768c}{plastic\+Deformation\+Applied\+To\+Peripodial}\label{classSimulation_abf2cb97bd129a14b21e15b742af8768c}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating that plastic deformation (remodelling) is applied to peripodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a42218fdf4e2a624fd4886edb39125251}{}bool \hyperlink{classSimulation_a42218fdf4e2a624fd4886edb39125251}{plastic\+Deformation\+Applied\+To\+Columnar}\label{classSimulation_a42218fdf4e2a624fd4886edb39125251}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating that plastic deformation (remodelling) is applied to columnar tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a0e44e881245a507dc96188a8934b3bcc}{}bool \hyperlink{classSimulation_a0e44e881245a507dc96188a8934b3bcc}{volume\+Conserved\+In\+Plastic\+Deformation}\label{classSimulation_a0e44e881245a507dc96188a8934b3bcc}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if volume is conserved during plastic deformation (remodelling). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1aeea82e56a6523f2918583af1ecdd1a}{}double \hyperlink{classSimulation_a1aeea82e56a6523f2918583af1ecdd1a}{plastic\+Deformation\+Half\+Life}\label{classSimulation_a1aeea82e56a6523f2918583af1ecdd1a}
+
+\begin{DoxyCompactList}\small\item\em The half life or plastic deformation (remodelling). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a28126585484ed0c7676c880cfe92f991}{}double \hyperlink{classSimulation_a28126585484ed0c7676c880cfe92f991}{z\+Remodelling\+Lower\+Threshold}\label{classSimulation_a28126585484ed0c7676c880cfe92f991}
+
+\begin{DoxyCompactList}\small\item\em The lower threshold of z remodelling, below which an element cannot be shrunk in z, fraction. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab455f57038010e1d9c6694eb99ddca8e}{}double \hyperlink{classSimulation_ab455f57038010e1d9c6694eb99ddca8e}{z\+Remodelling\+Upper\+Threshold}\label{classSimulation_ab455f57038010e1d9c6694eb99ddca8e}
+
+\begin{DoxyCompactList}\small\item\em The lower threshold of z remodelling, below which an element cannot be extended in z, fraction. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa6913c3f238cbf5455955b42bd617f72}{}std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$ $>$ \hyperlink{classSimulation_aa6913c3f238cbf5455955b42bd617f72}{Nodes}\label{classSimulation_aa6913c3f238cbf5455955b42bd617f72}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the unique pointers ot the nodes of the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a96e0aaea7b40dbb5bc11329fc7d34559}{}std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$ $>$ \hyperlink{classSimulation_a96e0aaea7b40dbb5bc11329fc7d34559}{Elements}\label{classSimulation_a96e0aaea7b40dbb5bc11329fc7d34559}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the unique pointers ot the elements of the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa80589d220581f9b149e4316e732252f}{}size\+\_\+t \hyperlink{classSimulation_aa80589d220581f9b149e4316e732252f}{n\+Elements}\label{classSimulation_aa80589d220581f9b149e4316e732252f}
+
+\begin{DoxyCompactList}\small\item\em The number of elements of the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab779ac291bc517de8a598ab72094c1a6}{}size\+\_\+t \hyperlink{classSimulation_ab779ac291bc517de8a598ab72094c1a6}{n\+Nodes}\label{classSimulation_ab779ac291bc517de8a598ab72094c1a6}
+
+\begin{DoxyCompactList}\small\item\em The number of nodes of the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aae01de5bcfd81ddeca987cdb6b054f54}{}std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ \hyperlink{classSimulation_aae01de5bcfd81ddeca987cdb6b054f54}{System\+Forces}\label{classSimulation_aae01de5bcfd81ddeca987cdb6b054f54}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the system forces applied on each node \mbox{[}\hyperlink{classSimulation_ab779ac291bc517de8a598ab72094c1a6}{Simulation\+::n\+Nodes}\mbox{]}\mbox{[}3\+D\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a999a884533442902aa3a868f4c326a1c}{}std\+::vector$<$ std\+::array$<$ double, 3 $>$ $>$ \hyperlink{classSimulation_a999a884533442902aa3a868f4c326a1c}{Packing\+Forces}\label{classSimulation_a999a884533442902aa3a868f4c326a1c}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the packing forces applied on each node \mbox{[}\hyperlink{classSimulation_ab779ac291bc517de8a598ab72094c1a6}{Simulation\+::n\+Nodes}\mbox{]}\mbox{[}3\+D\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af8c661769aba37b7374be811dc230e01}{}bool \hyperlink{classSimulation_af8c661769aba37b7374be811dc230e01}{adding\+Random\+Forces}\label{classSimulation_af8c661769aba37b7374be811dc230e01}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if random forces are added as noise. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a08bbe7a4f6a277158fac630b4336e3e2}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a08bbe7a4f6a277158fac630b4336e3e2}{random\+Forces}\label{classSimulation_a08bbe7a4f6a277158fac630b4336e3e2}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the random forces applied on each node, stored in vector form \mbox{[}\hyperlink{classSimulation_ab779ac291bc517de8a598ab72094c1a6}{Simulation\+::n\+Nodes} $\ast$ 3\+D\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a56b272cd63a24f903ab2378d71330e48}{}double \hyperlink{classSimulation_a56b272cd63a24f903ab2378d71330e48}{random\+Force\+Mean}\label{classSimulation_a56b272cd63a24f903ab2378d71330e48}
+
+\begin{DoxyCompactList}\small\item\em The mean of the random forces. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa16edf4b6fbdfb5cbc953ecefb21620c}{}double \hyperlink{classSimulation_aa16edf4b6fbdfb5cbc953ecefb21620c}{random\+Force\+Var}\label{classSimulation_aa16edf4b6fbdfb5cbc953ecefb21620c}
+
+\begin{DoxyCompactList}\small\item\em The variance of the random forces. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3229dca48a5d49bbcd641f74605341c0}{}double \hyperlink{classSimulation_a3229dca48a5d49bbcd641f74605341c0}{System\+Centre} \mbox{[}3\mbox{]}\label{classSimulation_a3229dca48a5d49bbcd641f74605341c0}
+
+\begin{DoxyCompactList}\small\item\em The geometric centre of the tissue mesh. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a31d908b8560f3da1a2524481c970449c}{}bool \hyperlink{classSimulation_a31d908b8560f3da1a2524481c970449c}{need\+Peripodialfor\+Input\+Consistency}\label{classSimulation_a31d908b8560f3da1a2524481c970449c}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the simulation inputs require peripodial tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a43db0752ce3c4d11a6268e7896a021f0}{}bool \hyperlink{classSimulation_a43db0752ce3c4d11a6268e7896a021f0}{there\+Is\+Peripodial\+Membrane}\label{classSimulation_a43db0752ce3c4d11a6268e7896a021f0}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is a peripodial membrane in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa6b15db1d6838c8387e3cce18dc469b1}{}bool \hyperlink{classSimulation_aa6b15db1d6838c8387e3cce18dc469b1}{symmetric\+Y}\label{classSimulation_aa6b15db1d6838c8387e3cce18dc469b1}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is y-\/axis symettricity in tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab224011afb730f28d57d12db3160c4ed}{}bool \hyperlink{classSimulation_ab224011afb730f28d57d12db3160c4ed}{symmetric\+X}\label{classSimulation_ab224011afb730f28d57d12db3160c4ed}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is x-\/axis symettricity in tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1dd66be606281f44c05ec6b4f8eed882}{}bool \hyperlink{classSimulation_a1dd66be606281f44c05ec6b4f8eed882}{conserving\+Column\+Volumes}\label{classSimulation_a1dd66be606281f44c05ec6b4f8eed882}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the simulation is conserving the volume of each elemental column rather than each element. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_adabe1c2bf2cb95e122fe157ddf4c170e}{}bool \hyperlink{classSimulation_adabe1c2bf2cb95e122fe157ddf4c170e}{there\+Is\+Artificaial\+Relaxation}\label{classSimulation_adabe1c2bf2cb95e122fe157ddf4c170e}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is artifical relaxation of forces in tissue at a selected time point stored in \hyperlink{classSimulation_a7a394751dc6e09dec25db763d94cbdf9}{Simulation\+::artificial\+Relaxation\+Time}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a9cb11c44d4b8ae638fb8c4bdce400c37}{}bool \hyperlink{classSimulation_a9cb11c44d4b8ae638fb8c4bdce400c37}{relax\+E\+C\+M\+In\+Artificial\+Relaxation}\label{classSimulation_a9cb11c44d4b8ae638fb8c4bdce400c37}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the E\+C\+M should be relaxed with the tissue in artifical relaxation of forces at a selected time point stored in \hyperlink{classSimulation_a7a394751dc6e09dec25db763d94cbdf9}{Simulation\+::artificial\+Relaxation\+Time}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7a394751dc6e09dec25db763d94cbdf9}{}double \hyperlink{classSimulation_a7a394751dc6e09dec25db763d94cbdf9}{artificial\+Relaxation\+Time}\label{classSimulation_a7a394751dc6e09dec25db763d94cbdf9}
+
+\begin{DoxyCompactList}\small\item\em The time of artifical relaxation of forces, in seconds. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab998930bbef90a5a59ba86079a44e7ae}{}bool \hyperlink{classSimulation_ab998930bbef90a5a59ba86079a44e7ae}{stretcher\+Attached}\label{classSimulation_ab998930bbef90a5a59ba86079a44e7ae}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if there is a stretcher experimental setup attached to tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a822045adc54ecbf2a5c33c65eeb856e8}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_a822045adc54ecbf2a5c33c65eeb856e8}{left\+Clamp\+Border}\label{classSimulation_a822045adc54ecbf2a5c33c65eeb856e8}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} vector for the nodes at the border of stretcher experiment left side clamp. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a73e68a828b5ec906e9b949aebd087098}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_a73e68a828b5ec906e9b949aebd087098}{right\+Clamp\+Border}\label{classSimulation_a73e68a828b5ec906e9b949aebd087098}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} vector for the nodes at the border of stretcher experiment right side clamp. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ad6d5bb340613f0a93a71bb8f3a73f609}{}double \hyperlink{classSimulation_ad6d5bb340613f0a93a71bb8f3a73f609}{left\+Clamp\+Forces} \mbox{[}3\mbox{]}\label{classSimulation_ad6d5bb340613f0a93a71bb8f3a73f609}
+
+\begin{DoxyCompactList}\small\item\em The total force vector at the stretcher experiment left side clamp. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa88acfad799773f87059228a07d40b37}{}double \hyperlink{classSimulation_aa88acfad799773f87059228a07d40b37}{right\+Clamp\+Forces} \mbox{[}3\mbox{]}\label{classSimulation_aa88acfad799773f87059228a07d40b37}
+
+\begin{DoxyCompactList}\small\item\em The total force vector at the stretcher experiment right side clamp. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af99671c6b222e164dd65bd969632480f}{}bool \hyperlink{classSimulation_af99671c6b222e164dd65bd969632480f}{D\+V\+Clamp}\label{classSimulation_af99671c6b222e164dd65bd969632480f}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the tissue should be clapmed in the D\+V axis (long axis). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ac21ce1a13eb2eedd549a1f61232b948b}{}int \hyperlink{classSimulation_ac21ce1a13eb2eedd549a1f61232b948b}{distance\+Index}\label{classSimulation_ac21ce1a13eb2eedd549a1f61232b948b}
+
+\begin{DoxyCompactList}\small\item\em The index of dimension for stretcher clamp position, 0 (x) id attached on long axis, 1 (y) otherwise. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8b7c90b578a80c574d7f8c35adac0afd}{}int \hyperlink{classSimulation_a8b7c90b578a80c574d7f8c35adac0afd}{Stretch\+Initial\+Time}\label{classSimulation_a8b7c90b578a80c574d7f8c35adac0afd}
+
+\begin{DoxyCompactList}\small\item\em The activation time of the stretcher, timestep counter unit. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af13e08bc4489985bbb66400226595aac}{}int \hyperlink{classSimulation_af13e08bc4489985bbb66400226595aac}{Stretch\+End\+Time}\label{classSimulation_af13e08bc4489985bbb66400226595aac}
+
+\begin{DoxyCompactList}\small\item\em The end time of gradual stretching stretcher, timestep counter unit. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a579d17e790d3ea2e470db00e3a732e0c}{}double \hyperlink{classSimulation_a579d17e790d3ea2e470db00e3a732e0c}{Stretch\+Min}\label{classSimulation_a579d17e790d3ea2e470db00e3a732e0c}
+
+\begin{DoxyCompactList}\small\item\em The minimum relative position in the selected direction (\hyperlink{classSimulation_ac21ce1a13eb2eedd549a1f61232b948b}{Simulation\+::distance\+Index}), below which the nodes are clamped and move with the stretcher. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a53227db1a41449ba235979fdd052f42e}{}double \hyperlink{classSimulation_a53227db1a41449ba235979fdd052f42e}{Stretch\+Max}\label{classSimulation_a53227db1a41449ba235979fdd052f42e}
+
+\begin{DoxyCompactList}\small\item\em The maximum relative position in the selected direction (\hyperlink{classSimulation_ac21ce1a13eb2eedd549a1f61232b948b}{Simulation\+::distance\+Index}), below which the nodes are clamped and move with the stretcher. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a76aca0fc8a6de8550af15556d18e6dfb}{}double \hyperlink{classSimulation_a76aca0fc8a6de8550af15556d18e6dfb}{Stretch\+Strain}\label{classSimulation_a76aca0fc8a6de8550af15556d18e6dfb}
+
+\begin{DoxyCompactList}\small\item\em The stretch applied in the stretcher device. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a10cfa63b384b954f5ea34afca788f298}{}bool \hyperlink{classSimulation_a10cfa63b384b954f5ea34afca788f298}{Pipette\+Suction}\label{classSimulation_a10cfa63b384b954f5ea34afca788f298}
+
+\begin{DoxyCompactList}\small\item\em The boolean if there is a pipette aspiration experiment in the simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a53d18b41ab9318966acb05815ab4deb0}{}bool \hyperlink{classSimulation_a53d18b41ab9318966acb05815ab4deb0}{Apical\+Suction}\label{classSimulation_a53d18b41ab9318966acb05815ab4deb0}
+
+\begin{DoxyCompactList}\small\item\em The boolean if the pipette aspiration experiment is attached to apical surface, if not, it is attached to basal surface. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aac639bb76a25b8df8917d6e288358110}{}bool \hyperlink{classSimulation_aac639bb76a25b8df8917d6e288358110}{Tissue\+Stuck\+On\+Glass\+During\+Pipette\+Aspiration}\label{classSimulation_aac639bb76a25b8df8917d6e288358110}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the tissue is stuck on glass on the non-\/aspirated surface. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a24de4a27428b8a8d6c80a02d43186df8}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_a24de4a27428b8a8d6c80a02d43186df8}{Transient\+Z\+Fix\+List\+For\+Pipette}\label{classSimulation_a24de4a27428b8a8d6c80a02d43186df8}
+
+\begin{DoxyCompactList}\small\item\em The vector of \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} marking the nodes packling to the tip of the pipette. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab3f29a12d0630213fe58e14a0e198ca0}{}int \hyperlink{classSimulation_ab3f29a12d0630213fe58e14a0e198ca0}{Pipette\+Initial\+Step}\label{classSimulation_ab3f29a12d0630213fe58e14a0e198ca0}
+
+\begin{DoxyCompactList}\small\item\em The initial time step of pipette aspiration. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a54a1f04e643d462d60644fef64fd7416}{}int \hyperlink{classSimulation_a54a1f04e643d462d60644fef64fd7416}{n\+Pipette\+Suction\+Steps}\label{classSimulation_a54a1f04e643d462d60644fef64fd7416}
+
+\begin{DoxyCompactList}\small\item\em The number of steps the pressure of the pipette aspiration experimetnis increased, times and pressures saved in \hyperlink{classSimulation_ae9b603670a57de082f3c87615eed3822}{Simulation\+::pipette\+Suction\+Times} and \hyperlink{classSimulation_a53bcf3b46795c52fd209a52d326db783}{Simulation\+::pipette\+Suction\+Pressures}, respectively. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae9b603670a57de082f3c87615eed3822}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_ae9b603670a57de082f3c87615eed3822}{pipette\+Suction\+Times}\label{classSimulation_ae9b603670a57de082f3c87615eed3822}
+
+\begin{DoxyCompactList}\small\item\em The time points where the pipette aspiration pressure is increased, the pressures are stored in \hyperlink{classSimulation_a53bcf3b46795c52fd209a52d326db783}{Simulation\+::pipette\+Suction\+Pressures}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a53bcf3b46795c52fd209a52d326db783}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a53bcf3b46795c52fd209a52d326db783}{pipette\+Suction\+Pressures}\label{classSimulation_a53bcf3b46795c52fd209a52d326db783}
+
+\begin{DoxyCompactList}\small\item\em The pressures steps of the pipette aspiration experiment, the times are stored in \hyperlink{classSimulation_ae9b603670a57de082f3c87615eed3822}{Simulation\+::pipette\+Suction\+Times}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a80ba175cfd0377ddab49a0058139f03c}{}double \hyperlink{classSimulation_a80ba175cfd0377ddab49a0058139f03c}{pipette\+Centre} \mbox{[}3\mbox{]}\label{classSimulation_a80ba175cfd0377ddab49a0058139f03c}
+
+\begin{DoxyCompactList}\small\item\em The centre of the pipette tip \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6d987f6569d306688d272436294e85f4}{}double \hyperlink{classSimulation_a6d987f6569d306688d272436294e85f4}{pipette\+Depth}\label{classSimulation_a6d987f6569d306688d272436294e85f4}
+
+\begin{DoxyCompactList}\small\item\em The z-\/depth of the suction pressure effectiveness from the pipette tip. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a9c0a8edcc987294ad36dc43cb0b2c77c}{}double \hyperlink{classSimulation_a9c0a8edcc987294ad36dc43cb0b2c77c}{pipette\+Inner\+Radius}\label{classSimulation_a9c0a8edcc987294ad36dc43cb0b2c77c}
+
+\begin{DoxyCompactList}\small\item\em The inner radius of the pipette. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a330bde4b57359e57318c1105edde06c5}{}double \hyperlink{classSimulation_a330bde4b57359e57318c1105edde06c5}{pipette\+Thickness}\label{classSimulation_a330bde4b57359e57318c1105edde06c5}
+
+\begin{DoxyCompactList}\small\item\em The thickness of the pipette. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab7a32b7ebb6db0157237249733ee653f}{}double \hyperlink{classSimulation_ab7a32b7ebb6db0157237249733ee653f}{pipette\+Inner\+Radius\+Sq}\label{classSimulation_ab7a32b7ebb6db0157237249733ee653f}
+
+\begin{DoxyCompactList}\small\item\em The pipette inner radius (\hyperlink{classSimulation_a9c0a8edcc987294ad36dc43cb0b2c77c}{Simulation\+::pipette\+Inner\+Radius}) squared. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a70a94dce9bdc0a99a99cab0abe805185}{}double \hyperlink{classSimulation_a70a94dce9bdc0a99a99cab0abe805185}{effect\+Limits\+In\+Z} \mbox{[}2\mbox{]}\label{classSimulation_a70a94dce9bdc0a99a99cab0abe805185}
+
+\begin{DoxyCompactList}\small\item\em The effective suction limits of the pipette in z, from tip to infinity in the opposing direction. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa7b121f145af33dae88b463490aef709}{}double \hyperlink{classSimulation_aa7b121f145af33dae88b463490aef709}{Suction\+Pressure} \mbox{[}3\mbox{]}\label{classSimulation_aa7b121f145af33dae88b463490aef709}
+
+\begin{DoxyCompactList}\small\item\em Current suction pressure of the pipette suction experiment. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_adad1e5ce0657d347c8b46a4d1749caa3}{}double \hyperlink{classSimulation_adad1e5ce0657d347c8b46a4d1749caa3}{Tissue\+Height}\label{classSimulation_adad1e5ce0657d347c8b46a4d1749caa3}
+
+\begin{DoxyCompactList}\small\item\em The height of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af40071d89036f339dd4c1dde41951741}{}size\+\_\+t \hyperlink{classSimulation_af40071d89036f339dd4c1dde41951741}{Tissue\+Height\+Discretisation\+Layers}\label{classSimulation_af40071d89036f339dd4c1dde41951741}
+
+\begin{DoxyCompactList}\small\item\em The number of elemetns the tissue height is discretisized to. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8e5b5de0190d35c7984c4b393fd9fcd9}{}double \hyperlink{classSimulation_a8e5b5de0190d35c7984c4b393fd9fcd9}{bounding\+Box} \mbox{[}2\mbox{]}\mbox{[}3\mbox{]}\label{classSimulation_a8e5b5de0190d35c7984c4b393fd9fcd9}
+
+\begin{DoxyCompactList}\small\item\em The bounding box of the tissue \mbox{[}lower left corner \mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]}\mbox{]} \mbox{[}upper right corner\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}\mbox{[}z\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aeb78dddb085445b34d6ed6efee996183}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_aeb78dddb085445b34d6ed6efee996183}{pacing\+Node\+Couples0}\label{classSimulation_aeb78dddb085445b34d6ed6efee996183}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} list of packing node couples, coupled with \hyperlink{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{Simulation\+::pacing\+Node\+Couples1}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{pacing\+Node\+Couples1}\label{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} list of packing node couples, coupled with \hyperlink{classSimulation_aeb78dddb085445b34d6ed6efee996183}{Simulation\+::pacing\+Node\+Couples0}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ad549ce1c8c1fee8311e54eea5dede24d}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_ad549ce1c8c1fee8311e54eea5dede24d}{pacing\+Node\+Couples\+Have\+Adhered}\label{classSimulation_ad549ce1c8c1fee8311e54eea5dede24d}
+
+\begin{DoxyCompactList}\small\item\em The boolean vector stating if the potentially packing node couple have adheres (couple stored in \hyperlink{classSimulation}{Simulation}\#///$<$ The vector storing the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} list of packing node couples, coupled with \hyperlink{classSimulation_aeb78dddb085445b34d6ed6efee996183}{Simulation\+::pacing\+Node\+Couples0} and \hyperlink{classSimulation}{Simulation}\#///$<$ The vector storing the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} list of packing node couples, coupled with \hyperlink{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{Simulation\+::pacing\+Node\+Couples1}). \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6a035fd880a67421014b46a9a85c6cbd}{}int \hyperlink{classSimulation_a6a035fd880a67421014b46a9a85c6cbd}{n\+Marker\+Ellipse\+Ranges}\label{classSimulation_a6a035fd880a67421014b46a9a85c6cbd}
+
+\begin{DoxyCompactList}\small\item\em Number of marker ellipses used in perturbation activation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3495b4621a68a6698c6305f2dd9f2798}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a3495b4621a68a6698c6305f2dd9f2798}{marker\+Ellipse\+Band\+X\+Centres}\label{classSimulation_a3495b4621a68a6698c6305f2dd9f2798}
+
+\begin{DoxyCompactList}\small\item\em The vecotr storing the x centres of the marker ellipse bands used in perturbation activation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6084b215ed2b7f11bd208c25e9b1e256}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a6084b215ed2b7f11bd208c25e9b1e256}{marker\+Ellipse\+Band\+R1\+Ranges}\label{classSimulation_a6084b215ed2b7f11bd208c25e9b1e256}
+
+\begin{DoxyCompactList}\small\item\em The vecotr storing the inner radia of the marker ellipse bands used in perturbation activation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a78598aabaa0ffafb153edf5dbc51aea9}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a78598aabaa0ffafb153edf5dbc51aea9}{marker\+Ellipse\+Band\+R2\+Ranges}\label{classSimulation_a78598aabaa0ffafb153edf5dbc51aea9}
+
+\begin{DoxyCompactList}\small\item\em The vecotr storing the outer radia of the marker ellipse bands used in perturbation activation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa715adde27080a9c1e52f4428070d408}{}bool \hyperlink{classSimulation_aa715adde27080a9c1e52f4428070d408}{there\+Is\+E\+C\+M\+Change}\label{classSimulation_aa715adde27080a9c1e52f4428070d408}
+
+\begin{DoxyCompactList}\small\item\em There is perturnaton on E\+C\+M. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_adc949fef766f9f71a713ea8fe88180b1}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_adc949fef766f9f71a713ea8fe88180b1}{number\+Of\+E\+C\+M\+Change\+Ellipse\+Bands}\label{classSimulation_adc949fef766f9f71a713ea8fe88180b1}
+
+\begin{DoxyCompactList}\small\item\em Number of marker ellipses used in perturbation of the E\+C\+M. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a505238cc725ac80e5fe265a698135d30}{}std\+::vector$<$ vector$<$ int $>$ $>$ \hyperlink{classSimulation_a505238cc725ac80e5fe265a698135d30}{E\+C\+M\+Change\+Ellipse\+Band\+Ids}\label{classSimulation_a505238cc725ac80e5fe265a698135d30}
+
+\begin{DoxyCompactList}\small\item\em The band Ids of marker ellipses used in perturbation of the E\+C\+M. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a974c4132b507462e193a8b7d4fc852d4}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a974c4132b507462e193a8b7d4fc852d4}{E\+C\+M\+Change\+Begin\+Time\+In\+Sec}\label{classSimulation_a974c4132b507462e193a8b7d4fc852d4}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change is activated. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1d912ab9d070b8fc79363b27cdd73928}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a1d912ab9d070b8fc79363b27cdd73928}{E\+C\+M\+Change\+End\+Time\+In\+Sec}\label{classSimulation_a1d912ab9d070b8fc79363b27cdd73928}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a66db5546dcae7e908e950bd066cce4b8}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a66db5546dcae7e908e950bd066cce4b8}{E\+C\+M\+Stiffness\+Change\+Fraction}\label{classSimulation_a66db5546dcae7e908e950bd066cce4b8}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M stiffness as a fraction of the initial value at the end of perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_abe203bfe372b8abc3af084c8c5aa7cec}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_abe203bfe372b8abc3af084c8c5aa7cec}{E\+C\+M\+Renewal\+Half\+Life\+Target\+Fraction}\label{classSimulation_abe203bfe372b8abc3af084c8c5aa7cec}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M renewal halflife as a fraction of the initial value at the end of perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2367e4589f071a0925265873773cbb1d}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a2367e4589f071a0925265873773cbb1d}{E\+C\+M\+Viscosity\+Change\+Fraction}\label{classSimulation_a2367e4589f071a0925265873773cbb1d}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M external viscosity as a fraction of the initial value at the end of perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a082e87b4a29d83f54866ac085e188d92}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a082e87b4a29d83f54866ac085e188d92}{change\+Apical\+E\+C\+M}\label{classSimulation_a082e87b4a29d83f54866ac085e188d92}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the apical E\+C\+M should be affected by perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa8c12a070e93fd1cd504f98aed28c9fa}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_aa8c12a070e93fd1cd504f98aed28c9fa}{change\+Basal\+E\+C\+M}\label{classSimulation_aa8c12a070e93fd1cd504f98aed28c9fa}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the basal E\+C\+M should be affected by perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2c668b7adc2f6d2d2d4520cc45e6926a}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a2c668b7adc2f6d2d2d4520cc45e6926a}{E\+C\+M\+Change\+Type\+Is\+Emergent}\label{classSimulation_a2c668b7adc2f6d2d2d4520cc45e6926a}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the E\+C\+M perturbation is emergent with fold initiation, rather tahn input ellipse markers. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a99017cf7137be61482cfdcbe751f7a11}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a99017cf7137be61482cfdcbe751f7a11}{changed\+E\+C\+M}\label{classSimulation_a99017cf7137be61482cfdcbe751f7a11}
+
+\begin{DoxyCompactList}\small\item\em The boolaen vector stating if the E\+C\+M perturbation has been set up. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3dc8a1c0e41aa8cde9865604b27a4226}{}double \hyperlink{classSimulation_a3dc8a1c0e41aa8cde9865604b27a4226}{notum\+E\+C\+M\+Change\+Init\+Time}\label{classSimulation_a3dc8a1c0e41aa8cde9865604b27a4226}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the notum tissue domain is activated. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a45f2a57f59d39995424b7c32ae11fa8c}{}double \hyperlink{classSimulation_a45f2a57f59d39995424b7c32ae11fa8c}{notum\+E\+C\+M\+Change\+End\+Time}\label{classSimulation_a45f2a57f59d39995424b7c32ae11fa8c}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the notum tissue domain is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ade4797ce6928843e8871f25adea46f6e}{}double \hyperlink{classSimulation_ade4797ce6928843e8871f25adea46f6e}{notum\+E\+C\+M\+Change\+Fraction}\label{classSimulation_ade4797ce6928843e8871f25adea46f6e}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M stiffness as a fraction of the initial value at the end of perturbation to the notum tissue domain is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae6491c62b99ae31c0a5bd2b5e3383bfd}{}double \hyperlink{classSimulation_ae6491c62b99ae31c0a5bd2b5e3383bfd}{hinge\+E\+C\+M\+Change\+Init\+Time}\label{classSimulation_ae6491c62b99ae31c0a5bd2b5e3383bfd}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the hinge tissue domain is activated. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1dac775eb4843f0cf562aa574664a14f}{}double \hyperlink{classSimulation_a1dac775eb4843f0cf562aa574664a14f}{hinge\+E\+C\+M\+Change\+End\+Time}\label{classSimulation_a1dac775eb4843f0cf562aa574664a14f}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the hinge tissue domain is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2fcc51c4065261a6fa1308e40d6c18d2}{}double \hyperlink{classSimulation_a2fcc51c4065261a6fa1308e40d6c18d2}{hinge\+E\+C\+M\+Change\+Fraction}\label{classSimulation_a2fcc51c4065261a6fa1308e40d6c18d2}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M stiffness as a fraction of the initial value at the end of perturbation to the hinge tissue domain is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_abe2da9f9cfd0abfe8d4530cc332f301d}{}double \hyperlink{classSimulation_abe2da9f9cfd0abfe8d4530cc332f301d}{pouch\+E\+C\+M\+Change\+Init\+Time}\label{classSimulation_abe2da9f9cfd0abfe8d4530cc332f301d}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the pouch tissue domain is activated. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_abbb40a5902677375bd7d4f30336accb1}{}double \hyperlink{classSimulation_abbb40a5902677375bd7d4f30336accb1}{pouch\+E\+C\+M\+Change\+End\+Time}\label{classSimulation_abbb40a5902677375bd7d4f30336accb1}
+
+\begin{DoxyCompactList}\small\item\em The time point where E\+C\+M change to the pouch tissue domain is activated. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7767563df2d0e9f4d9191dbb6742a6ca}{}double \hyperlink{classSimulation_a7767563df2d0e9f4d9191dbb6742a6ca}{pouch\+E\+C\+M\+Change\+Fraction}\label{classSimulation_a7767563df2d0e9f4d9191dbb6742a6ca}
+
+\begin{DoxyCompactList}\small\item\em The final E\+C\+M stiffness as a fraction of the initial value at the end of perturbation to the pouch tissue domain is ended. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afe8a88fffd9016ee11e7e2575109d437}{}bool \hyperlink{classSimulation_afe8a88fffd9016ee11e7e2575109d437}{There\+Is\+Stiffness\+Perturbation}\label{classSimulation_afe8a88fffd9016ee11e7e2575109d437}
+
+\begin{DoxyCompactList}\small\item\em The bolean stating if there is stiffness perturbation in the system. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab0d9567de53b463e14b28ae81b35c279}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_ab0d9567de53b463e14b28ae81b35c279}{There\+Is\+Apical\+Stiffness\+Perturbation}\label{classSimulation_ab0d9567de53b463e14b28ae81b35c279}
+
+\begin{DoxyCompactList}\small\item\em The vector storing if the shape change function is applied to apical surface. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a159554afc90804c2b60a4ac74bc8d0c1}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a159554afc90804c2b60a4ac74bc8d0c1}{There\+Is\+Basal\+Stiffness\+Perturbation}\label{classSimulation_a159554afc90804c2b60a4ac74bc8d0c1}
+
+\begin{DoxyCompactList}\small\item\em The vector storing if the shape change function is applied to basal surface. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a62aea550cbc8c8e7a767e44512a54668}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a62aea550cbc8c8e7a767e44512a54668}{There\+Is\+Whole\+Tissue\+Stiffness\+Perturbation}\label{classSimulation_a62aea550cbc8c8e7a767e44512a54668}
+
+\begin{DoxyCompactList}\small\item\em The vector storing if the shape change function is applied to whole tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a673dec3e38b4fbf4b22de30069ba32dd}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a673dec3e38b4fbf4b22de30069ba32dd}{There\+Is\+Basolateral\+Stiffness\+Perturbation}\label{classSimulation_a673dec3e38b4fbf4b22de30069ba32dd}
+
+\begin{DoxyCompactList}\small\item\em The vector storing if the shape change function is applied to basal and lateral tissue. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5ec07dc74b012952665fa54ed35a2736}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_a5ec07dc74b012952665fa54ed35a2736}{There\+Is\+Basolateral\+With\+Apical\+Relaxation\+Stiffness\+Perturbation}\label{classSimulation_a5ec07dc74b012952665fa54ed35a2736}
+
+\begin{DoxyCompactList}\small\item\em The vector storing if the shape change function is applied to basal and lateral tissue with inverse compansation on the apical layer. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa6f298f7f7ae41fcd197f17a6134603f}{}std\+::vector$<$ double $>$ {\bfseries stiffness\+Changed\+To\+Fraction\+Of\+Original}\label{classSimulation_aa6f298f7f7ae41fcd197f17a6134603f}
+
+\item 
+\hypertarget{classSimulation_a36cfc7d8043d1dad55751cf184bcb2b8}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a36cfc7d8043d1dad55751cf184bcb2b8}{stiffness\+Perturbation\+Begin\+Time\+In\+Sec}\label{classSimulation_a36cfc7d8043d1dad55751cf184bcb2b8}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the maximum stiffness change as a fraction of the original stiffness. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8b9dfbe4a63693a6cfdccfe9c0ee4771}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a8b9dfbe4a63693a6cfdccfe9c0ee4771}{stiffness\+Perturbation\+End\+Time\+In\+Sec}\label{classSimulation_a8b9dfbe4a63693a6cfdccfe9c0ee4771}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the stiffness perturbation initiation time points in sec. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classSimulation_ae03ad5c7859265aa5eb4d03d2e1f73d1}{number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands}
+\begin{DoxyCompactList}\small\item\em The vector storing the stiffness perturbation end time points in sec. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a95d68493a45f2d2cd22c2e757124bd81}{}std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classSimulation_a95d68493a45f2d2cd22c2e757124bd81}{stiffness\+Perturbation\+Ellipse\+Band\+Ids}\label{classSimulation_a95d68493a45f2d2cd22c2e757124bd81}
+
+\begin{DoxyCompactList}\small\item\em The I\+Ds of the marker ellipse band ids the perturbation is applied to. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a96269317c192e8f4682b45b2d272fce5}{}std\+::vector$<$ bool $>$ {\bfseries started\+Stiffness\+Perturbation}\label{classSimulation_a96269317c192e8f4682b45b2d272fce5}
+
+\item 
+\hypertarget{classSimulation_ab83a9bfa83ac45f58129afb916a129ce}{}double \hyperlink{classSimulation_ab83a9bfa83ac45f58129afb916a129ce}{packing\+Detection\+Threshold}\label{classSimulation_ab83a9bfa83ac45f58129afb916a129ce}
+
+\begin{DoxyCompactList}\small\item\em The threshold to detect potentially packing nodes, scaled to average side length. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a0c55eae62bd214951ca78098e2daf7a4}{}double \hyperlink{classSimulation_a0c55eae62bd214951ca78098e2daf7a4}{packing\+Detection\+Threshold\+Grid} \mbox{[}10\mbox{]}\mbox{[}5\mbox{]}\label{classSimulation_a0c55eae62bd214951ca78098e2daf7a4}
+
+\begin{DoxyCompactList}\small\item\em The threshold to detect potentially packing nodes as a grid, scaled to local average side length. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afa0e72518548c938a0c4974e432f9d83}{}double \hyperlink{classSimulation_afa0e72518548c938a0c4974e432f9d83}{packing\+Threshold}\label{classSimulation_afa0e72518548c938a0c4974e432f9d83}
+
+\begin{DoxyCompactList}\small\item\em The threshold to detect packing nodes, scaled to average side length. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7a39e3f43e8c3af42da95a827a0a7d5d}{}double \hyperlink{classSimulation_a7a39e3f43e8c3af42da95a827a0a7d5d}{packing\+Multiplier}\label{classSimulation_a7a39e3f43e8c3af42da95a827a0a7d5d}
+
+\begin{DoxyCompactList}\small\item\em A multiplier stored to scale packing functions where necessary, current value is unity. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a518ef4319a889b505ff0047fc30a1665}{}double \hyperlink{classSimulation_a518ef4319a889b505ff0047fc30a1665}{sigmoid\+Saturation\+For\+Packing}\label{classSimulation_a518ef4319a889b505ff0047fc30a1665}
+
+\begin{DoxyCompactList}\small\item\em The sigmoid saturation for packing, current value is 5, see packing function for details. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af0e6096603f734ee31fbd898f94bf38b}{}bool \hyperlink{classSimulation_af0e6096603f734ee31fbd898f94bf38b}{soft\+Periphery}\label{classSimulation_af0e6096603f734ee31fbd898f94bf38b}
+
+\begin{DoxyCompactList}\small\item\em Boolen stating if there is soft periphery. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab8301fb9927cb0527b8f58129aca5626}{}double \hyperlink{classSimulation_ab8301fb9927cb0527b8f58129aca5626}{soft\+Depth}\label{classSimulation_ab8301fb9927cb0527b8f58129aca5626}
+
+\begin{DoxyCompactList}\small\item\em The range of the soft periphery on xy plane. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a13ef7df1104c1e1263f50f11f36f3cdf}{}double \hyperlink{classSimulation_a13ef7df1104c1e1263f50f11f36f3cdf}{softness\+Fraction}\label{classSimulation_a13ef7df1104c1e1263f50f11f36f3cdf}
+
+\begin{DoxyCompactList}\small\item\em The fraction of stiffness perturbation at the soft periphery. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a939ae561258603220a73e00ad4143def}{}bool \hyperlink{classSimulation_a939ae561258603220a73e00ad4143def}{soft\+Periphery\+Booleans} \mbox{[}4\mbox{]}\label{classSimulation_a939ae561258603220a73e00ad4143def}
+
+\begin{DoxyCompactList}\small\item\em Boolen array stating if soft peripheri is applicable to \mbox{[}apply\+To\+Apical\mbox{]} \mbox{[}apply\+To\+Basal\mbox{]} \mbox{[}apply\+To\+Columnar\mbox{]} \mbox{[}apply\+To\+Peripodial\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a193d6b133b6b3cc3ad199dde1420756d}{}bool \hyperlink{classSimulation_a193d6b133b6b3cc3ad199dde1420756d}{there\+Is\+Adhesion}\label{classSimulation_a193d6b133b6b3cc3ad199dde1420756d}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if there is adhesion in the system. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6ee4b25647be698c89219c1cca3ba15e}{}bool \hyperlink{classSimulation_a6ee4b25647be698c89219c1cca3ba15e}{collapse\+Nodes\+On\+Adhesion}\label{classSimulation_a6ee4b25647be698c89219c1cca3ba15e}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the nodes should be collapsed in their degrees of freedom upon adheison. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3b06f6a7a5f9bab315843460f3df7a11}{}bool \hyperlink{classSimulation_a3b06f6a7a5f9bab315843460f3df7a11}{saved\+Stepwise}\label{classSimulation_a3b06f6a7a5f9bab315843460f3df7a11}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if collapse is stepwise rather than immediate, to avoid instabilities. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a6f134ccf6b32a0c6daefc77b298bd0f3}{}bool \hyperlink{classSimulation_a6f134ccf6b32a0c6daefc77b298bd0f3}{there\+Is\+Emergent\+Ellipse\+Marking}\label{classSimulation_a6f134ccf6b32a0c6daefc77b298bd0f3}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the emerging folding regions will be marked for further perturbation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab123970654b2c9352dca1fb046cc2173}{}bool \hyperlink{classSimulation_ab123970654b2c9352dca1fb046cc2173}{there\+Node\+Collapsing}\label{classSimulation_ab123970654b2c9352dca1fb046cc2173}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the nodes of elements at hogh risk of flipping will be collapsed in their degrees of freedom. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae940044346e35e17acd9f4c419f9ce4a}{}bool \hyperlink{classSimulation_ae940044346e35e17acd9f4c419f9ce4a}{implicit\+Packing}\label{classSimulation_ae940044346e35e17acd9f4c419f9ce4a}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the hard-\/wall packing will be calculated implicitly, inside N\+R iterations. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a2f2da7191c739e175284886243762a90}{}bool \hyperlink{classSimulation_a2f2da7191c739e175284886243762a90}{there\+Is\+Explicit\+E\+C\+M}\label{classSimulation_a2f2da7191c739e175284886243762a90}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if there is explcite E\+C\+M definition in the system. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a3c21241b429a8670ecf91d898ccfcf8b}{}bool \hyperlink{classSimulation_a3c21241b429a8670ecf91d898ccfcf8b}{add\+Lateral\+E\+C\+M\+Manually}\label{classSimulation_a3c21241b429a8670ecf91d898ccfcf8b}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the side E\+C\+M will be added during simulation time rather than being a mexh input. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af80f316c1518d8dbfaca351f3f4066ca}{}double \hyperlink{classSimulation_af80f316c1518d8dbfaca351f3f4066ca}{lateral\+E\+C\+M\+Thickness}\label{classSimulation_af80f316c1518d8dbfaca351f3f4066ca}
+
+\begin{DoxyCompactList}\small\item\em The thickness of the side E\+C\+M to be added. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab090ea461851d09d2ad06bce76967433}{}bool \hyperlink{classSimulation_ab090ea461851d09d2ad06bce76967433}{there\+Is\+Explicit\+Actin}\label{classSimulation_ab090ea461851d09d2ad06bce76967433}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if there is explcite actin definition in the system. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a30bc298189ac3e82173c728e32e4a384}{}double \hyperlink{classSimulation_a30bc298189ac3e82173c728e32e4a384}{E\+C\+M\+Renawal\+Half\+Life}\label{classSimulation_a30bc298189ac3e82173c728e32e4a384}
+
+\begin{DoxyCompactList}\small\item\em The half life for E\+C\+M renewal inside plastic deformation. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_aa935cd88fb6b87363b775efa578f2737}{}size\+\_\+t \hyperlink{classSimulation_aa935cd88fb6b87363b775efa578f2737}{number\+Of\+Clones}\label{classSimulation_aa935cd88fb6b87363b775efa578f2737}
+
+\begin{DoxyCompactList}\small\item\em Number of mutant clones. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af80702141bab1e092d1fb9f464a4c91c}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_af80702141bab1e092d1fb9f464a4c91c}{clone\+Information\+X}\label{classSimulation_af80702141bab1e092d1fb9f464a4c91c}
+
+\begin{DoxyCompactList}\small\item\em The vector storing x positions of clone centres. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_afbd330f29895998ed507bcd07792378e}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_afbd330f29895998ed507bcd07792378e}{clone\+Information\+Y}\label{classSimulation_afbd330f29895998ed507bcd07792378e}
+
+\begin{DoxyCompactList}\small\item\em The vector storing y positions of clone centres. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a13db8ef58a0e1927a397a7d562d6812a}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_a13db8ef58a0e1927a397a7d562d6812a}{clone\+Information\+R}\label{classSimulation_a13db8ef58a0e1927a397a7d562d6812a}
+
+\begin{DoxyCompactList}\small\item\em The vector storing z positions of clone centres. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_af00718ca118c533bbe7059a0f87cad3e}{}std\+::vector$<$ bool $>$ \hyperlink{classSimulation_af00718ca118c533bbe7059a0f87cad3e}{clone\+Information\+Using\+Absolue\+Growth}\label{classSimulation_af00718ca118c533bbe7059a0f87cad3e}
+
+\begin{DoxyCompactList}\small\item\em The vector of booleans defining the growth perturbation type of clones, true if absolute growth is provided, false if scaled. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab1abad698b27f9687e12b940eb1a3071}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_ab1abad698b27f9687e12b940eb1a3071}{clone\+Information\+Growth}\label{classSimulation_ab1abad698b27f9687e12b940eb1a3071}
+
+\begin{DoxyCompactList}\small\item\em The vector storing the absoule growth rates O\+R growth fold changes of clones. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a5f78710998d8706eb7e15857eb03ccc6}{}bool \hyperlink{classSimulation_a5f78710998d8706eb7e15857eb03ccc6}{enclose\+Tissue\+Between\+Surfaces}\label{classSimulation_a5f78710998d8706eb7e15857eb03ccc6}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if there is external enclosing surfaces. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a4b273b605ad9f2dafb4b4ea22b3a4d92}{}double \hyperlink{classSimulation_a4b273b605ad9f2dafb4b4ea22b3a4d92}{initial\+Z\+Enclosement\+Boundaries} \mbox{[}2\mbox{]}\label{classSimulation_a4b273b605ad9f2dafb4b4ea22b3a4d92}
+
+\begin{DoxyCompactList}\small\item\em Initial z position of the enclosing surfaces \mbox{[}top\mbox{]}\mbox{[}bottom\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a8741a8f397eceac3a4f7d40009ada8a4}{}double \hyperlink{classSimulation_a8741a8f397eceac3a4f7d40009ada8a4}{final\+Z\+Enclosement\+Boundaries} \mbox{[}2\mbox{]}\label{classSimulation_a8741a8f397eceac3a4f7d40009ada8a4}
+
+\begin{DoxyCompactList}\small\item\em Final z position of the enclosing surfaces \mbox{[}top\mbox{]}\mbox{[}bottom\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_adc4fdde612c109d01508eb4c8d49f76a}{}double \hyperlink{classSimulation_adc4fdde612c109d01508eb4c8d49f76a}{initial\+Time\+To\+Enclose\+Tissue\+Between\+Surfaces\+Sec}\label{classSimulation_adc4fdde612c109d01508eb4c8d49f76a}
+
+\begin{DoxyCompactList}\small\item\em Initial time point to start enclosement. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ab7ef2d249b5d20a2fc0bc399a2b34e6d}{}double \hyperlink{classSimulation_ab7ef2d249b5d20a2fc0bc399a2b34e6d}{final\+Time\+To\+Enclose\+Tissue\+Between\+Surfaces\+Sec}\label{classSimulation_ab7ef2d249b5d20a2fc0bc399a2b34e6d}
+
+\begin{DoxyCompactList}\small\item\em Final time point to apply enclosement. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a22bbc8742aed21f955c74c0ae2d60e59}{}double \hyperlink{classSimulation_a22bbc8742aed21f955c74c0ae2d60e59}{z\+Enclosement\+Boundaries} \mbox{[}2\mbox{]}\label{classSimulation_a22bbc8742aed21f955c74c0ae2d60e59}
+
+\begin{DoxyCompactList}\small\item\em Current z position of the enclosing surfaces \mbox{[}top\mbox{]}\mbox{[}bottom\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_acc9eacb89b824cb028ff9e36cf2a8eda}{}double \hyperlink{classSimulation_acc9eacb89b824cb028ff9e36cf2a8eda}{packing\+To\+Enclosing\+Surfaces\+Threshold}\label{classSimulation_acc9eacb89b824cb028ff9e36cf2a8eda}
+
+\begin{DoxyCompactList}\small\item\em The distance threshold for detection of nodes potentially packing to the surface. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a95a1b9f341e5485d7c83e638062e1751}{}double \hyperlink{classSimulation_a95a1b9f341e5485d7c83e638062e1751}{packing\+Detection\+To\+Enclosing\+Surfaces\+Threshold}\label{classSimulation_a95a1b9f341e5485d7c83e638062e1751}
+
+\begin{DoxyCompactList}\small\item\em The distance threshold for packing to nodes to surfaces. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a7751a8ee737000de78a3347c259a9a07}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_a7751a8ee737000de78a3347c259a9a07}{nodes\+Packing\+To\+Positive\+Surface}\label{classSimulation_a7751a8ee737000de78a3347c259a9a07}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classNode}{Node} ids packing to enclosing surface on the top. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a1d0748afb72db2f26f45d5186504a902}{}std\+::vector$<$ int $>$ \hyperlink{classSimulation_a1d0748afb72db2f26f45d5186504a902}{nodes\+Packing\+To\+Negative\+Surface}\label{classSimulation_a1d0748afb72db2f26f45d5186504a902}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classNode}{Node} ids packing to enclosing surface at the bottom. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_adbfa67b9482e8aca3f0f09fa8be33b3c}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_adbfa67b9482e8aca3f0f09fa8be33b3c}{initial\+Weight\+Packing\+To\+Positive\+Surface}\label{classSimulation_adbfa67b9482e8aca3f0f09fa8be33b3c}
+
+\begin{DoxyCompactList}\small\item\em Weights of packing to state directionality, for nodes packing to surface on top. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ac23138b2d969b8e89959ced5206f59fa}{}std\+::vector$<$ double $>$ \hyperlink{classSimulation_ac23138b2d969b8e89959ced5206f59fa}{initial\+Weight\+Packing\+To\+Negative\+Surface}\label{classSimulation_ac23138b2d969b8e89959ced5206f59fa}
+
+\begin{DoxyCompactList}\small\item\em Weights of packing to state directionality, for nodes packing to surface at the bottom. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_a38a26592cb20108652c8101026de864b}{}bool \hyperlink{classSimulation_a38a26592cb20108652c8101026de864b}{there\+Is\+Circumference\+X\+Y\+Binding}\label{classSimulation_a38a26592cb20108652c8101026de864b}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if circumference is bound in xy plane, all nodes of the same column have their x\&y degrees of freedom fixed on the bottom node. This avoids boundary buckling. \end{DoxyCompactList}\item 
+\hypertarget{classSimulation_ae799b43b58444df86277c65827076b61}{}std\+::unique\+\_\+ptr$<$ \hyperlink{classNewtonRaphsonSolver}{Newton\+Raphson\+Solver} $>$ \hyperlink{classSimulation_ae799b43b58444df86277c65827076b61}{N\+R\+Solver}\label{classSimulation_ae799b43b58444df86277c65827076b61}
+
+\begin{DoxyCompactList}\small\item\em The pointer to the newton raphson solver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSimulation_a7a62be5131e130aa7f631201d5a4a49a}{}\index{Simulation@{Simulation}!add\+Packing\+Forces@{add\+Packing\+Forces}}
+\index{add\+Packing\+Forces@{add\+Packing\+Forces}!Simulation@{Simulation}}
+\subsubsection[{add\+Packing\+Forces}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::add\+Packing\+Forces (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{g\+Ext}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a7a62be5131e130aa7f631201d5a4a49a}
+
+
+Add al packing forces to external foces vector. 
+
+The packing forces calculated in \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D} are added to the system force vector. The vector containd all dimensions of all nodes in one column, therefore indexing is carried out accordingly.\hypertarget{classSimulation_a91a12f6ac1b230cecbe004221326a7ca}{}\index{Simulation@{Simulation}!align\+Tissue\+D\+V\+To\+X\+Positive@{align\+Tissue\+D\+V\+To\+X\+Positive}}
+\index{align\+Tissue\+D\+V\+To\+X\+Positive@{align\+Tissue\+D\+V\+To\+X\+Positive}!Simulation@{Simulation}}
+\subsubsection[{align\+Tissue\+D\+V\+To\+X\+Positive}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::align\+Tissue\+D\+V\+To\+X\+Positive (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a91a12f6ac1b230cecbe004221326a7ca}
+
+
+Align tissue D\+V axis to x axis, the D\+V axis is defiend by Simulation\+::ventral\+Tip\+Index and Simulation\+::dorsal\+Tip\+Index, as assigned in \hyperlink{classSimulation_a7ed75e3d044166072754e6e323f3604c}{Simulation\+::assign\+Tips}. 
+
+The bounding box calculateion is relies on the fact that the tissue is lying parallel to the x axis in its initial long axis. Bring the long axis defined by Simulation\+::ventral\+Tip\+Index and Simulation\+::dorsal\+Tip\+Index Node\+::\+Ids parallel to the x axis with a rigid body rotation.\hypertarget{classSimulation_aee92b20e497b42f5b7a089c3f9409e97}{}\index{Simulation@{Simulation}!artificial\+Relax@{artificial\+Relax}}
+\index{artificial\+Relax@{artificial\+Relax}!Simulation@{Simulation}}
+\subsubsection[{artificial\+Relax}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::artificial\+Relax (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aee92b20e497b42f5b7a089c3f9409e97}
+
+
+Artificially relax all deformation on all elements at selected time point. 
+
+This function relaxes all accumulated forces on elements of the tissue by transfering the current elastic deformation gradient onto growth gradient. The relaxation can optionally be extended to E\+C\+M, or be applied to only cellular material of the tissue.\hypertarget{classSimulation_a5a12ff087efbc813a949e347da7a0438}{}\index{Simulation@{Simulation}!assign\+Fold\+Region\+And\+Release\+Peripodial@{assign\+Fold\+Region\+And\+Release\+Peripodial}}
+\index{assign\+Fold\+Region\+And\+Release\+Peripodial@{assign\+Fold\+Region\+And\+Release\+Peripodial}!Simulation@{Simulation}}
+\subsubsection[{assign\+Fold\+Region\+And\+Release\+Peripodial}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::assign\+Fold\+Region\+And\+Release\+Peripodial (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{Node\+M\+Aster, }
+\item[{{\bf Node} $\ast$}]{Node\+Slave}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a5a12ff087efbc813a949e347da7a0438}
+
+
+Nodes are assigned to be on folding regions if they lie in between two adhered nodes. 
+
+If two nodes are adhered they are on an indenting surface and therefore on a fold initiation surface. The \hyperlink{classNode_a913bf9335efdbd81a352b1ef80654f95}{Node\+::on\+Fold\+Initiation} booleans are set to true. Then all the nodes falling in between these two nodes are also declared to be on fold initiation.\hypertarget{classSimulation_a405e565b21064979e0010286927d087a}{}\index{Simulation@{Simulation}!calculate\+Change\+Rates\+For\+E\+C\+M@{calculate\+Change\+Rates\+For\+E\+C\+M}}
+\index{calculate\+Change\+Rates\+For\+E\+C\+M@{calculate\+Change\+Rates\+For\+E\+C\+M}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Change\+Rates\+For\+E\+C\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Change\+Rates\+For\+E\+C\+M (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+E\+C\+M\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a405e565b21064979e0010286927d087a}
+
+
+Calculate the physical property change rates for E\+C\+M perturbation with the E\+C\+M perturbaiton function of input I\+D. 
+
+If the E\+C\+M has perturbations, the elements are checked if they are influenced via \hyperlink{classShapeBase_ab1572ddb1f68178e0607873a432f227c}{Shape\+Base\+::is\+E\+C\+M\+Change\+Applied\+To\+Element} and rates are set in this function via \hyperlink{classShapeBase_aef460b84dc469f89742af7c19411454f}{Shape\+Base\+::calculate\+Stiffness\+Perturbation\+Rate}.
+
+For each node, the applicability of E\+C\+M change is checked via \hyperlink{classNode_abf7a4917252fff90bd2ff2c50bfc5d21}{Node\+::is\+E\+C\+M\+Change\+Applied\+To\+Node}, and the rate \hyperlink{classNode_a58afaee3d71a2c122396265c91acda04}{Node\+::\+E\+C\+M\+Viscosity\+Change\+Per\+Hour} per dimension is calculated via the change fraction \hyperlink{classSimulation_a2367e4589f071a0925265873773cbb1d}{Simulation\+::\+E\+C\+M\+Viscosity\+Change\+Fraction}, the total time of applied change obtined from \hyperlink{classSimulation_a974c4132b507462e193a8b7d4fc852d4}{Simulation\+::\+E\+C\+M\+Change\+Begin\+Time\+In\+Sec} and \hyperlink{classSimulation_a1d912ab9d070b8fc79363b27cdd73928}{Simulation\+::\+E\+C\+M\+Change\+End\+Time\+In\+Sec}.
+
+The viscosity based E\+C\+M perturbation can be applied for E\+C\+M definitions beyond explicit E\+C\+M, and this is purely on nodal viscosity basis.\hypertarget{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{}\index{Simulation@{Simulation}!calculate\+Packing\+Forces\+Implicit3\+D@{calculate\+Packing\+Forces\+Implicit3\+D}}
+\index{calculate\+Packing\+Forces\+Implicit3\+D@{calculate\+Packing\+Forces\+Implicit3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+Forces\+Implicit3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}
+
+
+Calculate packing forces on nodes due to packing to each other. 
+
+This function calculates the packing forces between nodes, inside the Newton-\/\+Raphson iteration steps. The list of nodes that can potentially pack are detected in function , and recorded in \hyperlink{classSimulation_aeb78dddb085445b34d6ed6efee996183}{Simulation\+::pacing\+Node\+Couples0} and \hyperlink{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{Simulation\+::pacing\+Node\+Couples1}. The applied packing force is a function of the distance between nodes, and is calculated with an inverse logic function\+:
+
+\[ f\left( d \right) = \frac{L}{1+ e^{-k\left(d-d_{0}\right)}} \]
+
+Here, the amplitude $ L $ is defined such that the force will scale with the average mass of the two nodes. The steepness of the curve is the force profile will approach to zero as the distance between nodes approaches to packing threshold. It is defined the sigmoid saturation term and the packing threshold as detected by the current average side lengths of mesh elements as below. The sigmoid saturation is set to 5, as this is the approximate saturation distance of the standard logistic function.
+
+\[ -k = \frac{2\:sigmoid\:saturation}{packing\:threshold} \]
+
+The distance is shifted with distance $ d_{0} $ to move the mid point of the function to approximately 60 per cent of the packing threshold distance.
+
+
+
+Then the forces on each node i and j become\+: \[ \mathbf{F_{i}}\left( d \right) = f\left( d \right)\: \mathbf{e_{i}}\:\:,\:\: F_{j}\left( d \right) = f\left( d \right)\: \mathbf{e_{j}}=-f\left( d \right)\: \mathbf{e_{i}}=-\mathbf{F_{i}} \]
+
+where the distance $ d $ is $ ||\mathbf{x_{i}}-\mathbf{x_{j}} || $, and the normal is $ \mathbf{e_{i}} = \left( \mathbf{x_{i}}-\mathbf{x_{j}} \right) / ||\mathbf{x_{i}}-\mathbf{x_{j}} || $.
+
+Procedure\+:
+
+
+\begin{DoxyItemize}
+\item Go through all the node couples that are selected to be packing in function
+\item For each node pair id0 and id1, calculate the distance $ d $ and the unit normal between them
+\item If the distance between the node pair is zero, then set the distance to the zero threshold value set in the function, to avoid division by zero.
+\item Shift the distance by $ d_{0} $, such that the sigmoid is 0.\+5 at this distance. Currently $ d_{0} $ is set to 60 percent of \hyperlink{classSimulation_afa0e72518548c938a0c4974e432f9d83}{Simulation\+::packing\+Threshold}. A shift of minimum of 50 per cent is necessary, as it will saturate the sigmoid at distance zero. A higher shift will make the saturation earlier, keeping a distance between nodes.
+\item calculate the sigmoid value
+\item Scale with average mass to obtain force per node. There is an additional multiplier that can be used to scale the force under specific conditions if desired.
+\item Assign the forces in x, y and z directions with the normal
+\item With the direction of the normal calculation, the algorithm will calculate $ \mathbf{F_{0}} $. $ \mathbf{F_{1}} $ is in the opposite direction. The forces are recorded on the \hyperlink{classSimulation_a999a884533442902aa3a868f4c326a1c}{Simulation\+::\+Packing\+Forces} vector.
+\end{DoxyItemize}\hypertarget{classSimulation_a3b2d417e1f2814ffd8e34c186508c2f2}{}\index{Simulation@{Simulation}!calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D@{calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D}}
+\index{calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D@{calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a3b2d417e1f2814ffd8e34c186508c2f2}
+
+
+Calculate packing forces on nodes due to packing to enclosing surfaces. 
+
+See the documentation for \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D}. The methodology is the same, with rigid wall positions in two z coordinates instead of a second node position.\hypertarget{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}{}\index{Simulation@{Simulation}!calculate\+Packing\+Jacobian3\+D@{calculate\+Packing\+Jacobian3\+D}}
+\index{calculate\+Packing\+Jacobian3\+D@{calculate\+Packing\+Jacobian3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+Jacobian3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+Jacobian3\+D (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{K}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}
+
+
+Update the system jaconbian with the derivatives of forces due to packing to each other, with respect to positions. 
+
+This function calculates the derivatives of packing forces between nodes with respect to nodal positions, and fills in hte Jacobian inside the Newton-\/\+Raphson iteration steps. The list of nodes that can potentially pack are detected in function , and recorded in and recorded in \hyperlink{classSimulation_aeb78dddb085445b34d6ed6efee996183}{Simulation\+::pacing\+Node\+Couples0} and \hyperlink{classSimulation_ab67e69811ef54ec761cce2b4c76fb568}{Simulation\+::pacing\+Node\+Couples1}.. The applied packing force is calculated in function \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D}.
+
+The derivatives are calculated as \[ \frac{d\mathbf{F_{i}}}{d\mathbf{x_{i}}} = \frac{f\left( d \right)}{d}\left( \mathbf{I} - \mathbf{e_{i}} \mathbf{e_{i}^{T}}\right) +\frac{df\left( d \right)}{dd} \mathbf{e_{i}} \mathbf{e_{i}^{T}} \] where distance $ d $ is $ ||\mathbf{x_{i}}-\mathbf{x_{j}} || $, the normal is $ \mathbf{e_{i}} = \left( \mathbf{x_{i}}-\mathbf{x_{j}} \right) / ||\mathbf{x_{i}}-\mathbf{x_{j}} || $, and $ \mathbf{I} $ is the identity matrix. The function $ f\left( d \right) $, linking the distance between the nodes is an inverse sigmoid function, detailed in \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D}. Its derivative is then\+: \[ \frac{df\left( d \right)}{dd} = mass\:\frac{-2\:sigmoid\:saturation}{packing\:threshold} f\left( d \right) \left( 1 - f\left( d \right) \right) \] Procedure\+:
+
+
+\begin{DoxyItemize}
+\item Go through all the node couples that are selected to be packing in function
+\item For each node pair id0 and id1, calculate the distance $ d $ and the unit normal between them
+\item If the distance between the node pair is zero, then set the distance to the zero threshold value set in the function, to avoid division by zero.
+\item Shift the distance by $ d_{0} $, such that the sigmoid is 0.\+5 at this distance. Currently $ d_{0} $ is set to 60 percent of \hyperlink{classSimulation_afa0e72518548c938a0c4974e432f9d83}{Simulation\+::packing\+Threshold}. And calculate the sigmoid function value.
+\item Shift the distance by $ d_{0} $, such that the sigmoid is 0.\+5 at this distance. Currently $ d_{0} $ is set to 60 percent of \hyperlink{classSimulation_afa0e72518548c938a0c4974e432f9d83}{Simulation\+::packing\+Threshold}. And calculate the sigmoid function value. Calculate the derivative, leave the multiplication by the amplitude (mass) to the last stage.
+\item Add the resulting 3 by 3 derivative matrices are added into the Jacobian in the form\+: \[ - \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow K \begin{bmatrix} & \vdots & \vdots & \vdots & \\ \dots & x_{3id0,3id0} & \dots & x_{3id0,3id0+2} & \dots \\ \dots & \vdots & \dots & \vdots & \dots \\ \dots & x_{3id0+2,3id0} & \dots & x_{3id0+2,3id0+2} & \dots \\ & \vdots & \vdots & \vdots & \end{bmatrix}, \] \[ \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id0,3id1} & \dots\\ \dots & x_{3id0+2,3id1+2} \end{bmatrix}, -\frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id1,3id1} & \dots\\ \dots & x_{3id1+2,3id1+2} \end{bmatrix}, \frac{d\mathbf{F_{0}}}{d\mathbf{x_{0}}} \:\: \rightarrow \begin{bmatrix} x_{3id1,3id0} & \dots\\ \dots & x_{3id1+2,3id0+2} \end{bmatrix}. \]
+\end{DoxyItemize}\hypertarget{classSimulation_a4b259e3827b74767c8005b2126191609}{}\index{Simulation@{Simulation}!calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D@{calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D}}
+\index{calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D@{calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{K}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a4b259e3827b74767c8005b2126191609}
+
+
+Update the system jaconbian with the derivatives of forces due to packing to enclosing surfaces, with respect to positions. 
+
+See the documentation for \hyperlink{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}{Simulation\+::calculate\+Packing\+Jacobian3\+D}. The methodology is the same, with rigid wall positions in two z coordinates instead of a second node position.\hypertarget{classSimulation_af18305ef63492bb7e76f79c4c85206d0}{}\index{Simulation@{Simulation}!calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D@{calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D}}
+\index{calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D@{calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_af18305ef63492bb7e76f79c4c85206d0}
+
+
+Calculate packing forces on nodes due to packing to pipette wall in pipette aspiration experiment. 
+
+See the documentation for \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D}. The methodology is the same, with pipeete tip centre used instead of the second node.\hypertarget{classSimulation_aeebe76bd38ce67afd3611ad521450c1f}{}\index{Simulation@{Simulation}!calculate\+Packing\+To\+Pipette\+Jacobian3\+D@{calculate\+Packing\+To\+Pipette\+Jacobian3\+D}}
+\index{calculate\+Packing\+To\+Pipette\+Jacobian3\+D@{calculate\+Packing\+To\+Pipette\+Jacobian3\+D}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Packing\+To\+Pipette\+Jacobian3\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Packing\+To\+Pipette\+Jacobian3\+D (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{K}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aeebe76bd38ce67afd3611ad521450c1f}
+
+
+Update the system jaconbian with the derivatives of forces due to packing to the pipette wall in pipette aspiration experiment, with respect to positions. 
+
+See the documentation for \hyperlink{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}{Simulation\+::calculate\+Packing\+Jacobian3\+D}. The methodology is the same, with pipette tip centre used instead of the second node.\hypertarget{classSimulation_a8b40b6f71c115d9c566333151219a7d6}{}\index{Simulation@{Simulation}!calculate\+Stiffness\+Change\+Rates\+For\+Actin@{calculate\+Stiffness\+Change\+Rates\+For\+Actin}}
+\index{calculate\+Stiffness\+Change\+Rates\+For\+Actin@{calculate\+Stiffness\+Change\+Rates\+For\+Actin}!Simulation@{Simulation}}
+\subsubsection[{calculate\+Stiffness\+Change\+Rates\+For\+Actin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::calculate\+Stiffness\+Change\+Rates\+For\+Actin (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+Stiffness\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a8b40b6f71c115d9c566333151219a7d6}
+
+
+Calculate the stiffness change rates for actin with the stiffness perturbaiton function of input I\+D. 
+
+If the actin layer has perturbations, the elements are checked if they are influenced via \hyperlink{classShapeBase_ae9cfd1ae56e018477dd3642d4d769d90}{Shape\+Base\+::is\+Actin\+Stiffness\+Change\+Applied\+To\+Element} and rates are set in this function via \hyperlink{classShapeBase_aef460b84dc469f89742af7c19411454f}{Shape\+Base\+::calculate\+Stiffness\+Perturbation\+Rate}.\hypertarget{classSimulation_ae096c8a7fcc6e921415d1be317526d02}{}\index{Simulation@{Simulation}!check\+E\+C\+M\+Change@{check\+E\+C\+M\+Change}}
+\index{check\+E\+C\+M\+Change@{check\+E\+C\+M\+Change}!Simulation@{Simulation}}
+\subsubsection[{check\+E\+C\+M\+Change}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+E\+C\+M\+Change (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_ae096c8a7fcc6e921415d1be317526d02}
+
+
+Check if there is E\+C\+M perturbation. 
+
+If there is explicit E\+C\+M, then first the compartment based perturbations are checked. Then each perturbation based on tissue placement, such as apical, basal or emergnt with markers, are checked. The stiffness, viscosity and half life updates are carried out via \hyperlink{classShapeBase_a4eb97c0c1a988e77126809745b191c02}{Shape\+Base\+::update\+Stiffness\+Multiplier}, Shape\+Base\+::update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition, Shape\+Base\+::update\+Change\+For\+Explicit\+E\+C\+M and Shape\+Base\+::update\+E\+C\+M\+Renewal\+Halflife\+Multiplier.\hypertarget{classSimulation_a1cf2aca93cb0f8716817936d98b6bf0e}{}\index{Simulation@{Simulation}!check\+Ellipse\+Allocation\+With\+Curving\+Nodes@{check\+Ellipse\+Allocation\+With\+Curving\+Nodes}}
+\index{check\+Ellipse\+Allocation\+With\+Curving\+Nodes@{check\+Ellipse\+Allocation\+With\+Curving\+Nodes}!Simulation@{Simulation}}
+\subsubsection[{check\+Ellipse\+Allocation\+With\+Curving\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+Ellipse\+Allocation\+With\+Curving\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a1cf2aca93cb0f8716817936d98b6bf0e}
+
+
+Check the ellipse band allocation of nodes residing on fold initiation. 
+
+The emergent curved regions of the tissue are marked via ellipse ban ids. These bands can be defined by the user, as such marker ellipse band Ids 100, 101 and 102 are reserved for emergent band initiation. ~\newline
+
+\begin{DoxyItemize}
+\item If a surface is on the apical fold initiation surface, then it acquires Id 100. ~\newline
+
+\item If a surface is on the basal fold initiation, then is acquires Id 101. ~\newline
+
+\item If there are emergent perturbations, and initiation of perturbation is conditional ( tissue shape change perturbation starts only after the E\+C\+M is reduced below a certain fraction of its original value), then the elements initially tagged 100 are updated to tag 102 once htis threshold (\hyperlink{classSimulation_a5869e105b5d4d2e41c071f24988b314e}{Simulation\+::shape\+Change\+E\+C\+M\+Limit}) is reached. The function \hyperlink{classSimulation_aba7aa0ded1d2cd262ed08c8abddde4f8}{Simulation\+::check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation} will carry out this operation.
+\end{DoxyItemize}\hypertarget{classSimulation_aba7aa0ded1d2cd262ed08c8abddde4f8}{}\index{Simulation@{Simulation}!check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation@{check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation}}
+\index{check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation@{check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation}!Simulation@{Simulation}}
+\subsubsection[{check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aba7aa0ded1d2cd262ed08c8abddde4f8}
+
+
+Check for emergence of ellipse bands as a result of E\+C\+M loss. 
+
+If there are emergent marker allocations, and initiation of a perturbation is conditional ( tissue shape change perturbation starts only after the E\+C\+M is reduced below a certain fraction of its original value), then the elements initially tagged 100 are updated to tag 102 once this threshold (\hyperlink{classSimulation_a5869e105b5d4d2e41c071f24988b314e}{Simulation\+::shape\+Change\+E\+C\+M\+Limit}) is reached.\hypertarget{classSimulation_a49ebb11d5727f0a6fc3ebfe8166b7290}{}\index{Simulation@{Simulation}!check\+For\+Emergent\+Ellipse\+Formation@{check\+For\+Emergent\+Ellipse\+Formation}}
+\index{check\+For\+Emergent\+Ellipse\+Formation@{check\+For\+Emergent\+Ellipse\+Formation}!Simulation@{Simulation}}
+\subsubsection[{check\+For\+Emergent\+Ellipse\+Formation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+For\+Emergent\+Ellipse\+Formation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a49ebb11d5727f0a6fc3ebfe8166b7290}
+
+
+Check for emergent marker elipse bands with fold initiation in the tissue. 
+
+The emergent marker ellipse Ids, reserved 100, 101 and 102, are assigned to curved surfaces of hte tissue. This information can be obtained via collapse of an elemental surface, or adhesion of two nodes. Once the identity is assigned, it can be updated to mark E\+C\+M relaxation threshold. The respnsible functions are \hyperlink{classSimulation_a0e7040a8ecc377bd2e53c785fc4c488b}{Simulation\+::update\+Ellipse\+With\+Collapse}, \hyperlink{classSimulation_ae7642cf5d56f38710da9b219e56b3c77}{Simulation\+::update\+On\+Fold\+Nodes\+From\+Collapse}, \hyperlink{classSimulation_a1cf2aca93cb0f8716817936d98b6bf0e}{Simulation\+::check\+Ellipse\+Allocation\+With\+Curving\+Nodes}, \hyperlink{classSimulation_a065f2150d785ee160762367bd6419e42}{Simulation\+::check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment} and \hyperlink{classSimulation_aba7aa0ded1d2cd262ed08c8abddde4f8}{Simulation\+::check\+For\+Ellipse\+Id\+Update\+With\+E\+C\+M\+Degradation}.\hypertarget{classSimulation_a065f2150d785ee160762367bd6419e42}{}\index{Simulation@{Simulation}!check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment@{check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment}}
+\index{check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment@{check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment}!Simulation@{Simulation}}
+\subsubsection[{check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+For\+Left\+Out\+Elements\+In\+Ellipse\+Assignment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a065f2150d785ee160762367bd6419e42}
+
+
+Check if elements at border of two emergent folds are missed in marking, and correct as needed. 
+
+When elements are assigned emergent marker identities, their nodes will follow. As a result, in densly folding regions, an element can have all its nodes assigned to a specific marker by its neighbours, without itself being assigned to it. These elements themselves will be tagged via their nodes.\hypertarget{classSimulation_a361530c38e215fd901d5e8a0ef051386}{}\index{Simulation@{Simulation}!check\+Stiffness\+Perturbation@{check\+Stiffness\+Perturbation}}
+\index{check\+Stiffness\+Perturbation@{check\+Stiffness\+Perturbation}!Simulation@{Simulation}}
+\subsubsection[{check\+Stiffness\+Perturbation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::check\+Stiffness\+Perturbation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a361530c38e215fd901d5e8a0ef051386}
+
+
+Check for stiffness perturbation on the tissue. 
+
+For all input stiffness perturbaitons, the perturbation activity time is checked from the \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{Simulation\+::curr\+Sim\+Time\+Sec} being between the selected \hyperlink{classSimulation_a36cfc7d8043d1dad55751cf184bcb2b8}{Simulation\+::stiffness\+Perturbation\+Begin\+Time\+In\+Sec} and \hyperlink{classSimulation_a8b9dfbe4a63693a6cfdccfe9c0ee4771}{Simulation\+::stiffness\+Perturbation\+End\+Time\+In\+Sec}. If this is the first time the perturbation is being called (checked via Simulation\+::started\+Stiffness\+Perturbation flag) then the rate is calculated via \hyperlink{classSimulation_a8b40b6f71c115d9c566333151219a7d6}{Simulation\+::calculate\+Stiffness\+Change\+Rates\+For\+Actin}. Then stiffnesses are uodated via \hyperlink{classSimulation_aacaebdb527784f46f67232f3180936e1}{Simulation\+::update\+Stiffness\+Change\+For\+Actin}.\hypertarget{classSimulation_a7a47dfca0623a5636cb65416411cb901}{}\index{Simulation@{Simulation}!correctz\+Projected\+Area\+For\+Mid\+Nodes@{correctz\+Projected\+Area\+For\+Mid\+Nodes}}
+\index{correctz\+Projected\+Area\+For\+Mid\+Nodes@{correctz\+Projected\+Area\+For\+Mid\+Nodes}!Simulation@{Simulation}}
+\subsubsection[{correctz\+Projected\+Area\+For\+Mid\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::correctz\+Projected\+Area\+For\+Mid\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a7a47dfca0623a5636cb65416411cb901}
+
+
+This function corrects the z-\/projected areas for mid-\/l;ayer nodes, as their areas are counted twice, by both elements. 
+
+For the nodes in mid-\/line nodes the area is added from apical and basal surfaces of elemetns on both sides. This is corrected in this function. !! A more efficient approach would be to calculate these areas only once!!\hypertarget{classSimulation_ab67230d22a5c07292574d10d5ee8fc13}{}\index{Simulation@{Simulation}!detect\+Pacing\+Nodes@{detect\+Pacing\+Nodes}}
+\index{detect\+Pacing\+Nodes@{detect\+Pacing\+Nodes}!Simulation@{Simulation}}
+\subsubsection[{detect\+Pacing\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::detect\+Pacing\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_ab67230d22a5c07292574d10d5ee8fc13}
+
+
+Detect nodes potentially packing to each other. 
+
+The current distance of node-\/node packing is dependent on the local average side length and is sored in a 10x5 grid \hyperlink{classSimulation_a0c55eae62bd214951ca78098e2daf7a4}{Simulation\+::packing\+Detection\+Threshold\+Grid}.\hypertarget{classSimulation_ac1225a76f3acef7e6ecc175d386b6b86}{}\index{Simulation@{Simulation}!detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes@{detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes}}
+\index{detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes@{detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes}!Simulation@{Simulation}}
+\subsubsection[{detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_ac1225a76f3acef7e6ecc175d386b6b86}
+
+
+Detect nodes potentially packing to the enclosing surfaces in z. 
+
+The current disctance of packing surfaces are stored in \hyperlink{classSimulation_a22bbc8742aed21f955c74c0ae2d60e59}{Simulation\+::z\+Enclosement\+Boundaries}. The z distance of nodes to these surfaces are checked against the threshold for packing detection \hyperlink{classSimulation_a95a1b9f341e5485d7c83e638062e1751}{Simulation\+::packing\+Detection\+To\+Enclosing\+Surfaces\+Threshold}. The actual forces of packing are not calculate4d here, this is for detection of potentially packing nodes.\hypertarget{classSimulation_a97927bd45513fc16d7dd56b9e8474f4a}{}\index{Simulation@{Simulation}!detect\+Packing\+To\+Pipette@{detect\+Packing\+To\+Pipette}}
+\index{detect\+Packing\+To\+Pipette@{detect\+Packing\+To\+Pipette}!Simulation@{Simulation}}
+\subsubsection[{detect\+Packing\+To\+Pipette}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::detect\+Packing\+To\+Pipette (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a97927bd45513fc16d7dd56b9e8474f4a}
+
+
+Detect nodes potentially packing to the pipette wall in pipette aspiration experiment. 
+
+The current tip of the pipette is defined as the range starting \hyperlink{classSimulation_a9c0a8edcc987294ad36dc43cb0b2c77c}{Simulation\+::pipette\+Inner\+Radius} going for \hyperlink{classSimulation_a330bde4b57359e57318c1105edde06c5}{Simulation\+::pipette\+Thickness}, and the centre of the pipette tip is recorded in \hyperlink{classSimulation_a80ba175cfd0377ddab49a0058139f03c}{Simulation\+::pipette\+Centre}. Any node falling within this threshold on the corect surface can potentially pack to the pipette.\hypertarget{classSimulation_a6ef90fd76ed4f6bb9d063e7e72e9a983}{}\index{Simulation@{Simulation}!initiate\+Saved\+System@{initiate\+Saved\+System}}
+\index{initiate\+Saved\+System@{initiate\+Saved\+System}!Simulation@{Simulation}}
+\subsubsection[{initiate\+Saved\+System}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulation\+::initiate\+Saved\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a6ef90fd76ed4f6bb9d063e7e72e9a983}
+
+
+This function initiates a saved system from save files. 
+
+This function follows the logic of the \hyperlink{classSimulation_ae44910ca27d6ec5eaa48f7136fad87ea}{Simulation\+::initiate\+System} function, please refer to its documentation for details. The element and node properties are read from saveed files where available.\hypertarget{classSimulation_ae44910ca27d6ec5eaa48f7136fad87ea}{}\index{Simulation@{Simulation}!initiate\+System@{initiate\+System}}
+\index{initiate\+System@{initiate\+System}!Simulation@{Simulation}}
+\subsubsection[{initiate\+System}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulation\+::initiate\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_ae44910ca27d6ec5eaa48f7136fad87ea}
+
+
+This function initiates the system with model inputs. 
+
+If the mesh type is 2, then a mesh with selected number of rows and columns will be initiated. This is the default option is no input file is provided to the system.
+
+Most commonly used input mesh type requires an input mesh file.
+
+If there is symetricity in the system, a checkpoint for circumferential node definitions is in place. The symmetricity boundary should not be considered as at the outer circumference.
+
+Then the existance of the peripodial membrane in the system is checked.
+
+The tissue height is calculated and the tissue bounding box is obtained. Then the relative z positions of the elements are calculated.
+
+At this point consistency is checked again to see if the model inputs necessiate a peripodial membane, and if they do, if it has been implemented.
+
+If the model inputs enable an explicit definition of extracellular matrix, this is labelled on the mesh here via Simulation\+::set\+Up\+E\+C\+M\+Mimicing\+Elements.
+
+If the model inputs enable an explicit definition of an actin rich top layer, this is labelled on the mesh here via Simulation\+::set\+Up\+Actin\+Mimicing\+Elements.
+
+Then element neighbourhoods are filled in.
+
+The simulation can fix degrees of freedom for certain nodes, as boundary condition. These node fixing options are set up via function Simulation\+::check\+For\+Node\+Fixing.
+
+The tip nodes are assigned via \hyperlink{classSimulation_a7ed75e3d044166072754e6e323f3604c}{Simulation\+::assign\+Tips}.
+
+If all the initiation setup conpleted without errors up to this point, then the mesh is characterised with flags, and now the actual physical parametrs are set up. First the system forces matrix is set with the sytem node size, via function Simulation\+::initiate\+System\+Forces. Then the system center is calcualted, and physical parameters are assigned to the elements via Simulation\+::assign\+Physical\+Parameters. ~\newline
+
+
+Once the viscoelastic properties are set, thje system is checked against zero external viscosity. If there is no external viscosity in the system, then additional boundry conditions should e implemented to reach a unique solution in the N\+R iteration to solve for nodal displacements. Oncce viscosities are updated, the node massess, and the surfaces that are expoed the the external friction are set in Simulation\+::assign\+Node\+Masses, Simulation\+::assign\+Elemental\+Surface\+Area\+Indices, and Simulation\+::assign\+Connected\+Elements\+And\+Weights\+To\+Nodes functions.
+
+Then the boiunding box of the tissue is calculated and the relative positions are set.
+
+If there are any additional manipulations, they are implemented next. Thee include growth mutant induction, experiemtal stretcher attachement, experimental pippete aspiration setup, and setting up symettic axes of the tissue to have fixed boundaries, and assigningn labelling by ellipse bands for further manipulation if these are implemented.
+
+If the simultion is continuing from an already saved setup (Simualtion\+::\+Continue\+From\+Save = true), the last frame of the save is read via Simulation\+::read\+Final\+Simulation\+Step.
+
+If data is being saved, then the simulation summary will be written next.
+
+Fianlly, the Newton Raphson solver object is initiated, and node Do\+F bonding as boundary condition is checked.\hypertarget{classSimulation_aa5c031b9d4c6b3d74f636adec0b695ed}{}\index{Simulation@{Simulation}!read\+Executable\+Inputs@{read\+Executable\+Inputs}}
+\index{read\+Executable\+Inputs@{read\+Executable\+Inputs}!Simulation@{Simulation}}
+\subsubsection[{read\+Executable\+Inputs}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulation\+::read\+Executable\+Inputs (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aa5c031b9d4c6b3d74f636adec0b695ed}
+
+
+This function reads the input executables from user input. 
+
+The mode of simulation can be \char`\"{}\+Display\+Save\char`\"{},\char`\"{}\+Simulation\+On\+The\+Go\char`\"{} or \char`\"{}\+Continue\+From\+Save\char`\"{}. As the nemas suggest, \char`\"{}\+Display\+Save\char`\"{} option will dsplay a simulation from saved files, without running the simulation. \char`\"{}\+Simulation\+On\+The\+Go\char`\"{} will start a fresh simulation and \char`\"{}\+Continue\+From\+Save\char`\"{} will continue simulating from a save file.~\newline
+
+
+The tag \char`\"{}-\/i\char`\"{} defines the input file, this should be a modelinput file detailing the parameters of the simulation.~\newline
+
+
+If the input file requires saving, then an output direcotry should be specified with the \char`\"{}-\/od\char`\"{} tag.
+
+In case of simulations contining from save or when the tool is called to display an existing simulation, the input directory should be specified, with the tag \char`\"{}-\/d\+Input\char`\"{}.\hypertarget{classSimulation_a300713fd91c15b51421606bffd6d87b7}{}\index{Simulation@{Simulation}!run\+One\+Step@{run\+One\+Step}}
+\index{run\+One\+Step@{run\+One\+Step}!Simulation@{Simulation}}
+\subsubsection[{run\+One\+Step}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulation\+::run\+One\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a300713fd91c15b51421606bffd6d87b7}
+
+
+Run the simulation for one time step. 
+
+The core function in the \hyperlink{classSimulation}{Simulation} class is the function to update the whole system from one time step to the next.
+
+The process starts by resetting all forces of the current time step via \hyperlink{classSimulation_a5c0989e1c64b0fde348701454e9fbf67}{Simulation\+::reset\+Forces}. Then emergent marker initiation is checked, (\hyperlink{classSimulation_a49ebb11d5727f0a6fc3ebfe8166b7290}{Simulation\+::check\+For\+Emergent\+Ellipse\+Formation}) as this could initiate physical property changes and should be carried out before the relavent updates. ~\newline
+
+
+Then the relative position updates of the tissue are carreid out. First the tissue long axis is aligned on the x axis (\hyperlink{classSimulation_a91a12f6ac1b230cecbe004221326a7ca}{Simulation\+::align\+Tissue\+D\+V\+To\+X\+Positive}), then the bounsing box is calculated (Shape\+Base\+::calculate\+Bounding\+Box), and the relative positions of apical (top layer) elements are obtained (\hyperlink{classShapeBase_a04278729ad9cc3238b1966ade0685a3d}{Shape\+Base\+::calculate\+Relative\+Pos\+In\+Bounding\+Box}). The relative positions of the midline and bottom elements are updated to be the same as the apical layer, as growth should not differ in the z-\/axis, the relative positions should read the same grid point from growth maps.
+
+Any experimental setup, that requires an update prior to entring the N\+R iterations for the time step are carried out by the function \hyperlink{classSimulation_aa9ad0627365ad5d465b273183c7db344}{Simulation\+::check\+For\+Experimental\+Setups\+Before\+Iteration}. This is folllowed by any existing perturbation on physical properties, through functions \hyperlink{classSimulation_a361530c38e215fd901d5e8a0ef051386}{Simulation\+::check\+Stiffness\+Perturbation} and \hyperlink{classSimulation_ae096c8a7fcc6e921415d1be317526d02}{Simulation\+::check\+E\+C\+M\+Change}. ~\newline
+
+
+Once the physical proerties are updated, the growth of each element is calculated. For growth functions based on reading gorwht maps (the main attribute utilised in morphogenesis simulations), the relative position in usecan be updated less frequently then each step, this update is checked in Simulation\+::check\+For\+Pinning\+Positions\+Update. Then the rigid body rotations around z axis are extracted to be eliminated through Shape\+Base\+::update\+Growth\+Rotation\+Matrices. For all growth functions and induced mutant clones the growth is calculated in Simulation\+::calculate\+Growth. Simularly, shape changes are updated via Simulation\+::calculate\+Shape\+Change. ~\newline
+
+
+Based on user preferences, the volumes of the elements can be conserved individually (default), or the volume can be conserved through the column, but volume exchange is allowed between elements of the same column, this is stated by the boolean \hyperlink{classSimulation_a1dd66be606281f44c05ec6b4f8eed882}{Simulation\+::conserving\+Column\+Volumes} and operation is handled by the function Simulation\+::conserve\+Column\+Volume. ~\newline
+
+
+Following potential volume exchange, the remodelling (plastic deformation) is updated. All explicit E\+C\+M elements (\hyperlink{classShapeBase_a5e442b31d2341cbe477d7c33195a576c}{Shape\+Base\+::is\+E\+C\+M\+Mimicing} = true) do have remodelling by default. Remodelling of cellular elements (all the rest) can be defiend by the user preferences and is defined in \hyperlink{classSimulation_ab0d54e9e505f3701cf5ca8b0ac0df00a}{Simulation\+::there\+Is\+Plastic\+Deformation}. The remodelling function is \hyperlink{classSimulation_aba920b0ae2806ea3890cbe2b819977fe}{Simulation\+::update\+Plastic\+Deformation}.
+
+The growth, shape change, volume exchange and remodelling all induce theri effects eventually through growth of the elements. Once all these options are covered, the elemetns are grown in \hyperlink{classShapeBase_a29ee0eeca30fdd381d294b383c3baf0c}{Shape\+Base\+::grow\+Shape\+By\+Fg}, which updated the growth deformation gradient of the element. ~\newline
+
+
+As the shape size is changed, nodal masses (volumes) (Simulation\+::update\+Node\+Masses) and exposed surfaces (Simulation\+::update\+Node\+Viscosity\+Surfaces) are updated, then the weight of each elements contribution on the nodes are updated (Simulation\+::update\+Element\+To\+Connected\+Nodes). Then the collapse nodes positions are updated, if the collapse is being carried out in stages. ~\newline
+
+
+Then packing to all posssible surfaces are detected, while the actual packing forces are calculated in the N\+R iterations as they are position dependent. This initial check creates a list of potential packing nodes, to check only these through the N\+R itaration, rather than checking all nodes at all times. Packing is checked against self contact (\hyperlink{classSimulation_ab67230d22a5c07292574d10d5ee8fc13}{Simulation\+::detect\+Pacing\+Nodes}) then to enclosing surfaces (\hyperlink{classSimulation_ac1225a76f3acef7e6ecc175d386b6b86}{Simulation\+::detect\+Pacing\+To\+Enclosing\+Surfaces\+Nodes}) and pipette (\hyperlink{classSimulation_a97927bd45513fc16d7dd56b9e8474f4a}{Simulation\+::detect\+Packing\+To\+Pipette}) if they are implemented. ~\newline
+
+
+Then collapse of elemental surfaces are checked (Simulation\+::check\+Edge\+Lenghts\+For\+Binding\+Potentially\+Unstable\+Elementss), and the N\+R solver is notified if there are changes made.
+
+After the collapse check, the nodal adhesion is updated (Simulation\+::adhere\+Nodes), makinguse of the detected packing, as any node couple close enough to adhere must be close enough to activate self-\/contact. ~\newline
+
+
+The actual positional updates are delegated to teh newton-\/\+Raphson solver object via function \hyperlink{classSimulation_a6a869cb433953d1d36249460b0a74545}{Simulation\+::update\+Step\+N\+R}. ~\newline
+
+
+Once the positions are updated, the bounding box is calculated again, the elements are checked agains flipping (\hyperlink{classSimulation_a7aa2db4c2819e37c0ded181d47467233}{Simulation\+::check\+Flip}).
+
+If there is aftificail relaxation defined by the user, this is done at the end of the time step via \hyperlink{classSimulation_aee92b20e497b42f5b7a089c3f9409e97}{Simulation\+::artificial\+Relax}.
+
+Then the time step is updated, and the data is saved if necessary in Simulation\+::process\+Display\+Data\+And\+Save.\hypertarget{classSimulation_af0d9108d648996ef65a3eff0977a8590}{}\index{Simulation@{Simulation}!update\+Change\+For\+Explicit\+E\+C\+M@{update\+Change\+For\+Explicit\+E\+C\+M}}
+\index{update\+Change\+For\+Explicit\+E\+C\+M@{update\+Change\+For\+Explicit\+E\+C\+M}!Simulation@{Simulation}}
+\subsubsection[{update\+Change\+For\+Explicit\+E\+C\+M}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Change\+For\+Explicit\+E\+C\+M (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+E\+C\+M\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_af0d9108d648996ef65a3eff0977a8590}
+
+
+Update physical properties of the E\+C\+M with the E\+C\+M perturbaiton function of input I\+D. 
+
+If the E\+C\+M has perturbationson elasticity, the elements are checked if they are influenced via \hyperlink{classShapeBase_ab1572ddb1f68178e0607873a432f227c}{Shape\+Base\+::is\+E\+C\+M\+Change\+Applied\+To\+Element}, the \hyperlink{classShapeBase_a9cff4a8549b3399fec12309d18b6db70}{Shape\+Base\+::stiffness\+Multiplier} is altered via \hyperlink{classShapeBase_a4eb97c0c1a988e77126809745b191c02}{Shape\+Base\+::update\+Stiffness\+Multiplier} and elastic property tensors are updated via \hyperlink{classShapeBase_a018cc92b513ff64b919c374b0767cc1b}{Shape\+Base\+::update\+Elastic\+Properties}.\hypertarget{classSimulation_a6ac28dca8cca35baed5b75ce4f8062c8}{}\index{Simulation@{Simulation}!update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition@{update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition}}
+\index{update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition@{update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition}!Simulation@{Simulation}}
+\subsubsection[{update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Change\+For\+Viscosity\+Based\+E\+C\+M\+Definition (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+E\+C\+M\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a6ac28dca8cca35baed5b75ce4f8062c8}
+
+
+Update E\+C\+M viscosity with the E\+C\+M perturbaiton function of input I\+D. 
+
+If the E\+C\+M has perturbations on viscosity, the nodes are checked if they are influenced via \hyperlink{classNode_af754322e3928dc45f70b19762551890a}{Node\+::tissue\+Placement} and \hyperlink{classSimulation_aa8c12a070e93fd1cd504f98aed28c9fa}{Simulation\+::change\+Basal\+E\+C\+M} -\/ \hyperlink{classSimulation_a082e87b4a29d83f54866ac085e188d92}{Simulation\+::change\+Apical\+E\+C\+M} boolean arrays, as well as the marker ellipse Ids. The visocisties of each node are updated via \hyperlink{classNode_a58afaee3d71a2c122396265c91acda04}{Node\+::\+E\+C\+M\+Viscosity\+Change\+Per\+Hour} and the time step \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt} (in sec). Once new viscosity is calculated, it is capped to be positive and at most equal to the maximum external viscosity.\hypertarget{classSimulation_a2308c071a7f6260910d76d4a8604a0a3}{}\index{Simulation@{Simulation}!update\+E\+C\+M\+Renewal\+Halflife\+Multiplier@{update\+E\+C\+M\+Renewal\+Halflife\+Multiplier}}
+\index{update\+E\+C\+M\+Renewal\+Halflife\+Multiplier@{update\+E\+C\+M\+Renewal\+Halflife\+Multiplier}!Simulation@{Simulation}}
+\subsubsection[{update\+E\+C\+M\+Renewal\+Halflife\+Multiplier}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+E\+C\+M\+Renewal\+Halflife\+Multiplier (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+E\+C\+M\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a2308c071a7f6260910d76d4a8604a0a3}
+
+
+Update E\+C\+M renewal half-\/life with the E\+C\+M perturbaiton function of input I\+D. 
+
+If there is perturbation on E\+C\+M renewal halflife, the type of perturbation emergence is checked, if the perturbation initiation is emergend based on topology (active at fold grove basal sides), then the rate is calculated from the total application time.\hypertarget{classSimulation_a0e7040a8ecc377bd2e53c785fc4c488b}{}\index{Simulation@{Simulation}!update\+Ellipse\+With\+Collapse@{update\+Ellipse\+With\+Collapse}}
+\index{update\+Ellipse\+With\+Collapse@{update\+Ellipse\+With\+Collapse}!Simulation@{Simulation}}
+\subsubsection[{update\+Ellipse\+With\+Collapse}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Ellipse\+With\+Collapse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a0e7040a8ecc377bd2e53c785fc4c488b}
+
+
+Update marker ellipses with collapsing nodes. 
+
+If there is an apical collapse of nodes, then this elemetn must be on a curving surface, thus the emergent marker ids are updated. The element is not checked if it is already assigned to a fold via emergent mariking (\hyperlink{classShapeBase_a8d2b9ded0e51df7c23499ccc3f4da9fc}{Shape\+Base\+::covering\+Ellipse\+Band\+Id} is 100 or 101). Lateral E\+C\+M elements are not modified. If the element is not already assigned to an emergent marker group (on fold initiation), then its collapse status is checked via \hyperlink{classShapeBase_a346f4ec76554bea282a5cab7ea28dfa2}{Shape\+Base\+::check\+For\+Collapsed\+Nodes}.\hypertarget{classSimulation_aea943e8e0caf1b9ff8e40b61248024b6}{}\index{Simulation@{Simulation}!update\+Node\+Positions\+N\+R@{update\+Node\+Positions\+N\+R}}
+\index{update\+Node\+Positions\+N\+R@{update\+Node\+Positions\+N\+R}!Simulation@{Simulation}}
+\subsubsection[{update\+Node\+Positions\+N\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Node\+Positions\+N\+R (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{uk}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aea943e8e0caf1b9ff8e40b61248024b6}
+
+
+Update nodal positions during one iteration of the N\+R numerical solving for the displacements. 
+
+The nodal positions vector contains each position of each node in a single vector, and indexing is carried out accordingly.\hypertarget{classSimulation_ae7642cf5d56f38710da9b219e56b3c77}{}\index{Simulation@{Simulation}!update\+On\+Fold\+Nodes\+From\+Collapse@{update\+On\+Fold\+Nodes\+From\+Collapse}}
+\index{update\+On\+Fold\+Nodes\+From\+Collapse@{update\+On\+Fold\+Nodes\+From\+Collapse}!Simulation@{Simulation}}
+\subsubsection[{update\+On\+Fold\+Nodes\+From\+Collapse}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+On\+Fold\+Nodes\+From\+Collapse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_ae7642cf5d56f38710da9b219e56b3c77}
+
+
+Mark nodes as on fold, due to collapsed elements. 
+
+When an element collapses its nodes, it is a sign that it is residing on a fold. These elements assign their nodes to be on folds, by flagging the boolean Node\+::on\+Fold.\hypertarget{classSimulation_aba920b0ae2806ea3890cbe2b819977fe}{}\index{Simulation@{Simulation}!update\+Plastic\+Deformation@{update\+Plastic\+Deformation}}
+\index{update\+Plastic\+Deformation@{update\+Plastic\+Deformation}!Simulation@{Simulation}}
+\subsubsection[{update\+Plastic\+Deformation}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Plastic\+Deformation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aba920b0ae2806ea3890cbe2b819977fe}
+
+
+Update the plastic deformation (remodelling) of all nodes. 
+
+The ezplicitely defined E\+C\+M elements are always subject to non-\/volume econserving plastic deformation. The remodelling is calculated by Shaope\+Base\+::calculate\+Plastic\+Deformation3\+D.
+
+If there is user prefered remodelling on elements other than the E\+C\+M then the \hyperlink{classShapeBase_a1d56f7eb3fed744adc268bc4da7a790f}{Shape\+Base\+::tissue\+Type} is chacked agains the parameters \hyperlink{classSimulation_a42218fdf4e2a624fd4886edb39125251}{Simulation\+::plastic\+Deformation\+Applied\+To\+Columnar} and \hyperlink{classSimulation_abf2cb97bd129a14b21e15b742af8768c}{Simulation\+::plastic\+Deformation\+Applied\+To\+Peripodial}. The parameters of the \hyperlink{classShapeBase_aa1c9eda4ef1eb0b23620235039bab921}{Shape\+Base\+::calculate\+Plastic\+Deformation3\+D} are again defined by the user, such as the \hyperlink{classSimulation_a0e44e881245a507dc96188a8934b3bcc}{Simulation\+::volume\+Conserved\+In\+Plastic\+Deformation}, \hyperlink{classSimulation_a1aeea82e56a6523f2918583af1ecdd1a}{Simulation\+::plastic\+Deformation\+Half\+Life} \hyperlink{classSimulation_a28126585484ed0c7676c880cfe92f991}{Simulation\+::z\+Remodelling\+Lower\+Threshold} and \hyperlink{classSimulation_ab455f57038010e1d9c6694eb99ddca8e}{Simulation\+::z\+Remodelling\+Upper\+Threshold}. See function documentation for further details.
+
+If there is no remodelling, then the elements plastic deformation increment is set to identity in \hyperlink{classShapeBase_aa36cea09cbf418a9e37454016c5b3f30}{Shape\+Base\+::set\+Plastic\+Deformation\+Increment}.\hypertarget{classSimulation_a6a869cb433953d1d36249460b0a74545}{}\index{Simulation@{Simulation}!update\+Step\+N\+R@{update\+Step\+N\+R}}
+\index{update\+Step\+N\+R@{update\+Step\+N\+R}!Simulation@{Simulation}}
+\subsubsection[{update\+Step\+N\+R}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Step\+N\+R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classSimulation_a6a869cb433953d1d36249460b0a74545}
+
+
+Update the positions with solving for the displacements with the N-\/\+R iterations. 
+
+The iteration will be carried out for 20 steps, if upon 20 trials the simulation have not converged, an error will be generated. The iteration starts by clearing all force, displacement and Jacobian matrices of the N\+R solver in \hyperlink{classNewtonRaphsonSolver_a3d01456ea07e72b0f02ae2e8d2b8ec9e}{Newton\+Raphson\+Solver\+::set\+Matrices\+To\+Zero\+At\+The\+Beginning\+Of\+Iteration}. Then the vector containing the positions of teh nodes at the end of the previous time step \char`\"{}n\char`\"{}, $ \boldsymbol{u_n} $ is calculated in \hyperlink{classNewtonRaphsonSolver_af759360cc54ea9515deb3cc2ecc83377}{Newton\+Raphson\+Solver\+::construct\+Un\+Matrix}. The positions of the current iteration \char`\"{}k\char`\"{}, $ \boldsymbol{u_k} $ are initiated equal to $ \boldsymbol{u_n} $ via \hyperlink{classNewtonRaphsonSolver_a48b7753542f36889cd030104937d76a3}{Newton\+Raphson\+Solver\+::initialte\+Uk\+Matrix}. ~\newline
+
+
+While the system has not converged, all the forces are rest at the beginning of each iteration with \hyperlink{classSimulation_a5c0989e1c64b0fde348701454e9fbf67}{Simulation\+::reset\+Forces}. Then the matrices to be cumulated from scratch in each iteration are reset in \hyperlink{classNewtonRaphsonSolver_a36d647a13f9942e90e288a42c5444c4d}{Newton\+Raphson\+Solver\+::set\+Matrices\+To\+Zero\+Inside\+Iteration()}. The displacement matrix per time step \hyperlink{classSimulation_a0ee381efb3458d02bf78487cbb4dc42a}{Simulation\+::dt} is calculated for use in external viscous forces in \hyperlink{classNewtonRaphsonSolver_aa0ce333a40397fd113f9b9fc47bcb6ca}{Newton\+Raphson\+Solver\+::calculate\+Displacement\+Matrix}. Then all the internal elemental and nodal forces are calculated in \hyperlink{classNewtonRaphsonSolver_a5793ee41a3a4d97c0c944347f1f6da8e}{Newton\+Raphson\+Solver\+::calculate\+Forces\+And\+Jacobian\+Matrix\+N\+R}. The forces are moved from the elements and nodes to the system vectors in \hyperlink{classNewtonRaphsonSolver_aca7345c1d02bf38b1c36cf1f5110f869}{Newton\+Raphson\+Solver\+::write\+Forces\+Toge\+Andgv\+Internal}, the elastic and viscous terms of the elemental Jacobians are mapped and added onto the system Jacobian in \hyperlink{classNewtonRaphsonSolver_a0d6e3a4d0cf1c6e4fdf2753c7f08df13}{Newton\+Raphson\+Solver\+::write\+Implicit\+Elemental\+K\+To\+Jacobian}. The external forces are calculated in \hyperlink{classNewtonRaphsonSolver_ad39200f7babf1a3761a010c1a43f7c22}{Newton\+Raphson\+Solver\+::calculate\+External\+Viscous\+Forces\+For\+N\+R} and their derivatives are added to the system Jacobian in \hyperlink{classNewtonRaphsonSolver_a78759a96ed41bf35e8401b7c63180ea2}{Newton\+Raphson\+Solver\+::add\+Implicit\+K\+Viscous\+External\+To\+Jacobian}. ~\newline
+
+
+If the packing forces calculated implicitely (default) they are updated via \hyperlink{classSimulation_a77e76f4fe61889b9c0ae18436a7fd2fb}{Simulation\+::calculate\+Packing\+Forces\+Implicit3\+D} and the corresponding Jacobian update is carried out with \hyperlink{classSimulation_a07d76a2495e1b863ab0cdb7185821bec}{Simulation\+::calculate\+Packing\+Jacobian3\+D}. The packing for enclosing surfaces and the pipette are also carried out here (\hyperlink{classSimulation_a3b2d417e1f2814ffd8e34c186508c2f2}{Simulation\+::calculate\+Packing\+Forces\+To\+Enclosing\+Surfaces\+Implicit3\+D}, \hyperlink{classSimulation_a4b259e3827b74767c8005b2126191609}{Simulation\+::calculate\+Packing\+To\+Enclosing\+Surfaces\+Jacobian3\+D}, \hyperlink{classSimulation_af18305ef63492bb7e76f79c4c85206d0}{Simulation\+::calculate\+Packing\+To\+Pipette\+Forces\+Implicit3\+D} and \hyperlink{classSimulation_aeebe76bd38ce67afd3611ad521450c1f}{Simulation\+::calculate\+Packing\+To\+Pipette\+Jacobian3\+D}).
+
+All the internal forces and the external viscous resistance forces are collated in \hyperlink{classNewtonRaphsonSolver_a843bd105e92dfa1c9205e4efa134a406}{Newton\+Raphson\+Solver\+::g\+Sum} via \hyperlink{classNewtonRaphsonSolver_aba9098983f90b6237a9d32ea633bcb7f}{Newton\+Raphson\+Solver\+::calculate\+Sum\+Of\+Internal\+Forces}. The external forceas from the pipette suction if set up, all packing, and random forces if assigned are collated in \hyperlink{classNewtonRaphsonSolver_afee5ceb54c8d439c1044ad3997d079ea}{Newton\+Raphson\+Solver\+::g\+Ext}, and these are added to system forces in \hyperlink{classNewtonRaphsonSolver_a24f8fb47b9c29dd9856228ba0602f69e}{Newton\+Raphson\+Solver\+::add\+Exernal\+Forces()}. ~\newline
+
+
+Once all forces and their derivatives are collated in system forces and Jacobian, then degrees of freedom fixing is reflected on these matrices in \hyperlink{classNewtonRaphsonSolver_acfaaed8f038167756f352b566b8455d7}{Newton\+Raphson\+Solver\+::calcutate\+Fixed\+K} and \hyperlink{classNewtonRaphsonSolver_aa1e2ec4519853c9acfaf120c4b513651}{Newton\+Raphson\+Solver\+::calculate\+Bound\+K\+With\+Slaves\+Master\+Do\+F}.
+
+Then \hyperlink{classNewtonRaphsonSolver_a8efb09b253b7d19bd978296314d65c24}{Newton\+Raphson\+Solver\+::solve\+For\+Delta\+U} function arranges the matrices and solves for the incremental displacements via P\+A\+R\+D\+I\+S\+O sparse matrix solver. The convergence is checked via the norm of incremental displacements in \hyperlink{classNewtonRaphsonSolver_a3653a563e32649e0c90407aa089a995b}{Newton\+Raphson\+Solver\+::check\+Convergence\+Via\+Delta\+U}, the position of the nodes in the iteration,  \$ \{u\+\_\+k\}  \$ are updated in \hyperlink{classNewtonRaphsonSolver_a5e457b3608c6fbd71767cd6eed07b2f7}{Newton\+Raphson\+Solver\+::update\+Uk\+In\+Iteration}. The nodal and elemental positions are updated (\hyperlink{classSimulation_aed6fc494b468ebd56c07625d3e5984ff}{Simulation\+::update\+Element\+Positionsin\+N\+R}, \hyperlink{classSimulation_aea943e8e0caf1b9ff8e40b61248024b6}{Simulation\+::update\+Node\+Positions\+N\+R}) with the new node positions of the iteration.\hypertarget{classSimulation_aacaebdb527784f46f67232f3180936e1}{}\index{Simulation@{Simulation}!update\+Stiffness\+Change\+For\+Actin@{update\+Stiffness\+Change\+For\+Actin}}
+\index{update\+Stiffness\+Change\+For\+Actin@{update\+Stiffness\+Change\+For\+Actin}!Simulation@{Simulation}}
+\subsubsection[{update\+Stiffness\+Change\+For\+Actin}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\+::update\+Stiffness\+Change\+For\+Actin (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Of\+Current\+Stiffness\+Perturbation}
+\end{DoxyParamCaption}
+)}\label{classSimulation_aacaebdb527784f46f67232f3180936e1}
+
+
+Update stiffness of actin with the stiffness perturbaiton function of input I\+D. 
+
+If the actin layer has perturbations, the elements are checked if they are influenced via \hyperlink{classShapeBase_ae9cfd1ae56e018477dd3642d4d769d90}{Shape\+Base\+::is\+Actin\+Stiffness\+Change\+Applied\+To\+Element}, the \hyperlink{classShapeBase_a9cff4a8549b3399fec12309d18b6db70}{Shape\+Base\+::stiffness\+Multiplier} is altered via \hyperlink{classShapeBase_a4eb97c0c1a988e77126809745b191c02}{Shape\+Base\+::update\+Stiffness\+Multiplier} and elastic property tensors are updated via \hyperlink{classShapeBase_a018cc92b513ff64b919c374b0767cc1b}{Shape\+Base\+::update\+Elastic\+Properties}.
+
+\subsection{Member Data Documentation}
+\hypertarget{classSimulation_ae03ad5c7859265aa5eb4d03d2e1f73d1}{}\index{Simulation@{Simulation}!number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands@{number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands}}
+\index{number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands@{number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands}!Simulation@{Simulation}}
+\subsubsection[{number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Simulation\+::number\+Of\+Stiffness\+Perturbation\+Applies\+Ellipse\+Bands}\label{classSimulation_ae03ad5c7859265aa5eb4d03d2e1f73d1}
+
+
+The vector storing the stiffness perturbation end time points in sec. 
+
+The number of marker ellipse band ids the perturbation is applied to. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Simulation.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Simulation.\+cpp\end{DoxyCompactItemize}

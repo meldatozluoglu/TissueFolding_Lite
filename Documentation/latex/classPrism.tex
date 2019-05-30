@@ -1,0 +1,301 @@
+\hypertarget{classPrism}{}\section{Prism Class Reference}
+\label{classPrism}\index{Prism@{Prism}}
+Inheritance diagram for Prism\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPrism}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPrism_a9dcd242eef25b663bd3d43554ca5aeb4}{}\hyperlink{classPrism_a9dcd242eef25b663bd3d43554ca5aeb4}{Prism} (const std\+::vector$<$ int $>$ \&inp\+Node\+Ids, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, int Curr\+Id)\label{classPrism_a9dcd242eef25b663bd3d43554ca5aeb4}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a6ab0c30da5abd28ac1bea8530eb67ba5}{}\hyperlink{classPrism_a6ab0c30da5abd28ac1bea8530eb67ba5}{$\sim$\+Prism} ()\label{classPrism_a6ab0c30da5abd28ac1bea8530eb67ba5}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_ac3f535b16518d1beea7d2405697bb203}{}void \hyperlink{classPrism_ac3f535b16518d1beea7d2405697bb203}{set\+Elastic\+Properties} (double E\+Apical, double E\+Basal, double E\+Mid, double E\+E\+C\+M, double \hyperlink{classShapeBase_a8b4c2d3bfbc6c9785c5181a56f929151}{v})\label{classPrism_ac3f535b16518d1beea7d2405697bb203}
+
+\begin{DoxyCompactList}\small\item\em This function sets the elastic properties of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a44a73ea508f443cbefc8e301d3f190ad}{}std\+::array$<$ double, 3 $>$ \hyperlink{classPrism_a44a73ea508f443cbefc8e301d3f190ad}{calculate\+Basal\+Normal} ()\label{classPrism_a44a73ea508f443cbefc8e301d3f190ad}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the normal of the basal surface of the element. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a7fe4a2476246f2b4f8368b61584dea58}{}void \hyperlink{classPrism_a7fe4a2476246f2b4f8368b61584dea58}{calculate\+Apical\+Normal\+Current\+Shape} ()\label{classPrism_a7fe4a2476246f2b4f8368b61584dea58}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the normal of the apical surface of the element. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_a9a877cebf651015b88af641f1e045699}{calculate\+Element\+Shape\+Function\+Derivatives} ()
+\begin{DoxyCompactList}\small\item\em This function calculates the shape function derivatives of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_af4ce210a9ba20d34b4b903e936b9dd8d}{}void \hyperlink{classPrism_af4ce210a9ba20d34b4b903e936b9dd8d}{check\+Health} ()\label{classPrism_af4ce210a9ba20d34b4b903e936b9dd8d}
+
+\begin{DoxyCompactList}\small\item\em This function checks the health of the element, against fliiping. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a10377e0ad0ae454a3cd25b82709119ac}{}int \hyperlink{classPrism_a10377e0ad0ae454a3cd25b82709119ac}{get\+Correcponding\+Apical} (int curr\+Node\+Id)\label{classPrism_a10377e0ad0ae454a3cd25b82709119ac}
+
+\begin{DoxyCompactList}\small\item\em This function returns the corresponding connected apical node of a basal input node on the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_abe648c5fa60635a50c14186135bed332}{}bool \hyperlink{classPrism_abe648c5fa60635a50c14186135bed332}{Is\+This\+Node\+My\+Basal} (int curr\+Node\+Id)\label{classPrism_abe648c5fa60635a50c14186135bed332}
+
+\begin{DoxyCompactList}\small\item\em This function checks if the input \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} is a basal node of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_ab9f3b638a4068180a11add5921870230}{}bool \hyperlink{classPrism_ab9f3b638a4068180a11add5921870230}{Is\+This\+Node\+My\+Apical} (int curr\+Node\+Id)\label{classPrism_ab9f3b638a4068180a11add5921870230}
+
+\begin{DoxyCompactList}\small\item\em This function checks if the input \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} is an apical node of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a91d08cfcf6bf111f5d9e314499bafd11}{}double \hyperlink{classPrism_a91d08cfcf6bf111f5d9e314499bafd11}{get\+Element\+Height} ()\label{classPrism_a91d08cfcf6bf111f5d9e314499bafd11}
+
+\begin{DoxyCompactList}\small\item\em This function returns the apical-\/basal (z) height of this prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a67e80515fb1cdf4438b4b7d47334bd2e}{}void \hyperlink{classPrism_a67e80515fb1cdf4438b4b7d47334bd2e}{calculate\+Apical\+Area} ()\label{classPrism_a67e80515fb1cdf4438b4b7d47334bd2e}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the apical area of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_aa8dd4b90cdaecdbabfb48f45a9bcdc95}{}void \hyperlink{classPrism_aa8dd4b90cdaecdbabfb48f45a9bcdc95}{calculate\+Basal\+Area} ()\label{classPrism_aa8dd4b90cdaecdbabfb48f45a9bcdc95}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the basal area of the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_ace69b0f46bcd14fed2413fa2e24701e4}{}void \hyperlink{classPrism_ace69b0f46bcd14fed2413fa2e24701e4}{update\+Elastic\+Properties} ()\label{classPrism_ace69b0f46bcd14fed2413fa2e24701e4}
+
+\begin{DoxyCompactList}\small\item\em This function updates the elastic properties of the prism upon perturbation. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_a6d95fcc54232f1b7777e988cdee98727}{set\+Basal\+Neig\+Element\+Id} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&elements\+List)
+\begin{DoxyCompactList}\small\item\em This function sets the basal neighboiur of this element, which has an apical surface overlapping completely with teh basal surface of this prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a972fe7d50800036b4dfd724bcba2b32b}{}void \hyperlink{classPrism_a972fe7d50800036b4dfd724bcba2b32b}{construct\+Element\+Stack\+List} (const int discretisation\+Layers, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classShapeBase}{Shape\+Base} $>$$>$ \&elements\+List)\label{classPrism_a972fe7d50800036b4dfd724bcba2b32b}
+
+\begin{DoxyCompactList}\small\item\em This function constructs the apical-\/basal element stack list that this prosm resides in. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a85f9b472a3310e76ab0c76bd1fb7dd30}{}void \hyperlink{classPrism_a85f9b472a3310e76ab0c76bd1fb7dd30}{check\+Rotation\+Consistency3\+D} ()\label{classPrism_a85f9b472a3310e76ab0c76bd1fb7dd30}
+
+\begin{DoxyCompactList}\small\item\em This function checks if the nodes of the prosm rotate counter-\/clock vise, and corrects if not. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_ae33eafcdbe69936cca29d7f23649c8cc}{}bool \hyperlink{classPrism_ae33eafcdbe69936cca29d7f23649c8cc}{are\+Nodes\+Directly\+Connected} (int node0, int node1)\label{classPrism_ae33eafcdbe69936cca29d7f23649c8cc}
+
+\begin{DoxyCompactList}\small\item\em This function checks if the two nodes with input \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} values are directly connected to each other in topology of the prism. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPrism_a3c252dc104a1ca7208b23c72737cd916}{get\+Curr\+Relaxed\+Shape} (gsl\+\_\+matrix $\ast$Curr\+Relaxed\+Shape)
+\begin{DoxyCompactList}\small\item\em This function writes the current relaxed shape of the elemetn in the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_aa1a4d3411d1f3dc05816ec01dcfa8310}{set\+Shape\+Function\+Derivatives} (gsl\+\_\+matrix $\ast$Shape\+Func\+Der, double eta, double zeta, double nu)
+\begin{DoxyCompactList}\small\item\em This function calculates and writes the shape function derivatives on the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer, for the provided barycentric coordinates. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_aa1f76f3cabdd00eb057f41cebbaa466d}{set\+Shape\+Function\+Derivative\+Stack} (gsl\+\_\+matrix $\ast$Shape\+Func\+Der, gsl\+\_\+matrix $\ast$Shape\+Func\+Der\+Stack)
+\begin{DoxyCompactList}\small\item\em This function writes the input gsl\+\_\+matrix Shape\+Func\+Der into a stack form, in the matrix Shape\+Func\+Der\+Stack. Both matrices must be allocated prior to calling the function. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_a0575442613f8b7d9428c58cef19ab219}{set\+Coeff\+Mat} ()
+\begin{DoxyCompactList}\small\item\em This function writes the coefficient matrix that is collating the calculated stresses in the form of the vector form of elemental stress and strain vectors. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a1bf622277c72a0ee0372c0a30a15ae6d}{}void \hyperlink{classPrism_a1bf622277c72a0ee0372c0a30a15ae6d}{calculate\+D\+Vector} ()\label{classPrism_a1bf622277c72a0ee0372c0a30a15ae6d}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the elasticity tensor for a Kirshoff material. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_ad339c17c6a056074dc4e642de9492c57}{calculate\+D81\+Tensor} ()
+\begin{DoxyCompactList}\small\item\em This function calculates the Lagrangian elasticity tensor for a neo-\/hookean material. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_aa433244f86cdf23a611a1adc3391c3f0}{}void \hyperlink{classPrism_aa433244f86cdf23a611a1adc3391c3f0}{calculate\+Currk} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&currk, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+B, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+B\+E, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+Bo, double eta, double zeta, double nu)\label{classPrism_aa433244f86cdf23a611a1adc3391c3f0}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the elemental jacobian for current Gauss Point. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_a606fbf422f9d652e0f697ea93dc2e088}{calculate\+Curr\+Nodal\+Forces} (gsl\+\_\+matrix $\ast$gslcurrge, gsl\+\_\+matrix $\ast$gslcurrgv, gsl\+\_\+matrix $\ast$gslcurr\+F, gsl\+\_\+matrix $\ast$displacement\+Per\+Dt, int point\+No)
+\begin{DoxyCompactList}\small\item\em This function calculates the nodal forces of teh prism for the current Gauss Point. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_ae9403142a217a005a4d588a6e472be27}{calculate\+Curr\+Tri\+Point\+F\+For\+Rotation} (gsl\+\_\+matrix $\ast$curr\+F, int point\+No)
+\begin{DoxyCompactList}\small\item\em This function calculates the deformation gradient of the prism for rigid body rotation rotation extractions, for the current Gauss Point. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a4ea58fd729a2bbef20530200978a8f75}{}void \hyperlink{classPrism_a4ea58fd729a2bbef20530200978a8f75}{calculate\+Reference\+Volume} ()\label{classPrism_a4ea58fd729a2bbef20530200978a8f75}
+
+\begin{DoxyCompactList}\small\item\em This function calculateds the volume of the reference element. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a76072439f768fd9a6bc6e5c23e3fa617}{}std\+::array$<$ std\+::array$<$ double, 3 $>$, 8 $>$ \hyperlink{classPrism_a76072439f768fd9a6bc6e5c23e3fa617}{calculate\+Plane\+Normals} ()\label{classPrism_a76072439f768fd9a6bc6e5c23e3fa617}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the plane normals for the triangular surfaces constructing the prism. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_af07401eaf9dde65f81895606575ecf48}{}std\+::array$<$ double, 3 $>$ \hyperlink{classPrism_af07401eaf9dde65f81895606575ecf48}{assign\+Nodal\+Vector} (size\+\_\+t id0, size\+\_\+t id1)\label{classPrism_af07401eaf9dde65f81895606575ecf48}
+
+\begin{DoxyCompactList}\small\item\em This function calculates the 3\+D vector from nodes indexed at id0 to id1. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a4d1f1f37d08fd9aefebc42cb6f63efab}{}bool \hyperlink{classPrism_a4d1f1f37d08fd9aefebc42cb6f63efab}{check\+Node\+Plane\+Consistency} (std\+::array$<$ std\+::array$<$ double, 3 $>$, 8 $>$ \&normals)\label{classPrism_a4d1f1f37d08fd9aefebc42cb6f63efab}
+
+\begin{DoxyCompactList}\small\item\em This functions checks the planes of the elemetn as part of health check. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a19996bf8336c7c6d3fc11bdc45bf8992}{}void \hyperlink{classPrism_a19996bf8336c7c6d3fc11bdc45bf8992}{set\+Initial\+Edge\+Lenghts} ()\label{classPrism_a19996bf8336c7c6d3fc11bdc45bf8992}
+
+\begin{DoxyCompactList}\small\item\em This function sets the initial edge lengths of the element, will be essential in deciding if the elemetn should collapse its surfaces to avoid flipping. \end{DoxyCompactList}\item 
+void \hyperlink{classPrism_a0a57c74e857e937883bb4581cd982da1}{check\+Edge\+Lenghts\+For\+Binding} (std\+::vector$<$ int $>$ \&master\+Ids, std\+::vector$<$ int $>$ \&slave\+Ids)
+\begin{DoxyCompactList}\small\item\em This function checks the edge lengths of the prism to decide if the elemetn should collapse its surfaces to avoid flipping. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_acc59ccf5e1b5f459a8fb871c2a78fe8e}{}double \hyperlink{classPrism_acc59ccf5e1b5f459a8fb871c2a78fe8e}{get\+Apical\+Side\+Length\+Average} ()\label{classPrism_acc59ccf5e1b5f459a8fb871c2a78fe8e}
+
+\begin{DoxyCompactList}\small\item\em This function returns the average edge length of the apical surface. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a628c31f0b9dbaa6a1fee8adb68cb6cd6}{}double \hyperlink{classPrism_a628c31f0b9dbaa6a1fee8adb68cb6cd6}{get\+Basal\+Side\+Length\+Average} ()\label{classPrism_a628c31f0b9dbaa6a1fee8adb68cb6cd6}
+
+\begin{DoxyCompactList}\small\item\em This function returns the average edge length of the basal surface. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_af8c5d2fbf2d87550855a7ae958c82e13}{}void \hyperlink{classPrism_af8c5d2fbf2d87550855a7ae958c82e13}{assign\+Exposed\+Surface\+Area\+Indices} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes)\label{classPrism_af8c5d2fbf2d87550855a7ae958c82e13}
+
+\begin{DoxyCompactList}\small\item\em This function assigns the indices of externally exposed surfaces of the prism. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPrism_a8852b1bc7b1b3c616c257170772c32cb}{}double \hyperlink{classPrism_a8852b1bc7b1b3c616c257170772c32cb}{initial\+Apilcal\+Edge\+Lengths\+Sq} \mbox{[}3\mbox{]}\label{classPrism_a8852b1bc7b1b3c616c257170772c32cb}
+
+\begin{DoxyCompactList}\small\item\em The array storing the squares of the apical edge lengths. \end{DoxyCompactList}\item 
+\hypertarget{classPrism_a9f1fc00413e365495117d6faaf3ec278}{}double \hyperlink{classPrism_a9f1fc00413e365495117d6faaf3ec278}{initial\+Basal\+Edge\+Lengths\+Sq} \mbox{[}3\mbox{]}\label{classPrism_a9f1fc00413e365495117d6faaf3ec278}
+
+\begin{DoxyCompactList}\small\item\em The array storing the squares of the apical edge lengths. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPrism_a606fbf422f9d652e0f697ea93dc2e088}{}\index{Prism@{Prism}!calculate\+Curr\+Nodal\+Forces@{calculate\+Curr\+Nodal\+Forces}}
+\index{calculate\+Curr\+Nodal\+Forces@{calculate\+Curr\+Nodal\+Forces}!Prism@{Prism}}
+\subsubsection[{calculate\+Curr\+Nodal\+Forces}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::calculate\+Curr\+Nodal\+Forces (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{gslcurrge, }
+\item[{gsl\+\_\+matrix $\ast$}]{gslcurrgv, }
+\item[{gsl\+\_\+matrix $\ast$}]{gslcurr\+F, }
+\item[{gsl\+\_\+matrix $\ast$}]{displacement\+Per\+Dt, }
+\item[{int}]{point\+No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classPrism_a606fbf422f9d652e0f697ea93dc2e088}
+
+
+This function calculates the nodal forces of teh prism for the current Gauss Point. 
+
+$<$ Removing growth 
+
+Reimplemented from \hyperlink{classShapeBase_acca6ea9484bbc995d941f1a7bb25e1db}{Shape\+Base}.
+
+\hypertarget{classPrism_ae9403142a217a005a4d588a6e472be27}{}\index{Prism@{Prism}!calculate\+Curr\+Tri\+Point\+F\+For\+Rotation@{calculate\+Curr\+Tri\+Point\+F\+For\+Rotation}}
+\index{calculate\+Curr\+Tri\+Point\+F\+For\+Rotation@{calculate\+Curr\+Tri\+Point\+F\+For\+Rotation}!Prism@{Prism}}
+\subsubsection[{calculate\+Curr\+Tri\+Point\+F\+For\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::calculate\+Curr\+Tri\+Point\+F\+For\+Rotation (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{curr\+F, }
+\item[{int}]{point\+No}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classPrism_ae9403142a217a005a4d588a6e472be27}
+
+
+This function calculates the deformation gradient of the prism for rigid body rotation rotation extractions, for the current Gauss Point. 
+
+This function calcultes the defrmation gradient $ \boldsymbol{F} $ for the input gauss point number point\+No. The calculated deformation gradient is recorded in the in input gsl\+\_\+matrix pointer curr\+F, the matrix must be allocated prior to calling the function. ~\newline
+The deformation gradient is the derivative of current nodal positions of an element ( $ \boldsymbol{x} $ ) with respect to the reference shape positions ( $ \boldsymbol{X} $ ).
+
+\begin{eqnarray*} \frac{\partial \boldsymbol{x}} {\partial \boldsymbol{X}} \end{eqnarray*}
+
+Reimplemented from \hyperlink{classShapeBase}{Shape\+Base}.
+
+\hypertarget{classPrism_ad339c17c6a056074dc4e642de9492c57}{}\index{Prism@{Prism}!calculate\+D81\+Tensor@{calculate\+D81\+Tensor}}
+\index{calculate\+D81\+Tensor@{calculate\+D81\+Tensor}!Prism@{Prism}}
+\subsubsection[{calculate\+D81\+Tensor}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::calculate\+D81\+Tensor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classPrism_ad339c17c6a056074dc4e642de9492c57}
+
+
+This function calculates the Lagrangian elasticity tensor for a neo-\/hookean material. 
+
+This function calculates the Lagrangian elasticity tensor for a neo-\/hookean material. The Lagrangian elasticity tensor depends on the deformation gradient through the Cauchy-\/\+Green Deformation tensor, and the physical material properties, namely Lame\textquotesingle{}s second parameter $ \lambda $ and the sheer modulus $ \mu $. ~\newline
+ $\boldsymbol {\mathcal D} $ can be obtained in the Voigt notation\+: \begin{eqnarray*} \mathcal{D}_{ijkl} = \lambda \boldsymbol{C}^{-1}_{ij} \boldsymbol{C}^{-1}_{kl} + 2 \left( \mu - \lambda ln(J)\right) \mathcal{I}_{ijkl} \end{eqnarray*} where $ \mathcal{I}_{ijkl} $ is defined as\+: \begin{eqnarray*} \mathcal{I}_{ijkl} = \frac{1}{2} \left[ \boldsymbol{C}^{-1}_{ik} \boldsymbol{C}^{-1}_{jl} + \boldsymbol{C}^{-1}_{il} \boldsymbol{C}^{-1}_{jk}\right] \end{eqnarray*} where the indices \$ i,j,k,l \$ go through 3 dimensions.~\newline
+\hypertarget{classPrism_a9a877cebf651015b88af641f1e045699}{}\index{Prism@{Prism}!calculate\+Element\+Shape\+Function\+Derivatives@{calculate\+Element\+Shape\+Function\+Derivatives}}
+\index{calculate\+Element\+Shape\+Function\+Derivatives@{calculate\+Element\+Shape\+Function\+Derivatives}!Prism@{Prism}}
+\subsubsection[{calculate\+Element\+Shape\+Function\+Derivatives}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::calculate\+Element\+Shape\+Function\+Derivatives (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPrism_a9a877cebf651015b88af641f1e045699}
+
+
+This function calculates the shape function derivatives of the prism. 
+
+This function calculates the Shape Function Derivatives for all Gauss points, and then calculates the derivative of reference coordiantes with respect to barycentric coordinates $ \frac{\partial \boldsymbol{X}}{\partial \boldsymbol{\zeta}} $. The determnant of htis derivative is recorded for next steps of calculation.~\newline
+First the matrices for the reference shape and the $ \frac{\partial \boldsymbol{X}}{\partial \boldsymbol{\zeta}} $ for one gauss point are allocated.
+
+The reference shape cordinates are obtained through function Shape\+Base\+::get\+Curr\+Relaxed\+Shape.
+
+Looping over all the gauss points as listed in constructor \hyperlink{classPrism_a9dcd242eef25b663bd3d43554ca5aeb4}{Prism\+::\+Prism}, the shape function derivatives are obtained in stack form via Shape\+Base\+::set\+Shape\+Function\+Derivatives and Shape\+Base\+::set\+Shape\+Function\+Derivative\+Stack functions. Then $ \frac{\partial \boldsymbol{X}}{\partial \boldsymbol{\zeta}} $, its determinant recorded in the array \hyperlink{classShapeBase_a37f25110de54965266cb29b66eaf5b81}{Shape\+Base\+::detd\+Xdes}.
+
+Reimplemented from \hyperlink{classShapeBase_ab86b6c4eef2ea6232dd1d0c300ae5602}{Shape\+Base}.
+
+\hypertarget{classPrism_a0a57c74e857e937883bb4581cd982da1}{}\index{Prism@{Prism}!check\+Edge\+Lenghts\+For\+Binding@{check\+Edge\+Lenghts\+For\+Binding}}
+\index{check\+Edge\+Lenghts\+For\+Binding@{check\+Edge\+Lenghts\+For\+Binding}!Prism@{Prism}}
+\subsubsection[{check\+Edge\+Lenghts\+For\+Binding}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::check\+Edge\+Lenghts\+For\+Binding (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$ \&}]{master\+Ids, }
+\item[{std\+::vector$<$ int $>$ \&}]{slave\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classPrism_a0a57c74e857e937883bb4581cd982da1}
+
+
+This function checks the edge lengths of the prism to decide if the elemetn should collapse its surfaces to avoid flipping. 
+
+This function returns the nodes to collapse together if any of the element surfaces are shrinking below the set threshold of 10\% of the original side length (set in threshold\+Fraction variable).~\newline
+
+
+The top side of the element will only be checked if the element top surface is at the exposed top surface of the tissue (apical surface, \hyperlink{classShapeBase_aff63b1fcb823bbfdb5b19fe78dea59b8}{Shape\+Base\+::tissue\+Placement} = 0 or the element spans the whole tissue, \hyperlink{classShapeBase_adafe85bbee6173d2a321408cd8b63db3}{Shape\+Base\+::spans\+Whole\+Tissue} = true).
+
+The bottom side of the element will only be checked if the element bottom surface is at the exposed bottom surface of the tissue (basal surface, \hyperlink{classShapeBase_aff63b1fcb823bbfdb5b19fe78dea59b8}{Shape\+Base\+::tissue\+Placement} = 1 or the element spans the whole tissue, \hyperlink{classShapeBase_adafe85bbee6173d2a321408cd8b63db3}{Shape\+Base\+::spans\+Whole\+Tissue} = true).
+
+Reimplemented from \hyperlink{classShapeBase_ab277fb6868925516b675821add019cef}{Shape\+Base}.
+
+\hypertarget{classPrism_a3c252dc104a1ca7208b23c72737cd916}{}\index{Prism@{Prism}!get\+Curr\+Relaxed\+Shape@{get\+Curr\+Relaxed\+Shape}}
+\index{get\+Curr\+Relaxed\+Shape@{get\+Curr\+Relaxed\+Shape}!Prism@{Prism}}
+\subsubsection[{get\+Curr\+Relaxed\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::get\+Curr\+Relaxed\+Shape (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{Curr\+Relaxed\+Shape}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classPrism_a3c252dc104a1ca7208b23c72737cd916}
+
+
+This function writes the current relaxed shape of the elemetn in the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer. 
+
+This function writes the current relaxed shape of the elemetn in the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer. The matrix must be allocated before the call to the function.\hypertarget{classPrism_a6d95fcc54232f1b7777e988cdee98727}{}\index{Prism@{Prism}!set\+Basal\+Neig\+Element\+Id@{set\+Basal\+Neig\+Element\+Id}}
+\index{set\+Basal\+Neig\+Element\+Id@{set\+Basal\+Neig\+Element\+Id}!Prism@{Prism}}
+\subsubsection[{set\+Basal\+Neig\+Element\+Id}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::set\+Basal\+Neig\+Element\+Id (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Shape\+Base} $>$$>$ \&}]{elements\+List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classPrism_a6d95fcc54232f1b7777e988cdee98727}
+
+
+This function sets the basal neighboiur of this element, which has an apical surface overlapping completely with teh basal surface of this prism. 
+
+This funciton sets the basal neighbours of all elemetns qualifying for a basal neighbour element. The check is only carried out on the apical elements of the coumnar tissue (\hyperlink{classShapeBase_aff63b1fcb823bbfdb5b19fe78dea59b8}{Shape\+Base\+::tissue\+Placement} = 0, Shape\+Base\+::\+Tissue\+Type = 0). The columnar elements bordering the basal extracellualar matrix (\hyperlink{classShapeBase_afcd1d4807f83e12b2df7606acb7518b3}{Shape\+Base\+::at\+Basal\+Border\+Of\+E\+C\+M} = true), and the basal extracellular matrix itself (\hyperlink{classShapeBase_a5e442b31d2341cbe477d7c33195a576c}{Shape\+Base\+::is\+E\+C\+M\+Mimicing}) are not labelled, as these elements do not hold a basal neighbour that is a tissue piece.
+
+Basal nodes of a prism are hte nodes recorded in \hyperlink{classShapeBase_af96e17fa9a23289fb743ff0722a7dc64}{Shape\+Base\+::\+Node\+Ids} array indices 0-\/2.
+
+When all three nodes are owned as apical nodes by another element, this is the neighbour I am looking for. If the element is N\+O\+T an explicit E\+C\+M element (\hyperlink{classShapeBase_a5e442b31d2341cbe477d7c33195a576c}{Shape\+Base\+::is\+E\+C\+M\+Mimicing} = false), then the new Id is recorded into the \hyperlink{classShapeBase_a7515f99cadce806894a7c254186a85f7}{Shape\+Base\+::basal\+Neig\+Element\+Id}.
+
+Once the element is found, break the loop regardless of the E\+C\+M status. If the loop has reached an E\+C\+M element then this element does not have a basal bordering tissue. It should not have this case anyway, as elemetns at\+Basal\+Border\+Of\+E\+C\+M are skipped.
+
+Reimplemented from \hyperlink{classShapeBase}{Shape\+Base}.
+
+\hypertarget{classPrism_a0575442613f8b7d9428c58cef19ab219}{}\index{Prism@{Prism}!set\+Coeff\+Mat@{set\+Coeff\+Mat}}
+\index{set\+Coeff\+Mat@{set\+Coeff\+Mat}!Prism@{Prism}}
+\subsubsection[{set\+Coeff\+Mat}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::set\+Coeff\+Mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classPrism_a0575442613f8b7d9428c58cef19ab219}
+
+
+This function writes the coefficient matrix that is collating the calculated stresses in the form of the vector form of elemental stress and strain vectors. 
+
+The coefficient matrix collating the calculated stresses in the form of the vector form of elemental strss and strain vectors\+:
+
+\begin{eqnarray*} \boldsymbol{c} = \begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\ 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\ \end{bmatrix} \sim \begin{bmatrix} \epsilon_{x} \\ \epsilon_{y} \\ \epsilon_{z}\\ \gamma_{x,y} \\ \gamma_{x,z} \\ \gamma_{y,z} \end{bmatrix} \sim \begin{bmatrix} \sigma_{x} \\ \sigma_{y} \\ \sigma_{z}\\ \sigma_{x,y} \\ \sigma_{x,z} \\ \sigma_{y,z} \end{bmatrix}. \end{eqnarray*}\hypertarget{classPrism_aa1a4d3411d1f3dc05816ec01dcfa8310}{}\index{Prism@{Prism}!set\+Shape\+Function\+Derivatives@{set\+Shape\+Function\+Derivatives}}
+\index{set\+Shape\+Function\+Derivatives@{set\+Shape\+Function\+Derivatives}!Prism@{Prism}}
+\subsubsection[{set\+Shape\+Function\+Derivatives}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::set\+Shape\+Function\+Derivatives (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{Shape\+Func\+Der, }
+\item[{double}]{eta, }
+\item[{double}]{zeta, }
+\item[{double}]{nu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classPrism_aa1a4d3411d1f3dc05816ec01dcfa8310}
+
+
+This function calculates and writes the shape function derivatives on the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer, for the provided barycentric coordinates. 
+
+This function calculates and writes the shape function derivatives on the gsl\+\_\+matrix pointed by the provided input gsl\+\_\+matrix pointer, for the provided barycentric coordinates. The matrix must be allocated prior to calling the function. ~\newline
+For the prism, the shape functions and their derivatives are given as\+:
+
+\begin{tabular}{|c|c|c|c|c|} \multicolumn{5}{|c|}{ $\lambda = 1 - \xi - \eta$ } \\ \multicolumn{5}{|c|}{ $\alpha = \left( 1-\zeta \right) /2$ } \\ \multicolumn{5}{|c|}{ $b = \left(1+\zeta\right)/2$ } \\ Node & Shape function. & Shape function & Shape function & Shape function. \\ & & derivative wrt $\xi$ & derivative wrt $\zeta$ & derivative wrt $\eta$ \\ & $N$ & $\frac{\partial{N}}{ \partial \xi}$ & $\frac{\partial{N}}{\partial \zeta}$ & $\frac{\partial{N}}{\partial \eta}$ \\ 1 & $\lambda \alpha$ & $- \alpha$ & $- \alpha$ & $ \frac{-\lambda} {2}$ \\ 2 & $\xi \alpha$ & $\alpha$ & 0 & $\frac{-\xi} {2} $ \\ 3 & $\eta \alpha$ & 0 & $\alpha$ & $\frac{-\nu} {2} $ \\ 4 & $\lambda b$ & $-b$ & $-b$ & $\frac{\lambda} {2} $ \\ 5 & $\xi b$ & $b$ &0 & $\frac{\xi} {2} $ \\ 6 & $\eta b$ & 0 & $b$ & $\frac{\eta} {2} $ \\ \end{tabular}
+
+The shape function derivatives matrix has the form\+: \begin{eqnarray*} \begin{bmatrix} \frac{\partial N_0}{ \partial \xi} & ... & \frac{\partial N_n}{ \partial \xi} \\ \frac{\partial N_0}{ \partial \zeta} & ... & \frac{\partial N_n}{ \partial \zeta} \\ \frac{\partial N_0}{ \partial \eta} & ... & \frac{\partial N_n}{ \partial \eta} \end{bmatrix} \end{eqnarray*}\hypertarget{classPrism_aa1f76f3cabdd00eb057f41cebbaa466d}{}\index{Prism@{Prism}!set\+Shape\+Function\+Derivative\+Stack@{set\+Shape\+Function\+Derivative\+Stack}}
+\index{set\+Shape\+Function\+Derivative\+Stack@{set\+Shape\+Function\+Derivative\+Stack}!Prism@{Prism}}
+\subsubsection[{set\+Shape\+Function\+Derivative\+Stack}]{\setlength{\rightskip}{0pt plus 5cm}void Prism\+::set\+Shape\+Function\+Derivative\+Stack (
+\begin{DoxyParamCaption}
+\item[{gsl\+\_\+matrix $\ast$}]{Shape\+Func\+Der, }
+\item[{gsl\+\_\+matrix $\ast$}]{Shape\+Func\+Der\+Stack}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classPrism_aa1f76f3cabdd00eb057f41cebbaa466d}
+
+
+This function writes the input gsl\+\_\+matrix Shape\+Func\+Der into a stack form, in the matrix Shape\+Func\+Der\+Stack. Both matrices must be allocated prior to calling the function. 
+
+This function writes the input gsl\+\_\+matrix Shape\+Func\+Der into a stack form, in the matrix Shape\+Func\+Der\+Stack. Both matrices must be allocated prior to calling the function. This stack is for direct multiplication with B matrix during calculation of stresses. with the notation $ N_{i, \xi} $ being the short hand for $ \partial \boldsymbol{x_{i}} / \partial {\xi} $ for node i, the stack for of the shape function derivatives in open form is\+:
+
+\begin{eqnarray*} \begin{bmatrix} N_{0,\xi} & 0 & 0 & N_{1,\xi} & \cdots &N_{n-1,\xi} & 0 & 0 \\ N_{0,\zeta} & 0 & 0 & N_{1,\zeta} & \cdots &N_{n-1,\zeta} & 0 & 0 \\ N_{0,\nu} & 0 & 0 & N_{1,\nu} & \cdots &N_{n-1,\nu} & 0 & 0 \\ 0 & N_{0,\xi} & 0 & 0 & \cdots &0 & N_{n-1,\xi} & 0 \\ 0 & N_{0,\zeta} & 0 & 0 & \cdots &0 & N_{n-1,\zeta} & 0 \\ 0 & N_{0,\nu} & 0 & 0 & \cdots &0 & N_{n-1,\nu} & 0 \\ 0 & 0 & N_{0,\xi} & 0 & \cdots &0 &0 & N_{n-1,\xi} \\ 0 & 0 & N_{0,\zeta} & 0 & \cdots &0 &0 & N_{n-1,\zeta} \\ 0 & 0 & N_{0,\nu} & 0 & \cdots &0 &0 & N_{n-1,\nu} . \end{bmatrix} \end{eqnarray*}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Prism.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Prism.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+InputMeshParameters:
+  MeshInputMode(int-seeDocumentation): 4
+  MeshFile(full-path):     ../MeshFiles/WingAt48hr.mesh
+  symmetricInX(bool): 0
+  symmetricInY(bool): 1
+ 
+TimeParameters:
+  TimeStep(sec): 10
+  SimulationLength(sec): 60
+  
+SaveOptions:
+  SaveImages(bool): 1
+  ImagesSaveDirectory(relative_path_to_od): ./ScreenShots/
+  SaveData(bool):   1
+  ImageSaveInterval(sec): 1
+  DataSaveInterval(sec):  10
+  
+NodeFixingOptions:
+  FixingViscosity(x,y,z): 0   0  32000
+  ApicSurfaceFix(bool-x,y,z):   0 0 0   FixApicalExtVisc(bool): 0
+  BasalSurfaceFix(bool-x,y,z):  1 1 1   FixBasalExtVisc(bool):  0
+  CircumferenceFix(bool-x,y,z): 0 0 0   FixCircWithExtVisc(bool): 0
+  ApicCircumFix(bool-x,y,z):    0 0 0   FixApicCircWithExtVisc(bool):  0
+  BasalCircumFix(bool-x,y,z):   0 0 0   FixBasalCircWithExtVisc(bool): 0
+  LinkerApicCircumFix(bool-x,y,z):  0 0 0  FixLinkerApicCircWithExtVisc(bool):  0
+  LinkerBasalCircumFix(bool-x,y,z): 0 0 0  FixLinkerBasalCircWithExtVisc(bool): 0
+  NotumFix(bool-x,y,z,double-xFracMin,xFracMax): 0 0 0 -0.1 0.5  FixNotumExtVisc(bool): 0
+
+PysicalProperties:
+  YoungsModulusApical: 100.0	YoungsModulusBasal: 25.0	YoungsModulusMid: 25.0	Noise(%-int): 20
+  PoissonsRatio: 0.29		Noise(%-int): 0
+  ApicalViscosity:  0.0 	Noise(%-int): 0
+  BasalViscosity:   0.0
+  MidLineViscosity: 0.0
+
+ExternalViscositySetup:
+  ExtendToWholeTissue: 0
+  DiscProperApicalExternalViscosity: 16000.0 
+  DiscProperBasalExternalViscosity: 10.0 
+  PeripodialMembraneApicalExternalViscosity: 0.0
+  PeripodialMembraneBasalExternalViscosity: 0.0 
+  LinkerZoneApicalExternalViscosity: 0.0
+  LinkerZoneBasalExternalViscosity: 0.0
+
+ExplicitECMOptions:
+  ThereIsExplicitECM(bool): 1
+  ECMRemodellingHalfLife(hour): 8.0
+  ECMColumnarYoungsModulus:  1600
+  ECMPeripodialYoungsModulus:  100
+
+ExplicitActinOptions:
+  ThereIsExplicitActin(bool): 1
+  
+Pipette_Aspiration:
+  PipetteAspitarionActive(bool): 1
+  NumberOfPressureStages(int): 2
+  InitiationTimes(sec): 0 40 
+  Pressures(Pa): 300 600 
+  ApicalSuction(bool-will_set_up_basal_suction_if_false): 1
+  TissueStuck(bool-will_fix_the_opposite_surface_in_z): 1
+  Centre_Position(x,y,z): 0 0 14
+  Pipette_InnerRadius(micron): 6
+  Pipette_OuterRadius(micron): 8
+  Pipette_Effect_Depth(micron): 2
+
+  
+    

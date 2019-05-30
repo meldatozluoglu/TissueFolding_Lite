@@ -1,0 +1,102 @@
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction}{}\section{marker\+Ellipse\+Based\+Shape\+Change\+Function Class Reference}
+\label{classmarkerEllipseBasedShapeChangeFunction}\index{marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}}
+Inheritance diagram for marker\+Ellipse\+Based\+Shape\+Change\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmarkerEllipseBasedShapeChangeFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmarkerEllipseBasedShapeChangeFunction_a672deb17c0ad66c4bc59aec927c48322}{marker\+Ellipse\+Based\+Shape\+Change\+Function} (int id, int type, float \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{init\+Time}, float \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{end\+Time}, bool \hyperlink{classGrowthFunctionBase_a254c82be25d3648a0474c24a63d5a555}{apply\+Tissue\+Apical}, bool \hyperlink{classGrowthFunctionBase_afcbfd4691a386ba9dbf75888e0a4ef9e}{apply\+Tissue\+Basal}, bool apply\+Tissue\+Midline, bool \hyperlink{classGrowthFunctionBase_a9fe46fc6dde4041b79204beb48972a09}{apply\+To\+Basal\+E\+C\+M}, bool \hyperlink{classGrowthFunctionBase_ac623b1dbe376bce5dddbe1a2e21c776f}{apply\+To\+Lateral\+E\+C\+M}, int Shape\+Change\+Type, double Shape\+Change\+Fraction\+Per\+Hr, std\+::vector$<$ int $>$ marker\+Ellipse\+Ids, bool conserve\+Volume)
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classUniformShapeChangeFunction}{Uniform\+Shape\+Change\+Function}. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 3 $>$ \hyperlink{classmarkerEllipseBasedShapeChangeFunction_aec4b322a254ca55b61604580197562fb}{get\+Shape\+Change\+Rate\+Rate} ()
+\begin{DoxyCompactList}\small\item\em The function is to get the 3\+D growth rate of the current shape change function. \end{DoxyCompactList}\item 
+void \hyperlink{classmarkerEllipseBasedShapeChangeFunction_aa4e6bc480cea0b02f2beb8521e6aca91}{write\+Summary} (std\+::ofstream \&save\+File\+Simulation\+Summary, double dt)
+\begin{DoxyCompactList}\small\item\em The function is to write the growth function summary to simulation summary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_ad3a4295d10decba7cfedcfc346be4267}{}int {\bfseries n\+Ellipse\+Bands}\label{classmarkerEllipseBasedShapeChangeFunction_ad3a4295d10decba7cfedcfc346be4267}
+
+\item 
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_af629b3243c3e8042fc63da026f643f0b}{}double {\bfseries Growth\+Rate} \mbox{[}3\mbox{]}\label{classmarkerEllipseBasedShapeChangeFunction_af629b3243c3e8042fc63da026f643f0b}
+
+\item 
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_a0ddbc19f190dae22e370d26142d31472}{}int {\bfseries Shape\+Change\+Type}\label{classmarkerEllipseBasedShapeChangeFunction_a0ddbc19f190dae22e370d26142d31472}
+
+\item 
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_a3de1358ce2f62a683585fd9662672744}{}bool {\bfseries conserve\+Volume}\label{classmarkerEllipseBasedShapeChangeFunction_a3de1358ce2f62a683585fd9662672744}
+
+\item 
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_a95dbc4a53d1c4ddd4f896df7dc09525c}{}double {\bfseries Shape\+Change\+E\+C\+M\+Limit}\label{classmarkerEllipseBasedShapeChangeFunction_a95dbc4a53d1c4ddd4f896df7dc09525c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_a672deb17c0ad66c4bc59aec927c48322}{}\index{marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}!marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}}
+\index{marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}!marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}}
+\subsubsection[{marker\+Ellipse\+Based\+Shape\+Change\+Function}]{\setlength{\rightskip}{0pt plus 5cm}marker\+Ellipse\+Based\+Shape\+Change\+Function\+::marker\+Ellipse\+Based\+Shape\+Change\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{type, }
+\item[{float}]{init\+Time, }
+\item[{float}]{end\+Time, }
+\item[{bool}]{apply\+Tissue\+Apical, }
+\item[{bool}]{apply\+Tissue\+Basal, }
+\item[{bool}]{apply\+Tissue\+Midline, }
+\item[{bool}]{apply\+To\+Basal\+E\+C\+M, }
+\item[{bool}]{apply\+To\+Lateral\+E\+C\+M, }
+\item[{int}]{Shape\+Change\+Type, }
+\item[{double}]{Shape\+Change\+Fraction\+Per\+Hr, }
+\item[{std\+::vector$<$ int $>$}]{marker\+Ellipse\+Ids, }
+\item[{bool}]{conserve\+Volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classmarkerEllipseBasedShapeChangeFunction_a672deb17c0ad66c4bc59aec927c48322}
+
+
+The constructor of \hyperlink{classUniformShapeChangeFunction}{Uniform\+Shape\+Change\+Function}. 
+
+First six parameters will be directed to the parent constructor, \hyperlink{classUniformGrowthFunction_a9ea553c72b2d5e83e98e4ec7a8c025b6}{Uniform\+Growth\+Function\+::\+Uniform\+Growth\+Function}. The growth rates in Dv, A\+B and A\+P will be fed as 0 to the parent constructor. ~\newline
+The parameter Shape\+Change\+Type will define the type of the shape change as 1\+: Columnar\+To\+Squamous change, 2\+: Apical shrinkage, and 2\+: basal shrinkage. The parameter Shape\+Change\+Rate will define the rate of defined shape change. The constructor will calculate the corrected rate, as to conserve the volume while shape change is occurring.
+
+\subsection{Member Function Documentation}
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_aec4b322a254ca55b61604580197562fb}{}\index{marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}!get\+Shape\+Change\+Rate\+Rate@{get\+Shape\+Change\+Rate\+Rate}}
+\index{get\+Shape\+Change\+Rate\+Rate@{get\+Shape\+Change\+Rate\+Rate}!marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}}
+\subsubsection[{get\+Shape\+Change\+Rate\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$double,3$>$ marker\+Ellipse\+Based\+Shape\+Change\+Function\+::get\+Shape\+Change\+Rate\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classmarkerEllipseBasedShapeChangeFunction_aec4b322a254ca55b61604580197562fb}
+
+
+The function is to get the 3\+D growth rate of the current shape change function. 
+
+This function will write the marker\+Ellipse\+Based\+Shape\+Change\+Function\+::\+Growth\+Rate of the current growth function to the input double array pointer. The double array pointer should be set to point at a double array of size 3 (or higher) before calling the function.
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_a79fbb3a43d05b82aa10b35c86bbef5f3}{Growth\+Function\+Base}.
+
+\hypertarget{classmarkerEllipseBasedShapeChangeFunction_aa4e6bc480cea0b02f2beb8521e6aca91}{}\index{marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}!write\+Summary@{write\+Summary}}
+\index{write\+Summary@{write\+Summary}!marker\+Ellipse\+Based\+Shape\+Change\+Function@{marker\+Ellipse\+Based\+Shape\+Change\+Function}}
+\subsubsection[{write\+Summary}]{\setlength{\rightskip}{0pt plus 5cm}void marker\+Ellipse\+Based\+Shape\+Change\+Function\+::write\+Summary (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{save\+File\+Simulation\+Summary, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classmarkerEllipseBasedShapeChangeFunction_aa4e6bc480cea0b02f2beb8521e6aca91}
+
+
+The function is to write the growth function summary to simulation summary file. 
+
+This function will write the \hyperlink{classUniformGrowthFunction}{Uniform\+Growth\+Function} details into the simulation summary file, provided as the first input. Time step (dt) of the simulation is provided as second input, to report the growth rates per hour. The output should look like\+: ~\newline
+ Growth Type\+: Uniform (1) Initial time(sec)\+: \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{Uniform\+Growth\+Function\+::init\+Time} Final\+Time time(sec)\+: \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{Uniform\+Growth\+Function\+::end\+Time} Growth\+Rate(fraction/hr)\+: D\+V\+Growth(in 1/hr) A\+P\+Growth(in 1/hr) A\+B\+Growth(in 1/hr)
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_ad6403a702f3ed53984083904755a832b}{Growth\+Function\+Base}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Growth\+Function\+Types.\+h\end{DoxyCompactItemize}

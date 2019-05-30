@@ -1,0 +1,340 @@
+\hypertarget{classNode}{}\section{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNode_a4cb4e49e312b20b6d1b11e15d6a8a0e3}{}\hyperlink{classNode_a4cb4e49e312b20b6d1b11e15d6a8a0e3}{Node} (int id, int dim, std\+::array$<$ double, 3 $>$ pos, int tissue\+Pos, int \hyperlink{classNode_ae621097f98f1d33d283cf65a0a02d29a}{tissue\+Type})\label{classNode_a4cb4e49e312b20b6d1b11e15d6a8a0e3}
+
+\begin{DoxyCompactList}\small\item\em Constructer of the node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ab165125d2f0e60b9030468a4152c3ccb}{}bool \hyperlink{classNode_ab165125d2f0e60b9030468a4152c3ccb}{have\+Common\+Owner} (\hyperlink{classNode}{Node} $\ast$node\+Slave)\label{classNode_ab165125d2f0e60b9030468a4152c3ccb}
+
+\begin{DoxyCompactList}\small\item\em The function to check if the node pointed by the input pointer (node\+Slave) has common owner with this node (returns boolean). \end{DoxyCompactList}\item 
+\hypertarget{classNode_a52d23c3e39f6de623ed0aad9bc225c14}{}int \hyperlink{classNode_a52d23c3e39f6de623ed0aad9bc225c14}{get\+Common\+Owner\+Id} (\hyperlink{classNode}{Node} $\ast$node\+Slave)\label{classNode_a52d23c3e39f6de623ed0aad9bc225c14}
+
+\begin{DoxyCompactList}\small\item\em The function to return the \hyperlink{classShapeBase_ae097764dd4d607b54710d7ca0f7e12f8}{Shape\+Base\+::\+Id} the owner element this node shares with the node pointed by the input pointer (node\+Slave). \end{DoxyCompactList}\item 
+void \hyperlink{classNode_adae4720965b558b075a91af4cf742b2a}{set\+External\+Viscosity} (double Apical\+Visc, double Basal\+Visc, bool extend\+External\+Viscosity\+To\+Inner\+Tissue)
+\begin{DoxyCompactList}\small\item\em The function to set the viscosity of the node. \end{DoxyCompactList}\item 
+bool \hyperlink{classNode_a7dc5a9838a0a1963e58f648c5f7cb635}{check\+If\+Neighbour} (int Id\+To\+Check)
+\begin{DoxyCompactList}\small\item\em The function to check if the node with input Id (Id\+To\+Check) is an immediate neighbour of the node. \end{DoxyCompactList}\item 
+bool \hyperlink{classNode_a1d80e6f467d8ca919872b6e47a882dd5}{check\+If\+Node\+Has\+Packing} ()
+\begin{DoxyCompactList}\small\item\em The function to check if the node is eligible for packing. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a7c6a8e48ca7eda39cfb4b83699181cce}{get\+Current\+Position} ()
+\begin{DoxyCompactList}\small\item\em return the current position of the node \end{DoxyCompactList}\item 
+void \hyperlink{classNode_a3030a518aa97bd50060b8733e87540f7}{display\+Connected\+Element\+Ids} ()
+\begin{DoxyCompactList}\small\item\em This function will print out a list of connected element Id\textquotesingle{}s. \end{DoxyCompactList}\item 
+void \hyperlink{classNode_a755e8c3d76e7f1f0ab364fc3d4da3a9a}{display\+Connected\+Element\+Weights} ()
+\begin{DoxyCompactList}\small\item\em This function will print out the weights of the connected elements, in the order of Id s given in connected\+Element\+Ids. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a39d2419d4de14f0d0ecffc7c7809e705}{}void \hyperlink{classNode_a39d2419d4de14f0d0ecffc7c7809e705}{display\+Position} ()\label{classNode_a39d2419d4de14f0d0ecffc7c7809e705}
+
+\begin{DoxyCompactList}\small\item\em The helper function to display the position of the node during debugging or in catasthropic failure. \end{DoxyCompactList}\item 
+void \hyperlink{classNode_ac2838f50304007a7cfe3df3f2e8d1772}{add\+To\+Immediate\+Neigs} (int new\+Node\+Id)
+\begin{DoxyCompactList}\small\item\em This function adds the input node Id (int) to the list of neighbours of the node (\hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs}) \end{DoxyCompactList}\item 
+void \hyperlink{classNode_a2c6f029aa3388b8fb122139b1d24b71b}{add\+To\+Connected\+Elements} (int new\+Element\+Id, double volume\+Per\+Node)
+\begin{DoxyCompactList}\small\item\em This function adds the input new\+Element\+Id (int) to the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process. \end{DoxyCompactList}\item 
+void \hyperlink{classNode_a6dc9c26deadb9d2ca3e248f4748d9dfc}{remove\+From\+Connected\+Elements} (int new\+Element\+Id, double volume\+Per\+Node)
+\begin{DoxyCompactList}\small\item\em This function removes the input new\+Element\+Id (int) from the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process. \end{DoxyCompactList}\item 
+bool \hyperlink{classNode_abc1e7e6c42b377c073a68c2b2ea97fa8}{is\+My\+Neig} (int node\+Id)
+\begin{DoxyCompactList}\small\item\em The function to check if the node with the input node id is a neighbour of this node (returns boolean). \end{DoxyCompactList}\item 
+bool \hyperlink{classNode_aaf5ecd8e43cad8d619629d07bcaa1a8e}{is\+Neig\+With\+My\+Collapsed\+Nodes} (int Node\+Id, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes)
+\begin{DoxyCompactList}\small\item\em The function to check if the node with the input \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} (node\+Id) is collapsed with a neighbour of this node (returns boolean). \end{DoxyCompactList}\item 
+\hypertarget{classNode_a108f0ce1c6a6ca9d372302cbb16677bc}{}void \hyperlink{classNode_a108f0ce1c6a6ca9d372302cbb16677bc}{get\+New\+Collapse\+List\+And\+Average\+Pos} (std\+::vector$<$ int $>$ \&new\+Collapse\+List, std\+::array$<$ double, 3 $>$ avr\+Pos, std\+::array$<$ bool, 3 $>$ fix, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, int master\+Node\+Id)\label{classNode_a108f0ce1c6a6ca9d372302cbb16677bc}
+
+\begin{DoxyCompactList}\small\item\em This function appends the list of node Ids this node is collapsed with to the input array. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a7256e876aa188a55e16ef5df1aa89c0f}{}void \hyperlink{classNode_a7256e876aa188a55e16ef5df1aa89c0f}{clear\+Duplicates\+From\+Collapse\+List} ()\label{classNode_a7256e876aa188a55e16ef5df1aa89c0f}
+
+\begin{DoxyCompactList}\small\item\em This function clears the \hyperlink{classNode_a099baa33319712e8ff03063385f8e095}{Node\+::collapsed\+With} array from duplicates. \end{DoxyCompactList}\item 
+void \hyperlink{classNode_ad12f31fe9c966e7afc2d820365116123}{collapse\+On\+Node} (const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes, int master\+Node\+Id)
+\begin{DoxyCompactList}\small\item\em This function collapses this node on the node with the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} with input master\+Node\+Id, at one time step. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a914f0b9898cbfa82aac511f0a44ee811}{}void \hyperlink{classNode_a914f0b9898cbfa82aac511f0a44ee811}{collapse\+On\+Node\+In\+Stages} (std\+::vector$<$ int $>$ \&new\+Collapse\+List, std\+::array$<$ double, 3 $>$ avr\+Pos, std\+::array$<$ bool, 3 $>$ fix, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \hyperlink{classNode}{Node} $>$$>$ \&Nodes)\label{classNode_a914f0b9898cbfa82aac511f0a44ee811}
+
+\begin{DoxyCompactList}\small\item\em This function collapses this node on the node with the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} with input master\+Node\+Id, at multiple time steps, perturbing the position of the node smoothly to ensure stability. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a4cbc108c419c4c525ad92684df401e51}{}void \hyperlink{classNode_a4cbc108c419c4c525ad92684df401e51}{update\+Position\+Towards\+Point} (std\+::array$<$ double, 3 $>$ avr\+Pos, std\+::array$<$ bool, 3 $>$ fix)\label{classNode_a4cbc108c419c4c525ad92684df401e51}
+
+\begin{DoxyCompactList}\small\item\em This function moves this node towards the coordinates given in input array avr\+Pos, excluding movement of fixed position. \end{DoxyCompactList}\item 
+\hypertarget{classNode_abf7a4917252fff90bd2ff2c50bfc5d21}{}bool \hyperlink{classNode_abf7a4917252fff90bd2ff2c50bfc5d21}{is\+E\+C\+M\+Change\+Applied\+To\+Node} (bool change\+Apical\+E\+C\+M, bool change\+Basal\+E\+C\+M, std\+::vector$<$ int $>$ \&E\+C\+M\+Change\+Ellipse\+Band\+Ids, int number\+Of\+E\+C\+M\+Change\+Ellipse\+Bands)\label{classNode_abf7a4917252fff90bd2ff2c50bfc5d21}
+
+\begin{DoxyCompactList}\small\item\em This function checks if the node falls within the range of the marker ellipse band ids for the E\+C\+M property perturbations. \end{DoxyCompactList}\item 
+int \hyperlink{classNode_a3c7b8ccf4dab44216b997c5f63f11d9f}{get\+Id} ()
+\begin{DoxyCompactList}\small\item\em The function returns the Id (\hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id}) of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNode_a8f3a763935fb67e34784d060c0ea76f8}{}std\+::array$<$ bool, 3 $>$ \hyperlink{classNode_a8f3a763935fb67e34784d060c0ea76f8}{Fixed\+Pos}\label{classNode_a8f3a763935fb67e34784d060c0ea76f8}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the node\textquotesingle{}s position is fixed in any direction, format\+: \mbox{[}x y z\mbox{]}, true = fixed. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a1bd379569cc1a8b96432e61971aed4d9}{}int \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Id}\label{classNode_a1bd379569cc1a8b96432e61971aed4d9}
+
+\begin{DoxyCompactList}\small\item\em The unique identification number of the node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_aaa21f137c35d767ff0a119ef5e058194}{}size\+\_\+t \hyperlink{classNode_aaa21f137c35d767ff0a119ef5e058194}{n\+Dim}\label{classNode_aaa21f137c35d767ff0a119ef5e058194}
+
+\begin{DoxyCompactList}\small\item\em The number of dimensions of the node, (2 or 3) \end{DoxyCompactList}\item 
+\hypertarget{classNode_a70e54350ca21406946b8e1b34360dbae}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a70e54350ca21406946b8e1b34360dbae}{Position}\label{classNode_a70e54350ca21406946b8e1b34360dbae}
+
+\begin{DoxyCompactList}\small\item\em The position array of the node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a34061bba1f26ce526f8cb17ed2bab561}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a34061bba1f26ce526f8cb17ed2bab561}{R\+K\+Position}\label{classNode_a34061bba1f26ce526f8cb17ed2bab561}
+
+\begin{DoxyCompactList}\small\item\em The position array for position during a Runge-\/\+Kutta step array of the node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a6c133172953bbe1451075ef7b78db6b7}{}std\+::array$<$ bool, 3 $>$ \hyperlink{classNode_a6c133172953bbe1451075ef7b78db6b7}{external\+Viscosity\+Set\+In\+Fixing}\label{classNode_a6c133172953bbe1451075ef7b78db6b7}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the external viscosity of any axis has been set in node fixing options. The node fixing is carried out before the physical parameter settings in most cases. The boolean check is carried out not to overwrite the existing set viscosity in normal viscosity assignment. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a6377f135c12aae0dd776107c2628516e}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a6377f135c12aae0dd776107c2628516e}{external\+Viscosity}\label{classNode_a6377f135c12aae0dd776107c2628516e}
+
+\begin{DoxyCompactList}\small\item\em External viscosity of the node, defined by its placement within the tissue. This can be defined as an external adhesion, E\+C\+M remodelling, or any other form of viscosity. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a1d6adc185162f9fea733839c4e7230f7}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a1d6adc185162f9fea733839c4e7230f7}{initial\+External\+Viscosity}\label{classNode_a1d6adc185162f9fea733839c4e7230f7}
+
+\begin{DoxyCompactList}\small\item\em External viscosity of the node before any modifications by perturbation (for example E\+C\+M stiffness/ viscosity change) \end{DoxyCompactList}\item 
+\hypertarget{classNode_a78523720b4a1758f38d4e8b1703ad6c3}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a78523720b4a1758f38d4e8b1703ad6c3}{maximum\+External\+Viscosity}\label{classNode_a78523720b4a1758f38d4e8b1703ad6c3}
+
+\begin{DoxyCompactList}\small\item\em Maximum external viscosity the node can reach as a result of modifications by perturbation (for example E\+C\+M stiffness/ viscosity change) \end{DoxyCompactList}\item 
+\hypertarget{classNode_a59528693432e71fa9b9e7ecfef6ee274}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a59528693432e71fa9b9e7ecfef6ee274}{minimum\+External\+Viscosity}\label{classNode_a59528693432e71fa9b9e7ecfef6ee274}
+
+\begin{DoxyCompactList}\small\item\em Minimum external viscosity the node can reach as a result of modifications by perturbation (for example E\+C\+M stiffness/ viscosity change) \end{DoxyCompactList}\item 
+\hypertarget{classNode_a58afaee3d71a2c122396265c91acda04}{}std\+::array$<$ double, 3 $>$ \hyperlink{classNode_a58afaee3d71a2c122396265c91acda04}{E\+C\+M\+Viscosity\+Change\+Per\+Hour}\label{classNode_a58afaee3d71a2c122396265c91acda04}
+
+\begin{DoxyCompactList}\small\item\em The change in E\+C\+M viscosity per one hour. The double array of size (1,3) stores the viscosity change in x, y, and z directions, respectively. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a1f25afa638813548bef54299c2d756e4}{}double \hyperlink{classNode_a1f25afa638813548bef54299c2d756e4}{displacement}\label{classNode_a1f25afa638813548bef54299c2d756e4}
+
+\begin{DoxyCompactList}\small\item\em the displacement of the node from previous time step; \end{DoxyCompactList}\item 
+\hypertarget{classNode_af754322e3928dc45f70b19762551890a}{}int \hyperlink{classNode_af754322e3928dc45f70b19762551890a}{tissue\+Placement}\label{classNode_af754322e3928dc45f70b19762551890a}
+
+\begin{DoxyCompactList}\small\item\em The tissue placement is 0 for basal nodes, 1 for apical nodes, and 2 for middle range. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ae621097f98f1d33d283cf65a0a02d29a}{}int \hyperlink{classNode_ae621097f98f1d33d283cf65a0a02d29a}{tissue\+Type}\label{classNode_ae621097f98f1d33d283cf65a0a02d29a}
+
+\begin{DoxyCompactList}\small\item\em The tissue type is 0 for columnar layer, 1 for peripodial membrane, and 2 for linker zone. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ab6b225354ad961f2e9bd5d7fe9b67b3a}{}bool \hyperlink{classNode_ab6b225354ad961f2e9bd5d7fe9b67b3a}{at\+Circumference}\label{classNode_ab6b225354ad961f2e9bd5d7fe9b67b3a}
+
+\begin{DoxyCompactList}\small\item\em Boolean defining if the node is at the circumference of the columnar layer of the tissue. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a63e510fc9158eb15e751861bc14eae38}{}double \hyperlink{classNode_a63e510fc9158eb15e751861bc14eae38}{mass}\label{classNode_a63e510fc9158eb15e751861bc14eae38}
+
+\begin{DoxyCompactList}\small\item\em The mass of the node, calculated via the elements that use the node as a vertex. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a7a585da74654d80d5f94805e39c1e2ad}{}double \hyperlink{classNode_a7a585da74654d80d5f94805e39c1e2ad}{viscosity\+Surface}\label{classNode_a7a585da74654d80d5f94805e39c1e2ad}
+
+\begin{DoxyCompactList}\small\item\em The surface of the node, calculated for application of external viscosity via surface. It is positive for a surface that is to feel external viscosity, zero otherwise. \end{DoxyCompactList}\item 
+\hypertarget{classNode_af8e9678dfeffc9e99d925a83b58fde3d}{}double \hyperlink{classNode_af8e9678dfeffc9e99d925a83b58fde3d}{z\+Projected\+Area}\label{classNode_af8e9678dfeffc9e99d925a83b58fde3d}
+
+\begin{DoxyCompactList}\small\item\em The surface of the node, as projected in Z, calculated from apical or pasal surfces of elements, lateral surfaces are not included. \end{DoxyCompactList}\item 
+\hypertarget{classNode_adac7d84db546cadec7a8193e6ff52bd6}{}std\+::vector$<$ int $>$ \hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{immediate\+Neigs}\label{classNode_adac7d84db546cadec7a8193e6ff52bd6}
+
+\begin{DoxyCompactList}\small\item\em The list of Id\textquotesingle{}s for immediate neighbours of the node, i.\+e. the nodes that are shared by the elements that utilise the owner of this node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{}std\+::vector$<$ int $>$ \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{connected\+Element\+Ids}\label{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}
+
+\begin{DoxyCompactList}\small\item\em The list of Id\textquotesingle{}s for elements that are utilising this node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{}std\+::vector$<$ double $>$ \hyperlink{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{connected\+Element\+Weights}\label{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}
+
+\begin{DoxyCompactList}\small\item\em The list of weights (normalised mass) for elements that are utilising this node, order is linked to \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a71d38b47678cff15e338f9c917d32696}{}bool \hyperlink{classNode_a71d38b47678cff15e338f9c917d32696}{has\+Lateral\+Element\+Owner}\label{classNode_a71d38b47678cff15e338f9c917d32696}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if any lateral element uses this node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ae14618d71e657039ed84316154be7330}{}bool \hyperlink{classNode_ae14618d71e657039ed84316154be7330}{at\+Symmetricity\+Border}\label{classNode_ae14618d71e657039ed84316154be7330}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the node is at the border of symmetricity. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a216c4bf4af00dc77d8c88c4d2952f6ab}{}bool \hyperlink{classNode_a216c4bf4af00dc77d8c88c4d2952f6ab}{inside\+Ellipse\+Band}\label{classNode_a216c4bf4af00dc77d8c88c4d2952f6ab}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the node is inside a marker ellipse. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a5a0c478d6925dc16abf3995061fda191}{}int \hyperlink{classNode_a5a0c478d6925dc16abf3995061fda191}{covering\+Ellipse\+Band\+Id}\label{classNode_a5a0c478d6925dc16abf3995061fda191}
+
+\begin{DoxyCompactList}\small\item\em The id of the marker ellipse that the node is covered by. If hte node is not covered by any marker ellipse, the value is -\/1. \end{DoxyCompactList}\item 
+\hypertarget{classNode_aa9eb82543b868adc05b5543251ebb42f}{}bool \hyperlink{classNode_aa9eb82543b868adc05b5543251ebb42f}{all\+Owners\+E\+C\+M\+Mimicing}\label{classNode_aa9eb82543b868adc05b5543251ebb42f}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating all the elements making use of the node are E\+C\+M mimicking elements. \end{DoxyCompactList}\item 
+\hypertarget{classNode_af96140b8fa2e7abffd79a040c6972309}{}bool \hyperlink{classNode_af96140b8fa2e7abffd79a040c6972309}{is\+Master} \mbox{[}3\mbox{]}\label{classNode_af96140b8fa2e7abffd79a040c6972309}
+
+\begin{DoxyCompactList}\small\item\em The boolean array stating if the corresponding degree of freedom of the node is a master of any other degree of freedom. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a83aeb69143ee2ddc1f6f49be4b261b44}{}int \hyperlink{classNode_a83aeb69143ee2ddc1f6f49be4b261b44}{slave\+To} \mbox{[}3\mbox{]}\label{classNode_a83aeb69143ee2ddc1f6f49be4b261b44}
+
+\begin{DoxyCompactList}\small\item\em The int array storing the master node ids if the corresponding degree of freedom of the node is a slave to the respective degree of freedom of another node. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a099baa33319712e8ff03063385f8e095}{}std\+::vector$<$ int $>$ \hyperlink{classNode_a099baa33319712e8ff03063385f8e095}{collapsed\+With}\label{classNode_a099baa33319712e8ff03063385f8e095}
+
+\begin{DoxyCompactList}\small\item\em The vector of int storing the ids of the nodes this node is collapsed and bound with. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a484ea8b4f71ea5fdfa1036ed1fabfae0}{}int \hyperlink{classNode_a484ea8b4f71ea5fdfa1036ed1fabfae0}{adhered\+To}\label{classNode_a484ea8b4f71ea5fdfa1036ed1fabfae0}
+
+\begin{DoxyCompactList}\small\item\em The id of the node this node is adhered to. \end{DoxyCompactList}\item 
+\hypertarget{classNode_a913bf9335efdbd81a352b1ef80654f95}{}bool \hyperlink{classNode_a913bf9335efdbd81a352b1ef80654f95}{on\+Fold\+Initiation}\label{classNode_a913bf9335efdbd81a352b1ef80654f95}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if this node is on a fold initiation region, automatically detected via curvature. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ad41abb2d4571366c2ba8d3a0b46798b6}{}bool \hyperlink{classNode_ad41abb2d4571366c2ba8d3a0b46798b6}{check\+Ownersfor\+Ellipse\+Asignment}\label{classNode_ad41abb2d4571366c2ba8d3a0b46798b6}
+
+\begin{DoxyCompactList}\small\item\em When the ellipse ids are assigned to nodes by owner elemetns, you can end up with elements that have all their nodes engulfed in an ellipse, but the element itself is not assigned into an ellipse. This flag will check for that. \end{DoxyCompactList}\item 
+\hypertarget{classNode_acf1e1353abc605a027ca492f44cd15bf}{}bool \hyperlink{classNode_acf1e1353abc605a027ca492f44cd15bf}{position\+Update\+Ongoing}\label{classNode_acf1e1353abc605a027ca492f44cd15bf}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if this node has its in the process of updating its position during staged collapse of nodes upon adhesion. \end{DoxyCompactList}\item 
+\hypertarget{classNode_ac19c4820651632467a0d7f913f002b56}{}int \hyperlink{classNode_ac19c4820651632467a0d7f913f002b56}{position\+Update\+Counter}\label{classNode_ac19c4820651632467a0d7f913f002b56}
+
+\begin{DoxyCompactList}\small\item\em The counter for steps the nodes position update upon collapse with another node has been ongoing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The node class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classNode_a2c6f029aa3388b8fb122139b1d24b71b}{}\index{Node@{Node}!add\+To\+Connected\+Elements@{add\+To\+Connected\+Elements}}
+\index{add\+To\+Connected\+Elements@{add\+To\+Connected\+Elements}!Node@{Node}}
+\subsubsection[{add\+To\+Connected\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::add\+To\+Connected\+Elements (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Element\+Id, }
+\item[{double}]{volume\+Per\+Node}
+\end{DoxyParamCaption}
+)}\label{classNode_a2c6f029aa3388b8fb122139b1d24b71b}
+
+
+This function adds the input new\+Element\+Id (int) to the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process. 
+
+This function adds the input new\+Element\+Id (int) to the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process.
+
+First the mass before addition of the new element is recorded. Then the \hyperlink{classNode_a63e510fc9158eb15e751861bc14eae38}{Node\+::mass} is updated.
+
+Each of the already recorded weights (in \hyperlink{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{Node\+::connected\+Element\+Weights}) of the connected elements (in \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}) will be updated with the scale new\+Mass / old\+Mass.
+
+Then the new element and its corresponding id will be added to the lists of the node, \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}, and \hyperlink{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{Node\+::connected\+Element\+Weights}, respectively.\hypertarget{classNode_ac2838f50304007a7cfe3df3f2e8d1772}{}\index{Node@{Node}!add\+To\+Immediate\+Neigs@{add\+To\+Immediate\+Neigs}}
+\index{add\+To\+Immediate\+Neigs@{add\+To\+Immediate\+Neigs}!Node@{Node}}
+\subsubsection[{add\+To\+Immediate\+Neigs}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::add\+To\+Immediate\+Neigs (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Node\+Id}
+\end{DoxyParamCaption}
+)}\label{classNode_ac2838f50304007a7cfe3df3f2e8d1772}
+
+
+This function adds the input node Id (int) to the list of neighbours of the node (\hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs}) 
+
+The function will add the input node id to the vector of immediate neighbours of the current node (\hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs}).\hypertarget{classNode_a7dc5a9838a0a1963e58f648c5f7cb635}{}\index{Node@{Node}!check\+If\+Neighbour@{check\+If\+Neighbour}}
+\index{check\+If\+Neighbour@{check\+If\+Neighbour}!Node@{Node}}
+\subsubsection[{check\+If\+Neighbour}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::check\+If\+Neighbour (
+\begin{DoxyParamCaption}
+\item[{int}]{Id\+To\+Check}
+\end{DoxyParamCaption}
+)}\label{classNode_a7dc5a9838a0a1963e58f648c5f7cb635}
+
+
+The function to check if the node with input Id (Id\+To\+Check) is an immediate neighbour of the node. 
+
+The function will return true if the node with the unique \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} equal to \char`\"{}\+Id\+To\+Check\char`\"{} is an immediate neighbour of the current node. The search will be done through the list \hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs}\hypertarget{classNode_a1d80e6f467d8ca919872b6e47a882dd5}{}\index{Node@{Node}!check\+If\+Node\+Has\+Packing@{check\+If\+Node\+Has\+Packing}}
+\index{check\+If\+Node\+Has\+Packing@{check\+If\+Node\+Has\+Packing}!Node@{Node}}
+\subsubsection[{check\+If\+Node\+Has\+Packing}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::check\+If\+Node\+Has\+Packing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNode_a1d80e6f467d8ca919872b6e47a882dd5}
+
+
+The function to check if the node is eligible for packing. 
+
+The function will return true if the node is eligible for packing calculation. This packing will ensure volume exclusion, and is calculated via function Simulation\+::calculate\+Packing. It is not necessary to calculate packing under the following conditions\+: 1) The node is at the middle of the columnar layer, the packing should have stopped any other node/element coming close enough to this node, as they would need to penetrate through the apical or basal surface of the tissue to reach this node.\hypertarget{classNode_ad12f31fe9c966e7afc2d820365116123}{}\index{Node@{Node}!collapse\+On\+Node@{collapse\+On\+Node}}
+\index{collapse\+On\+Node@{collapse\+On\+Node}!Node@{Node}}
+\subsubsection[{collapse\+On\+Node}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::collapse\+On\+Node (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes, }
+\item[{int}]{master\+Node\+Id}
+\end{DoxyParamCaption}
+)}\label{classNode_ad12f31fe9c966e7afc2d820365116123}
+
+
+This function collapses this node on the node with the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} with input master\+Node\+Id, at one time step. 
+
+This function will collapse this \hyperlink{classNode}{Node} with the input node id (second parameter). Collapse will bind the two nodes\textquotesingle{} all degrees of freedoms to each other, and bring them to the same position, mid point of their positions at the time of the function call. The function will take in the address of the list of node pointers in the simulation, and a node id.\hypertarget{classNode_a3030a518aa97bd50060b8733e87540f7}{}\index{Node@{Node}!display\+Connected\+Element\+Ids@{display\+Connected\+Element\+Ids}}
+\index{display\+Connected\+Element\+Ids@{display\+Connected\+Element\+Ids}!Node@{Node}}
+\subsubsection[{display\+Connected\+Element\+Ids}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::display\+Connected\+Element\+Ids (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNode_a3030a518aa97bd50060b8733e87540f7}
+
+
+This function will print out a list of connected element Id\textquotesingle{}s. 
+
+The function will display on screen the list of unique \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} s for the elements utilising this node. These elements are listed in \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}.\hypertarget{classNode_a755e8c3d76e7f1f0ab364fc3d4da3a9a}{}\index{Node@{Node}!display\+Connected\+Element\+Weights@{display\+Connected\+Element\+Weights}}
+\index{display\+Connected\+Element\+Weights@{display\+Connected\+Element\+Weights}!Node@{Node}}
+\subsubsection[{display\+Connected\+Element\+Weights}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::display\+Connected\+Element\+Weights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNode_a755e8c3d76e7f1f0ab364fc3d4da3a9a}
+
+
+This function will print out the weights of the connected elements, in the order of Id s given in connected\+Element\+Ids. 
+
+The function will display on screen output the list of weights (normalised masses) of the connected elements. These weights are stored in \hyperlink{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{Node\+::connected\+Element\+Weights}, and the order is linked to the list\+: \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}.\hypertarget{classNode_a7c6a8e48ca7eda39cfb4b83699181cce}{}\index{Node@{Node}!get\+Current\+Position@{get\+Current\+Position}}
+\index{get\+Current\+Position@{get\+Current\+Position}!Node@{Node}}
+\subsubsection[{get\+Current\+Position}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$ double, 3 $>$ Node\+::get\+Current\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNode_a7c6a8e48ca7eda39cfb4b83699181cce}
+
+
+return the current position of the node 
+
+The function will return the current position of the owner node.\hypertarget{classNode_a3c7b8ccf4dab44216b997c5f63f11d9f}{}\index{Node@{Node}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Node@{Node}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classNode_a3c7b8ccf4dab44216b997c5f63f11d9f}
+
+
+The function returns the Id (\hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id}) of the node. 
+
+The function returns the \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} of the node.\hypertarget{classNode_abc1e7e6c42b377c073a68c2b2ea97fa8}{}\index{Node@{Node}!is\+My\+Neig@{is\+My\+Neig}}
+\index{is\+My\+Neig@{is\+My\+Neig}!Node@{Node}}
+\subsubsection[{is\+My\+Neig}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::is\+My\+Neig (
+\begin{DoxyParamCaption}
+\item[{int}]{node\+Id}
+\end{DoxyParamCaption}
+)}\label{classNode_abc1e7e6c42b377c073a68c2b2ea97fa8}
+
+
+The function to check if the node with the input node id is a neighbour of this node (returns boolean). 
+
+This function will take in a node id, and check if the node is an immediate neighbour of itself. The check is done through its \hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs} list. The function will return true if the input id is a neighbour, and false otherwise.\hypertarget{classNode_aaf5ecd8e43cad8d619629d07bcaa1a8e}{}\index{Node@{Node}!is\+Neig\+With\+My\+Collapsed\+Nodes@{is\+Neig\+With\+My\+Collapsed\+Nodes}}
+\index{is\+Neig\+With\+My\+Collapsed\+Nodes@{is\+Neig\+With\+My\+Collapsed\+Nodes}!Node@{Node}}
+\subsubsection[{is\+Neig\+With\+My\+Collapsed\+Nodes}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::is\+Neig\+With\+My\+Collapsed\+Nodes (
+\begin{DoxyParamCaption}
+\item[{int}]{Node\+Id, }
+\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ {\bf Node} $>$$>$ \&}]{Nodes}
+\end{DoxyParamCaption}
+)}\label{classNode_aaf5ecd8e43cad8d619629d07bcaa1a8e}
+
+
+The function to check if the node with the input \hyperlink{classNode_a1bd379569cc1a8b96432e61971aed4d9}{Node\+::\+Id} (node\+Id) is collapsed with a neighbour of this node (returns boolean). 
+
+This function will take in a node id, and the address of the list of node pointers in the simulation. It will check if the input node id is an immediate neighbour of any of the nodes it has been collapsed with. The check is done through \hyperlink{classNode_adac7d84db546cadec7a8193e6ff52bd6}{Node\+::immediate\+Neigs} lists of all the nodes on its \hyperlink{classNode_a099baa33319712e8ff03063385f8e095}{Node\+::collapsed\+With} list. The function will return true if the input id is a neighbour of any node this node has collapsed with, and false otherwise.\hypertarget{classNode_a6dc9c26deadb9d2ca3e248f4748d9dfc}{}\index{Node@{Node}!remove\+From\+Connected\+Elements@{remove\+From\+Connected\+Elements}}
+\index{remove\+From\+Connected\+Elements@{remove\+From\+Connected\+Elements}!Node@{Node}}
+\subsubsection[{remove\+From\+Connected\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::remove\+From\+Connected\+Elements (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Element\+Id, }
+\item[{double}]{volume\+Per\+Node}
+\end{DoxyParamCaption}
+)}\label{classNode_a6dc9c26deadb9d2ca3e248f4748d9dfc}
+
+
+This function removes the input new\+Element\+Id (int) from the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process. 
+
+This function removes the input new\+Element\+Id (int) from the list of elements connected by this node, updating the mass, and weights of mass per connected element in the process.
+
+First the mass before addition of the new element is recorded. Then the \hyperlink{classNode_a63e510fc9158eb15e751861bc14eae38}{Node\+::mass} is updated.
+
+Each of the already recorded weights (in \hyperlink{classNode_a8f3f1b55c7bfb8b81d8182c06ad1eee4}{Node\+::connected\+Element\+Weights}) of the connected elements (in \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids}) will be updated with the scale new\+Mass / old\+Mass. The index of the element to be deleted on vector \hyperlink{classNode_a42c30c38a9406e72b1fc3b1cc9448d37}{Node\+::connected\+Element\+Ids} is obtained in the process.
+
+Then the element with the obtained index is removed from the lists of connected element ids and weights. For efficiency, the element to be removed is swapped with the last element of each vector, and the vector popped back.\hypertarget{classNode_adae4720965b558b075a91af4cf742b2a}{}\index{Node@{Node}!set\+External\+Viscosity@{set\+External\+Viscosity}}
+\index{set\+External\+Viscosity@{set\+External\+Viscosity}!Node@{Node}}
+\subsubsection[{set\+External\+Viscosity}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+External\+Viscosity (
+\begin{DoxyParamCaption}
+\item[{double}]{Apical\+Visc, }
+\item[{double}]{Basal\+Visc, }
+\item[{bool}]{extend\+External\+Viscosity\+To\+Inner\+Tissue}
+\end{DoxyParamCaption}
+)}\label{classNode_adae4720965b558b075a91af4cf742b2a}
+
+
+The function to set the viscosity of the node. 
+
+This function will take in the apical and basal external viscosities of the tissue as inputs, respectively. The external viscosity of the node will be assigned via its \hyperlink{classNode_af754322e3928dc45f70b19762551890a}{Node\+::tissue\+Placement} and \hyperlink{classNode_ae621097f98f1d33d283cf65a0a02d29a}{Node\+::tissue\+Type}. On the columnar layer, nodes that are in the mid-\/zone of the tissue (neither on the apical nor on the basal surface, will take the average of the two values.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Node.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Node.\+cpp\end{DoxyCompactItemize}

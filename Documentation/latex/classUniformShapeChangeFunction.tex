@@ -1,0 +1,70 @@
+\hypertarget{classUniformShapeChangeFunction}{}\section{Uniform\+Shape\+Change\+Function Class Reference}
+\label{classUniformShapeChangeFunction}\index{Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}}
+Inheritance diagram for Uniform\+Shape\+Change\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classUniformShapeChangeFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUniformShapeChangeFunction_afa0eddca7000c9f270e4179f0718fd23}{Uniform\+Shape\+Change\+Function} (int id, int type, float \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{init\+Time}, float \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{end\+Time}, bool \hyperlink{classGrowthFunctionBase_a3d56771e7c145589a14e11cc331e0326}{apply\+To\+Columnar\+Layer}, bool \hyperlink{classGrowthFunctionBase_a08ae19f58cb98fa8e315a77f52749732}{apply\+To\+Peripodial\+Membrane}, bool \hyperlink{classGrowthFunctionBase_a9fe46fc6dde4041b79204beb48972a09}{apply\+To\+Basal\+E\+C\+M}, bool \hyperlink{classGrowthFunctionBase_ac623b1dbe376bce5dddbe1a2e21c776f}{apply\+To\+Lateral\+E\+C\+M}, int Shape\+Change\+Type, double Shape\+Change\+Rate)
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classUniformShapeChangeFunction}{Uniform\+Shape\+Change\+Function}. \end{DoxyCompactList}\item 
+void \hyperlink{classUniformShapeChangeFunction_a336ad7754afb58309fd3af82913fab83}{write\+Summary} (std\+::ofstream \&save\+File\+Simulation\+Summary, double dt)
+\begin{DoxyCompactList}\small\item\em The function is to write the growth function summary to simulation summary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUniformShapeChangeFunction_ac157bf953d6a8e3006988e8913866524}{}int {\bfseries Shape\+Change\+Type}\label{classUniformShapeChangeFunction_ac157bf953d6a8e3006988e8913866524}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUniformShapeChangeFunction_afa0eddca7000c9f270e4179f0718fd23}{}\index{Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}!Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}}
+\index{Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}!Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}}
+\subsubsection[{Uniform\+Shape\+Change\+Function}]{\setlength{\rightskip}{0pt plus 5cm}Uniform\+Shape\+Change\+Function\+::\+Uniform\+Shape\+Change\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{type, }
+\item[{float}]{init\+Time, }
+\item[{float}]{end\+Time, }
+\item[{bool}]{apply\+To\+Columnar\+Layer, }
+\item[{bool}]{apply\+To\+Peripodial\+Membrane, }
+\item[{bool}]{apply\+To\+Basal\+E\+C\+M, }
+\item[{bool}]{apply\+To\+Lateral\+E\+C\+M, }
+\item[{int}]{Shape\+Change\+Type, }
+\item[{double}]{Shape\+Change\+Rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classUniformShapeChangeFunction_afa0eddca7000c9f270e4179f0718fd23}
+
+
+The constructor of \hyperlink{classUniformShapeChangeFunction}{Uniform\+Shape\+Change\+Function}. 
+
+Forst six parameters will be directed to the parent constructor, \hyperlink{classUniformGrowthFunction_a9ea553c72b2d5e83e98e4ec7a8c025b6}{Uniform\+Growth\+Function\+::\+Uniform\+Growth\+Function}. The growth rates in Dv, A\+B and A\+P will be fed as 0 to the parent constructor. ~\newline
+The parameter Shape\+Change\+Type will define the type of the shape change as 1\+: Columnar\+To\+Squamous change, 2\+: Apical shrinkage, and 2\+: basal shrinkage. The paremeter Shape\+Change\+Rate will define the rate of defined shape change. The constructor will calculate the corrected rate, as to conserve the volume while shape change is occuring.
+
+\subsection{Member Function Documentation}
+\hypertarget{classUniformShapeChangeFunction_a336ad7754afb58309fd3af82913fab83}{}\index{Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}!write\+Summary@{write\+Summary}}
+\index{write\+Summary@{write\+Summary}!Uniform\+Shape\+Change\+Function@{Uniform\+Shape\+Change\+Function}}
+\subsubsection[{write\+Summary}]{\setlength{\rightskip}{0pt plus 5cm}void Uniform\+Shape\+Change\+Function\+::write\+Summary (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{save\+File\+Simulation\+Summary, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classUniformShapeChangeFunction_a336ad7754afb58309fd3af82913fab83}
+
+
+The function is to write the growth function summary to simulation summary file. 
+
+This function will write the \hyperlink{classUniformGrowthFunction}{Uniform\+Growth\+Function} details into the simulation summary file, provided as the first input. Time step (dt) of the simulation is provided as second input, to report the growth rates per hour. The output should look like\+: ~\newline
+ Growth Type\+: Uniform (1) Initial time(sec)\+: \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{Uniform\+Growth\+Function\+::init\+Time} Final\+Time time(sec)\+: \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{Uniform\+Growth\+Function\+::end\+Time} Growth\+Rate(fraction/hr)\+: D\+V\+Growth(in 1/hr) A\+P\+Growth(in 1/hr) A\+B\+Growth(in 1/hr)
+
+Reimplemented from \hyperlink{classUniformGrowthFunction_a57d05e0d05812b77eac2fd6ca099bd26}{Uniform\+Growth\+Function}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Growth\+Function\+Types.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,90 @@
+\hypertarget{classTriangle}{}\section{Triangle Class Reference}
+\label{classTriangle}\index{Triangle@{Triangle}}
+Inheritance diagram for Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classTriangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTriangle_a1ea2d067d286e87f1de2eb2fbde7c5e2}{}{\bfseries Triangle} (int $\ast$Node\+Ids, vector$<$ \hyperlink{classNode}{Node} $\ast$ $>$ \&Nodes, int Curr\+Id, double h)\label{classTriangle_a1ea2d067d286e87f1de2eb2fbde7c5e2}
+
+\item 
+\hypertarget{classTriangle_a9a0174324eb44506b6628452200d37ef}{}void {\bfseries set\+Elastic\+Properties} (double E\+Apical, double E\+Basal, double E\+Mid, double v)\label{classTriangle_a9a0174324eb44506b6628452200d37ef}
+
+\item 
+\hypertarget{classTriangle_adc0585ae36d0068e6cd3d74b5d290811}{}void {\bfseries calculate\+Apical\+Normal\+Cross\+Order} (double $\ast$System\+Centre)\label{classTriangle_adc0585ae36d0068e6cd3d74b5d290811}
+
+\item 
+\hypertarget{classTriangle_a3fde5757c488c9226583c71bf3cb43d3}{}void {\bfseries Align\+Reference\+Apical\+Normal\+To\+Z} (double $\ast$System\+Centre)\label{classTriangle_a3fde5757c488c9226583c71bf3cb43d3}
+
+\item 
+\hypertarget{classTriangle_ae2d34573720ad9b04c8fbaafb658b8af}{}void {\bfseries check\+Health} ()\label{classTriangle_ae2d34573720ad9b04c8fbaafb658b8af}
+
+\item 
+\hypertarget{classTriangle_a9e8b1fa244db29a80f93c59267b062da}{}void {\bfseries Add\+Packing\+To\+Surface} (int tissueplacement, double Fx, double Fy, double Fz, int R\+K\+Id, double $\ast$$\ast$$\ast$System\+Forces, double $\ast$$\ast$$\ast$Packing\+Forces, vector$<$ \hyperlink{classNode}{Node} $\ast$ $>$ \&Nodes)\label{classTriangle_a9e8b1fa244db29a80f93c59267b062da}
+
+\item 
+\hypertarget{classTriangle_a054ffe6fc83a96baee97b261c651ea33}{}bool {\bfseries Is\+Point\+Close\+Enough\+For\+Packing} (double $\ast$Pos, float Peripodialthreshold, float Columnarthreshold, int Tissue\+Placement\+Of\+Packing\+Node, int Tissue\+Type\+Of\+Packing\+Node)\label{classTriangle_a054ffe6fc83a96baee97b261c651ea33}
+
+\item 
+\hypertarget{classTriangle_ab1a4c194be5a3ab7a93db682e9c992fe}{}void {\bfseries get\+Apical\+Node\+Pos} (double $\ast$pos\+Corner)\label{classTriangle_ab1a4c194be5a3ab7a93db682e9c992fe}
+
+\item 
+\hypertarget{classTriangle_a58817fb4e1f91fd6e856dd3b12f3ee82}{}void {\bfseries get\+Basal\+Node\+Pos} (double $\ast$pos\+Corner)\label{classTriangle_a58817fb4e1f91fd6e856dd3b12f3ee82}
+
+\item 
+\hypertarget{classTriangle_a372f2cdcbcc45b6e3935ae48a2dca266}{}void {\bfseries calculate\+Normal\+For\+Packing} (int tissueplacement)\label{classTriangle_a372f2cdcbcc45b6e3935ae48a2dca266}
+
+\item 
+\hypertarget{classTriangle_acf12a63ea288e0f97e17ff49ebd44ba5}{}bool {\bfseries Ispoint\+Inside\+Triangle} (int tissueplacement, double x, double y, double z)\label{classTriangle_acf12a63ea288e0f97e17ff49ebd44ba5}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTriangle_abc90c3548a0f08e5d1a34ad42748622a}{}void \hyperlink{classTriangle_abc90c3548a0f08e5d1a34ad42748622a}{set\+Tissue\+Coords\+Rotations\+Buffers} ()\label{classTriangle_abc90c3548a0f08e5d1a34ad42748622a}
+
+\begin{DoxyCompactList}\small\item\em The function to set the buffers for rotation matrices. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a4c0e797b1552945c68f0b76cfe939a06}{}void \hyperlink{classTriangle_a4c0e797b1552945c68f0b76cfe939a06}{get\+Curr\+Relaxed\+Shape} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&Curr\+Relaxed\+Shape)\label{classTriangle_a4c0e797b1552945c68f0b76cfe939a06}
+
+\begin{DoxyCompactList}\small\item\em The function will return the positions of the reference shape of the element. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_ae226791c33e27f0152bf71dda61dfd81}{}void \hyperlink{classTriangle_ae226791c33e27f0152bf71dda61dfd81}{set\+Shape\+Function\+Derivatives} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&Shape\+Func\+Der, double eta, double nu)\label{classTriangle_ae226791c33e27f0152bf71dda61dfd81}
+
+\begin{DoxyCompactList}\small\item\em The function will set the shape function derivatives for given barycentric coordinates for stiffness matrix calculation. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a96981bb576f1a27d29cd26ae42b99f7b}{}void \hyperlink{classTriangle_a96981bb576f1a27d29cd26ae42b99f7b}{set\+Shape\+Function\+Derivative\+Stack} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&Shape\+Func\+Der, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&Shape\+Func\+Der\+Stack)\label{classTriangle_a96981bb576f1a27d29cd26ae42b99f7b}
+
+\begin{DoxyCompactList}\small\item\em The function will set the shape function derivatives stack from already calculated shape function derivatives. The matrix form is necessary in calculation of the stiffness matrix. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a43d8581fe626bc89e68b3f0572106211}{}void \hyperlink{classTriangle_a43d8581fe626bc89e68b3f0572106211}{set\+Coeff\+Mat} ()\label{classTriangle_a43d8581fe626bc89e68b3f0572106211}
+
+\begin{DoxyCompactList}\small\item\em The function will set the coefficient matrix of the elemetn necessary for stiffness matrix calculation. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a1dc3a679e4b5ef53a94923788afd26e5}{}void {\bfseries calculate\+Currk} (boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&currk, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+B, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+B\+E, boost\+::numeric\+::ublas\+::matrix$<$ double $>$ \&curr\+Bo, double eta, double nu)\label{classTriangle_a1dc3a679e4b5ef53a94923788afd26e5}
+
+\item 
+\hypertarget{classTriangle_aa3372ccff16fb2bbbbafb90e6e839607}{}void \hyperlink{classTriangle_aa3372ccff16fb2bbbbafb90e6e839607}{calculate\+Reference\+Volume} ()\label{classTriangle_aa3372ccff16fb2bbbbafb90e6e839607}
+
+\begin{DoxyCompactList}\small\item\em This function will calculate the the volume of the reference element, using reference shape positions and \hyperlink{classTriangle_a78b065ab25dff7133101ec341638532d}{Triangle\+::slab\+Height}. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a997f0b9a849540006795db90b753eaa2}{}double {\bfseries get\+Apical\+Side\+Length\+Average} ()\label{classTriangle_a997f0b9a849540006795db90b753eaa2}
+
+\item 
+\hypertarget{classTriangle_a4c91b5e09d569d000f5c6247662497f1}{}double {\bfseries get\+Element\+Height} ()\label{classTriangle_a4c91b5e09d569d000f5c6247662497f1}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTriangle_a39f71d3edb0f3ba6fc632d6dcf5237ac}{}int \hyperlink{classTriangle_a39f71d3edb0f3ba6fc632d6dcf5237ac}{normal\+Cross\+Order} \mbox{[}2\mbox{]}\label{classTriangle_a39f71d3edb0f3ba6fc632d6dcf5237ac}
+
+\begin{DoxyCompactList}\small\item\em The ids of the nodes that will be used in calculation of normal pointing towards the apical surface. \end{DoxyCompactList}\item 
+\hypertarget{classTriangle_a78b065ab25dff7133101ec341638532d}{}double \hyperlink{classTriangle_a78b065ab25dff7133101ec341638532d}{slab\+Height}\label{classTriangle_a78b065ab25dff7133101ec341638532d}
+
+\begin{DoxyCompactList}\small\item\em The slab height of the triangle, which is the amount of tissue in 3\+D, that the 2\+D element is be representing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/\+Tissue\+Folding/\+Tissue\+Folding/\+Source\+Code/Triangle.\+h\item 
+/home/melda/\+Documents/\+Tissue\+Folding/\+Tissue\+Folding/\+Source\+Code/Triangle.\+cpp\end{DoxyCompactItemize}

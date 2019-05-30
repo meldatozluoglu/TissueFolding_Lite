@@ -1,0 +1,144 @@
+\hypertarget{classRingGrowthFunction}{}\section{Ring\+Growth\+Function Class Reference}
+\label{classRingGrowthFunction}\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+Inheritance diagram for Ring\+Growth\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRingGrowthFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRingGrowthFunction_a6d4914efe62137aae9fec55401edf986}{Ring\+Growth\+Function} (int id, int type, float \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{init\+Time}, float \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{end\+Time}, bool \hyperlink{classGrowthFunctionBase_a3d56771e7c145589a14e11cc331e0326}{apply\+To\+Columnar\+Layer}, bool \hyperlink{classGrowthFunctionBase_a08ae19f58cb98fa8e315a77f52749732}{apply\+To\+Peripodial\+Membrane}, bool \hyperlink{classGrowthFunctionBase_a9fe46fc6dde4041b79204beb48972a09}{apply\+To\+Basal\+E\+C\+M}, bool \hyperlink{classGrowthFunctionBase_ac623b1dbe376bce5dddbe1a2e21c776f}{apply\+To\+Lateral\+E\+C\+M}, double Cx, double Cy, double inner\+R, double outer\+R, double D\+V\+Growth, double A\+P\+Growth, double A\+B\+Growth, double \hyperlink{classRingGrowthFunction_add6283d1ad999925c4202a3fa66b76ea}{angle})
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classRingGrowthFunction}{Ring\+Growth\+Function}. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_aa2063170e3ee5c5f22d7beef32300e9c}{}void \hyperlink{classRingGrowthFunction_aa2063170e3ee5c5f22d7beef32300e9c}{get\+Centre} (float \&centre\+X, float \&centre\+Y)\label{classRingGrowthFunction_aa2063170e3ee5c5f22d7beef32300e9c}
+
+\begin{DoxyCompactList}\small\item\em This function writes \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{Ring\+Growth\+Function\+::centre} into the input float addresses centre\+X and centre\+Y, in this order. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_ae1f4f4cecfab3ec343c748cfe78ab70b}{}float \hyperlink{classRingGrowthFunction_ae1f4f4cecfab3ec343c748cfe78ab70b}{get\+Inner\+Radius} ()\label{classRingGrowthFunction_ae1f4f4cecfab3ec343c748cfe78ab70b}
+
+\begin{DoxyCompactList}\small\item\em This function returns \hyperlink{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}{Ring\+Growth\+Function\+::inner\+Radius}. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_ad5c890c72a8ce520411d28e929faec19}{}float \hyperlink{classRingGrowthFunction_ad5c890c72a8ce520411d28e929faec19}{get\+Outer\+Radius} ()\label{classRingGrowthFunction_ad5c890c72a8ce520411d28e929faec19}
+
+\begin{DoxyCompactList}\small\item\em This function returns \hyperlink{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{Ring\+Growth\+Function\+::outer\+Radius}. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 3 $>$ \hyperlink{classRingGrowthFunction_a1407e68d2f59cc7beacaf73c0c92bfef}{get\+Growth\+Rate} ()
+\begin{DoxyCompactList}\small\item\em The function is to set the 3\+D maximum growth rate of the current ring growth function. \end{DoxyCompactList}\item 
+void \hyperlink{classRingGrowthFunction_a051da280e649c81afff38a1a45cb035a}{set\+Growt\+Rate} (double ex, double ey, double ez)
+\begin{DoxyCompactList}\small\item\em The function is to set the 3\+D maximum growth rate of the current ring growth function. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_a05f880ba6df8b3001a8e8fdec5ba1ad6}{}gsl\+\_\+matrix $\ast$ \hyperlink{classRingGrowthFunction_a05f880ba6df8b3001a8e8fdec5ba1ad6}{get\+Shear\+Angle\+Rotation\+Matrix} ()\label{classRingGrowthFunction_a05f880ba6df8b3001a8e8fdec5ba1ad6}
+
+\begin{DoxyCompactList}\small\item\em The function return the matrix pointer to the oriented growth rotation matrix. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_aa70523c66dce48e7e54360596787a629}{}double \hyperlink{classRingGrowthFunction_aa70523c66dce48e7e54360596787a629}{get\+Shear\+Angle} ()\label{classRingGrowthFunction_aa70523c66dce48e7e54360596787a629}
+
+\begin{DoxyCompactList}\small\item\em The function returns the oriented growth angle in radians (double). \end{DoxyCompactList}\item 
+void \hyperlink{classRingGrowthFunction_aa4f386e127dd29d216e4bd6c2c5efbbf}{write\+Summary} (std\+::ofstream \&save\+File\+Simulation\+Summary, double dt)
+\begin{DoxyCompactList}\small\item\em The function is to write the growth function summary to simulation summary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{}double \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{centre} \mbox{[}2\mbox{]}\label{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}
+
+\begin{DoxyCompactList}\small\item\em The double array of 2, giving the centre of the ring in micro-\/meters, format \mbox{[}x, y\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}{}double \hyperlink{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}{inner\+Radius}\label{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}
+
+\begin{DoxyCompactList}\small\item\em The inner radius of the ring, inner boundary of the growth region in micro-\/meters. The growth will be zero at and inside the inner radius. This value can be set to zero to have circular growth. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{}double \hyperlink{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{outer\+Radius}\label{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}
+
+\begin{DoxyCompactList}\small\item\em The outer radius of the ring, outer boundary of the growth region in micro-\/meters. The growth will be at the maximum value set by \hyperlink{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{Ring\+Growth\+Function\+::\+Growth\+Rate} at the outer radius. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{}double \hyperlink{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{Growth\+Rate} \mbox{[}3\mbox{]}\label{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}
+
+\begin{DoxyCompactList}\small\item\em The maximum growth rate at the \hyperlink{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{Ring\+Growth\+Function\+::outer\+Radius}, in (1/sec), format\+: \mbox{[} D\+V axis (x), A\+P axis (y), and A\+B axis (z)\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_a9603e5de21f7bca0c23deff2c1e9efd6}{}gsl\+\_\+matrix $\ast$ \hyperlink{classRingGrowthFunction_a9603e5de21f7bca0c23deff2c1e9efd6}{Shear\+Angle\+Rotation\+Matrix}\label{classRingGrowthFunction_a9603e5de21f7bca0c23deff2c1e9efd6}
+
+\begin{DoxyCompactList}\small\item\em The rotation matrix for the orientation of the growth on x-\/y plane. This matrix is constructed through \hyperlink{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}{Uniform\+Growth\+Function\+::angle}. \end{DoxyCompactList}\item 
+\hypertarget{classRingGrowthFunction_add6283d1ad999925c4202a3fa66b76ea}{}double \hyperlink{classRingGrowthFunction_add6283d1ad999925c4202a3fa66b76ea}{angle}\label{classRingGrowthFunction_add6283d1ad999925c4202a3fa66b76ea}
+
+\begin{DoxyCompactList}\small\item\em The rotation angle for the orientation of the growth on x-\/y plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRingGrowthFunction_a6d4914efe62137aae9fec55401edf986}{}\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}!Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}!Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+\subsubsection[{Ring\+Growth\+Function}]{\setlength{\rightskip}{0pt plus 5cm}Ring\+Growth\+Function\+::\+Ring\+Growth\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{type, }
+\item[{float}]{init\+Time, }
+\item[{float}]{end\+Time, }
+\item[{bool}]{apply\+To\+Columnar\+Layer, }
+\item[{bool}]{apply\+To\+Peripodial\+Membrane, }
+\item[{bool}]{apply\+To\+Basal\+E\+C\+M, }
+\item[{bool}]{apply\+To\+Lateral\+E\+C\+M, }
+\item[{double}]{Cx, }
+\item[{double}]{Cy, }
+\item[{double}]{inner\+R, }
+\item[{double}]{outer\+R, }
+\item[{double}]{D\+V\+Growth, }
+\item[{double}]{A\+P\+Growth, }
+\item[{double}]{A\+B\+Growth, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classRingGrowthFunction_a6d4914efe62137aae9fec55401edf986}
+
+
+The constructor of \hyperlink{classRingGrowthFunction}{Ring\+Growth\+Function}. 
+
+The first six parameters will be directed to the parent constructor, \hyperlink{classGrowthFunctionBase_a5c275b3f839cc4f572b68afc5ad1064f}{Growth\+Function\+Base\+::\+Growth\+Function\+Base}. ~\newline
+doubles Cx and Cy will set \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{Ring\+Growth\+Function\+::centre}\mbox{[}0\mbox{]} and \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{Ring\+Growth\+Function\+::centre}\mbox{[}1\mbox{]}, respectively. ~\newline
+doubles inner\+R and outer\+R will set \hyperlink{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}{Ring\+Growth\+Function\+::inner\+Radius} and \hyperlink{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{Ring\+Growth\+Function\+::outer\+Radius}, respectively. ~\newline
+doubles D\+V\+Growth, A\+P\+Growth and A\+B\+Growth will set the \hyperlink{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{Ring\+Growth\+Function\+::\+Growth\+Rate}, in the given order.
+
+\subsection{Member Function Documentation}
+\hypertarget{classRingGrowthFunction_a1407e68d2f59cc7beacaf73c0c92bfef}{}\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}!get\+Growth\+Rate@{get\+Growth\+Rate}}
+\index{get\+Growth\+Rate@{get\+Growth\+Rate}!Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+\subsubsection[{get\+Growth\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$double,3$>$ Ring\+Growth\+Function\+::get\+Growth\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classRingGrowthFunction_a1407e68d2f59cc7beacaf73c0c92bfef}
+
+
+The function is to set the 3\+D maximum growth rate of the current ring growth function. 
+
+This function will return the \hyperlink{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{Ring\+Growth\+Function\+::\+Growth\+Rate} of the current growth function.
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_a6a239fcefd398413d29a23dc8e7a075b}{Growth\+Function\+Base}.
+
+\hypertarget{classRingGrowthFunction_a051da280e649c81afff38a1a45cb035a}{}\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}!set\+Growt\+Rate@{set\+Growt\+Rate}}
+\index{set\+Growt\+Rate@{set\+Growt\+Rate}!Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+\subsubsection[{set\+Growt\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Ring\+Growth\+Function\+::set\+Growt\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{ex, }
+\item[{double}]{ey, }
+\item[{double}]{ez}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classRingGrowthFunction_a051da280e649c81afff38a1a45cb035a}
+
+
+The function is to set the 3\+D maximum growth rate of the current ring growth function. 
+
+This function will set the \hyperlink{classRingGrowthFunction_a93b70ff6a7258c73a6bd2d888d09fc09}{Ring\+Growth\+Function\+::\+Growth\+Rate} of the current growth function to the input values The parameters are in the order \mbox{[} D\+V axis (x), A\+P axis (y), and A\+B axis (z)\mbox{]}.
+
+Reimplemented from \hyperlink{classGrowthFunctionBase}{Growth\+Function\+Base}.
+
+\hypertarget{classRingGrowthFunction_aa4f386e127dd29d216e4bd6c2c5efbbf}{}\index{Ring\+Growth\+Function@{Ring\+Growth\+Function}!write\+Summary@{write\+Summary}}
+\index{write\+Summary@{write\+Summary}!Ring\+Growth\+Function@{Ring\+Growth\+Function}}
+\subsubsection[{write\+Summary}]{\setlength{\rightskip}{0pt plus 5cm}void Ring\+Growth\+Function\+::write\+Summary (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{save\+File\+Simulation\+Summary, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classRingGrowthFunction_aa4f386e127dd29d216e4bd6c2c5efbbf}
+
+
+The function is to write the growth function summary to simulation summary file. 
+
+This function will write the \hyperlink{classRingGrowthFunction}{Ring\+Growth\+Function} details into the simulation summary file, provided as the first input. Time step (dt) of the simulation is provided as second input, to report the growth rates per hour. The output should look like\+: ~\newline
+ Growth Type\+: Ring (2) Initial time(sec)\+: \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{Ring\+Growth\+Function\+::init\+Time} Final\+Time time(sec)\+: \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{Ring\+Growth\+Function\+::end\+Time} Centre(micron)\+: \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{Ring\+Growth\+Function\+::centre}\mbox{[}0\mbox{]} \hyperlink{classRingGrowthFunction_a5b8f1cc72d03907bb1492e6c2f288db0}{Ring\+Growth\+Function\+::centre}\mbox{[}1\mbox{]} Inner radius(micron)\+: \hyperlink{classRingGrowthFunction_a4e8796fbbbe9fe18c2dcd04613effcf0}{Ring\+Growth\+Function\+::inner\+Radius} Outer radius(micron)\+: \hyperlink{classRingGrowthFunction_a8b7d5268d9d47f112b56feef58193649}{Ring\+Growth\+Function\+::outer\+Radius} Growth\+Rate(fraction/hr)\+:D\+V\+Growth(in 1/hr) A\+P\+Growth(in 1/hr) A\+B\+Growth(in 1/hr)
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_ad6403a702f3ed53984083904755a832b}{Growth\+Function\+Base}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Growth\+Function\+Types.\+h\end{DoxyCompactItemize}

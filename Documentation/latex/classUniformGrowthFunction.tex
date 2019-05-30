@@ -1,0 +1,124 @@
+\hypertarget{classUniformGrowthFunction}{}\section{Uniform\+Growth\+Function Class Reference}
+\label{classUniformGrowthFunction}\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+Inheritance diagram for Uniform\+Growth\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classUniformGrowthFunction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classUniformGrowthFunction_a9ea553c72b2d5e83e98e4ec7a8c025b6}{Uniform\+Growth\+Function} (int id, int type, float \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{init\+Time}, float \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{end\+Time}, bool \hyperlink{classGrowthFunctionBase_a3d56771e7c145589a14e11cc331e0326}{apply\+To\+Columnar\+Layer}, bool \hyperlink{classGrowthFunctionBase_a08ae19f58cb98fa8e315a77f52749732}{apply\+To\+Peripodial\+Membrane}, bool \hyperlink{classGrowthFunctionBase_a9fe46fc6dde4041b79204beb48972a09}{apply\+To\+Basal\+E\+C\+M}, bool \hyperlink{classGrowthFunctionBase_ac623b1dbe376bce5dddbe1a2e21c776f}{apply\+To\+Lateral\+E\+C\+M}, double D\+V\+Growth, double A\+P\+Growth, double A\+B\+Growth, double \hyperlink{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}{angle})
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classUniformGrowthFunction}{Uniform\+Growth\+Function}. \end{DoxyCompactList}\item 
+std\+::array$<$ double, 3 $>$ \hyperlink{classUniformGrowthFunction_a07c289d1e99b46d0629dbd229cf3b952}{get\+Growth\+Rate} ()
+\begin{DoxyCompactList}\small\item\em The function is to get the 3\+D growth rate of the current growth function. \end{DoxyCompactList}\item 
+void \hyperlink{classUniformGrowthFunction_aff899907569af697d47927f61b6871a5}{set\+Growt\+Rate} (double ex, double ey, double ez)
+\begin{DoxyCompactList}\small\item\em The function is to set the 3\+D growth rate of the current growth function. \end{DoxyCompactList}\item 
+\hypertarget{classUniformGrowthFunction_a5a7e9b102a299b94ba648513b66f9cd1}{}gsl\+\_\+matrix $\ast$ \hyperlink{classUniformGrowthFunction_a5a7e9b102a299b94ba648513b66f9cd1}{get\+Shear\+Angle\+Rotation\+Matrix} ()\label{classUniformGrowthFunction_a5a7e9b102a299b94ba648513b66f9cd1}
+
+\begin{DoxyCompactList}\small\item\em The function return the matrix pointer to the oriented growth rotation matrix. \end{DoxyCompactList}\item 
+\hypertarget{classUniformGrowthFunction_a8a60d83743c441f7453af8053d5e7010}{}double \hyperlink{classUniformGrowthFunction_a8a60d83743c441f7453af8053d5e7010}{get\+Shear\+Angle} ()\label{classUniformGrowthFunction_a8a60d83743c441f7453af8053d5e7010}
+
+\begin{DoxyCompactList}\small\item\em The function returns the oriented growth angle in radians (double). \end{DoxyCompactList}\item 
+void \hyperlink{classUniformGrowthFunction_a57d05e0d05812b77eac2fd6ca099bd26}{write\+Summary} (std\+::ofstream \&save\+File\+Simulation\+Summary, double dt)
+\begin{DoxyCompactList}\small\item\em The function is to write the growth function summary to simulation summary file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}{}std\+::array$<$ double, 3 $>$ \hyperlink{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}{Growth\+Rate}\label{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}
+
+\begin{DoxyCompactList}\small\item\em The double array stating the uniform growth rate throughout the tissue. Growth rate is in 1/sec, format\+: \mbox{[} D\+V axis (x), A\+P axis (y), and A\+B axis (z)\mbox{]}. \end{DoxyCompactList}\item 
+\hypertarget{classUniformGrowthFunction_afef9ac84dfe60bbf3d558fbb31946087}{}gsl\+\_\+matrix $\ast$ \hyperlink{classUniformGrowthFunction_afef9ac84dfe60bbf3d558fbb31946087}{Shear\+Angle\+Rotation\+Matrix}\label{classUniformGrowthFunction_afef9ac84dfe60bbf3d558fbb31946087}
+
+\begin{DoxyCompactList}\small\item\em The rotation matrix for the orientation of the growth on x-\/y plane. This matrix is constructed through \hyperlink{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}{Uniform\+Growth\+Function\+::angle}. \end{DoxyCompactList}\item 
+\hypertarget{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}{}double \hyperlink{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}{angle}\label{classUniformGrowthFunction_a1a985ff52f9796688e00942b4d3349f8}
+
+\begin{DoxyCompactList}\small\item\em The rotation angle for the orientation of the growth on x-\/y plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classUniformGrowthFunction_a9ea553c72b2d5e83e98e4ec7a8c025b6}{}\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}!Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}!Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+\subsubsection[{Uniform\+Growth\+Function}]{\setlength{\rightskip}{0pt plus 5cm}Uniform\+Growth\+Function\+::\+Uniform\+Growth\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{int}]{type, }
+\item[{float}]{init\+Time, }
+\item[{float}]{end\+Time, }
+\item[{bool}]{apply\+To\+Columnar\+Layer, }
+\item[{bool}]{apply\+To\+Peripodial\+Membrane, }
+\item[{bool}]{apply\+To\+Basal\+E\+C\+M, }
+\item[{bool}]{apply\+To\+Lateral\+E\+C\+M, }
+\item[{double}]{D\+V\+Growth, }
+\item[{double}]{A\+P\+Growth, }
+\item[{double}]{A\+B\+Growth, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classUniformGrowthFunction_a9ea553c72b2d5e83e98e4ec7a8c025b6}
+
+
+The constructor of \hyperlink{classUniformGrowthFunction}{Uniform\+Growth\+Function}. 
+
+The first six parameters will be directed to the parent constructor, \hyperlink{classGrowthFunctionBase_a5c275b3f839cc4f572b68afc5ad1064f}{Growth\+Function\+Base\+::\+Growth\+Function\+Base}. ~\newline
+doubles D\+V\+Growth, A\+P\+Growth and A\+B\+Growth will set the \hyperlink{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}{Uniform\+Growth\+Function\+::\+Growth\+Rate}, in the given order.
+
+\subsection{Member Function Documentation}
+\hypertarget{classUniformGrowthFunction_a07c289d1e99b46d0629dbd229cf3b952}{}\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}!get\+Growth\+Rate@{get\+Growth\+Rate}}
+\index{get\+Growth\+Rate@{get\+Growth\+Rate}!Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+\subsubsection[{get\+Growth\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}std\+::array$<$double,3$>$ Uniform\+Growth\+Function\+::get\+Growth\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classUniformGrowthFunction_a07c289d1e99b46d0629dbd229cf3b952}
+
+
+The function is to get the 3\+D growth rate of the current growth function. 
+
+This function will return the \hyperlink{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}{Uniform\+Growth\+Function\+::\+Growth\+Rate} of the current growth function.
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_a6a239fcefd398413d29a23dc8e7a075b}{Growth\+Function\+Base}.
+
+\hypertarget{classUniformGrowthFunction_aff899907569af697d47927f61b6871a5}{}\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}!set\+Growt\+Rate@{set\+Growt\+Rate}}
+\index{set\+Growt\+Rate@{set\+Growt\+Rate}!Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+\subsubsection[{set\+Growt\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Uniform\+Growth\+Function\+::set\+Growt\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{ex, }
+\item[{double}]{ey, }
+\item[{double}]{ez}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classUniformGrowthFunction_aff899907569af697d47927f61b6871a5}
+
+
+The function is to set the 3\+D growth rate of the current growth function. 
+
+This function will set the \hyperlink{classUniformGrowthFunction_a2dd690c963e646ea55fc9359b54d5e5e}{Uniform\+Growth\+Function\+::\+Growth\+Rate} of the current growth function to the input values The parameters are in the order \mbox{[} D\+V axis (x), A\+P axis (y), and A\+B axis (z)\mbox{]}.
+
+Reimplemented from \hyperlink{classGrowthFunctionBase}{Growth\+Function\+Base}.
+
+\hypertarget{classUniformGrowthFunction_a57d05e0d05812b77eac2fd6ca099bd26}{}\index{Uniform\+Growth\+Function@{Uniform\+Growth\+Function}!write\+Summary@{write\+Summary}}
+\index{write\+Summary@{write\+Summary}!Uniform\+Growth\+Function@{Uniform\+Growth\+Function}}
+\subsubsection[{write\+Summary}]{\setlength{\rightskip}{0pt plus 5cm}void Uniform\+Growth\+Function\+::write\+Summary (
+\begin{DoxyParamCaption}
+\item[{std\+::ofstream \&}]{save\+File\+Simulation\+Summary, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classUniformGrowthFunction_a57d05e0d05812b77eac2fd6ca099bd26}
+
+
+The function is to write the growth function summary to simulation summary file. 
+
+This function will write the \hyperlink{classUniformGrowthFunction}{Uniform\+Growth\+Function} details into the simulation summary file, provided as the first input. Time step (dt) of the simulation is provided as second input, to report the growth rates per hour. The output should look like\+: ~\newline
+ Growth Type\+: Uniform (1) Initial time(sec)\+: \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{Uniform\+Growth\+Function\+::init\+Time} Final\+Time time(sec)\+: \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{Uniform\+Growth\+Function\+::end\+Time} Growth\+Rate(fraction/hr)\+: D\+V\+Growth(in 1/hr) A\+P\+Growth(in 1/hr) A\+B\+Growth(in 1/hr)
+
+Reimplemented from \hyperlink{classGrowthFunctionBase_ad6403a702f3ed53984083904755a832b}{Growth\+Function\+Base}.
+
+
+
+Reimplemented in \hyperlink{classUniformShapeChangeFunction_a336ad7754afb58309fd3af82913fab83}{Uniform\+Shape\+Change\+Function}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+Tissue\+Folding/\+Source\+Code/Growth\+Function\+Types.\+h\end{DoxyCompactItemize}

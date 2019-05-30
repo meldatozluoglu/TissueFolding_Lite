@@ -1,0 +1,136 @@
+\hypertarget{classMainWindow}{}\section{Main\+Window Class Reference}
+\label{classMainWindow}\index{Main\+Window@{Main\+Window}}
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMainWindow}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMainWindow_ab2c0d4d0d84826cc032a45ea4783dde5}{}void \hyperlink{classMainWindow_ab2c0d4d0d84826cc032a45ea4783dde5}{Selected\+Item\+Change} ()\label{classMainWindow_ab2c0d4d0d84826cc032a45ea4783dde5}
+
+\begin{DoxyCompactList}\small\item\em When the selected item is changed, this function updates on screen displayed information. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_af6253ec8c287b675a80e80bdd0ad31cc}{}void \hyperlink{classMainWindow_af6253ec8c287b675a80e80bdd0ad31cc}{manual\+Element\+Selection} (const Q\+String \&)\label{classMainWindow_af6253ec8c287b675a80e80bdd0ad31cc}
+
+\begin{DoxyCompactList}\small\item\em When the selected element is changed, this function updates on screen displayed information. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_ad613f2de4daee9c84828dc0490b00ffa}{}void \hyperlink{classMainWindow_ad613f2de4daee9c84828dc0490b00ffa}{Manual\+Element\+Selection\+Reset} ()\label{classMainWindow_ad613f2de4daee9c84828dc0490b00ffa}
+
+\begin{DoxyCompactList}\small\item\em This function resets the element selection informaton when no element is selected upon selection update. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a59dd1f2fe0d6900a98feff45c94e23e6}{timer\+Simulation\+Step} ()
+\begin{DoxyCompactList}\small\item\em This function iterates the simulation by one time step. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_a0dce0c101c73abe3b5f347cd4dacfbd3}{}void \hyperlink{classMainWindow_a0dce0c101c73abe3b5f347cd4dacfbd3}{update\+Strain} (int)\label{classMainWindow_a0dce0c101c73abe3b5f347cd4dacfbd3}
+
+\begin{DoxyCompactList}\small\item\em This function will update the strain to display, between D\+V, A\+P and A\+B axes (corresponding to x,y,z in the current coordinate system) \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a99a35d2b2c33a4cadab365403816c15c}{update\+Strain\+Check\+Box} (int)
+\begin{DoxyCompactList}\small\item\em This function will update the strain checkbox, only one of Strain or Pysical property can be displayed at a time. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_a3312d7addf449ffda5fd9f68964d6b61}{}void \hyperlink{classMainWindow_a3312d7addf449ffda5fd9f68964d6b61}{update\+Strain\+Spin\+Boxes} ()\label{classMainWindow_a3312d7addf449ffda5fd9f68964d6b61}
+
+\begin{DoxyCompactList}\small\item\em This function will update the strain spin box to select which strain is displayed. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_a524bf8d075a209be107c5ee9cd750bba}{}void \hyperlink{classMainWindow_a524bf8d075a209be107c5ee9cd750bba}{update\+Pys\+Prop} (int s)\label{classMainWindow_a524bf8d075a209be107c5ee9cd750bba}
+
+\begin{DoxyCompactList}\small\item\em This function will update the physical property to display. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a933538d0ccf6de1298c6e4c7ed223f38}{update\+Pys\+Check\+Box} (int)
+\begin{DoxyCompactList}\small\item\em This function will update the physical property checkbox, only one of Strain or Pysical property can be displayed at a time. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_a3ee88b5e4474675aec3b55f7a5e38bb2}{}void \hyperlink{classMainWindow_a3ee88b5e4474675aec3b55f7a5e38bb2}{update\+Pys\+Prop\+Spin\+Boxes} ()\label{classMainWindow_a3ee88b5e4474675aec3b55f7a5e38bb2}
+
+\begin{DoxyCompactList}\small\item\em This function will update the physical property spin box to select which strain is displayed. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_a43031416fc2795d2b3cda8a158476549}{}void \hyperlink{classMainWindow_a43031416fc2795d2b3cda8a158476549}{update\+Draw\+Symmetricity\+View\+Toggle} ()\label{classMainWindow_a43031416fc2795d2b3cda8a158476549}
+
+\begin{DoxyCompactList}\small\item\em This function will toggle the boolean to draw the symmetricity or not. \end{DoxyCompactList}\item 
+\hypertarget{classMainWindow_ad30193e1dac5d64c7467e576e238ce03}{}void {\bfseries update\+Display\+Pipette} (int)\label{classMainWindow_ad30193e1dac5d64c7467e576e238ce03}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMainWindow_acc6787844dd93200e0190709e39543dc}{}{\bfseries Main\+Window} (std\+::shared\+\_\+ptr$<$ \hyperlink{classSimulation}{Simulation} $>$ Sim01)\label{classMainWindow_acc6787844dd93200e0190709e39543dc}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMainWindow_a9604326eab0369c7de6be01f992e0ba7}{}Q\+Graphics\+Scene $\ast$ {\bfseries Main\+Scene}\label{classMainWindow_a9604326eab0369c7de6be01f992e0ba7}
+
+\item 
+\hypertarget{classMainWindow_a80b2787fc058a3f5141b905d6c69c0ad}{}Q\+V\+Box\+Layout $\ast$ {\bfseries Control\+Panel\+Main\+H\+Box}\label{classMainWindow_a80b2787fc058a3f5141b905d6c69c0ad}
+
+\item 
+\hypertarget{classMainWindow_a028cf99e2842ca1250d4c103310c3430}{}Q\+Grid\+Layout $\ast$ {\bfseries Main\+Grid}\label{classMainWindow_a028cf99e2842ca1250d4c103310c3430}
+
+\item 
+\hypertarget{classMainWindow_aebd88a36f5ea16df9a037f7591090856}{}\hyperlink{classGLWidget}{G\+L\+Widget} $\ast$ {\bfseries Main\+G\+L\+Widget}\label{classMainWindow_aebd88a36f5ea16df9a037f7591090856}
+
+\item 
+\hypertarget{classMainWindow_a4152f5181c46ca3f23047819a479af62}{}std\+::shared\+\_\+ptr$<$ \hyperlink{classSimulation}{Simulation} $>$ {\bfseries Sim01}\label{classMainWindow_a4152f5181c46ca3f23047819a479af62}
+
+\item 
+\hypertarget{classMainWindow_ae37b6a1ead599733ddefed609c59a30d}{}int {\bfseries interator\+For\+Pressure}\label{classMainWindow_ae37b6a1ead599733ddefed609c59a30d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMainWindow_a59dd1f2fe0d6900a98feff45c94e23e6}{}\index{Main\+Window@{Main\+Window}!timer\+Simulation\+Step@{timer\+Simulation\+Step}}
+\index{timer\+Simulation\+Step@{timer\+Simulation\+Step}!Main\+Window@{Main\+Window}}
+\subsubsection[{timer\+Simulation\+Step}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::timer\+Simulation\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{classMainWindow_a59dd1f2fe0d6900a98feff45c94e23e6}
+
+
+This function iterates the simulation by one time step. 
+
+If the user interface is called with the option to display a previously saved simulation, the data will be read from the save files until the flag \hyperlink{classSimulation_a99b66ca81fcc16dab7f44632ddff7ecd}{Simulation\+::reached\+End\+Of\+Save\+File} is set to true.
+
+The data will be read via the function \hyperlink{classSimulation_a1f5dbbde572af555225089e247296e2e}{Simulation\+::update\+One\+Step\+From\+Save}. Upon each update of the simulation data, vertex buffer will be set to update.
+
+If the display is saving images, then the toggle to inform taking a screenshot of the \hyperlink{classGLWidget}{G\+L\+Widget} after this step is displayed will be set to on after each read step.
+
+If the display is set to process slowly, then the process is waited accordingly.
+
+Once the end of the save file is reached, if the toggle for automated\+Save is set true, the window will close itself. This toggle is exists to enable users to process multiple simulations sequantially and save thier screen putputs within a script.~\newline
+
+
+If the user interface is called with the option to run a new simulation, either from scratch or continuing form an existing save file, then simulation will be run for each time step via \hyperlink{classSimulation_a300713fd91c15b51421606bffd6d87b7}{Simulation\+::run\+One\+Step}, until the desired simulation length is reached, such that \hyperlink{classSimulation_a0a8d61383b2f51f2f98b72554b7e00cb}{Simulation\+::curr\+Sim\+Time\+Sec} is larger or equal to \hyperlink{classSimulation_a96bf105b28395184053bb4f987f05746}{Simulation\+::\+Sim\+Length}.
+
+The simulation data will be updated at the end of each ran step, and vertex buffer will be set to update accordingly.
+
+If the simulation options require saving screenshots of the \hyperlink{classGLWidget}{G\+L\+Widget}, and the current simulation time is coincidin gwith the desired image save interval (\hyperlink{classSimulation_acc8ebf021a21da302f6aabb24a9c5d87}{Simulation\+::image\+Save\+Interval}), then the toggle to save the screenshot once the display is updated is toggled on.
+
+If \hyperlink{classSimulation_a300713fd91c15b51421606bffd6d87b7}{Simulation\+::run\+One\+Step} did not retun success, then ther must be a flipped element in the system, and the user is notified. The simulation is forced to finish by setting thecurrent time higher than desired dimulation length, to avoid unidentifiable crashes in matrix opertion failure in the next step.
+
+If the simulation has reached its final length, the first screen update after the finalisation of the simulation tidies up the final simulation parameters, takes one last screenshot, and reports simulation process time. The toggle Main\+Window\+::displayed\+Simulation\+Length is toggled to ensure this simulation end reporting is carried out once.\hypertarget{classMainWindow_a933538d0ccf6de1298c6e4c7ed223f38}{}\index{Main\+Window@{Main\+Window}!update\+Pys\+Check\+Box@{update\+Pys\+Check\+Box}}
+\index{update\+Pys\+Check\+Box@{update\+Pys\+Check\+Box}!Main\+Window@{Main\+Window}}
+\subsubsection[{update\+Pys\+Check\+Box}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::update\+Pys\+Check\+Box (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{classMainWindow_a933538d0ccf6de1298c6e4c7ed223f38}
+
+
+This function will update the physical property checkbox, only one of Strain or Pysical property can be displayed at a time. 
+
+If the check lead to disabling of the physical property display, the control panel items and disabled.
+
+If the check lead to enabling of the physical property display, the control panel items and enabled, and the strain display checkbox is unchecked. This will emit its own change signal and make necessary changes on strain control panel.\hypertarget{classMainWindow_a99a35d2b2c33a4cadab365403816c15c}{}\index{Main\+Window@{Main\+Window}!update\+Strain\+Check\+Box@{update\+Strain\+Check\+Box}}
+\index{update\+Strain\+Check\+Box@{update\+Strain\+Check\+Box}!Main\+Window@{Main\+Window}}
+\subsubsection[{update\+Strain\+Check\+Box}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::update\+Strain\+Check\+Box (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\label{classMainWindow_a99a35d2b2c33a4cadab365403816c15c}
+
+
+This function will update the strain checkbox, only one of Strain or Pysical property can be displayed at a time. 
+
+If the check lead to disabling of the strain display, the control panel items and disabled.
+
+If the check lead to enabling of the strain display, the control panel items and enabled, and the physical property display checkbox is unchecked. This will emit its own change signal and make necessary changes on physical property control panel.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+User\+Interface/\+Source\+Code/Main\+Window.\+h\item 
+/home/melda/\+Documents/non\+Academic/\+Tissue\+Folding\+Fefractor/\+Tissue\+Folding\+Refractor/\+Tissue\+Folding\+Linux/\+User\+Interface/\+Source\+Code/Main\+Window.\+cpp\end{DoxyCompactItemize}

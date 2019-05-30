@@ -1,0 +1,157 @@
+\hypertarget{classMyosinFunction}{}\section{Myosin\+Function Class Reference}
+\label{classMyosinFunction}\index{Myosin\+Function@{Myosin\+Function}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyosinFunction_a25c83e1aaafc9d029e6c551008114ef7}{Myosin\+Function} (int id, bool \hyperlink{classMyosinFunction_a413c9a88624a97f6483efebdc5ab6fac}{is\+Apical}, bool \hyperlink{classMyosinFunction_a66bf31a5b46a19e67691d67b25c03852}{is\+Polarised}, int \hyperlink{classMyosinFunction_a5bf0e10f1e37ef01762fe72305d2e4d2}{init\+Time}, bool \hyperlink{classMyosinFunction_a6a978e5577af3f6b56edda5fd825d89c}{apply\+To\+Columnar\+Layer}, bool \hyperlink{classMyosinFunction_a76b32da8850a97ca48046d34542ee1c0}{apply\+To\+Peripodial\+Membrane}, int n\+X, int n\+Y, double $\ast$$\ast$Myo\+Mat, double $\ast$$\ast$angle\+Mat)
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classMyosinFunction}{Myosin\+Function}. Different growth functions will be derived from this class. \end{DoxyCompactList}\item 
+\hyperlink{classMyosinFunction_a9a1d0f2da5bf8c9f3e9f48d88297c3fd}{Myosin\+Function} (int id, bool \hyperlink{classMyosinFunction_a413c9a88624a97f6483efebdc5ab6fac}{is\+Apical}, bool \hyperlink{classMyosinFunction_a66bf31a5b46a19e67691d67b25c03852}{is\+Polarised}, int \hyperlink{classMyosinFunction_a5bf0e10f1e37ef01762fe72305d2e4d2}{init\+Time}, bool \hyperlink{classMyosinFunction_a6a978e5577af3f6b56edda5fd825d89c}{apply\+To\+Columnar\+Layer}, bool \hyperlink{classMyosinFunction_a76b32da8850a97ca48046d34542ee1c0}{apply\+To\+Peripodial\+Membrane}, double stripe\+Size1, double stripe\+Size2, double initial\+Point, double end\+Point, double manualc\+Eq, double tetha)
+\begin{DoxyCompactList}\small\item\em The constructor of \hyperlink{classMyosinFunction}{Myosin\+Function}. Different growth functions will be derived from this class. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a81060aaa6923f43a5a9e2dcbb11a9ac6}{}int \hyperlink{classMyosinFunction_a81060aaa6923f43a5a9e2dcbb11a9ac6}{get\+Grid\+X} ()\label{classMyosinFunction_a81060aaa6923f43a5a9e2dcbb11a9ac6}
+
+\begin{DoxyCompactList}\small\item\em This function returns \hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X}. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_ab73e8b8b716defffabf6b3bf23d606d9}{}int \hyperlink{classMyosinFunction_ab73e8b8b716defffabf6b3bf23d606d9}{get\+Grid\+Y} ()\label{classMyosinFunction_ab73e8b8b716defffabf6b3bf23d606d9}
+
+\begin{DoxyCompactList}\small\item\em This function returns \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y}. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a59fb2bb53bf315ab2740ab27f7fa7536}{}double $\ast$$\ast$ \hyperlink{classMyosinFunction_a59fb2bb53bf315ab2740ab27f7fa7536}{get\+Equilibrium\+Myo\+Matrix} ()\label{classMyosinFunction_a59fb2bb53bf315ab2740ab27f7fa7536}
+
+\begin{DoxyCompactList}\small\item\em This function returns Myosin\+Function\+::\+Growth\+Matrix. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_ac8b8b7bd3c067e83f36f42930c5fd45d}{}double \hyperlink{classMyosinFunction_ac8b8b7bd3c067e83f36f42930c5fd45d}{get\+Equilibrium\+Myo\+Matrix\+Element} (int i, int j)\label{classMyosinFunction_ac8b8b7bd3c067e83f36f42930c5fd45d}
+
+\begin{DoxyCompactList}\small\item\em This function returns a the equilibrium myosin concentration at grid point \mbox{[}i\mbox{]}\mbox{[}j\mbox{]} (in dimensions \hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X}, \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y}). \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a2249447e97be176009c74d34d5219498}{}double $\ast$$\ast$$\ast$ \hyperlink{classMyosinFunction_a2249447e97be176009c74d34d5219498}{get\+Orientation\+Matrix} ()\label{classMyosinFunction_a2249447e97be176009c74d34d5219498}
+
+\begin{DoxyCompactList}\small\item\em This function returns \hyperlink{classMyosinFunction_a171909633b0117031045287fdbc401db}{Myosin\+Function\+::\+Myosin\+Orientation\+Matrix}. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a5952daaeebe5fe284ecf096687d1c7c0}{}double \hyperlink{classMyosinFunction_a5952daaeebe5fe284ecf096687d1c7c0}{get\+Orientation\+Matrix\+Element} (int i, int j, int k)\label{classMyosinFunction_a5952daaeebe5fe284ecf096687d1c7c0}
+
+\begin{DoxyCompactList}\small\item\em This function returns the myosin orientation at grid point \mbox{[}i\mbox{]}\mbox{[}j\mbox{]} (in dimensions \hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X}, \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y} as in normalised vector \mbox{[} D\+V axis (x), A\+P axis (y)\mbox{]} ). \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a7f9b40f267049352619709243c929a25}{}void \hyperlink{classMyosinFunction_a7f9b40f267049352619709243c929a25}{set\+Orientation\+Matrix\+Element} (double ex, double ey, int i, int j)\label{classMyosinFunction_a7f9b40f267049352619709243c929a25}
+
+\begin{DoxyCompactList}\small\item\em This function sets the myosin orientation at grid point \mbox{[}i\mbox{]}\mbox{[}j\mbox{]} (in dimensions \hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X}, \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y}), to the growth rate \mbox{[}ex, ez\mbox{]} in the format \mbox{[} D\+V axis (x), A\+P axis (y)\mbox{]} The vector M\+U\+S\+T be normalised. \end{DoxyCompactList}\item 
+void \hyperlink{classMyosinFunction_ad0bfc8aafe7e54a46f04e8eeb84ce457}{write\+Summary} (ofstream \&save\+File\+Simulation\+Summary)
+\begin{DoxyCompactList}\small\item\em The. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMyosinFunction_a718e298e9ed8eee2b037fd08d7bd4373}{}int \hyperlink{classMyosinFunction_a718e298e9ed8eee2b037fd08d7bd4373}{Id}\label{classMyosinFunction_a718e298e9ed8eee2b037fd08d7bd4373}
+
+\begin{DoxyCompactList}\small\item\em The unique identification number of the myosin function. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a5bf0e10f1e37ef01762fe72305d2e4d2}{}int \hyperlink{classMyosinFunction_a5bf0e10f1e37ef01762fe72305d2e4d2}{init\+Time}\label{classMyosinFunction_a5bf0e10f1e37ef01762fe72305d2e4d2}
+
+\begin{DoxyCompactList}\small\item\em The application time of the myosin response, in time steps. If the input value(sec) does not fit with the time steps, it will be rounded down. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a413c9a88624a97f6483efebdc5ab6fac}{}bool \hyperlink{classMyosinFunction_a413c9a88624a97f6483efebdc5ab6fac}{is\+Apical}\label{classMyosinFunction_a413c9a88624a97f6483efebdc5ab6fac}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the myosin function is for the apical surface of selected tissue layer. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a66bf31a5b46a19e67691d67b25c03852}{}bool \hyperlink{classMyosinFunction_a66bf31a5b46a19e67691d67b25c03852}{is\+Polarised}\label{classMyosinFunction_a66bf31a5b46a19e67691d67b25c03852}
+
+\begin{DoxyCompactList}\small\item\em The boolean stating if the myosin function is is polarised, defaul value is false, and applies a uniform contraction of the surface. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a6a978e5577af3f6b56edda5fd825d89c}{}bool \hyperlink{classMyosinFunction_a6a978e5577af3f6b56edda5fd825d89c}{apply\+To\+Columnar\+Layer}\label{classMyosinFunction_a6a978e5577af3f6b56edda5fd825d89c}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the myosin levels should be applied to columnar layer. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a76b32da8850a97ca48046d34542ee1c0}{}bool \hyperlink{classMyosinFunction_a76b32da8850a97ca48046d34542ee1c0}{apply\+To\+Peripodial\+Membrane}\label{classMyosinFunction_a76b32da8850a97ca48046d34542ee1c0}
+
+\begin{DoxyCompactList}\small\item\em Boolean stating if the myosin levels should be applied to peripodial membrane. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_af9847dcd6e9db66662d90e3e4ba4cc0b}{}bool {\bfseries manual\+Stripes}\label{classMyosinFunction_af9847dcd6e9db66662d90e3e4ba4cc0b}
+
+\item 
+\hypertarget{classMyosinFunction_aae36807a55b8886c6ebfe24598a160ea}{}double {\bfseries stripe\+Size1}\label{classMyosinFunction_aae36807a55b8886c6ebfe24598a160ea}
+
+\item 
+\hypertarget{classMyosinFunction_a540d49e3dbb0b6b119eebfa3d3dcb4bb}{}double {\bfseries stripe\+Size2}\label{classMyosinFunction_a540d49e3dbb0b6b119eebfa3d3dcb4bb}
+
+\item 
+\hypertarget{classMyosinFunction_a71b4c116055c970cd05c4ecd9fbeca6a}{}double {\bfseries initial\+Point}\label{classMyosinFunction_a71b4c116055c970cd05c4ecd9fbeca6a}
+
+\item 
+\hypertarget{classMyosinFunction_a21f2a844af80cb09c37fbc9b20909c7f}{}double {\bfseries end\+Point}\label{classMyosinFunction_a21f2a844af80cb09c37fbc9b20909c7f}
+
+\item 
+\hypertarget{classMyosinFunction_acfa8ebd891b11162a806a8ebf9b6f39a}{}double {\bfseries manual\+C\+Myo\+Eq}\label{classMyosinFunction_acfa8ebd891b11162a806a8ebf9b6f39a}
+
+\item 
+\hypertarget{classMyosinFunction_a8e71a34d5be53e6eb7c1d3621fe72455}{}double {\bfseries manual\+Orientation} \mbox{[}2\mbox{]}\label{classMyosinFunction_a8e71a34d5be53e6eb7c1d3621fe72455}
+
+\item 
+\hypertarget{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{}int \hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{n\+Grid\+X}\label{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}
+
+\begin{DoxyCompactList}\small\item\em The number of grid points that discretise the tissue in x. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{}int \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{n\+Grid\+Y}\label{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}
+
+\begin{DoxyCompactList}\small\item\em The number of grid points that discretise the tissue in y. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a7332175e6d9369c02a8c569f000211e1}{}double $\ast$$\ast$ \hyperlink{classMyosinFunction_a7332175e6d9369c02a8c569f000211e1}{Equilibrium\+Myosin\+Matrix}\label{classMyosinFunction_a7332175e6d9369c02a8c569f000211e1}
+
+\begin{DoxyCompactList}\small\item\em The matrix of equilibrium myosin levels. It is a matrix of doubles for equilibrium concentration at each grid point. The dimensions of the matrix are equal to (\hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X}, \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y}), and set in constructor of the \hyperlink{classMyosinFunction}{Myosin\+Function}. \end{DoxyCompactList}\item 
+\hypertarget{classMyosinFunction_a171909633b0117031045287fdbc401db}{}double $\ast$$\ast$$\ast$ \hyperlink{classMyosinFunction_a171909633b0117031045287fdbc401db}{Myosin\+Orientation\+Matrix}\label{classMyosinFunction_a171909633b0117031045287fdbc401db}
+
+\begin{DoxyCompactList}\small\item\em The matrix of equilibrium myosin orientations. It is a matrix of double triplets for equilibrium orientation at each grid point. The dimensions of the matrix are equal to (\hyperlink{classMyosinFunction_a36ac0b5ce87011878a7f1954e270e5ae}{Myosin\+Function\+::n\+Grid\+X} \mbox{[}3\mbox{]}, \hyperlink{classMyosinFunction_a1652a8a0d154b136434bee037e0262a4}{Myosin\+Function\+::n\+Grid\+Y} \mbox{[}3\mbox{]}), and set in constructor of the \hyperlink{classMyosinFunction}{Myosin\+Function}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMyosinFunction_a25c83e1aaafc9d029e6c551008114ef7}{}\index{Myosin\+Function@{Myosin\+Function}!Myosin\+Function@{Myosin\+Function}}
+\index{Myosin\+Function@{Myosin\+Function}!Myosin\+Function@{Myosin\+Function}}
+\subsubsection[{Myosin\+Function}]{\setlength{\rightskip}{0pt plus 5cm}Myosin\+Function\+::\+Myosin\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{bool}]{is\+Apical, }
+\item[{bool}]{is\+Polarised, }
+\item[{int}]{init\+Time, }
+\item[{bool}]{apply\+To\+Columnar\+Layer, }
+\item[{bool}]{apply\+To\+Peripodial\+Membrane, }
+\item[{int}]{n\+X, }
+\item[{int}]{n\+Y, }
+\item[{double $\ast$$\ast$}]{Myo\+Mat, }
+\item[{double $\ast$$\ast$}]{angle\+Mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMyosinFunction_a25c83e1aaafc9d029e6c551008114ef7}
+
+
+The constructor of \hyperlink{classMyosinFunction}{Myosin\+Function}. Different growth functions will be derived from this class. 
+
+The first six parameters will be directed to the parent constructor, \hyperlink{classGrowthFunctionBase_a061b31ad8a0cb228628c7104029a94bf}{Growth\+Function\+Base\+::\+Growth\+Function\+Base}. ~\newline
+integers n\+X and n\+Y will set \hyperlink{classGridBasedGrowthFunction_af872b9963f3a579dcd615c23bcb58a86}{Grid\+Based\+Growth\+Function\+::n\+Grid\+X} and \hyperlink{classGridBasedGrowthFunction_a625bc963a1f1e7d1f1a35dbd0ef51728}{Grid\+Based\+Growth\+Function\+::n\+Grid\+Y}, respectively. \hyperlink{classGridBasedGrowthFunction_a5522d9b84fa95ebd65cdf290a4f0a65c}{Grid\+Based\+Growth\+Function\+::\+Growth\+Matrix} will be initiated to point at a 2 dimensional matrix of double triplets the size(n\+X, n\+Y). ~\newline
+double$\ast$$\ast$$\ast$ Growth\+Mat is the pointer to the 2-\/dimensional matrix of double triplets, holding the 3\+D growth rates at each grid point. Values stored in Growth\+Mat will set the values in \hyperlink{classGridBasedGrowthFunction_a5522d9b84fa95ebd65cdf290a4f0a65c}{Grid\+Based\+Growth\+Function\+::\+Growth\+Matrix}. The matrix storing the growth rates have been read from an input file through Model\+Input\+Object\+::read\+Growth\+Options and related functions therein ~\newline
+ \hypertarget{classMyosinFunction_a9a1d0f2da5bf8c9f3e9f48d88297c3fd}{}\index{Myosin\+Function@{Myosin\+Function}!Myosin\+Function@{Myosin\+Function}}
+\index{Myosin\+Function@{Myosin\+Function}!Myosin\+Function@{Myosin\+Function}}
+\subsubsection[{Myosin\+Function}]{\setlength{\rightskip}{0pt plus 5cm}Myosin\+Function\+::\+Myosin\+Function (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{bool}]{is\+Apical, }
+\item[{bool}]{is\+Polarised, }
+\item[{int}]{init\+Time, }
+\item[{bool}]{apply\+To\+Columnar\+Layer, }
+\item[{bool}]{apply\+To\+Peripodial\+Membrane, }
+\item[{double}]{stripe\+Size1, }
+\item[{double}]{stripe\+Size2, }
+\item[{double}]{initial\+Point, }
+\item[{double}]{end\+Point, }
+\item[{double}]{manualc\+Eq, }
+\item[{double}]{tetha}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMyosinFunction_a9a1d0f2da5bf8c9f3e9f48d88297c3fd}
+
+
+The constructor of \hyperlink{classMyosinFunction}{Myosin\+Function}. Different growth functions will be derived from this class. 
+
+The first six parameters will be directed to the parent constructor, \hyperlink{classGrowthFunctionBase_a061b31ad8a0cb228628c7104029a94bf}{Growth\+Function\+Base\+::\+Growth\+Function\+Base}. ~\newline
+integers n\+X and n\+Y will set \hyperlink{classGridBasedGrowthFunction_af872b9963f3a579dcd615c23bcb58a86}{Grid\+Based\+Growth\+Function\+::n\+Grid\+X} and \hyperlink{classGridBasedGrowthFunction_a625bc963a1f1e7d1f1a35dbd0ef51728}{Grid\+Based\+Growth\+Function\+::n\+Grid\+Y}, respectively. \hyperlink{classGridBasedGrowthFunction_a5522d9b84fa95ebd65cdf290a4f0a65c}{Grid\+Based\+Growth\+Function\+::\+Growth\+Matrix} will be initiated to point at a 2 dimensional matrix of double triplets the size(n\+X, n\+Y). ~\newline
+double$\ast$$\ast$$\ast$ Growth\+Mat is the pointer to the 2-\/dimensional matrix of double triplets, holding the 3\+D growth rates at each grid point. Values stored in Growth\+Mat will set the values in \hyperlink{classGridBasedGrowthFunction_a5522d9b84fa95ebd65cdf290a4f0a65c}{Grid\+Based\+Growth\+Function\+::\+Growth\+Matrix}. The matrix storing the growth rates have been read from an input file through Model\+Input\+Object\+::read\+Growth\+Options and related functions therein ~\newline
+ 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMyosinFunction_ad0bfc8aafe7e54a46f04e8eeb84ce457}{}\index{Myosin\+Function@{Myosin\+Function}!write\+Summary@{write\+Summary}}
+\index{write\+Summary@{write\+Summary}!Myosin\+Function@{Myosin\+Function}}
+\subsubsection[{write\+Summary}]{\setlength{\rightskip}{0pt plus 5cm}void Myosin\+Function\+::write\+Summary (
+\begin{DoxyParamCaption}
+\item[{ofstream \&}]{save\+File\+Simulation\+Summary}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMyosinFunction_ad0bfc8aafe7e54a46f04e8eeb84ce457}
+
+
+The. 
+
+This function will write the \hyperlink{classMyosinFunction}{Myosin\+Function} details into the simulation summary file, provided as the first input. The output should look like\+: ~\newline
+ Growth Type\+: growth From File (3) Initial time(sec)\+: \hyperlink{classGrowthFunctionBase_ae92513a7b41637df8e26e7db35ddf97c}{Grid\+Based\+Growth\+Function\+::init\+Time} Final\+Time time(sec)\+: \hyperlink{classGrowthFunctionBase_a3ff4db0573d354a75666a5f3ca446941}{Grid\+Based\+Growth\+Function\+::end\+Time} Growth matrix mesh size\+: \hyperlink{classGridBasedGrowthFunction_af872b9963f3a579dcd615c23bcb58a86}{Grid\+Based\+Growth\+Function\+::n\+Grid\+X} \hyperlink{classGridBasedGrowthFunction_a625bc963a1f1e7d1f1a35dbd0ef51728}{Grid\+Based\+Growth\+Function\+::n\+Grid\+Y}
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/melda/\+Documents/\+Tissue\+Folding/\+Tissue\+Folding/\+Source\+Code/Myosin\+Function.\+h\end{DoxyCompactItemize}

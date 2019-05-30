@@ -1,0 +1,112 @@
+InputMeshParameters:
+  MeshInputMode(int-seeDocumentation): 4
+  MeshFile(full-path):     ../MeshFiles/WingAt48hr.mesh
+  symmetricInX(bool): 0
+  symmetricInY(bool): 1
+ 
+TimeParameters:
+  TimeStep(sec): 1800
+  SimulationLength(sec): 1700
+  
+SaveOptions:
+  SaveImages(bool): 1
+  ImagesSaveDirectory(relative_path_to_od): ./ScreenShots/
+  SaveData(bool):   1
+  ImageSaveInterval(sec): 1800
+  DataSaveInterval(sec):  1800
+  
+NodeBindingOptions:
+  bindCircumferenceXYToBasal(bool): 1
+
+PysicalProperties:
+  YoungsModulusApical: 100.0	YoungsModulusBasal: 25.0	YoungsModulusMid: 25.0	Noise(%-int): 0
+  PoissonsRatio: 0.29		Noise(%-int): 0
+  ApicalViscosity:  0.0 	Noise(%-int): 0
+  BasalViscosity:   0.0
+  MidLineViscosity: 0.0
+
+ExternalViscositySetup:
+  ExtendToWholeTissue: 0
+  DiscProperApicalExternalViscosity: 16000.0 
+  DiscProperBasalExternalViscosity: 10.0 
+  PeripodialMembraneApicalExternalViscosity: 0.0
+  PeripodialMembraneBasalExternalViscosity: 0.0 
+  LinkerZoneApicalExternalViscosity: 0.0
+  LinkerZoneBasalExternalViscosity: 0.0
+
+GrowthOptions:
+  NumberofGrowthFunctions(int): 5
+  GridGrowthsPinnedOnInitialMesh(bool): 1 
+  PinningUpdateTimes(number-times(sec)):  2 57600 115200
+  GridGrowthsInterpolationType(0=step,1=linear): 1
+
+  GrowthFunctionType(int-seeDocumentation): 3
+  InitialTime(sec):  2000
+  FinalTime(sec):  57600 
+  ApplyToColumnarLayer(bool): 1
+  ApplyToPeripodialMembrane(bool): 0
+  ApplyToBasalECM(bool): 0
+  ApplyToLateralECM(bool): 0
+  Filename(full-path): ../GrowthMaps/Growth48-64hr
+  zRange: 0.0 1.0
+
+  GrowthFunctionType(int-seeDocumentation): 3
+  InitialTime(sec):  57600 
+  FinalTime(sec):  115200
+  ApplyToColumnarLayer(bool): 1
+  ApplyToPeripodialMembrane(bool): 0
+  ApplyToBasalECM(bool): 0
+  ApplyToLateralECM(bool): 0
+  Filename(full-path): ../GrowthMaps/Growth64-80hr
+  zRange: 0.0 1.0
+  
+
+  GrowthFunctionType(int-seeDocumentation): 3
+  InitialTime(sec):  115200
+  FinalTime(sec):  172800
+  ApplyToColumnarLayer(bool): 1
+  ApplyToPeripodialMembrane(bool): 0
+  ApplyToBasalECM(bool): 0
+  ApplyToLateralECM(bool): 0
+  Filename(full-path): ../GrowthMaps/Growth80-96hr
+  zRange: 0.0 1.0
+    
+  GrowthFunctionType(int-seeDocumentation): 3
+  InitialTime(sec):  0
+  FinalTime(sec):  115200 
+  ApplyToColumnarLayer(bool): 0
+  ApplyToPeripodialMembrane(bool): 0
+  ApplyToBasalECM(bool): 0
+  ApplyToLateralECM(bool): 1
+  Filename(full-path): ../GrowthMaps/Growth48-64hr-zOnly 
+  zRange: 0.0 1.0
+
+  
+  GrowthFunctionType(int-seeDocumentation): 3
+  InitialTime(sec):  115200
+  FinalTime(sec):  172800
+  ApplyToColumnarLayer(bool): 0
+  ApplyToPeripodialMembrane(bool): 0
+  ApplyToBasalECM(bool): 0
+  ApplyToLateralECM(bool): 1
+  Filename(full-path): ../GrowthMaps/Growth64-96hr-zOnly 
+  zRange: 0.0 1.0
+
+ExplicitECMOptions:
+  ThereIsExplicitECM(bool): 1
+  ECMRemodellingHalfLife(hour): 8.0
+  ECMColumnarYoungsModulus:  1600
+  ECMPeripodialYoungsModulus:  100
+
+ExplicitActinOptions:
+  ThereIsExplicitActin(bool): 1
+
+AdhesionOptions:
+  ThereIsAdhesion(bool): 1
+  CollapseNodesOnAdhesion(bool): 1
+
+NodeCollapseOptions:
+  ThereIsNodeCollapse(bool): 1
+
+  
+    
